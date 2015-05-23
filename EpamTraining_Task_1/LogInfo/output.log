@@ -2,3 +2,39 @@
 21.05.2015 03:02:07,645 INFO  runner.Runner - Create new air company
 21.05.2015 03:28:39,854 INFO  runner.Runner - Create new air company
 22.05.2015 10:27:26,698 INFO  runner.Runner - Create new air company
+23.05.2015 23:32:04,930 INFO  runner.Runner - Create new air company
+23.05.2015 23:59:02,752 INFO  runner.Runner - Create new air company
+23.05.2015 23:59:02,755 INFO  runner.Runner - Create airplanes in the company
+23.05.2015 23:59:02,756 INFO  creator.CompanyCreator - Create new PassangerAirplane
+23.05.2015 23:59:02,756 INFO  creator.CompanyCreator - Create new PassangerAirplane
+23.05.2015 23:59:02,756 INFO  creator.CompanyCreator - Create new TransportAirplane
+23.05.2015 23:59:02,756 INFO  creator.CompanyCreator - Create new TransportAirplane
+23.05.2015 23:59:02,756 ERROR creator.CompanyCreator - Incorrect boardNumber value
+24.05.2015 00:06:10,531 INFO  runner.Runner - Create new air company
+24.05.2015 00:06:10,534 INFO  runner.Runner - Create airplanes in the company
+24.05.2015 00:06:10,535 INFO  creator.CompanyCreator - Create new PassangerAirplane
+24.05.2015 00:06:10,535 INFO  creator.CompanyCreator - Create new PassangerAirplane
+24.05.2015 00:06:10,535 INFO  creator.CompanyCreator - Create new TransportAirplane
+24.05.2015 00:06:10,535 INFO  creator.CompanyCreator - Create new TransportAirplane
+24.05.2015 00:06:10,535 ERROR creator.CompanyCreator - Incorrect boardNumber value
+24.05.2015 00:07:38,463 INFO  runner.Runner - Create new air company
+24.05.2015 00:07:38,467 INFO  runner.Runner - Create airplanes in the company
+24.05.2015 00:07:38,468 INFO  creator.CompanyCreator - Create new PassangerAirplane
+24.05.2015 00:07:38,468 INFO  creator.CompanyCreator - Create new PassangerAirplane
+24.05.2015 00:07:38,468 INFO  creator.CompanyCreator - Create new TransportAirplane
+24.05.2015 00:07:38,468 INFO  creator.CompanyCreator - Create new TransportAirplane
+24.05.2015 00:07:38,468 ERROR creator.CompanyCreator - Incorrect boardNumber value
+24.05.2015 00:07:55,831 INFO  runner.Runner - Create new air company
+24.05.2015 00:07:55,837 INFO  runner.Runner - Create airplanes in the company
+24.05.2015 00:07:55,837 INFO  creator.CompanyCreator - Create new PassangerAirplane
+24.05.2015 00:07:55,838 INFO  creator.CompanyCreator - Create new PassangerAirplane
+24.05.2015 00:07:55,838 INFO  creator.CompanyCreator - Create new TransportAirplane
+24.05.2015 00:07:55,838 INFO  creator.CompanyCreator - Create new TransportAirplane
+24.05.2015 00:07:55,838 ERROR creator.CompanyCreator - Incorrect boardNumber value
+24.05.2015 00:08:08,182 INFO  runner.Runner - Create new air company
+24.05.2015 00:08:08,188 INFO  runner.Runner - Create airplanes in the company
+24.05.2015 00:08:08,188 INFO  creator.CompanyCreator - Create new PassangerAirplane
+24.05.2015 00:08:08,188 INFO  creator.CompanyCreator - Create new PassangerAirplane
+24.05.2015 00:08:08,188 INFO  creator.CompanyCreator - Create new TransportAirplane
+24.05.2015 00:08:08,188 INFO  creator.CompanyCreator - Create new TransportAirplane
+24.05.2015 00:08:08,189 ERROR creator.CompanyCreator - Incorrect boardNumber value
