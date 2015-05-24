@@ -37,7 +37,7 @@ public class CompanyCreator {
 			company.add(airplane);
 			LOG.info("Create new PassangerAirplane");
 						
-			airplane = new PassangerAirplane(modelName.AIRBUS_A310, 11, 300, 20, 15, 20, 6);
+			airplane = new PassangerAirplane(modelName.AIRBUS_A310, 11, 700, 20, 15, 20, 6);
 			airplane.setFuelUsage(15);
 			((PassangerAirplane) airplane).setBusinessPlace(25);
 			((PassangerAirplane) airplane).setEconomPlace(50);

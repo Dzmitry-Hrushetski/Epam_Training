@@ -9,7 +9,7 @@ import com.epam.aircompany.exeptions.LogicalExeptions;
  * @author Dzmitry Hrushetski
  *
  */
-public class Airplane {
+public class Airplane implements Comparable<Airplane>{
 	private static final int MIN_BOARD_NUMBER=1;
 	private static final int MIN_FLYING_RANGE=100;
 	private static final int MIN_CAP_FUEL_TANK=1;
@@ -97,7 +97,7 @@ public class Airplane {
 	@Override
 	public String toString() {
 		return "Airplane " + modelName + ", board number - "
-				+ boardNumber;
+				+ boardNumber + ", flying range " + flyingRange;
 	}
 	
 	@Override
@@ -120,5 +120,13 @@ public class Airplane {
 		if (boardNumber != other.boardNumber)
 			return false;
 		return true;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Comparable#compareTo(java.lang.Object)
+	 */
+	@Override
+	public int compareTo(Airplane o) {
+		return flyingRange-o.flyingRange;
 	}
 }

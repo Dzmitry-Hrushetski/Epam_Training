@@ -1,0 +1,6 @@
+Total passanger place - 120 and cargo weight - 16
+The list of airplanes sorted by flying range:
+Airplane BOING_737, board number - 10, flying range 200
+Airplane AIRBUS_A400M, board number - 12, flying range 400
+Airplane AN_26D, board number - 15, flying range 420
+Airplane AIRBUS_A310, board number - 11, flying range 700

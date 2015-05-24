@@ -5,6 +5,7 @@ package com.epam.aircompany.beans;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 import com.epam.aircompany.exeptions.LogicalExeptions;
 
@@ -53,7 +54,8 @@ public class AirCompany {
 		super();
 		this.companyName = companyName;
 		
-		airplanes= new HashSet<Airplane>();
+		//airplanes= new HashSet<Airplane>();
+		airplanes= new TreeSet<Airplane>();
 	}
 
 
