@@ -41,6 +41,46 @@ public class TransportAirplane extends Airplane{
 
 
 
+	public int getCargoLong() {
+		return cargoLong;
+	}
+
+
+
+
+	public int getCargoWidth() {
+		return cargoWidth;
+	}
+
+
+
+
+	public int getCargoHeight() {
+		return cargoHeight;
+	}
+
+
+
+
+	public int getMaxCargoWeight() {
+		return maxCargoWeight;
+	}
+
+
+
+
+	public int getCargoHatchWidth() {
+		return cargoHatchWidth;
+	}
+
+
+
+
+	public int getCargoHatchHeight() {
+		return cargoHatchHeight;
+	}
+
+
 	public TransportAirplane(AirplaneModelName modelName, int boardNumber,
 			int flyingRange, int capacityFuelTank, int maxLoadCapacity,
 			int cargoLong, int cargoWidth, int cargoHeight, int maxCargoWeight,

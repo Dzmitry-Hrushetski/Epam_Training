@@ -32,11 +32,15 @@ public class CompanyCreator {
 		try {
 			airplane = new PassangerAirplane(modelName.BOING_737, 10, 200, 10, 15, 20, 6);
 			airplane.setFuelUsage(11);
+			((PassangerAirplane) airplane).setBusinessPlace(15);
+			((PassangerAirplane) airplane).setEconomPlace(30);
 			company.add(airplane);
 			LOG.info("Create new PassangerAirplane");
 						
 			airplane = new PassangerAirplane(modelName.AIRBUS_A310, 11, 300, 20, 15, 20, 6);
 			airplane.setFuelUsage(15);
+			((PassangerAirplane) airplane).setBusinessPlace(25);
+			((PassangerAirplane) airplane).setEconomPlace(50);
 			company.add(airplane);
 			LOG.info("Create new PassangerAirplane");
 		

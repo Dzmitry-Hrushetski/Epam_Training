@@ -59,6 +59,9 @@ public class AirCompany {
 
 	@Override
 	public String toString() {
-		return "The " + companyName + " has " + airplanes.size() + " airplanes.";
+		
+		return airplanes.isEmpty()? "The " + companyName + " has no airplanes." : "The " + companyName + " has " + airplanes.size() + " airplanes.";
+				
+		//return "The " + companyName + " has " + airplanes.size() + " airplanes.";
 	}
 }

@@ -69,6 +69,18 @@ public class PassangerAirplane extends Airplane {
 
 
 
+	public int getMaxBaggagePlace() {
+		return maxBaggagePlace;
+	}
+
+
+
+	public int getMaxBaggageWeight() {
+		return maxBaggageWeight;
+	}
+
+
+
 	public PassangerAirplane(AirplaneModelName modelName, int boardNumber,
 			int flyingRange, int capacityFuelTank, int maxLoadCapacity,
 			int maxBaggagePlace, int maxBaggageWeight) throws LogicalExeptions {

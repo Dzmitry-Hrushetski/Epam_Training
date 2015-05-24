@@ -41,6 +41,28 @@ public class Airplane {
 		}
 	}	
 	
+		
+	
+	public AirplaneModelName getModelName() {
+		return modelName;
+	}
+
+	public int getBoardNumber() {
+		return boardNumber;
+	}
+
+	public int getFlyingRange() {
+		return flyingRange;
+	}
+
+	public int getCapacityFuelTank() {
+		return capacityFuelTank;
+	}
+
+	public int getMaxLoadCapacity() {
+		return maxLoadCapacity;
+	}
+
 	public Airplane(AirplaneModelName modelName, int boardNumber,
 			int flyingRange, int capacityFuelTank, int maxLoadCapacity) throws LogicalExeptions {
 		
