@@ -15,32 +15,62 @@ import com.epam.aircompany.beans.TransportAirplane;
  * @author Dzmitry Hrushetski
  *
  */
-public class CompanyBusiness {
-	private AirCompany company;
-	
-	
-	public static int[] getTotalCapasity(AirCompany company)
-	{
-		Set<Airplane> airplanes=null;
-		int[] totalCapasity={0,0};
+public class CompanyBusiness implements ICompanyBusiness{
 		
-		airplanes=company.getAirplanes();
+	
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.logic.ICompanyBusiness#getTotalPassangerPlace(com.epam.aircompany.beans.AirCompany)
+	 */
+	@Override
+	public int getTotalPassangerPlace(AirCompany company) {
+		int totalPlace=0;
+		
+		if(company==null) return -1;
+		
+		Set<Airplane> airplanes=company.getAirplanes();
 		for(Airplane tmp: airplanes){
 			if(tmp instanceof PassangerAirplane){
-				totalCapasity[0]+=((PassangerAirplane) tmp).getBusinessPlace()+((PassangerAirplane) tmp).getEconomPlace();
-				totalCapasity[1]+=((PassangerAirplane) tmp).getMaxBaggageWeight();
-				
-			} else{
-				if(tmp instanceof TransportAirplane){
-					totalCapasity[1]+=((TransportAirplane) tmp).getMaxCargoWeight();
-				}
+				totalPlace+=((PassangerAirplane) tmp).getBusinessPlace()+((PassangerAirplane) tmp).getEconomPlace();
+			} 
+		}
+		return totalPlace;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.logic.ICompanyBusiness#getTotalTransportCargoWeight(com.epam.aircompany.beans.AirCompany)
+	 */
+	@Override
+	public int getTotalTransportCargoWeight(AirCompany company) {
+		int totalCargoWeigh=0;
+		
+		if(company==null) return -1;
+		
+		Set<Airplane> airplanes=company.getAirplanes();
+		for(Airplane tmp: airplanes){
+			if(tmp instanceof TransportAirplane){
+				totalCargoWeigh+=((TransportAirplane) tmp).getMaxCargoWeight();
 			}
 		}
 		
-		return totalCapasity;
+		return totalCargoWeigh;
 	}
-	
-	
-	
-	
+
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.logic.ICompanyBusiness#getTotalPassangerCargoWeight(com.epam.aircompany.beans.AirCompany)
+	 */
+	@Override
+	public int getTotalPassangerCargoWeight(AirCompany company) {
+		int totalCargoWeigh=0;
+		
+		if(company==null) return -1;
+		
+		Set<Airplane> airplanes=company.getAirplanes();
+		for(Airplane tmp: airplanes){
+			if(tmp instanceof PassangerAirplane){
+				totalCargoWeigh+=((PassangerAirplane) tmp).getMaxBaggageWeight();
+			}
+		}
+		
+		return totalCargoWeigh;
+	}
 }

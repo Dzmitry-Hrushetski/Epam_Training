@@ -3,7 +3,6 @@
  */
 package com.epam.aircompany.beans;
 
-import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -14,17 +13,25 @@ import com.epam.aircompany.exeptions.LogicalExeptions;
  *
  */
 public class AirCompany {
+	private static final String COMPANY_STRING_1="The %s has no airplanes.";
+	private static final String COMPANY_STRING_2="The %s has %d airplanes.";
 	private String companyName;
 	private Set<Airplane> airplanes;
 	
 	
-	/*private Set<PassangerAirplane> passAirplanes;
-	private Set<TransportAirplane> transAirplanes;*/
-	
-	
-	
-	
-	
+	public AirCompany(String companyName) throws LogicalExeptions {
+		super();
+		if(companyName!=null && !companyName.isEmpty()){
+			this.companyName = companyName;
+		} else{
+			throw new LogicalExeptions("Incorrect companyName");
+		}
+		
+		//airplanes= new HashSet<Airplane>();
+		airplanes= new TreeSet<Airplane>();
+	}
+
+		
 	public boolean add(Airplane e) {
 		return airplanes.add(e);
 	}
@@ -42,7 +49,7 @@ public class AirCompany {
 
 	public void setCompanyName(String companyName) throws LogicalExeptions {
 		
-		if(companyName!=null){
+		if(companyName!=null && !companyName.isEmpty()){
 			this.companyName = companyName;
 		} else{
 			throw new LogicalExeptions("Incorrect companyName");
@@ -50,20 +57,9 @@ public class AirCompany {
 	}
 
 
-	public AirCompany(String companyName) {
-		super();
-		this.companyName = companyName;
-		
-		//airplanes= new HashSet<Airplane>();
-		airplanes= new TreeSet<Airplane>();
-	}
-
-
 	@Override
 	public String toString() {
 		
-		return airplanes.isEmpty()? "The " + companyName + " has no airplanes." : "The " + companyName + " has " + airplanes.size() + " airplanes.";
-				
-		//return "The " + companyName + " has " + airplanes.size() + " airplanes.";
+		return airplanes.isEmpty()? String.format(COMPANY_STRING_1, companyName) : String.format(COMPANY_STRING_2, companyName, airplanes.size());
 	}
 }

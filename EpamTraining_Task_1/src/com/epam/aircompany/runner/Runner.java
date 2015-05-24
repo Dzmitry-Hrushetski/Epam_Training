@@ -3,15 +3,13 @@
  */
 package com.epam.aircompany.runner;
 
-import java.util.Set;
-
 import org.apache.log4j.Logger;
 
 import com.epam.aircompany.beans.AirCompany;
-import com.epam.aircompany.beans.Airplane;
 import com.epam.aircompany.creator.CompanyCreator;
 import com.epam.aircompany.logic.CompanyBusiness;
 import com.epam.aircompany.logic.CompanyOutputData;
+import com.epam.aircompany.logic.ICompanyBusiness;
 
 
 /**
@@ -34,27 +32,21 @@ public class Runner {
 		CompanyCreator creator = new CompanyCreator(COMPANY_NAME);
 					
 		LOG.info("Create airplanes in the company");
-		creator.generateHardCoreCpompanyPark();
+		creator.generateHardCoreCompanyPark();
 		
 		LOG.info("To count the total capacity and loading capacity");
 		AirCompany company=creator.getCompany();
-		int[] totalCapasity=null;
-		
-		totalCapasity=CompanyBusiness.getTotalCapasity(company);
-		System.out.println(totalCapasity[0]+"  "+totalCapasity[1]);
-		//CompanyBusiness.getTotalCapasity(company);
+		ICompanyBusiness companyBusiness=new CompanyBusiness();
+				
+		int totalPlace=companyBusiness.getTotalPassangerPlace(company);
+		int totalCargo=companyBusiness.getTotalPassangerCargoWeight(company);
+		totalCargo+=companyBusiness.getTotalTransportCargoWeight(company);
 		
 		LOG.info("Save data to file");
-		CompanyOutputData.saveFile("result.txt", totalCapasity, company.getAirplanes());
+		CompanyOutputData.saveFile("result.txt", totalPlace, totalCargo, company.getAirplanes());
 		
-		//Delete !!!!!!!!!!!!
+		LOG.info("Job finish");
 		
-		/*Set<Airplane> airplanes=creator.getCompany().getAirplanes();
-		
-		System.out.println(creator.getCompany());
-		for(Airplane a: airplanes){
-			System.out.println(a);
-		}*/
 	}
 
 }

@@ -20,67 +20,6 @@ public class TransportAirplane extends Airplane{
 	private int cargoHatchHeight;
 	
 	
-	
-	
-	public int getCurCargoWeight() {
-		return curCargoWeight;
-	}
-
-
-
-
-	public void setCurCargoWeight(int curCargoWeight) throws LogicalExeptions {
-		
-		if(curCargoWeight>=MIN_CARGO_VALUE){
-			this.curCargoWeight = curCargoWeight;
-		} else{
-			throw new LogicalExeptions("Incorrect curCargoWeight value");
-		}	
-	}
-
-
-
-
-	public int getCargoLong() {
-		return cargoLong;
-	}
-
-
-
-
-	public int getCargoWidth() {
-		return cargoWidth;
-	}
-
-
-
-
-	public int getCargoHeight() {
-		return cargoHeight;
-	}
-
-
-
-
-	public int getMaxCargoWeight() {
-		return maxCargoWeight;
-	}
-
-
-
-
-	public int getCargoHatchWidth() {
-		return cargoHatchWidth;
-	}
-
-
-
-
-	public int getCargoHatchHeight() {
-		return cargoHatchHeight;
-	}
-
-
 	public TransportAirplane(AirplaneModelName modelName, int boardNumber,
 			int flyingRange, int capacityFuelTank, int maxLoadCapacity,
 			int cargoLong, int cargoWidth, int cargoHeight, int maxCargoWeight,
@@ -124,5 +63,44 @@ public class TransportAirplane extends Airplane{
 		} else{
 			throw new LogicalExeptions("Incorrect cargoHatchHeighth value");
 		}
+	}
+	
+	
+	
+	public int getCurCargoWeight() {
+		return curCargoWeight;
+	}
+
+	public void setCurCargoWeight(int curCargoWeight) throws LogicalExeptions {
+		
+		if(curCargoWeight>=MIN_CARGO_VALUE){
+			this.curCargoWeight = curCargoWeight;
+		} else{
+			throw new LogicalExeptions("Incorrect curCargoWeight value");
+		}	
+	}
+
+	public int getCargoLong() {
+		return cargoLong;
+	}
+
+	public int getCargoWidth() {
+		return cargoWidth;
+	}
+
+	public int getCargoHeight() {
+		return cargoHeight;
+	}
+
+	public int getMaxCargoWeight() {
+		return maxCargoWeight;
+	}
+
+	public int getCargoHatchWidth() {
+		return cargoHatchWidth;
+	}
+
+	public int getCargoHatchHeight() {
+		return cargoHatchHeight;
 	}
 }

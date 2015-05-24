@@ -17,13 +17,13 @@ import com.epam.aircompany.beans.Airplane;
  *
  */
 public class CompanyOutputData {
+	
 	public static Logger LOG = Logger.getLogger(CompanyOutputData.class);
 	
-	private String fileName;
+	private static final String OUTPUT_STRING_1="Total passanger place - %d and cargo weight - %d\n";
+	private static final String OUTPUT_STRING_2="The list of airplanes sorted by flying range:\n";
 	
-		
-	
-	public static void saveFile(String fileName, int[] totalCapasity, Set<Airplane> airplanes){
+	public static void saveFile(String fileName, int totalPlace, int totalCargo, Set<Airplane> airplanes){
 		
 		BufferedWriter output = null;
 		
@@ -36,8 +36,8 @@ public class CompanyOutputData {
 	    	    
 	    try {
 	    	
-	    	  output.write("Total passanger place - "+ totalCapasity[0] + " and cargo weight - " + totalCapasity[1] +"\n");
-	    	  output.write("The list of airplanes sorted by flying range:\n");	    	
+	    	  output.write(String.format(OUTPUT_STRING_1, totalPlace, totalCargo));
+	    	  output.write(OUTPUT_STRING_2);	    	
 	    	  for(Airplane tmp: airplanes){
 	    		  output.write(tmp.toString());
 	    		  output.write("\n");

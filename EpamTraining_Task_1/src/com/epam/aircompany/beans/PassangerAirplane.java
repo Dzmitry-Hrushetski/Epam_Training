@@ -20,6 +20,26 @@ public class PassangerAirplane extends Airplane {
 	private int curBaggageWeight;
 	
 	
+	public PassangerAirplane(AirplaneModelName modelName, int boardNumber,
+			int flyingRange, int capacityFuelTank, int maxLoadCapacity,
+			int maxBaggagePlace, int maxBaggageWeight) throws LogicalExeptions {
+		
+		super(modelName, boardNumber, flyingRange, capacityFuelTank,
+				maxLoadCapacity);
+		
+		if(maxBaggagePlace<=MAX_BAGGAGE_PLACE){
+			this.maxBaggagePlace = maxBaggagePlace;
+		} else{
+			throw new LogicalExeptions("Incorrect maxBaggagePlace value");
+		}
+		
+		if(maxBaggageWeight<=MAX_BAGGAGE_WEIGHT){
+			this.maxBaggageWeight = maxBaggageWeight;
+		} else{
+			throw new LogicalExeptions("Incorrect maxBaggageWeight value");
+		}	
+	}
+	
 	
 	public int getEconomPlace() {
 		return economPlace;
@@ -77,27 +97,5 @@ public class PassangerAirplane extends Airplane {
 
 	public int getMaxBaggageWeight() {
 		return maxBaggageWeight;
-	}
-
-
-
-	public PassangerAirplane(AirplaneModelName modelName, int boardNumber,
-			int flyingRange, int capacityFuelTank, int maxLoadCapacity,
-			int maxBaggagePlace, int maxBaggageWeight) throws LogicalExeptions {
-		
-		super(modelName, boardNumber, flyingRange, capacityFuelTank,
-				maxLoadCapacity);
-		
-		if(maxBaggagePlace<=MAX_BAGGAGE_PLACE){
-			this.maxBaggagePlace = maxBaggagePlace;
-		} else{
-			throw new LogicalExeptions("Incorrect maxBaggagePlace value");
-		}
-		
-		if(maxBaggageWeight<=MAX_BAGGAGE_WEIGHT){
-			this.maxBaggageWeight = maxBaggageWeight;
-		} else{
-			throw new LogicalExeptions("Incorrect maxBaggageWeight value");
-		}	
 	}
 }
