@@ -9,6 +9,8 @@ import com.epam.aircompany.beans.AirCompany;
 import com.epam.aircompany.beans.Airplane;
 import com.epam.aircompany.beans.PassangerAirplane;
 import com.epam.aircompany.beans.TransportAirplane;
+import com.epam.aircompany.exeptions.BusinessExeptions;
+import com.epam.aircompany.exeptions.LogicalExeptions;
 
 
 /**
@@ -22,10 +24,10 @@ public class CompanyBusiness implements ICompanyBusiness{
 	 * @see com.epam.aircompany.logic.ICompanyBusiness#getTotalPassangerPlace(com.epam.aircompany.beans.AirCompany)
 	 */
 	@Override
-	public int getTotalPassangerPlace(AirCompany company) {
+	public int getTotalPassangerPlace(AirCompany company) throws BusinessExeptions {
 		int totalPlace=0;
 		
-		if(company==null) return -1;
+		if(company==null) throw new BusinessExeptions("company is null");
 		
 		Set<Airplane> airplanes=company.getAirplanes();
 		for(Airplane tmp: airplanes){
@@ -40,10 +42,10 @@ public class CompanyBusiness implements ICompanyBusiness{
 	 * @see com.epam.aircompany.logic.ICompanyBusiness#getTotalTransportCargoWeight(com.epam.aircompany.beans.AirCompany)
 	 */
 	@Override
-	public int getTotalTransportCargoWeight(AirCompany company) {
+	public int getTotalTransportCargoWeight(AirCompany company) throws BusinessExeptions {
 		int totalCargoWeigh=0;
 		
-		if(company==null) return -1;
+		if(company==null) throw new BusinessExeptions("company is null");
 		
 		Set<Airplane> airplanes=company.getAirplanes();
 		for(Airplane tmp: airplanes){
@@ -59,10 +61,10 @@ public class CompanyBusiness implements ICompanyBusiness{
 	 * @see com.epam.aircompany.logic.ICompanyBusiness#getTotalPassangerCargoWeight(com.epam.aircompany.beans.AirCompany)
 	 */
 	@Override
-	public int getTotalPassangerCargoWeight(AirCompany company) {
+	public int getTotalPassangerCargoWeight(AirCompany company) throws BusinessExeptions {
 		int totalCargoWeigh=0;
 		
-		if(company==null) return -1;
+		if(company==null) throw new BusinessExeptions("company is null");
 		
 		Set<Airplane> airplanes=company.getAirplanes();
 		for(Airplane tmp: airplanes){

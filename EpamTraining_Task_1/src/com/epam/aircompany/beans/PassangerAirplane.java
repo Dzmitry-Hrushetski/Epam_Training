@@ -10,8 +10,6 @@ import com.epam.aircompany.exeptions.LogicalExeptions;
  *
  */
 public class PassangerAirplane extends Airplane {
-	private static final int MAX_BAGGAGE_PLACE=100;
-	private static final int MAX_BAGGAGE_WEIGHT=10_000;
 	private int economPlace;
 	private int businessPlace;
 	private int maxBaggagePlace;
@@ -27,13 +25,13 @@ public class PassangerAirplane extends Airplane {
 		super(modelName, boardNumber, flyingRange, capacityFuelTank,
 				maxLoadCapacity);
 		
-		if(maxBaggagePlace<=MAX_BAGGAGE_PLACE){
+		if(maxBaggagePlace<=ConstantsBean.MAX_BAGGAGE_PLACE){
 			this.maxBaggagePlace = maxBaggagePlace;
 		} else{
 			throw new LogicalExeptions("Incorrect maxBaggagePlace value");
 		}
 		
-		if(maxBaggageWeight<=MAX_BAGGAGE_WEIGHT){
+		if(maxBaggageWeight<=ConstantsBean.MAX_BAGGAGE_WEIGHT){
 			this.maxBaggageWeight = maxBaggageWeight;
 		} else{
 			throw new LogicalExeptions("Incorrect maxBaggageWeight value");

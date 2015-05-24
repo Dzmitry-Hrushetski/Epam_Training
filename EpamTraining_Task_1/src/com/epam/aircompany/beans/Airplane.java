@@ -11,13 +11,7 @@ import com.epam.aircompany.exeptions.LogicalExeptions;
  */
 public class Airplane implements Comparable<Airplane>{
 	private static final String AIRPLANE_STRING="Airplane %s, board number - %d, flying range %d";
-	private static final int MIN_BOARD_NUMBER=1;
-	private static final int MIN_FLYING_RANGE=100;
-	private static final int MIN_CAP_FUEL_TANK=1;
-	private static final int MIN_LOAD_CAPACITY=1;
-	private static final int MIN_FUEL_USAGE=10;
-	private static final int MAX_FUEL_USAGE=10_000;
-	private static final int DEFAULT_FUEL_USAGE=200;
+	
 	private AirplaneModelName modelName;
 	private int boardNumber;
 	private int flyingRange;
@@ -33,25 +27,25 @@ public class Airplane implements Comparable<Airplane>{
 		super();
 		this.modelName = modelName;
 		
-		if(MIN_BOARD_NUMBER<=boardNumber){
+		if(ConstantsBean.MIN_BOARD_NUMBER<=boardNumber){
 			this.boardNumber = boardNumber;
 		} else{
 			throw new LogicalExeptions("Incorrect boardNumber value");
 		}
 		
-		if(flyingRange>=MIN_FLYING_RANGE){
+		if(flyingRange>=ConstantsBean.MIN_FLYING_RANGE){
 			this.flyingRange = flyingRange;
 		} else{
 			throw new LogicalExeptions("Incorrect flyingRange value");
 		}
 		
-		if(capacityFuelTank>=MIN_CAP_FUEL_TANK){
+		if(capacityFuelTank>=ConstantsBean.MIN_CAP_FUEL_TANK){
 			this.capacityFuelTank = capacityFuelTank;
 		} else{
 			throw new LogicalExeptions("Incorrect capacityFuelTank value");
 		}
 		
-		if(maxLoadCapacity>=MIN_LOAD_CAPACITY){
+		if(maxLoadCapacity>=ConstantsBean.MIN_LOAD_CAPACITY){
 			this.maxLoadCapacity = maxLoadCapacity;
 		} else{
 			throw new LogicalExeptions("Incorrect maxLoadCapacity value");
@@ -64,10 +58,10 @@ public class Airplane implements Comparable<Airplane>{
 	}
 
 	public void setFuelUsage(int fuelUsage) {
-		if(MIN_FUEL_USAGE<=fuelUsage && fuelUsage<=MAX_FUEL_USAGE){
+		if(ConstantsBean.MIN_FUEL_USAGE<=fuelUsage && fuelUsage<=ConstantsBean.MAX_FUEL_USAGE){
 			this.fuelUsage = fuelUsage;
 		} else{
-			this.fuelUsage = DEFAULT_FUEL_USAGE;
+			this.fuelUsage = ConstantsBean.DEFAULT_FUEL_USAGE;
 		}
 	}	
 	
@@ -127,6 +121,11 @@ public class Airplane implements Comparable<Airplane>{
 	 */
 	@Override
 	public int compareTo(Airplane o) {
-		return flyingRange-o.flyingRange;
+		if(o==null){
+			return -1;
+		}else{
+			return flyingRange-o.flyingRange;
+		}
+		
 	}
 }
