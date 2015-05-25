@@ -1,9 +1,9 @@
 /**
  * 
  */
-package com.epam.aircompany.beans;
+package com.epam.aircompany.bean;
 
-import com.epam.aircompany.exeptions.LogicalExeptions;
+import com.epam.aircompany.exeption.LogicalExeption;
 
 /**
  * @author Dzmitry Hrushetski
@@ -20,7 +20,7 @@ public class PassangerAirplane extends Airplane {
 	
 	public PassangerAirplane(AirplaneModelName modelName, int boardNumber,
 			int flyingRange, int capacityFuelTank, int maxLoadCapacity,
-			int maxBaggagePlace, int maxBaggageWeight) throws LogicalExeptions {
+			int maxBaggagePlace, int maxBaggageWeight) throws LogicalExeption {
 		
 		super(modelName, boardNumber, flyingRange, capacityFuelTank,
 				maxLoadCapacity);
@@ -28,13 +28,13 @@ public class PassangerAirplane extends Airplane {
 		if(maxBaggagePlace<=ConstantsBean.MAX_BAGGAGE_PLACE){
 			this.maxBaggagePlace = maxBaggagePlace;
 		} else{
-			throw new LogicalExeptions("Incorrect maxBaggagePlace value");
+			throw new LogicalExeption("Incorrect maxBaggagePlace value");
 		}
 		
 		if(maxBaggageWeight<=ConstantsBean.MAX_BAGGAGE_WEIGHT){
 			this.maxBaggageWeight = maxBaggageWeight;
 		} else{
-			throw new LogicalExeptions("Incorrect maxBaggageWeight value");
+			throw new LogicalExeption("Incorrect maxBaggageWeight value");
 		}	
 	}
 	

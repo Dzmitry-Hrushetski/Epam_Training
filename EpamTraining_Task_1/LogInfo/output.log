@@ -8,3 +8,61 @@
 24.05.2015 17:12:40,139 INFO  runner.Runner - To count the total capacity and loading capacity
 24.05.2015 17:12:40,140 INFO  runner.Runner - Save data to file
 24.05.2015 17:12:40,144 INFO  runner.Runner - Job finish
+25.05.2015 02:55:10,869 INFO  runner.Runner - Create new air company
+25.05.2015 02:55:10,872 INFO  runner.Runner - Create airplanes in the company
+25.05.2015 02:55:10,872 INFO  creator.CompanyCreator - Create new PassangerAirplane
+25.05.2015 02:55:10,873 INFO  creator.CompanyCreator - Create new PassangerAirplane
+25.05.2015 02:55:10,873 INFO  creator.CompanyCreator - Create new TransportAirplane
+25.05.2015 02:55:10,873 INFO  creator.CompanyCreator - Create new TransportAirplane
+25.05.2015 02:55:10,873 ERROR creator.CompanyCreator - Incorrect boardNumber value
+25.05.2015 02:55:10,873 INFO  runner.Runner - To count the total capacity and loading capacity
+25.05.2015 02:55:10,874 INFO  runner.Runner - Save data to file
+25.05.2015 02:55:10,877 INFO  runner.Runner - Job finish
+25.05.2015 03:55:12,187 INFO  runner.Runner - Create new air company
+25.05.2015 03:55:12,190 INFO  runner.Runner - Create airplanes in the company
+25.05.2015 03:55:12,190 INFO  creator.CompanyCreator - Create new PassangerAirplane
+25.05.2015 03:55:12,190 INFO  creator.CompanyCreator - Create new PassangerAirplane
+25.05.2015 03:55:12,191 INFO  creator.CompanyCreator - Create new TransportAirplane
+25.05.2015 03:55:12,191 INFO  creator.CompanyCreator - Create new TransportAirplane
+25.05.2015 03:55:12,191 ERROR creator.CompanyCreator - Incorrect boardNumber value
+25.05.2015 03:55:12,191 INFO  runner.Runner - To count the total capacity and loading capacity
+25.05.2015 03:55:12,192 INFO  runner.Runner - Save data to file
+25.05.2015 03:55:12,195 INFO  runner.Runner - Job finish
+25.05.2015 04:01:26,612 INFO  runner.Runner - Create new air company
+25.05.2015 04:01:26,615 INFO  runner.Runner - Create airplanes in the company
+25.05.2015 04:01:26,615 INFO  creator.CompanyCreator - Create new PassangerAirplane
+25.05.2015 04:01:26,615 INFO  creator.CompanyCreator - Create new PassangerAirplane
+25.05.2015 04:01:26,615 INFO  creator.CompanyCreator - Create new TransportAirplane
+25.05.2015 04:01:26,615 INFO  creator.CompanyCreator - Create new TransportAirplane
+25.05.2015 04:01:26,615 ERROR creator.CompanyCreator - Incorrect boardNumber value
+25.05.2015 04:01:26,616 INFO  runner.Runner - To count the total capacity and loading capacity
+25.05.2015 04:01:26,616 INFO  runner.Runner - Save data to file
+25.05.2015 04:01:26,620 INFO  runner.Runner - Job finish
+25.05.2015 04:23:27,604 INFO  runner.Runner - Create new air company
+25.05.2015 04:23:27,607 INFO  runner.Runner - Create airplanes in the company
+25.05.2015 04:23:27,608 INFO  creator.CompanyCreator - Create new PassangerAirplane
+25.05.2015 04:23:27,608 INFO  creator.CompanyCreator - Create new PassangerAirplane
+25.05.2015 04:23:27,608 INFO  creator.CompanyCreator - Create new TransportAirplane
+25.05.2015 04:23:27,608 INFO  creator.CompanyCreator - Create new TransportAirplane
+25.05.2015 04:23:27,608 ERROR creator.CompanyCreator - Incorrect boardNumber value
+25.05.2015 04:23:27,608 INFO  runner.Runner - To count the total capacity and loading capacity
+25.05.2015 04:23:27,609 INFO  runner.Runner - Save data to file
+25.05.2015 04:23:27,612 INFO  runner.Runner - Job finish
+25.05.2015 04:24:39,752 INFO  runner.Runner - Create new air company
+25.05.2015 04:24:39,755 INFO  runner.Runner - Create airplanes in the company
+25.05.2015 04:24:39,756 INFO  creator.CompanyCreator - Create new PassangerAirplane
+25.05.2015 04:24:39,756 INFO  creator.CompanyCreator - Create new PassangerAirplane
+25.05.2015 04:24:39,756 INFO  creator.CompanyCreator - Create new TransportAirplane
+25.05.2015 04:24:39,756 INFO  creator.CompanyCreator - Create new TransportAirplane
+25.05.2015 04:24:39,756 INFO  runner.Runner - To count the total capacity and loading capacity
+25.05.2015 04:24:39,757 INFO  runner.Runner - Save data to file
+25.05.2015 04:24:39,761 INFO  runner.Runner - Job finish
+25.05.2015 04:26:30,257 INFO  runner.Runner - Create new air company
+25.05.2015 04:26:30,260 INFO  runner.Runner - Create airplanes in the company
+25.05.2015 04:26:30,261 INFO  creator.CompanyCreator - Create new PassangerAirplane
+25.05.2015 04:26:30,261 INFO  creator.CompanyCreator - Create new PassangerAirplane
+25.05.2015 04:26:30,261 INFO  creator.CompanyCreator - Create new TransportAirplane
+25.05.2015 04:26:30,261 INFO  creator.CompanyCreator - Create new TransportAirplane
+25.05.2015 04:26:30,261 INFO  runner.Runner - To count the total capacity and loading capacity
+25.05.2015 04:26:30,262 INFO  runner.Runner - Save data to file
+25.05.2015 04:26:30,265 INFO  runner.Runner - Job finish

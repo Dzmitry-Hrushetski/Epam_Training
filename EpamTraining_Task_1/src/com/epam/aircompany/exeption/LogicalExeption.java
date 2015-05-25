@@ -1,13 +1,13 @@
 /**
  * 
  */
-package com.epam.aircompany.exeptions;
+package com.epam.aircompany.exeption;
 
 /**
  * @author Dzmitry Hrushetski
  *
  */
-public class LogicalExeptions extends Exception {
+public class LogicalExeption extends Exception {
 
 	/**
 	 * 
@@ -17,7 +17,7 @@ public class LogicalExeptions extends Exception {
 	/**
 	 * 
 	 */
-	public LogicalExeptions() {
+	public LogicalExeption() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -28,7 +28,7 @@ public class LogicalExeptions extends Exception {
 	 * @param enableSuppression
 	 * @param writableStackTrace
 	 */
-	public LogicalExeptions(String message, Throwable cause,
+	public LogicalExeption(String message, Throwable cause,
 			boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 		// TODO Auto-generated constructor stub
@@ -38,7 +38,7 @@ public class LogicalExeptions extends Exception {
 	 * @param message
 	 * @param cause
 	 */
-	public LogicalExeptions(String message, Throwable cause) {
+	public LogicalExeption(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}
@@ -46,7 +46,7 @@ public class LogicalExeptions extends Exception {
 	/**
 	 * @param message
 	 */
-	public LogicalExeptions(String message) {
+	public LogicalExeption(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
@@ -54,7 +54,7 @@ public class LogicalExeptions extends Exception {
 	/**
 	 * @param cause
 	 */
-	public LogicalExeptions(Throwable cause) {
+	public LogicalExeption(Throwable cause) {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}

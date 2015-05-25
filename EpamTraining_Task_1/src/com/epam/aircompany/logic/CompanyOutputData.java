@@ -10,7 +10,7 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 
-import com.epam.aircompany.beans.Airplane;
+import com.epam.aircompany.bean.Airplane;
 
 /**
  * @author Dzmitry Hrushetski
@@ -18,12 +18,13 @@ import com.epam.aircompany.beans.Airplane;
  */
 public class CompanyOutputData {
 	
-	public static Logger LOG = Logger.getLogger(CompanyOutputData.class);
+	public static final Logger LOG = Logger.getLogger(CompanyOutputData.class);
 	
 	private static final String OUTPUT_STRING_1="Total passanger place - %d and cargo weight - %d\n";
 	private static final String OUTPUT_STRING_2="The list of airplanes sorted by flying range:\n";
+	private static final String OUTPUT_STRING_3="The list of airplanes fuelUsage:\n";
 	
-	public static void saveFile(String fileName, int totalPlace, int totalCargo, Set<Airplane> airplanes){
+	public static void saveFile(String fileName, int totalPlace, int totalCargo, Set<Airplane> airplanes, Set<Airplane> findAirplanes){
 		
 		BufferedWriter output = null;
 		
@@ -41,14 +42,20 @@ public class CompanyOutputData {
 	    	  for(Airplane tmp: airplanes){
 	    		  output.write(tmp.toString());
 	    		  output.write("\n");
-	    	  }   	
+	    	  }
+	    	  
+	    	  output.write(OUTPUT_STRING_3);
+	    	  for(Airplane tmp: findAirplanes){
+	    		  output.write(tmp.toString());
+	    		  output.write("\n");
+	    	  }
 	    } catch (IOException e) {
 	    	LOG.error(e.getMessage());
-	       return;
-	       
 	    } finally{
 	    	try {
-				output.close();
+				if(output!=null){
+					output.close();
+				}
 			} catch (IOException e) {
 				LOG.error(e.getMessage());
 			}  	

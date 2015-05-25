@@ -1,9 +1,9 @@
 /**
  * 
  */
-package com.epam.aircompany.beans;
+package com.epam.aircompany.bean;
 
-import com.epam.aircompany.exeptions.LogicalExeptions;
+import com.epam.aircompany.exeption.LogicalExeption;
 
 /**
  * @author Dzmitry Hrushetski
@@ -22,7 +22,7 @@ public class Airplane implements Comparable<Airplane>{
 	
 	
 	public Airplane(AirplaneModelName modelName, int boardNumber,
-			int flyingRange, int capacityFuelTank, int maxLoadCapacity) throws LogicalExeptions {
+			int flyingRange, int capacityFuelTank, int maxLoadCapacity) throws LogicalExeption {
 		
 		super();
 		this.modelName = modelName;
@@ -30,25 +30,25 @@ public class Airplane implements Comparable<Airplane>{
 		if(ConstantsBean.MIN_BOARD_NUMBER<=boardNumber){
 			this.boardNumber = boardNumber;
 		} else{
-			throw new LogicalExeptions("Incorrect boardNumber value");
+			throw new LogicalExeption("Incorrect boardNumber value");
 		}
 		
 		if(flyingRange>=ConstantsBean.MIN_FLYING_RANGE){
 			this.flyingRange = flyingRange;
 		} else{
-			throw new LogicalExeptions("Incorrect flyingRange value");
+			throw new LogicalExeption("Incorrect flyingRange value");
 		}
 		
 		if(capacityFuelTank>=ConstantsBean.MIN_CAP_FUEL_TANK){
 			this.capacityFuelTank = capacityFuelTank;
 		} else{
-			throw new LogicalExeptions("Incorrect capacityFuelTank value");
+			throw new LogicalExeption("Incorrect capacityFuelTank value");
 		}
 		
 		if(maxLoadCapacity>=ConstantsBean.MIN_LOAD_CAPACITY){
 			this.maxLoadCapacity = maxLoadCapacity;
 		} else{
-			throw new LogicalExeptions("Incorrect maxLoadCapacity value");
+			throw new LogicalExeption("Incorrect maxLoadCapacity value");
 		}		
 	}
 	

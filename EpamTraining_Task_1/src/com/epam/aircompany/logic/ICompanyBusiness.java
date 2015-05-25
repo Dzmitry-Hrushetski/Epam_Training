@@ -3,8 +3,11 @@
  */
 package com.epam.aircompany.logic;
 
-import com.epam.aircompany.beans.AirCompany;
-import com.epam.aircompany.exeptions.BusinessExeptions;
+import java.util.Set;
+
+import com.epam.aircompany.bean.AirCompany;
+import com.epam.aircompany.bean.Airplane;
+import com.epam.aircompany.exeption.BusinessExeption;
 
 /**
  * @author Dzmitry Hrushetski
@@ -12,9 +15,10 @@ import com.epam.aircompany.exeptions.BusinessExeptions;
  */
 public interface ICompanyBusiness {
 	
-	public int getTotalPassangerPlace(AirCompany company) throws BusinessExeptions;
-	public int getTotalTransportCargoWeight(AirCompany company) throws BusinessExeptions;
-	public int getTotalPassangerCargoWeight(AirCompany company) throws BusinessExeptions;
+	public int getTotalPassangerPlace(AirCompany company) throws BusinessExeption;
+	public int getTotalTransportCargoWeight(AirCompany company) throws BusinessExeption;
+	public int getTotalPassangerCargoWeight(AirCompany company) throws BusinessExeption;
+	public Set<Airplane> findAirplaneFuelUsageRange(AirCompany company, int minFuelUsage, int maxFuelUsage) throws BusinessExeption;
 	
 	/*public int getMaxPassangerPlace(AirCompany company);
 	public int getMaxTransportCargoWeight(AirCompany company);

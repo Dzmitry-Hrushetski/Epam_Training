@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.epam.aircompany.beans;
+package com.epam.aircompany.bean;
 
 /**
  * @author Dzmitry Hrushetski

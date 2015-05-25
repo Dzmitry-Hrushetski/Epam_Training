@@ -4,13 +4,13 @@
 package com.epam.aircompany.logic;
 
 import java.util.Set;
+import java.util.TreeSet;
 
-import com.epam.aircompany.beans.AirCompany;
-import com.epam.aircompany.beans.Airplane;
-import com.epam.aircompany.beans.PassangerAirplane;
-import com.epam.aircompany.beans.TransportAirplane;
-import com.epam.aircompany.exeptions.BusinessExeptions;
-import com.epam.aircompany.exeptions.LogicalExeptions;
+import com.epam.aircompany.bean.AirCompany;
+import com.epam.aircompany.bean.Airplane;
+import com.epam.aircompany.bean.PassangerAirplane;
+import com.epam.aircompany.bean.TransportAirplane;
+import com.epam.aircompany.exeption.BusinessExeption;
 
 
 /**
@@ -24,10 +24,12 @@ public class CompanyBusiness implements ICompanyBusiness{
 	 * @see com.epam.aircompany.logic.ICompanyBusiness#getTotalPassangerPlace(com.epam.aircompany.beans.AirCompany)
 	 */
 	@Override
-	public int getTotalPassangerPlace(AirCompany company) throws BusinessExeptions {
+	public int getTotalPassangerPlace(AirCompany company) throws BusinessExeption {
 		int totalPlace=0;
 		
-		if(company==null) throw new BusinessExeptions("company is null");
+		if(company==null){
+			throw new BusinessExeption("company is null");
+		}
 		
 		Set<Airplane> airplanes=company.getAirplanes();
 		for(Airplane tmp: airplanes){
@@ -42,10 +44,12 @@ public class CompanyBusiness implements ICompanyBusiness{
 	 * @see com.epam.aircompany.logic.ICompanyBusiness#getTotalTransportCargoWeight(com.epam.aircompany.beans.AirCompany)
 	 */
 	@Override
-	public int getTotalTransportCargoWeight(AirCompany company) throws BusinessExeptions {
+	public int getTotalTransportCargoWeight(AirCompany company) throws BusinessExeption {
 		int totalCargoWeigh=0;
 		
-		if(company==null) throw new BusinessExeptions("company is null");
+		if(company==null){
+			throw new BusinessExeption("company is null");
+		}
 		
 		Set<Airplane> airplanes=company.getAirplanes();
 		for(Airplane tmp: airplanes){
@@ -61,10 +65,12 @@ public class CompanyBusiness implements ICompanyBusiness{
 	 * @see com.epam.aircompany.logic.ICompanyBusiness#getTotalPassangerCargoWeight(com.epam.aircompany.beans.AirCompany)
 	 */
 	@Override
-	public int getTotalPassangerCargoWeight(AirCompany company) throws BusinessExeptions {
+	public int getTotalPassangerCargoWeight(AirCompany company) throws BusinessExeption {
 		int totalCargoWeigh=0;
 		
-		if(company==null) throw new BusinessExeptions("company is null");
+		if(company==null){
+			throw new BusinessExeption("company is null");
+		}
 		
 		Set<Airplane> airplanes=company.getAirplanes();
 		for(Airplane tmp: airplanes){
@@ -74,5 +80,38 @@ public class CompanyBusiness implements ICompanyBusiness{
 		}
 		
 		return totalCargoWeigh;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.logic.ICompanyBusiness#findAirplaneFuelUsageRange(com.epam.aircompany.beans.AirCompany, int, int)
+	 */
+	@Override
+	public Set<Airplane> findAirplaneFuelUsageRange(AirCompany company, int minFuelUsage,
+			int maxFuelUsage) throws BusinessExeption {
+		
+		if(company==null){
+			throw new BusinessExeption("company is null");
+		}
+		if(minFuelUsage<=0 || maxFuelUsage<=0 || maxFuelUsage<minFuelUsage){
+			throw new BusinessExeption("minFuelUsage and maxFuelUsage is wrong");
+		}
+		
+		Set<Airplane> findAirplanes = new TreeSet<Airplane>();
+		
+		Set<Airplane> airplanes=company.getAirplanes();
+		
+		for(Airplane tmp: airplanes){
+			if(minFuelUsage<=tmp.getFuelUsage() && tmp.getFuelUsage()<=maxFuelUsage){
+				findAirplanes.add(tmp);
+			}
+		}
+		
+		//// Что лучше возвращать?????????????
+		if(findAirplanes.isEmpty()){
+			return null;
+		}
+		else{
+			return findAirplanes;
+		}
 	}
 }

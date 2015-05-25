@@ -6,12 +6,12 @@ package com.epam.aircompany.creator;
 
 import org.apache.log4j.Logger;
 
-import com.epam.aircompany.beans.AirCompany;
-import com.epam.aircompany.beans.Airplane;
-import com.epam.aircompany.beans.AirplaneModelName;
-import com.epam.aircompany.beans.PassangerAirplane;
-import com.epam.aircompany.beans.TransportAirplane;
-import com.epam.aircompany.exeptions.LogicalExeptions;
+import com.epam.aircompany.bean.AirCompany;
+import com.epam.aircompany.bean.Airplane;
+import com.epam.aircompany.bean.AirplaneModelName;
+import com.epam.aircompany.bean.PassangerAirplane;
+import com.epam.aircompany.bean.TransportAirplane;
+import com.epam.aircompany.exeption.LogicalExeption;
 
 /**
  * @author Dzmitry Hrushetski
@@ -19,7 +19,7 @@ import com.epam.aircompany.exeptions.LogicalExeptions;
  */
 public class CompanyCreator {
 	
-	public static Logger LOG = Logger.getLogger(CompanyCreator.class);
+	public static final Logger LOG = Logger.getLogger(CompanyCreator.class);
 	
 	private AirCompany company;
 	
@@ -29,7 +29,7 @@ public class CompanyCreator {
 		super();
 		try {
 			company = new AirCompany (companyName);
-		} catch (LogicalExeptions e) {
+		} catch (LogicalExeption e) {
 			LOG.error(e.getMessage());
 			e.printStackTrace();
 		}
@@ -48,7 +48,7 @@ public class CompanyCreator {
 			company.add(airplane);
 			LOG.info("Create new PassangerAirplane");
 			
-		} catch (LogicalExeptions e) {
+		} catch (LogicalExeption e) {
 			LOG.error(e.getMessage());
 		}
 		
@@ -60,7 +60,7 @@ public class CompanyCreator {
 			company.add(airplane);
 			LOG.info("Create new PassangerAirplane");
 			
-		} catch (LogicalExeptions e) {
+		} catch (LogicalExeption e) {
 			LOG.error(e.getMessage());
 		}
 		
@@ -69,7 +69,7 @@ public class CompanyCreator {
 			airplane.setFuelUsage(25);
 			company.add(airplane);
 			LOG.info("Create new TransportAirplane");
-		} catch (LogicalExeptions e) {
+		} catch (LogicalExeption e) {
 			LOG.error(e.getMessage());
 		}
 		
@@ -78,18 +78,9 @@ public class CompanyCreator {
 			airplane.setFuelUsage(27);
 			company.add(airplane);
 			LOG.info("Create new TransportAirplane");
-		} catch (LogicalExeptions e) {
+		} catch (LogicalExeption e) {
 			LOG.error(e.getMessage());
 		}	
-		
-		try {	
-			airplane = new TransportAirplane(AirplaneModelName.AN_26D, 0, 420, 60, 16, 25, 6, 2, 2, 2, 2);
-			airplane.setFuelUsage(27);
-			company.add(airplane);
-			LOG.info("Test Exeption"); // This log message not logged	
-		} catch (LogicalExeptions e) {
-			LOG.error(e.getMessage());
-		}
 	}
 
 	public AirCompany getCompany() {
