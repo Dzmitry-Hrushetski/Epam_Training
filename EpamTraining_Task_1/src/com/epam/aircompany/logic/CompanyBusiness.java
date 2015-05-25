@@ -24,7 +24,7 @@ public class CompanyBusiness implements ICompanyBusiness{
 	 * @see com.epam.aircompany.logic.ICompanyBusiness#getTotalPassangerPlace(com.epam.aircompany.beans.AirCompany)
 	 */
 	@Override
-	public int getTotalPassangerPlace(AirCompany company) throws BusinessExeption {
+	public int calculateTotalPassangerPlace(AirCompany company) throws BusinessExeption {
 		int totalPlace=0;
 		
 		if(company==null){
@@ -44,7 +44,7 @@ public class CompanyBusiness implements ICompanyBusiness{
 	 * @see com.epam.aircompany.logic.ICompanyBusiness#getTotalTransportCargoWeight(com.epam.aircompany.beans.AirCompany)
 	 */
 	@Override
-	public int getTotalTransportCargoWeight(AirCompany company) throws BusinessExeption {
+	public int calculateTotalTransportCargoWeight(AirCompany company) throws BusinessExeption {
 		int totalCargoWeigh=0;
 		
 		if(company==null){
@@ -65,7 +65,7 @@ public class CompanyBusiness implements ICompanyBusiness{
 	 * @see com.epam.aircompany.logic.ICompanyBusiness#getTotalPassangerCargoWeight(com.epam.aircompany.beans.AirCompany)
 	 */
 	@Override
-	public int getTotalPassangerCargoWeight(AirCompany company) throws BusinessExeption {
+	public int calculateTotalPassangerCargoWeight(AirCompany company) throws BusinessExeption {
 		int totalCargoWeigh=0;
 		
 		if(company==null){
@@ -106,12 +106,14 @@ public class CompanyBusiness implements ICompanyBusiness{
 			}
 		}
 		
+		
+		return findAirplanes;
 		//// Что лучше возвращать?????????????
-		if(findAirplanes.isEmpty()){
+		/*if(findAirplanes.isEmpty()){
 			return null;
 		}
 		else{
 			return findAirplanes;
-		}
+		}*/
 	}
 }

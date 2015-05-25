@@ -3,9 +3,12 @@
  */
 package com.epam.aircompany.runner;
 
+import java.util.Set;
+
 import org.apache.log4j.Logger;
 
 import com.epam.aircompany.bean.AirCompany;
+import com.epam.aircompany.bean.Airplane;
 import com.epam.aircompany.creator.CompanyCreator;
 import com.epam.aircompany.exeption.BusinessExeption;
 import com.epam.aircompany.logic.CompanyBusiness;
@@ -22,35 +25,33 @@ public class Runner {
 	public static final Logger LOG = Logger.getLogger(Runner.class);
 	
 	private static final String COMPANY_NAME="TransExpress";
-	
+	private static final int MIN_FUEL_USAGE=14;
+	private static final int MAX_FUEL_USAGE=25;
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-				
-		LOG.info("Create new air company");
-		CompanyCreator creator = new CompanyCreator(COMPANY_NAME);
-					
-		LOG.info("Create airplanes in the company");
-		creator.generateHardCoreCompanyPark();
+		LOG.info("Create company and airplanes in the company");
+		AirCompany company=CompanyCreator.generateHardCoreCompany(COMPANY_NAME);
 		
-		LOG.info("To count the total capacity and loading capacity");
-		AirCompany company=creator.getCompany();
+		LOG.info("To count the total capacity and loading capacity, search of the plane in fuel consumption.");
 		ICompanyBusiness companyBusiness=new CompanyBusiness();
 				
 		int totalPlace=0;
 		int totalCargo=0;
+		Set<Airplane> findAirplanes=null;
 		
 		try {
-			totalPlace = companyBusiness.getTotalPassangerPlace(company);
-			totalCargo = companyBusiness.getTotalPassangerCargoWeight(company);
-			totalCargo+=companyBusiness.getTotalTransportCargoWeight(company);
+			totalPlace = companyBusiness.calculateTotalPassangerPlace(company);
+			totalCargo = companyBusiness.calculateTotalPassangerCargoWeight(company);
+			totalCargo+=companyBusiness.calculateTotalTransportCargoWeight(company);
+			findAirplanes=companyBusiness.findAirplaneFuelUsageRange(company,MIN_FUEL_USAGE,MAX_FUEL_USAGE);
 		} catch (BusinessExeption e) {
 			LOG.error(e.getMessage());
 		}
 		
 		LOG.info("Save data to file");
-		CompanyOutputData.saveFile("result.txt", totalPlace, totalCargo, company.getAirplanes());
+		CompanyOutputData.saveFile("result.txt", totalPlace, totalCargo, company.getAirplanes(),findAirplanes);
 		
 		LOG.info("Job finish");
 		

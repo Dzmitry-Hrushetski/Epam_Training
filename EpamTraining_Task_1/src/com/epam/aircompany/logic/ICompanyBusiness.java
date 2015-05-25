@@ -15,9 +15,9 @@ import com.epam.aircompany.exeption.BusinessExeption;
  */
 public interface ICompanyBusiness {
 	
-	public int getTotalPassangerPlace(AirCompany company) throws BusinessExeption;
-	public int getTotalTransportCargoWeight(AirCompany company) throws BusinessExeption;
-	public int getTotalPassangerCargoWeight(AirCompany company) throws BusinessExeption;
+	public int calculateTotalPassangerPlace(AirCompany company) throws BusinessExeption;
+	public int calculateTotalTransportCargoWeight(AirCompany company) throws BusinessExeption;
+	public int calculateTotalPassangerCargoWeight(AirCompany company) throws BusinessExeption;
 	public Set<Airplane> findAirplaneFuelUsageRange(AirCompany company, int minFuelUsage, int maxFuelUsage) throws BusinessExeption;
 	
 	/*public int getMaxPassangerPlace(AirCompany company);

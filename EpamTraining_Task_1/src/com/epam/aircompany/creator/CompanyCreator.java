@@ -21,24 +21,18 @@ public class CompanyCreator {
 	
 	public static final Logger LOG = Logger.getLogger(CompanyCreator.class);
 	
-	private AirCompany company;
-	
-	
-	
-	public CompanyCreator(String companyName) {
-		super();
+		
+	public static AirCompany generateHardCoreCompany(String companyName){
+		
+		Airplane airplane=null;
+		
+		AirCompany company=null;
 		try {
 			company = new AirCompany (companyName);
 		} catch (LogicalExeption e) {
 			LOG.error(e.getMessage());
 			e.printStackTrace();
 		}
-	}
-	
-	
-	public void generateHardCoreCompanyPark(){
-		
-		Airplane airplane=null;
 		
 		try {
 			airplane = new PassangerAirplane(AirplaneModelName.BOING_737, 10, 200, 10, 15, 20, 6);
@@ -81,9 +75,7 @@ public class CompanyCreator {
 		} catch (LogicalExeption e) {
 			LOG.error(e.getMessage());
 		}	
-	}
-
-	public AirCompany getCompany() {
+		
 		return company;
 	}
 }
