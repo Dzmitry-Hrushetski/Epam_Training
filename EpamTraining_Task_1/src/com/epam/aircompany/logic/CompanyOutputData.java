@@ -17,17 +17,14 @@ import com.epam.aircompany.bean.Airplane;
  *
  */
 public class CompanyOutputData {
-	
 	public static final Logger LOG = Logger.getLogger(CompanyOutputData.class);
-	
-	private static final String OUTPUT_STRING_1="Total passanger place - %d and cargo weight - %d\n\n";
-	private static final String OUTPUT_STRING_2="The list of airplanes sorted by flying range:\n";
-	private static final String OUTPUT_STRING_3="The list of airplanes fuelUsage:\n";
-	private static final String OUTPUT_STRING_4="Airplanes not found\n";
-	private static final String OUTPUT_STRING_5="\n";
+	private static final String MESSAGE_1="Total passanger place - %d and cargo weight - %d\n\n";
+	private static final String MESSAGE_2="The list of airplanes sorted by flying range:\n";
+	private static final String MESSAGE_3="The list of airplanes fuelUsage:\n";
+	private static final String MESSAGE_4="Airplanes not found\n";
+	private static final String NEW_LINE="\n";
 	
 	public static void saveFile(String fileName, int totalPlace, int totalCargo, Set<Airplane> airplanes, Set<Airplane> findAirplanes){
-		
 		BufferedWriter output = null;
 		
 		try {
@@ -38,28 +35,27 @@ public class CompanyOutputData {
 	    }
 	    	    
 	    try {
-	    	
-	    	  output.write(String.format(OUTPUT_STRING_1, totalPlace, totalCargo));
-	    	  output.write(OUTPUT_STRING_2);	    	
+	       	  output.write(String.format(MESSAGE_1, totalPlace, totalCargo));
+	    	  output.write(MESSAGE_2);	    	
 	    	  for(Airplane tmp: airplanes){
 	    		  output.write(tmp.toString());
-	    		  output.write(OUTPUT_STRING_5);
+	    		  output.write(NEW_LINE);
 	    	  }
 	    	  
-	    	  output.write(OUTPUT_STRING_5);
+	    	  output.write(NEW_LINE);
 	    	  	    	  
 	    	  if(findAirplanes.isEmpty()){
-	    		  output.write(OUTPUT_STRING_4);
-	    	  }else{
-	    		  output.write(OUTPUT_STRING_3);
+	    		  output.write(MESSAGE_4);
+	    	  }else {
+	    		  output.write(MESSAGE_3);
 	    		  for(Airplane tmp: findAirplanes){
 		    		  output.write(tmp.toString());
-		    		  output.write("\n");
+		    		  output.write(NEW_LINE);
 		    	  }
 	    	  }
 	    } catch (IOException e) {
 	    	LOG.error(e.getMessage());
-	    } finally{
+	    } finally {
 	    	try {
 				if(output!=null){
 					output.close();

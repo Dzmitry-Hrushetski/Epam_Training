@@ -15,9 +15,7 @@ public final class ConstantsBean {
 	public static final int MIN_FUEL_USAGE=10;
 	public static final int MAX_FUEL_USAGE=10_000;
 	public static final int DEFAULT_FUEL_USAGE=200;
-	
 	public static final int MAX_BAGGAGE_PLACE=100;
 	public static final int MAX_BAGGAGE_WEIGHT=10_000;
-	
 	public static final int MIN_CARGO_VALUE=1;
 }

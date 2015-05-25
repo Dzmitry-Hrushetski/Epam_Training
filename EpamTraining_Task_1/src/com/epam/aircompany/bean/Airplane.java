@@ -10,16 +10,13 @@ import com.epam.aircompany.exeption.LogicalExeption;
  *
  */
 public class Airplane implements Comparable<Airplane>{
-	private static final String AIRPLANE_STRING="Airplane %s, board number - %d, flying range %d";
-	
+	private static final String TO_STRING_MESSAGE="Airplane %s, board number - %d, flying range %d";
 	private AirplaneModelName modelName;
 	private int boardNumber;
 	private int flyingRange;
 	private int capacityFuelTank;
 	private int fuelUsage;
 	private int maxLoadCapacity;
-
-	
 	
 	public Airplane(AirplaneModelName modelName, int boardNumber,
 			int flyingRange, int capacityFuelTank, int maxLoadCapacity) throws LogicalExeption {
@@ -29,29 +26,28 @@ public class Airplane implements Comparable<Airplane>{
 		
 		if(ConstantsBean.MIN_BOARD_NUMBER<=boardNumber){
 			this.boardNumber = boardNumber;
-		} else{
+		} else {
 			throw new LogicalExeption("Incorrect boardNumber value");
 		}
 		
 		if(flyingRange>=ConstantsBean.MIN_FLYING_RANGE){
 			this.flyingRange = flyingRange;
-		} else{
+		} else {
 			throw new LogicalExeption("Incorrect flyingRange value");
 		}
 		
 		if(capacityFuelTank>=ConstantsBean.MIN_CAP_FUEL_TANK){
 			this.capacityFuelTank = capacityFuelTank;
-		} else{
+		} else {
 			throw new LogicalExeption("Incorrect capacityFuelTank value");
 		}
 		
 		if(maxLoadCapacity>=ConstantsBean.MIN_LOAD_CAPACITY){
 			this.maxLoadCapacity = maxLoadCapacity;
-		} else{
+		} else {
 			throw new LogicalExeption("Incorrect maxLoadCapacity value");
 		}		
 	}
-	
 	
 	public int getFuelUsage() {
 		return fuelUsage;
@@ -60,12 +56,10 @@ public class Airplane implements Comparable<Airplane>{
 	public void setFuelUsage(int fuelUsage) {
 		if(ConstantsBean.MIN_FUEL_USAGE<=fuelUsage && fuelUsage<=ConstantsBean.MAX_FUEL_USAGE){
 			this.fuelUsage = fuelUsage;
-		} else{
+		} else {
 			this.fuelUsage = ConstantsBean.DEFAULT_FUEL_USAGE;
 		}
 	}	
-	
-		
 	
 	public AirplaneModelName getModelName() {
 		return modelName;
@@ -87,11 +81,9 @@ public class Airplane implements Comparable<Airplane>{
 		return maxLoadCapacity;
 	}
 
-	
-
 	@Override
 	public String toString() {
-		return String.format(AIRPLANE_STRING, modelName, boardNumber, flyingRange);
+		return String.format(TO_STRING_MESSAGE, modelName, boardNumber, flyingRange);
 	}
 	
 	@Override
@@ -104,15 +96,19 @@ public class Airplane implements Comparable<Airplane>{
 	
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj){
 			return true;
-		if (obj == null)
+		}
+		if (obj == null){
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()){
 			return false;
+		}
 		Airplane other = (Airplane) obj;
-		if (boardNumber != other.boardNumber)
+		if (boardNumber != other.boardNumber){
 			return false;
+		}
 		return true;
 	}
 
@@ -123,9 +119,8 @@ public class Airplane implements Comparable<Airplane>{
 	public int compareTo(Airplane o) {
 		if(o==null){
 			return -1;
-		}else{
+		}else {
 			return flyingRange-o.flyingRange;
-		}
-		
+		}	
 	}
 }

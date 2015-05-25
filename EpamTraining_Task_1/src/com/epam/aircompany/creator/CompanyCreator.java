@@ -18,14 +18,10 @@ import com.epam.aircompany.exeption.LogicalExeption;
  *
  */
 public class CompanyCreator {
-	
 	public static final Logger LOG = Logger.getLogger(CompanyCreator.class);
-	
 		
 	public static AirCompany generateHardCoreCompany(String companyName){
-		
 		Airplane airplane=null;
-		
 		AirCompany company=null;
 		try {
 			company = new AirCompany (companyName);

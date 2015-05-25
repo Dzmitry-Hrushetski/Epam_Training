@@ -18,7 +18,6 @@ public class TransportAirplane extends Airplane{
 	private int cargoHatchWidth;
 	private int cargoHatchHeight;
 	
-	
 	public TransportAirplane(AirplaneModelName modelName, int boardNumber,
 			int flyingRange, int capacityFuelTank, int maxLoadCapacity,
 			int cargoLong, int cargoWidth, int cargoHeight, int maxCargoWeight,
@@ -29,43 +28,41 @@ public class TransportAirplane extends Airplane{
 		
 		if(cargoLong>=ConstantsBean.MIN_CARGO_VALUE){
 			this.cargoLong = cargoLong;
-		} else{
+		} else {
 			throw new LogicalExeption("Incorrect cargoLong value");
 		}
 		
 		if(cargoWidth>=ConstantsBean.MIN_CARGO_VALUE){
 			this.cargoWidth = cargoWidth;
-		} else{
+		} else {
 			throw new LogicalExeption("Incorrect cargoWidth value");
 		}
 		
 		if(cargoHeight>=ConstantsBean.MIN_CARGO_VALUE){
 			this.cargoHeight = cargoHeight;
-		} else{
+		} else {
 			throw new LogicalExeption("Incorrect cargoHeight value");
 		}
 		
 		if(maxCargoWeight>=ConstantsBean.MIN_CARGO_VALUE){
 			this.maxCargoWeight = maxCargoWeight;
-		} else{
+		} else {
 			throw new LogicalExeption("Incorrect maxCargoWeight value");
 		}
 		
 		if(cargoHatchWidth>=ConstantsBean.MIN_CARGO_VALUE){
 			this.cargoHatchWidth = cargoHatchWidth;
-		} else{
+		} else {
 			throw new LogicalExeption("Incorrect cargoHatchWidth value");
 		}
 		
 		if(cargoHatchHeight>=ConstantsBean.MIN_CARGO_VALUE){
 			this.cargoHatchHeight = cargoHatchHeight;
-		} else{
+		} else {
 			throw new LogicalExeption("Incorrect cargoHatchHeighth value");
 		}
 	}
-	
-	
-	
+		
 	public int getCurCargoWeight() {
 		return curCargoWeight;
 	}
@@ -74,7 +71,7 @@ public class TransportAirplane extends Airplane{
 		
 		if(curCargoWeight>=ConstantsBean.MIN_CARGO_VALUE){
 			this.curCargoWeight = curCargoWeight;
-		} else{
+		} else {
 			throw new LogicalExeption("Incorrect curCargoWeight value");
 		}	
 	}

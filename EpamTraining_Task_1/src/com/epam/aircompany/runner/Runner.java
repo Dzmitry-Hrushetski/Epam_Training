@@ -21,9 +21,7 @@ import com.epam.aircompany.logic.ICompanyBusiness;
  *
  */
 public class Runner {
-
 	public static final Logger LOG = Logger.getLogger(Runner.class);
-	
 	private static final String COMPANY_NAME="TransExpress";
 	private static final int MIN_FUEL_USAGE=14;
 	private static final int MAX_FUEL_USAGE=25;
@@ -53,8 +51,6 @@ public class Runner {
 		LOG.info("Save data to file");
 		CompanyOutputData.saveFile("result.txt", totalPlace, totalCargo, company.getAirplanes(),findAirplanes);
 		
-		LOG.info("Job finish");
-		
+		LOG.info("Job finish");	
 	}
-
 }

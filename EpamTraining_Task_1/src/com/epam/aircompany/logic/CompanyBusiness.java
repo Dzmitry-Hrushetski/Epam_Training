@@ -28,7 +28,7 @@ public class CompanyBusiness implements ICompanyBusiness{
 		int totalPlace=0;
 		
 		if(company==null){
-			throw new BusinessExeption("company is null");
+			throw new BusinessExeption("company instance is null");
 		}
 		
 		Set<Airplane> airplanes=company.getAirplanes();
@@ -48,7 +48,7 @@ public class CompanyBusiness implements ICompanyBusiness{
 		int totalCargoWeigh=0;
 		
 		if(company==null){
-			throw new BusinessExeption("company is null");
+			throw new BusinessExeption("company instance is null");
 		}
 		
 		Set<Airplane> airplanes=company.getAirplanes();
@@ -69,7 +69,7 @@ public class CompanyBusiness implements ICompanyBusiness{
 		int totalCargoWeigh=0;
 		
 		if(company==null){
-			throw new BusinessExeption("company is null");
+			throw new BusinessExeption("company instance is null");
 		}
 		
 		Set<Airplane> airplanes=company.getAirplanes();
@@ -90,14 +90,14 @@ public class CompanyBusiness implements ICompanyBusiness{
 			int maxFuelUsage) throws BusinessExeption {
 		
 		if(company==null){
-			throw new BusinessExeption("company is null");
+			throw new BusinessExeption("company instance is null");
 		}
+		
 		if(minFuelUsage<=0 || maxFuelUsage<=0 || maxFuelUsage<minFuelUsage){
 			throw new BusinessExeption("minFuelUsage and maxFuelUsage is wrong");
 		}
 		
 		Set<Airplane> findAirplanes = new TreeSet<Airplane>();
-		
 		Set<Airplane> airplanes=company.getAirplanes();
 		
 		for(Airplane tmp: airplanes){
@@ -105,15 +105,7 @@ public class CompanyBusiness implements ICompanyBusiness{
 				findAirplanes.add(tmp);
 			}
 		}
-		
-		
+			
 		return findAirplanes;
-		//// Что лучше возвращать?????????????
-		/*if(findAirplanes.isEmpty()){
-			return null;
-		}
-		else{
-			return findAirplanes;
-		}*/
 	}
 }

@@ -17,7 +17,6 @@ public class PassangerAirplane extends Airplane {
 	private int curBaggagePlace;
 	private int curBaggageWeight;
 	
-	
 	public PassangerAirplane(AirplaneModelName modelName, int boardNumber,
 			int flyingRange, int capacityFuelTank, int maxLoadCapacity,
 			int maxBaggagePlace, int maxBaggageWeight) throws LogicalExeption {
@@ -27,71 +26,52 @@ public class PassangerAirplane extends Airplane {
 		
 		if(maxBaggagePlace<=ConstantsBean.MAX_BAGGAGE_PLACE){
 			this.maxBaggagePlace = maxBaggagePlace;
-		} else{
+		} else {
 			throw new LogicalExeption("Incorrect maxBaggagePlace value");
 		}
 		
 		if(maxBaggageWeight<=ConstantsBean.MAX_BAGGAGE_WEIGHT){
 			this.maxBaggageWeight = maxBaggageWeight;
-		} else{
+		} else {
 			throw new LogicalExeption("Incorrect maxBaggageWeight value");
 		}	
 	}
-	
 	
 	public int getEconomPlace() {
 		return economPlace;
 	}
 
-
-
 	public void setEconomPlace(int economPlace) {
 		this.economPlace = economPlace;
 	}
-
-
 
 	public int getBusinessPlace() {
 		return businessPlace;
 	}
 
-
-
 	public void setBusinessPlace(int businessPlace) {
 		this.businessPlace = businessPlace;
 	}
-
-
 
 	public int getCurBaggagePlace() {
 		return curBaggagePlace;
 	}
 
-
-
 	public void setCurBaggagePlace(int curBaggagePlace) {
 		this.curBaggagePlace = curBaggagePlace;
 	}
-
-
 
 	public int getCurBaggageWeight() {
 		return curBaggageWeight;
 	}
 
-
-
 	public void setCurBaggageWeight(int curBaggageWeight) {
 		this.curBaggageWeight = curBaggageWeight;
 	}
 
-
-
 	public int getMaxBaggagePlace() {
 		return maxBaggagePlace;
 	}
-
-
 
 	public int getMaxBaggageWeight() {
 		return maxBaggageWeight;
