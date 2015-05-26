@@ -49,7 +49,11 @@ public class Runner {
 		}
 		
 		LOG.info("Save data to file");
-		CompanyOutputData.saveFile("result.txt", totalPlace, totalCargo, company.getAirplanes(),findAirplanes);
+		if(CompanyOutputData.saveFile("result.txt", totalPlace, totalCargo, company.getAirplanes(),findAirplanes)){
+			LOG.info("Data are saved correctly");
+		}else {
+			LOG.error("Data are saved incorrectly");
+		}
 		
 		LOG.info("Job finish");	
 	}
