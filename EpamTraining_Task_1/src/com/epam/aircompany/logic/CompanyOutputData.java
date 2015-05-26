@@ -21,6 +21,7 @@ public class CompanyOutputData {
 	private static final String MESSAGE_TOTAL_PLACE="Total passanger place - %d and cargo weight - %d\n\n";
 	private static final String MESSAGE_SORT_FLY_RANGE="The list of airplanes sorted by flying range:\n";
 	private static final String MESSAGE_FUEL_USAGE="The list of airplanes fuelUsage:\n";
+	private static final String MESSAGE_STRING_FUEL_USAGE=", fuel usage %d\n";
 	private static final String MESSAGE_NOT_FOUND="Airplanes not found\n";
 	private static final String NEW_LINE="\n";
 	
@@ -28,7 +29,7 @@ public class CompanyOutputData {
 		BufferedWriter output = null;
 		boolean rezult=false;
 		
-		if(fileName==null || fileName.isEmpty()){
+		if(fileName==null || fileName.isEmpty() || airplanes==null || findAirplanes==null){
 			return rezult;
 		}
 			    
@@ -53,7 +54,7 @@ public class CompanyOutputData {
 	    		  output.write(MESSAGE_FUEL_USAGE);
 	    		  for(Airplane tmp: findAirplanes){
 		    		  output.write(tmp.toString());
-		    		  output.write(NEW_LINE);
+		    		  output.write(String.format(MESSAGE_STRING_FUEL_USAGE, tmp.getFuelUsage()));
 		    	  }
 	    	  }else {
 	    		  output.write(MESSAGE_NOT_FOUND);  

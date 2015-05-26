@@ -7,5 +7,5 @@ Airplane AN_26D, board number - 15, flying range 420
 Airplane AIRBUS_A310, board number - 11, flying range 700
 
 The list of airplanes fuelUsage:
-Airplane AIRBUS_A400M, board number - 12, flying range 400
-Airplane AIRBUS_A310, board number - 11, flying range 700
+Airplane AIRBUS_A400M, board number - 12, flying range 400, fuel usage 25
+Airplane AIRBUS_A310, board number - 11, flying range 700, fuel usage 15

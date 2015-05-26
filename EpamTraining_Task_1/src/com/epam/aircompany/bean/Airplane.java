@@ -10,7 +10,7 @@ import com.epam.aircompany.exeption.LogicalExeption;
  *
  */
 public class Airplane implements Comparable<Airplane>{
-	private static final String TO_STRING_MESSAGE="Airplane %s, board number - %d, flying range %d";
+	private static final String MESSAGE_TO_STRING="Airplane %s, board number - %d, flying range %d";
 	private AirplaneModelName modelName;
 	private int boardNumber;
 	private int flyingRange;
@@ -83,7 +83,7 @@ public class Airplane implements Comparable<Airplane>{
 
 	@Override
 	public String toString() {
-		return String.format(TO_STRING_MESSAGE, modelName, boardNumber, flyingRange);
+		return String.format(MESSAGE_TO_STRING, modelName, boardNumber, flyingRange);
 	}
 	
 	@Override

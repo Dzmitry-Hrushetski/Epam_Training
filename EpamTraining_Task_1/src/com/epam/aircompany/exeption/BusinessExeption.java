@@ -18,7 +18,7 @@ public class BusinessExeption extends Exception {
 	 * 
 	 */
 	public BusinessExeption() {
-		// TODO Auto-generated constructor stub
+		super();
 	}
 
 	/**
@@ -26,7 +26,6 @@ public class BusinessExeption extends Exception {
 	 */
 	public BusinessExeption(String message) {
 		super(message);
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -34,7 +33,6 @@ public class BusinessExeption extends Exception {
 	 */
 	public BusinessExeption(Throwable cause) {
 		super(cause);
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -43,7 +41,6 @@ public class BusinessExeption extends Exception {
 	 */
 	public BusinessExeption(String message, Throwable cause) {
 		super(message, cause);
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -55,7 +52,6 @@ public class BusinessExeption extends Exception {
 	public BusinessExeption(String message, Throwable cause,
 			boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
-		// TODO Auto-generated constructor stub
 	}
 
 }
