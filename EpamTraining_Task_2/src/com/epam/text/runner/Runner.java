@@ -3,18 +3,29 @@
  */
 package com.epam.text.runner;
 
+import org.apache.log4j.Logger;
+
+import com.epam.text.bean.TypeText;
+import com.epam.text.regex.TextRegex;
+
+
 /**
- * @author Dzmitry Hrushetski 29 мая 2015 г.
+ * @author Dzmitry Hrushetski
  * 
  */
 public class Runner {
+	private static final Logger LOG = Logger.getLogger(Runner.class);
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		LOG.info("Start");
+		TextRegex rg=TextRegex.getTextRegexInstance();
+		rg.getPattern(TypeText.LISTING);
+		rg.getPattern(TypeText.SENTENCE);
+		rg.getPattern(TypeText.WORD);
+		
 	}
 
 }

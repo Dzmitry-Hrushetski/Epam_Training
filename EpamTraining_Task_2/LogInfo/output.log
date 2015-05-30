@@ -1,0 +1,4 @@
+30.05.2015 23:52:01,292 INFO  runner.Runner - Start
+30.05.2015 23:52:40,965 INFO  regex.TextRegex - Load listing regex
+30.05.2015 23:53:02,865 INFO  regex.TextRegex - Load sentence regex
+30.05.2015 23:53:14,334 INFO  regex.TextRegex - Load word regex

@@ -4,9 +4,12 @@
 package com.epam.text.bean;
 
 /**
- * @author Dzmitry Hrushetski 29 мая 2015 г.
+ * @author Dzmitry Hrushetski
  * 
  */
 public enum TypeText {
-
+	SENTENCE,
+	LISTING,
+	WORD,
+	PUNKTUATION_MARK
 }
