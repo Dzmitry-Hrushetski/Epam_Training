@@ -73,6 +73,8 @@ public class TextRegex {
 			}
 			pattern=patternPunctuationMark;
 			break;
+		default:
+			LOG.error("Icorrect type text");
 		}
 		return pattern;
 	}

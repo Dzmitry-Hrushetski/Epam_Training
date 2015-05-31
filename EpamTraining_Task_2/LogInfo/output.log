@@ -2,3 +2,93 @@
 30.05.2015 23:52:40,965 INFO  regex.TextRegex - Load listing regex
 30.05.2015 23:53:02,865 INFO  regex.TextRegex - Load sentence regex
 30.05.2015 23:53:14,334 INFO  regex.TextRegex - Load word regex
+31.05.2015 11:04:36,146 INFO  runner.Runner - Start
+31.05.2015 11:14:48,871 INFO  runner.Runner - Start
+31.05.2015 11:18:07,150 INFO  runner.Runner - Start
+31.05.2015 11:29:26,297 INFO  runner.Runner - Start
+31.05.2015 16:33:54,117 INFO  runner.Runner - Start
+31.05.2015 16:38:49,293 INFO  runner.Runner - Start
+31.05.2015 16:44:50,326 INFO  regex.TextRegex - Load listing regex
+31.05.2015 16:46:08,825 INFO  runner.Runner - Start
+31.05.2015 16:46:56,141 INFO  regex.TextRegex - Load listing regex
+31.05.2015 16:53:30,176 INFO  runner.Runner - Start
+31.05.2015 16:53:56,853 INFO  regex.TextRegex - Load listing regex
+31.05.2015 16:54:10,885 INFO  runner.Runner - Start
+31.05.2015 16:54:20,607 INFO  regex.TextRegex - Load listing regex
+31.05.2015 16:56:11,355 INFO  runner.Runner - Start
+31.05.2015 16:56:20,385 INFO  regex.TextRegex - Load listing regex
+31.05.2015 16:58:23,574 INFO  runner.Runner - Start
+31.05.2015 16:58:32,111 INFO  regex.TextRegex - Load listing regex
+31.05.2015 17:02:18,626 INFO  runner.Runner - Start
+31.05.2015 17:02:27,285 INFO  regex.TextRegex - Load listing regex
+31.05.2015 17:06:43,595 INFO  runner.Runner - Start
+31.05.2015 17:06:51,018 INFO  regex.TextRegex - Load listing regex
+31.05.2015 17:08:04,676 INFO  runner.Runner - Start
+31.05.2015 17:08:15,308 INFO  regex.TextRegex - Load listing regex
+31.05.2015 17:09:27,857 INFO  runner.Runner - Start
+31.05.2015 17:09:34,722 INFO  regex.TextRegex - Load listing regex
+31.05.2015 17:10:01,505 INFO  runner.Runner - Start
+31.05.2015 17:10:11,106 INFO  regex.TextRegex - Load listing regex
+31.05.2015 17:23:19,091 INFO  runner.Runner - Start
+31.05.2015 17:23:27,544 INFO  regex.TextRegex - Load listing regex
+31.05.2015 17:24:47,743 INFO  runner.Runner - Start
+31.05.2015 17:24:53,631 INFO  regex.TextRegex - Load listing regex
+31.05.2015 17:28:05,628 INFO  runner.Runner - Start
+31.05.2015 17:28:14,034 INFO  regex.TextRegex - Load listing regex
+31.05.2015 17:29:49,787 INFO  runner.Runner - Start
+31.05.2015 17:29:58,822 INFO  regex.TextRegex - Load listing regex
+31.05.2015 17:30:25,564 INFO  runner.Runner - Start
+31.05.2015 17:30:33,447 INFO  regex.TextRegex - Load listing regex
+31.05.2015 17:32:18,718 INFO  runner.Runner - Start
+31.05.2015 17:32:24,479 INFO  regex.TextRegex - Load listing regex
+31.05.2015 17:33:33,578 INFO  runner.Runner - Start
+31.05.2015 17:33:39,216 INFO  regex.TextRegex - Load listing regex
+31.05.2015 20:36:57,894 INFO  runner.Runner - Start
+31.05.2015 20:37:07,294 INFO  regex.TextRegex - Load listing regex
+31.05.2015 20:37:52,280 INFO  runner.Runner - Start
+31.05.2015 20:38:00,792 INFO  regex.TextRegex - Load listing regex
+31.05.2015 21:45:23,726 INFO  runner.Runner - Start
+31.05.2015 21:45:38,047 INFO  regex.TextRegex - Load listing regex
+31.05.2015 21:49:28,528 INFO  runner.Runner - Start
+31.05.2015 21:49:58,124 INFO  runner.Runner - Start
+31.05.2015 21:50:03,879 INFO  regex.TextRegex - Load listing regex
+31.05.2015 21:53:01,577 INFO  runner.Runner - Start
+31.05.2015 21:53:04,799 INFO  regex.TextRegex - Load listing regex
+31.05.2015 21:54:44,135 INFO  runner.Runner - Start
+31.05.2015 21:54:48,292 INFO  regex.TextRegex - Load listing regex
+31.05.2015 21:55:53,076 INFO  runner.Runner - Start
+31.05.2015 21:55:59,333 INFO  regex.TextRegex - Load listing regex
+31.05.2015 21:57:48,495 INFO  runner.Runner - Start
+31.05.2015 21:57:52,934 INFO  regex.TextRegex - Load listing regex
+31.05.2015 21:59:11,525 INFO  runner.Runner - Start
+31.05.2015 21:59:16,121 INFO  regex.TextRegex - Load listing regex
+31.05.2015 22:01:41,441 INFO  runner.Runner - Start
+31.05.2015 22:01:45,441 INFO  regex.TextRegex - Load listing regex
+31.05.2015 22:02:36,949 INFO  runner.Runner - Start
+31.05.2015 22:02:38,635 INFO  regex.TextRegex - Load listing regex
+31.05.2015 22:06:27,199 INFO  runner.Runner - Start
+31.05.2015 22:06:31,324 INFO  regex.TextRegex - Load listing regex
+31.05.2015 22:18:38,822 INFO  runner.Runner - Start
+31.05.2015 22:18:44,030 INFO  regex.TextRegex - Load sentence regex
+31.05.2015 22:19:18,602 INFO  runner.Runner - Start
+31.05.2015 22:19:24,568 INFO  regex.TextRegex - Load sentence regex
+31.05.2015 22:21:26,729 INFO  runner.Runner - Start
+31.05.2015 22:21:30,994 INFO  regex.TextRegex - Load sentence regex
+31.05.2015 22:22:20,747 INFO  runner.Runner - Start
+31.05.2015 22:22:24,155 INFO  regex.TextRegex - Load sentence regex
+31.05.2015 22:29:55,901 INFO  runner.Runner - Start
+31.05.2015 22:30:01,335 INFO  regex.TextRegex - Load sentence regex
+31.05.2015 22:31:35,220 INFO  runner.Runner - Start
+31.05.2015 22:31:38,002 INFO  regex.TextRegex - Load sentence regex
+31.05.2015 22:34:06,554 INFO  runner.Runner - Start
+31.05.2015 22:34:10,668 INFO  regex.TextRegex - Load sentence regex
+31.05.2015 22:38:17,886 INFO  runner.Runner - Start
+31.05.2015 22:38:21,563 INFO  regex.TextRegex - Load sentence regex
+31.05.2015 22:42:36,725 INFO  runner.Runner - Start
+31.05.2015 22:42:40,663 INFO  regex.TextRegex - Load sentence regex
+31.05.2015 22:44:42,425 INFO  runner.Runner - Start
+31.05.2015 22:44:48,013 INFO  regex.TextRegex - Load sentence regex
+31.05.2015 22:47:23,341 INFO  runner.Runner - Start
+31.05.2015 22:47:27,419 INFO  regex.TextRegex - Load sentence regex
+31.05.2015 22:49:48,641 INFO  runner.Runner - Start
+31.05.2015 22:49:55,792 INFO  regex.TextRegex - Load sentence regex

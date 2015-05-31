@@ -8,6 +8,7 @@ package com.epam.text.bean;
  * 
  */
 public enum TypeText {
+	TEXT,
 	SENTENCE,
 	LISTING,
 	WORD,

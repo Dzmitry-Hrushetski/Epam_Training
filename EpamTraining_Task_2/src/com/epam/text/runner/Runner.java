@@ -5,7 +5,11 @@ package com.epam.text.runner;
 
 import org.apache.log4j.Logger;
 
+import com.epam.text.bean.Composite;
 import com.epam.text.bean.TypeText;
+import com.epam.text.logic.IComponent;
+import com.epam.text.logic.LoadData;
+import com.epam.text.logic.TextParser;
 import com.epam.text.regex.TextRegex;
 
 
@@ -21,10 +25,14 @@ public class Runner {
 	 */
 	public static void main(String[] args) {
 		LOG.info("Start");
-		TextRegex rg=TextRegex.getTextRegexInstance();
+		/*TextRegex rg=TextRegex.getTextRegexInstance();
 		rg.getPattern(TypeText.LISTING);
 		rg.getPattern(TypeText.SENTENCE);
-		rg.getPattern(TypeText.WORD);
+		rg.getPattern(TypeText.WORD);*/
+		
+		String text=LoadData.loadDataFromFile("InputData\\input.txt");
+		IComponent client=new Composite(TypeText.TEXT, text);
+		TextParser.parseText(client, text);
 		
 	}
 

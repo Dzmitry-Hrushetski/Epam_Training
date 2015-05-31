@@ -4,6 +4,7 @@
 package com.epam.text.logic;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -20,40 +21,30 @@ public class LoadData {
 	
 	
 	public static String loadDataFromFile(String fileName){
-		String inputData=null;
-		BufferedReader input = null;
+		String inputString=null;
+		FileInputStream fileInput=null;
 		
+		if(fileName==null || fileName.isEmpty()) {
+			LOG.error("Incorrect file name");
+			return inputString;
+		}
 	    try {
-	       input = new BufferedReader(new FileReader(fileName));
-	    } catch (FileNotFoundException e) {
-	    	LOG.error(e.getMessage());
-	    	////??????????????
-	    }
-	    
-	    //int tmp;
-	    String tmp;
-	    
-	    try {
-	          /*while ((tmp = input.read()) != -1)
-	          inputData.appendInputData((char)tmp);*/
-	    	
-	    	while ((tmp = input.readLine()) != null)
-		          inputData.appendInputData(tmp+"\n");
-	    	
-	    } catch (IOException e) {
-	       e.printStackTrace();
-	       return null;
+	    	fileInput=new FileInputStream(fileName);
 	       
+	    	int fileLenght=fileInput.available();
+	    	byte[] inputData=new byte[fileLenght];
+	    	
+	    	fileInput.read(inputData);
+	    	inputString=new String(inputData);
+	    } catch (IOException e) {
+	    	LOG.error(e.getMessage());    
 	    } finally{
 	    	try {
-				input.close();
+				fileInput.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				LOG.error(e.getMessage());
 			}  	
-	    }
-		
-		return inputData;
+	    }	
+		return inputString;
 	}
-
 }
