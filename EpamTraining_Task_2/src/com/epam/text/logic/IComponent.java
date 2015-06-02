@@ -14,5 +14,5 @@ public interface IComponent {
 	void remove(IComponent component);
 	IComponent getElement(int index);
 	TypeText getTypeText();
-	void parseText();
+	void parseText(String text);
 }

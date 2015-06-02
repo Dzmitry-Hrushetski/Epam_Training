@@ -7,3 +7,30 @@
 26.05.2015 13:34:01,275 INFO  runner.Runner - Save data to file
 26.05.2015 13:34:01,290 INFO  runner.Runner - Data are saved correctly
 26.05.2015 13:34:01,290 INFO  runner.Runner - Job finish
+01.06.2015 13:46:41,069 INFO  runner.Runner - Create company and airplanes in the company
+01.06.2015 13:46:41,102 INFO  creator.CompanyCreator - Create new PassangerAirplane
+01.06.2015 13:46:41,102 INFO  creator.CompanyCreator - Create new PassangerAirplane
+01.06.2015 13:46:41,102 INFO  creator.CompanyCreator - Create new TransportAirplane
+01.06.2015 13:46:41,102 INFO  creator.CompanyCreator - Create new TransportAirplane
+01.06.2015 13:46:41,102 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+01.06.2015 13:46:41,102 INFO  runner.Runner - Save data to file
+01.06.2015 13:46:41,132 INFO  runner.Runner - Data are saved correctly
+01.06.2015 13:46:41,132 INFO  runner.Runner - Job finish
+01.06.2015 13:53:21,992 INFO  runner.Runner - Create company and airplanes in the company
+01.06.2015 13:53:21,992 INFO  creator.CompanyCreator - Create new PassangerAirplane
+01.06.2015 13:53:21,992 INFO  creator.CompanyCreator - Create new PassangerAirplane
+01.06.2015 13:53:21,992 INFO  creator.CompanyCreator - Create new TransportAirplane
+01.06.2015 13:53:21,992 INFO  creator.CompanyCreator - Create new TransportAirplane
+01.06.2015 13:53:21,992 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+01.06.2015 13:53:21,992 INFO  runner.Runner - Save data to file
+01.06.2015 13:53:22,007 INFO  runner.Runner - Data are saved correctly
+01.06.2015 13:53:22,007 INFO  runner.Runner - Job finish
+01.06.2015 13:53:52,335 INFO  runner.Runner - Create company and airplanes in the company
+01.06.2015 13:53:52,355 INFO  creator.CompanyCreator - Create new PassangerAirplane
+01.06.2015 13:53:52,355 INFO  creator.CompanyCreator - Create new PassangerAirplane
+01.06.2015 13:53:52,355 INFO  creator.CompanyCreator - Create new TransportAirplane
+01.06.2015 13:53:52,355 INFO  creator.CompanyCreator - Create new TransportAirplane
+01.06.2015 13:53:52,355 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+01.06.2015 13:53:52,355 INFO  runner.Runner - Save data to file
+01.06.2015 13:53:52,366 INFO  runner.Runner - Data are saved correctly
+01.06.2015 13:53:52,366 INFO  runner.Runner - Job finish

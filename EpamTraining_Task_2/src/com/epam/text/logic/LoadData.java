@@ -3,10 +3,8 @@
  */
 package com.epam.text.logic;
 
-import java.io.BufferedReader;
+import java.io.BufferedInputStream;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 
 import org.apache.log4j.Logger;
@@ -22,25 +20,27 @@ public class LoadData {
 	
 	public static String loadDataFromFile(String fileName){
 		String inputString=null;
-		FileInputStream fileInput=null;
+		BufferedInputStream fileInput=null;
 		
 		if(fileName==null || fileName.isEmpty()) {
 			LOG.error("Incorrect file name");
 			return inputString;
 		}
 	    try {
-	    	fileInput=new FileInputStream(fileName);
+	    	fileInput=new BufferedInputStream(new FileInputStream(fileName));
 	       
 	    	int fileLenght=fileInput.available();
 	    	byte[] inputData=new byte[fileLenght];
 	    	
 	    	fileInput.read(inputData);
-	    	inputString=new String(inputData);
+	    	inputString=new String(inputData,"UTF-8");
 	    } catch (IOException e) {
 	    	LOG.error(e.getMessage());    
 	    } finally{
 	    	try {
-				fileInput.close();
+	    		if(fileInput!=null) {
+	    			fileInput.close();
+	    		}
 			} catch (IOException e) {
 				LOG.error(e.getMessage());
 			}  	

@@ -31,8 +31,9 @@ public class Runner {
 		rg.getPattern(TypeText.WORD);*/
 		
 		String text=LoadData.loadDataFromFile("InputData\\input.txt");
-		IComponent client=new Composite(TypeText.TEXT, text);
-		TextParser.parseText(client, text);
+		IComponent client=new Composite(TypeText.TEXT);
+		client.parseText(text);
+		//TextParser.parseText(client, text);
 		
 	}
 

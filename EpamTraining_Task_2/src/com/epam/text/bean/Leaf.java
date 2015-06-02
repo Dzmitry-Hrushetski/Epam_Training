@@ -13,6 +13,15 @@ public class Leaf implements IComponent {
 	private TypeText typeText;
 	private String text;
 	
+	
+	/**
+	 * @param typeText
+	 */
+	public Leaf(TypeText typeText) {
+		super();
+		this.typeText = typeText;
+	}
+
 	/**
 	 * @param typeText
 	 * @param leaf
@@ -63,7 +72,7 @@ public class Leaf implements IComponent {
 	 * @see com.epam.text.logic.IComponent#parseText()
 	 */
 	@Override
-	public void parseText() {
+	public void parseText(String text) {
 		// TODO Auto-generated method stub
 
 	}
