@@ -20,6 +20,7 @@ import com.epam.text.regex.TextRegex;
  */
 public class Runner {
 	private static final Logger LOG = Logger.getLogger(Runner.class);
+	private static final String FILE_NAME="InputData\\input.txt";
 
 	/**
 	 * @param args
@@ -30,8 +31,13 @@ public class Runner {
 		rg.getPattern(TypeText.LISTING);
 		rg.getPattern(TypeText.SENTENCE);
 		rg.getPattern(TypeText.WORD);*/
+		LOG.info("Load data from file");
+		String inputText=LoadData.loadDataFromFile(FILE_NAME);
+		TextParser parser=new TextParser();
+		IComponent compositeText=parser.createCompositeText(inputText);
+		compositeText.print();
 		
-		String text=LoadData.loadDataFromFile("InputData\\input.txt");
+		/*
 		IComponent clientT=new Composite(TypeText.TEXT);
 		IComponent clientS1=new Composite(TypeText.SENTENCE);
 		IComponent clientS2=new Composite(TypeText.SENTENCE);
@@ -73,7 +79,7 @@ public class Runner {
 		clientS3.add(clientW6);
 		
 		clientT.print();
-		//client.parseText(text);
+		//client.parseText(text);*/
 		//TextParser.parseText(client, text);
 		
 	}
