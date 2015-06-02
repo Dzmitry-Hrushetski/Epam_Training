@@ -6,6 +6,7 @@ package com.epam.text.runner;
 import org.apache.log4j.Logger;
 
 import com.epam.text.bean.Composite;
+import com.epam.text.bean.Leaf;
 import com.epam.text.bean.TypeText;
 import com.epam.text.logic.IComponent;
 import com.epam.text.logic.LoadData;
@@ -31,8 +32,48 @@ public class Runner {
 		rg.getPattern(TypeText.WORD);*/
 		
 		String text=LoadData.loadDataFromFile("InputData\\input.txt");
-		IComponent client=new Composite(TypeText.TEXT);
-		client.parseText(text);
+		IComponent clientT=new Composite(TypeText.TEXT);
+		IComponent clientS1=new Composite(TypeText.SENTENCE);
+		IComponent clientS2=new Composite(TypeText.SENTENCE);
+		IComponent clientS3=new Composite(TypeText.SENTENCE);
+		
+		IComponent clientW1=new Leaf(TypeText.WORD,"111");
+		IComponent clientW2=new Leaf(TypeText.WORD,"222");
+		IComponent clientW3=new Leaf(TypeText.WORD,"333");
+		IComponent clientW4=new Leaf(TypeText.WORD,"444");
+		IComponent clientW5=new Leaf(TypeText.WORD,"555");
+		IComponent clientW6=new Leaf(TypeText.WORD,"666");
+		
+		IComponent clientP1=new Leaf(TypeText.PUNKTUATION_MARK,".");
+		IComponent clientP2=new Leaf(TypeText.PUNKTUATION_MARK,",");
+		IComponent clientP3=new Leaf(TypeText.PUNKTUATION_MARK,":");
+				
+		IComponent clientL1=new Leaf(TypeText.LISTING,"void name { }");
+		IComponent clientL2=new Leaf(TypeText.LISTING,"class Name { }");
+		
+		clientT.add(clientS1);
+		clientT.add(clientL1);
+		clientT.add(clientS2);
+		clientT.add(clientL2);
+		clientT.add(clientS3);
+		
+		clientS1.add(clientW1);
+		clientS1.add(clientW2);
+		clientS1.add(clientP1);
+		
+		clientS2.add(clientW1);
+		clientS2.add(clientW4);
+		clientS2.add(clientP2);
+		clientS2.add(clientW5);
+		
+		clientS3.add(clientW1);
+		clientS3.add(clientW2);
+		clientS3.add(clientW3);
+		clientS3.add(clientP3);
+		clientS3.add(clientW6);
+		
+		clientT.print();
+		//client.parseText(text);
 		//TextParser.parseText(client, text);
 		
 	}

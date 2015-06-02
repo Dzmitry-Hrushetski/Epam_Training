@@ -67,13 +67,31 @@ public class Leaf implements IComponent {
 	public TypeText getTypeText() {
 		return typeText;
 	}
+	
+	/* (non-Javadoc)
+	 * @see com.epam.text.logic.IComponent#print()
+	 */
+	@Override
+	public void print() {
+		System.out.print(this);
+	}
+	
+	
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return text+" ";
+	}
 
 	/* (non-Javadoc)
 	 * @see com.epam.text.logic.IComponent#parseText()
 	 */
 	@Override
 	public void parseText(String text) {
-		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException();
 
 	}
 

@@ -6,7 +6,6 @@ package com.epam.text.bean;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import com.epam.text.logic.IComponent;
 import com.epam.text.regex.TextRegex;
@@ -78,18 +77,30 @@ public class Composite implements IComponent {
 	}
 	
 	/* (non-Javadoc)
+	 * @see com.epam.text.logic.IComponent#print()
+	 */
+	@Override
+	public void print() {
+		for(IComponent c:components){
+			c.print();
+		}
+		
+	}
+	
+	/* (non-Javadoc)
 	 * @see com.epam.text.logic.IComponent#parseText()
 	 */
 	@Override
 	public void parseText(String text) {
 		TextRegex patternInstance=TextRegex.getTextRegexInstance();
 		Matcher matcher=null;
+		Matcher matcherGroup=null;
 		IComponent newComponent=null;
 		String findElement=null;
 		
 		switch(typeText) {
 		case TEXT:	
-			Matcher matcherGroup=patternInstance.getPattern(TypeText.SENTENCE_OR_LISTING).matcher(text);
+			matcherGroup=patternInstance.getPattern(TypeText.SENTENCE_OR_LISTING).matcher(text);
 			
 			while (matcherGroup.find()) {
 				findElement=matcherGroup.group();
@@ -106,32 +117,28 @@ public class Composite implements IComponent {
 			break;
 			
 		case SENTENCE:
-			matcher=patternInstance.getPattern(TypeText.WORD_OR_PUNKTUATION_MARK).matcher(text);
+			matcherGroup=patternInstance.getPattern(TypeText.WORD_OR_PUNKTUATION_MARK).matcher(text);
 			
-			while (matcher.find()) {
-				findElement=matcher.group();
-				newComponent=new Composite(TypeText.WORD_OR_PUNKTUATION_MARK);
-				add(newComponent);
-				newComponent.parseText(findElement);
-			}
-			break;
-			
-		case WORD_OR_PUNKTUATION_MARK:
-			matcher=patternInstance.getPattern(TypeText.WORD).matcher(text);
-			
-			if(matcher.find()){
-				findElement=matcher.group();
-				newComponent=new Leaf(TypeText.WORD,findElement);
-				add(newComponent);
+			while (matcherGroup.find()) {
+				findElement=matcherGroup.group();
+				matcher=patternInstance.getPattern(TypeText.WORD).matcher(findElement);
 				
-				//newComponent.parseText(findElement);
-				text=matcher.replaceFirst(EMPTY_STRING);
-				newComponent=new Leaf(TypeText.PUNKTUATION_MARK,text);
-				add(newComponent);
-			}else {
-				// error?????
+				if(matcher.matches()){
+					newComponent=new Leaf(TypeText.WORD,findElement);
+					add(newComponent);
+					text=matcher.replaceFirst(EMPTY_STRING);
+				}
+				
+				matcher=patternInstance.getPattern(TypeText.PUNKTUATION_MARK).matcher(findElement);
+				
+				if(matcher.matches()){
+					newComponent=new Leaf(TypeText.PUNKTUATION_MARK,findElement);
+					add(newComponent);
+				}else {
+					//log error
+				}
 			}
-			break;
+			break;	
 		default:
 			// error
 		}

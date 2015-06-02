@@ -15,4 +15,5 @@ public interface IComponent {
 	IComponent getElement(int index);
 	TypeText getTypeText();
 	void parseText(String text);
+	void print();
 }
