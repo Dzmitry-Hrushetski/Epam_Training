@@ -27,9 +27,9 @@ public class Runner {
 	 */
 	public static void main(String[] args) {
 		LOG.info("Start");
-		/*TextRegex rg=TextRegex.getTextRegexInstance();
+		TextRegex rg=TextRegex.getTextRegexInstance();
 		rg.getPattern(TypeText.LISTING);
-		rg.getPattern(TypeText.SENTENCE);
+		/*rg.getPattern(TypeText.SENTENCE);
 		rg.getPattern(TypeText.WORD);*/
 		LOG.info("Load data from file");
 		String inputText=LoadData.loadDataFromFile(FILE_NAME);

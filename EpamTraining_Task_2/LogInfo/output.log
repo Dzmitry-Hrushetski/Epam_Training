@@ -115,3 +115,9 @@
 03.06.2015 00:11:12,748 INFO  runner.Runner - Start
 03.06.2015 00:11:12,748 INFO  runner.Runner - Load data from file
 03.06.2015 00:11:12,748 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+03.06.2015 15:04:14,195 INFO  runner.Runner - Start
+03.06.2015 15:04:18,467 INFO  regex.TextRegex - Load LISTING regex
+03.06.2015 15:05:54,536 INFO  runner.Runner - Start
+03.06.2015 15:05:54,568 INFO  regex.TextRegex - Load LISTING regex
+03.06.2015 15:06:19,021 INFO  runner.Runner - Start
+03.06.2015 15:06:19,021 INFO  regex.TextRegex - Load LISTING regex
