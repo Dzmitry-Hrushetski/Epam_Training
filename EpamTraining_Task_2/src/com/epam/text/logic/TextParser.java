@@ -70,10 +70,10 @@ public class TextParser {
 		case SENTENCE:
 			matcherGroup=patternInstance.getPattern(TypeText.WORD_OR_PUNKTUATION_MARK).matcher(text);
 			
-			while (matcherGroup.find()==true) {
+			while (matcherGroup.find()) {
 				findElement=matcherGroup.group();
 							
-				if(findElement.isEmpty())continue;
+				//if(findElement.isEmpty())continue;
 				
 				matcher=patternInstance.getPattern(TypeText.WORD).matcher(findElement);
 				

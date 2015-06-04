@@ -2479,3 +2479,46 @@
 04.06.2015 15:47:37,880 INFO  regex.TextRegex - Load WORD regex
 04.06.2015 15:47:37,881 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
 04.06.2015 15:47:37,882 INFO  regex.TextRegex - Load LISTING regex
+04.06.2015 16:07:48,175 INFO  runner.Runner - Start
+04.06.2015 16:07:48,175 INFO  runner.Runner - Load data from file
+04.06.2015 16:07:58,510 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 16:08:29,669 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 16:10:29,988 INFO  runner.Runner - Start
+04.06.2015 16:10:29,989 INFO  runner.Runner - Load data from file
+04.06.2015 16:10:29,996 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 16:10:29,996 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 16:10:29,997 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 16:10:56,986 INFO  runner.Runner - Start
+04.06.2015 16:10:56,987 INFO  runner.Runner - Load data from file
+04.06.2015 16:10:56,994 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 16:10:56,994 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 16:11:09,719 INFO  runner.Runner - Start
+04.06.2015 16:11:09,720 INFO  runner.Runner - Load data from file
+04.06.2015 16:11:09,727 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 16:11:09,727 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 16:14:09,836 INFO  runner.Runner - Start
+04.06.2015 16:14:09,837 INFO  runner.Runner - Load data from file
+04.06.2015 16:14:09,845 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 16:14:09,845 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 16:14:09,846 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 16:14:25,791 INFO  runner.Runner - Start
+04.06.2015 16:14:25,791 INFO  runner.Runner - Load data from file
+04.06.2015 16:14:25,801 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 16:14:25,802 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 16:14:25,802 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 16:15:17,231 INFO  runner.Runner - Start
+04.06.2015 16:15:17,232 INFO  runner.Runner - Load data from file
+04.06.2015 16:15:17,241 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 16:15:17,242 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 16:15:17,242 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 16:15:17,242 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 16:15:17,243 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 16:15:17,245 INFO  regex.TextRegex - Load LISTING regex
+04.06.2015 16:20:57,848 INFO  runner.Runner - Start
+04.06.2015 16:20:57,849 INFO  runner.Runner - Load data from file
+04.06.2015 16:20:57,856 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 16:20:57,856 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 16:20:57,857 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 16:20:57,857 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 16:20:57,857 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 16:20:57,859 INFO  regex.TextRegex - Load LISTING regex
