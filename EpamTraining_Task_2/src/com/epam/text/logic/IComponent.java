@@ -10,9 +10,12 @@ import com.epam.text.bean.TypeText;
  *
  */
 public interface IComponent {
+	public static final String SPACE=" ";
+	
 	void add(IComponent component);
 	void remove(IComponent component);
 	IComponent getElement(int index);
 	TypeText getTypeText();
+	StringBuilder RecoverComposit(StringBuilder data);
 	void print();
 }

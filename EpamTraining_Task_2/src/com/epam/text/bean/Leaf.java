@@ -60,6 +60,15 @@ public class Leaf implements IComponent {
 	}
 	
 	/* (non-Javadoc)
+	 * @see com.epam.text.logic.IComponent#RecoverComposit(java.lang.StringBuilder)
+	 */
+	@Override
+	public StringBuilder RecoverComposit(StringBuilder data) {
+		data.append(getText()).append(SPACE);
+		return data;
+	}
+
+	/* (non-Javadoc)
 	 * @see com.epam.text.logic.IComponent#print()
 	 */
 	@Override

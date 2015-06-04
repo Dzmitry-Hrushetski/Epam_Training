@@ -2522,3 +2522,29 @@
 04.06.2015 16:20:57,857 INFO  regex.TextRegex - Load WORD regex
 04.06.2015 16:20:57,857 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
 04.06.2015 16:20:57,859 INFO  regex.TextRegex - Load LISTING regex
+04.06.2015 18:55:22,351 INFO  runner.Runner - Start
+04.06.2015 18:55:22,351 INFO  runner.Runner - Load data from file
+04.06.2015 18:55:22,367 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 18:55:22,367 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 18:55:22,367 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 18:55:22,367 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 18:55:22,367 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 18:55:22,383 INFO  regex.TextRegex - Load LISTING regex
+04.06.2015 20:00:12,035 INFO  runner.Runner - Start
+04.06.2015 20:00:12,035 INFO  runner.Runner - Load data from file
+04.06.2015 20:00:12,035 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 20:00:12,035 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 20:00:12,035 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 20:00:12,035 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 20:00:12,050 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 20:00:12,050 INFO  regex.TextRegex - Load LISTING regex
+04.06.2015 20:00:12,050 INFO  logic.SaveData - Composite are successfully saved
+04.06.2015 20:11:17,750 INFO  runner.Runner - Start
+04.06.2015 20:11:17,750 INFO  logic.LoadData - Data are successfully loaded
+04.06.2015 20:11:17,750 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 20:11:17,765 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 20:11:17,765 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 20:11:17,765 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 20:11:17,765 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 20:11:17,765 INFO  regex.TextRegex - Load LISTING regex
+04.06.2015 20:11:17,765 INFO  logic.SaveData - Composite are successfully saved

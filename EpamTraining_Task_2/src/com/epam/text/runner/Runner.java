@@ -10,6 +10,7 @@ import com.epam.text.bean.Leaf;
 import com.epam.text.bean.TypeText;
 import com.epam.text.logic.IComponent;
 import com.epam.text.logic.LoadData;
+import com.epam.text.logic.SaveData;
 import com.epam.text.logic.TextParser;
 import com.epam.text.regex.TextRegex;
 
@@ -20,7 +21,8 @@ import com.epam.text.regex.TextRegex;
  */
 public class Runner {
 	private static final Logger LOG = Logger.getLogger(Runner.class);
-	private static final String FILE_NAME="InputData\\input.txt";
+	private static final String INPUT_FILE_NAME="InputData\\input.txt";
+	private static final String COMPOSITE_FILE_NAME="OutputData\\composite.txt";
 	
 	//String d="(?m)(~[\\w\\s (){}\u005b\u005d/,:;!'-.>=+\u0022]*~\\r)";
 
@@ -33,10 +35,11 @@ public class Runner {
 		rg.getPattern(TypeText.LISTING);
 		rg.getPattern(TypeText.SENTENCE);
 		rg.getPattern(TypeText.WORD);*/
-		LOG.info("Load data from file");
-		String inputText=LoadData.loadDataFromFile(FILE_NAME);
+		
+		String inputText=LoadData.loadDataFromFile(INPUT_FILE_NAME);
 		TextParser parser=new TextParser();
 		IComponent compositeText=parser.createCompositeText(inputText);
+		SaveData.saveCompositeToFile(COMPOSITE_FILE_NAME, compositeText.RecoverComposit(new StringBuilder()));
 		compositeText.print();
 		
 		/*

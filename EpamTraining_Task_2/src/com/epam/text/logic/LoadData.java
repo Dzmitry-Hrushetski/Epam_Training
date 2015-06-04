@@ -16,8 +16,7 @@ import org.apache.log4j.Logger;
  */
 public class LoadData {
 	private static final Logger LOG = Logger.getLogger(LoadData.class);
-	
-	
+		
 	public static String loadDataFromFile(String fileName){
 		String inputString=null;
 		BufferedInputStream fileInput=null;
@@ -44,7 +43,8 @@ public class LoadData {
 			} catch (IOException e) {
 				LOG.error(e.getMessage());
 			}  	
-	    }	
+	    }
+	    LOG.info("Data are successfully loaded");
 		return inputString;
 	}
 }

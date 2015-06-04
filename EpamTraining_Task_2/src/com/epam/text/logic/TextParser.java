@@ -23,6 +23,10 @@ public class TextParser {
 	private static final String LOG_DEBUG_ERROR_TYPE="Wrong text type - %s";
 	
 	public IComponent createCompositeText(String text){
+		if(text==null || text.isEmpty()) {
+			return null;
+		}
+		
 		IComponent head=new Composite(TypeText.TEXT);
 		parseText(head,text);
 		
