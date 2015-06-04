@@ -19,13 +19,15 @@ import com.epam.text.regex.TextRegex;
 public class TextParser {
 	private static final Logger LOG = Logger.getLogger(TextParser.class);
 	private static final String EMPTY_STRING="";
-	private static final String LOG_DEBUG_ERROR_TEXT="Error of analysis of a line - %s";
+	private static final String LOG_DEBUG_ERROR_TEXT="Error of analysis of a line - %s, %s";
 	private static final String LOG_DEBUG_ERROR_TYPE="Wrong text type - %s";
 	
 	public IComponent createCompositeText(String text){
 		IComponent head=new Composite(TypeText.TEXT);
-		
 		parseText(head,text);
+		
+		//IComponent head=new Composite(TypeText.SENTENCE);
+		//parseText(head,"The if-then statement is the most basic of all the control flow statements.");
 		
 		return head;
 	}
@@ -49,25 +51,36 @@ public class TextParser {
 				if(matcher.matches()){
 					newComponent=new Composite(TypeText.SENTENCE);
 					component.add(newComponent);
-					newComponent.parseText(findElement);
-				}else {
+					parseText(newComponent,findElement);
+					continue;			
+				}
+				
+				matcher=patternInstance.getPattern(TypeText.LISTING).matcher(findElement);
+				
+				if(matcher.matches()){			
 					newComponent=new Leaf(TypeText.LISTING,findElement);
 					component.add(newComponent);
+					continue;
 				}
+				
+				LOG.debug(String.format(LOG_DEBUG_ERROR_TEXT, findElement, typeText));			
 			}
 			break;
 			
 		case SENTENCE:
 			matcherGroup=patternInstance.getPattern(TypeText.WORD_OR_PUNKTUATION_MARK).matcher(text);
 			
-			while (matcherGroup.find()) {
+			while (matcherGroup.find()==true) {
 				findElement=matcherGroup.group();
+							
+				if(findElement.isEmpty())continue;
+				
 				matcher=patternInstance.getPattern(TypeText.WORD).matcher(findElement);
 				
 				if(matcher.matches()){
 					newComponent=new Leaf(TypeText.WORD,findElement);
 					component.add(newComponent);
-					text=matcher.replaceFirst(EMPTY_STRING);
+					continue;
 				}
 				
 				matcher=patternInstance.getPattern(TypeText.PUNKTUATION_MARK).matcher(findElement);
@@ -75,9 +88,10 @@ public class TextParser {
 				if(matcher.matches()){
 					newComponent=new Leaf(TypeText.PUNKTUATION_MARK,findElement);
 					component.add(newComponent);
-				}else {
-					LOG.debug(String.format(LOG_DEBUG_ERROR_TEXT, findElement));
+					continue;
 				}
+				
+				LOG.debug(String.format(LOG_DEBUG_ERROR_TEXT, findElement, typeText));				
 			}
 			break;	
 		default:

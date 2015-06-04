@@ -13,15 +13,6 @@ public class Leaf implements IComponent {
 	private TypeText typeText;
 	private String text;
 	
-	
-	/**
-	 * @param typeText
-	 */
-	public Leaf(TypeText typeText) {
-		super();
-		this.typeText = typeText;
-	}
-
 	/**
 	 * @param typeText
 	 * @param leaf
@@ -85,14 +76,4 @@ public class Leaf implements IComponent {
 	public String toString() {
 		return text+" ";
 	}
-
-	/* (non-Javadoc)
-	 * @see com.epam.text.logic.IComponent#parseText()
-	 */
-	@Override
-	public void parseText(String text) {
-		throw new UnsupportedOperationException();
-
-	}
-
 }

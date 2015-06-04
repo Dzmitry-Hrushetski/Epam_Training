@@ -21,15 +21,17 @@ import com.epam.text.regex.TextRegex;
 public class Runner {
 	private static final Logger LOG = Logger.getLogger(Runner.class);
 	private static final String FILE_NAME="InputData\\input.txt";
+	
+	//String d="(?m)(~[\\w\\s (){}\u005b\u005d/,:;!'-.>=+\u0022]*~\\r)";
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		LOG.info("Start");
-		TextRegex rg=TextRegex.getTextRegexInstance();
+		/*TextRegex rg=TextRegex.getTextRegexInstance();
 		rg.getPattern(TypeText.LISTING);
-		/*rg.getPattern(TypeText.SENTENCE);
+		rg.getPattern(TypeText.SENTENCE);
 		rg.getPattern(TypeText.WORD);*/
 		LOG.info("Load data from file");
 		String inputText=LoadData.loadDataFromFile(FILE_NAME);

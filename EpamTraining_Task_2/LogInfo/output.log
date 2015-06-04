@@ -121,3 +121,2361 @@
 03.06.2015 15:05:54,568 INFO  regex.TextRegex - Load LISTING regex
 03.06.2015 15:06:19,021 INFO  runner.Runner - Start
 03.06.2015 15:06:19,021 INFO  regex.TextRegex - Load LISTING regex
+04.06.2015 13:45:31,442 INFO  runner.Runner - Start
+04.06.2015 13:45:31,458 INFO  regex.TextRegex - Load LISTING regex
+04.06.2015 13:45:31,458 INFO  runner.Runner - Load data from file
+04.06.2015 13:45:31,473 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 13:45:31,473 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 13:45:31,473 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 13:45:31,473 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 13:45:31,473 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 13:45:31,473 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:45:31,473 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:45:31,473 DEBUG logic.TextParser - Error of analysis of a line - '
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - "
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - "
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - '
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - "
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - "
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - %
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - %
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - >=
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - >=
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - =
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - '
+04.06.2015 13:45:31,489 DEBUG logic.TextParser - Error of analysis of a line - '
+04.06.2015 13:56:31,560 INFO  runner.Runner - Start
+04.06.2015 13:56:31,576 INFO  regex.TextRegex - Load LISTING regex
+04.06.2015 13:56:31,576 INFO  runner.Runner - Load data from file
+04.06.2015 13:56:31,576 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 13:56:31,576 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 13:56:31,576 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 13:56:31,576 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 13:56:31,576 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 13:56:31,576 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - '
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - "
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - "
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - "
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - "
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - '
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - "
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - "
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - %
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - %
+04.06.2015 13:56:31,591 DEBUG logic.TextParser - Error of analysis of a line - =
+04.06.2015 13:56:31,607 DEBUG logic.TextParser - Error of analysis of a line - >=
+04.06.2015 13:56:31,607 DEBUG logic.TextParser - Error of analysis of a line - >=
+04.06.2015 13:56:31,607 DEBUG logic.TextParser - Error of analysis of a line - w
+04.06.2015 13:56:31,607 DEBUG logic.TextParser - Error of analysis of a line - =
+04.06.2015 13:56:31,607 DEBUG logic.TextParser - Error of analysis of a line - '
+04.06.2015 13:56:31,607 DEBUG logic.TextParser - Error of analysis of a line - '
+04.06.2015 13:57:54,856 INFO  runner.Runner - Start
+04.06.2015 13:57:54,856 INFO  runner.Runner - Load data from file
+04.06.2015 13:58:14,871 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 13:58:46,862 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 13:59:31,419 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:00:19,810 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:01:15,475 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:11:18,045 INFO  runner.Runner - Start
+04.06.2015 14:11:18,045 INFO  runner.Runner - Load data from file
+04.06.2015 14:11:18,045 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 14:11:18,045 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 14:11:18,045 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:11:18,045 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:11:18,045 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:12:55,228 INFO  runner.Runner - Start
+04.06.2015 14:12:55,228 INFO  runner.Runner - Load data from file
+04.06.2015 14:12:55,244 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:12:55,244 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:12:55,244 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:13:03,015 INFO  runner.Runner - Start
+04.06.2015 14:13:03,015 INFO  runner.Runner - Load data from file
+04.06.2015 14:13:12,940 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:13:12,941 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:13:12,942 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:13:20,367 INFO  runner.Runner - Start
+04.06.2015 14:13:20,367 INFO  runner.Runner - Load data from file
+04.06.2015 14:13:38,461 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:14:17,658 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:14:25,983 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:15:03,207 INFO  runner.Runner - Start
+04.06.2015 14:15:03,207 INFO  runner.Runner - Load data from file
+04.06.2015 14:15:32,616 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:16:49,617 INFO  runner.Runner - Start
+04.06.2015 14:16:49,633 INFO  runner.Runner - Load data from file
+04.06.2015 14:16:49,633 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:17:18,254 INFO  runner.Runner - Start
+04.06.2015 14:17:18,269 INFO  runner.Runner - Load data from file
+04.06.2015 14:17:31,092 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:20:43,954 INFO  runner.Runner - Start
+04.06.2015 14:20:43,954 INFO  runner.Runner - Load data from file
+04.06.2015 14:20:43,970 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:20:43,970 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:21:24,600 INFO  runner.Runner - Start
+04.06.2015 14:21:24,600 INFO  runner.Runner - Load data from file
+04.06.2015 14:21:33,801 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:22:08,038 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:23:33,154 INFO  runner.Runner - Start
+04.06.2015 14:23:33,154 INFO  runner.Runner - Load data from file
+04.06.2015 14:23:52,385 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:24:53,136 INFO  runner.Runner - Start
+04.06.2015 14:24:53,136 INFO  runner.Runner - Load data from file
+04.06.2015 14:25:08,648 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:27:53,499 INFO  runner.Runner - Start
+04.06.2015 14:27:53,499 INFO  runner.Runner - Load data from file
+04.06.2015 14:27:53,499 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:27:53,499 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:28:18,754 INFO  runner.Runner - Start
+04.06.2015 14:28:18,754 INFO  runner.Runner - Load data from file
+04.06.2015 14:28:18,754 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:28:18,754 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:28:18,754 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:28:18,754 DEBUG logic.TextParser - Error of analysis of a line - if-
+04.06.2015 14:28:18,754 DEBUG logic.TextParser - Error of analysis of a line - statements.
+04.06.2015 14:28:45,415 INFO  runner.Runner - Start
+04.06.2015 14:28:45,431 INFO  runner.Runner - Load data from file
+04.06.2015 14:28:56,907 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:29:08,579 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:29:45,661 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:31:04,577 INFO  runner.Runner - Start
+04.06.2015 14:31:04,577 INFO  runner.Runner - Load data from file
+04.06.2015 14:31:04,593 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:31:04,593 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:31:04,593 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:31:04,593 DEBUG logic.TextParser - Error of analysis of a line - if-
+04.06.2015 14:31:04,593 DEBUG logic.TextParser - Error of analysis of a line - statements.
+04.06.2015 14:31:14,939 INFO  runner.Runner - Start
+04.06.2015 14:31:14,939 INFO  runner.Runner - Load data from file
+04.06.2015 14:31:23,003 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:31:29,234 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:33:34,450 INFO  runner.Runner - Start
+04.06.2015 14:33:34,466 INFO  runner.Runner - Load data from file
+04.06.2015 14:33:34,466 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:33:34,466 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:33:34,466 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - The
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - if-
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - then
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - statement
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - is
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - the
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - most
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - basic
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - of
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - all
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - the
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - control
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - flow
+04.06.2015 14:33:34,466 DEBUG logic.TextParser - Error of analysis of a line - statements.
+04.06.2015 14:34:12,249 INFO  runner.Runner - Start
+04.06.2015 14:34:12,265 INFO  runner.Runner - Load data from file
+04.06.2015 14:34:20,664 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:34:28,420 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:34:35,123 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:34:36,732 DEBUG logic.TextParser - Error of analysis of a line - The
+04.06.2015 14:44:13,429 INFO  runner.Runner - Start
+04.06.2015 14:44:13,430 INFO  runner.Runner - Load data from file
+04.06.2015 14:44:13,437 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:44:13,437 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:44:13,438 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:44:13,438 DEBUG logic.TextParser - Error of analysis of a line - The
+04.06.2015 14:44:13,438 DEBUG logic.TextParser - Error of analysis of a line - if
+04.06.2015 14:44:13,439 DEBUG logic.TextParser - Error of analysis of a line - then
+04.06.2015 14:44:13,439 DEBUG logic.TextParser - Error of analysis of a line - statement
+04.06.2015 14:44:13,439 DEBUG logic.TextParser - Error of analysis of a line - is
+04.06.2015 14:44:13,439 DEBUG logic.TextParser - Error of analysis of a line - the
+04.06.2015 14:44:13,439 DEBUG logic.TextParser - Error of analysis of a line - most
+04.06.2015 14:44:13,439 DEBUG logic.TextParser - Error of analysis of a line - basic
+04.06.2015 14:44:13,440 DEBUG logic.TextParser - Error of analysis of a line - of
+04.06.2015 14:44:13,440 DEBUG logic.TextParser - Error of analysis of a line - all
+04.06.2015 14:44:13,440 DEBUG logic.TextParser - Error of analysis of a line - the
+04.06.2015 14:44:13,440 DEBUG logic.TextParser - Error of analysis of a line - control
+04.06.2015 14:44:13,440 DEBUG logic.TextParser - Error of analysis of a line - flow
+04.06.2015 14:44:13,440 DEBUG logic.TextParser - Error of analysis of a line - statements.
+04.06.2015 14:44:34,139 INFO  runner.Runner - Start
+04.06.2015 14:44:34,140 INFO  runner.Runner - Load data from file
+04.06.2015 14:44:34,147 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:44:34,148 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:44:34,148 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:44:34,149 DEBUG logic.TextParser - Error of analysis of a line - The
+04.06.2015 14:44:34,149 DEBUG logic.TextParser - Error of analysis of a line - if
+04.06.2015 14:44:34,149 DEBUG logic.TextParser - Error of analysis of a line - then
+04.06.2015 14:44:34,149 DEBUG logic.TextParser - Error of analysis of a line - statement
+04.06.2015 14:44:34,149 DEBUG logic.TextParser - Error of analysis of a line - is
+04.06.2015 14:44:34,149 DEBUG logic.TextParser - Error of analysis of a line - the
+04.06.2015 14:44:34,150 DEBUG logic.TextParser - Error of analysis of a line - most
+04.06.2015 14:44:34,150 DEBUG logic.TextParser - Error of analysis of a line - basic
+04.06.2015 14:44:34,150 DEBUG logic.TextParser - Error of analysis of a line - of
+04.06.2015 14:44:34,150 DEBUG logic.TextParser - Error of analysis of a line - all
+04.06.2015 14:44:34,150 DEBUG logic.TextParser - Error of analysis of a line - the
+04.06.2015 14:44:34,150 DEBUG logic.TextParser - Error of analysis of a line - control
+04.06.2015 14:44:34,151 DEBUG logic.TextParser - Error of analysis of a line - flow
+04.06.2015 14:44:34,151 DEBUG logic.TextParser - Error of analysis of a line - statements.
+04.06.2015 14:44:43,014 INFO  runner.Runner - Start
+04.06.2015 14:44:43,015 INFO  runner.Runner - Load data from file
+04.06.2015 14:44:49,774 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:44:52,321 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:44:57,231 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:44:59,642 DEBUG logic.TextParser - Error of analysis of a line - The
+04.06.2015 14:46:06,505 INFO  runner.Runner - Start
+04.06.2015 14:46:06,506 INFO  runner.Runner - Load data from file
+04.06.2015 14:46:06,513 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:46:06,513 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:46:06,514 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:46:06,514 DEBUG logic.TextParser - Error of analysis of a line - The
+04.06.2015 14:46:06,514 DEBUG logic.TextParser - Error of analysis of a line - if
+04.06.2015 14:46:06,514 DEBUG logic.TextParser - Error of analysis of a line - then
+04.06.2015 14:46:06,514 DEBUG logic.TextParser - Error of analysis of a line - statement
+04.06.2015 14:46:06,514 DEBUG logic.TextParser - Error of analysis of a line - is
+04.06.2015 14:46:06,515 DEBUG logic.TextParser - Error of analysis of a line - the
+04.06.2015 14:46:06,515 DEBUG logic.TextParser - Error of analysis of a line - most
+04.06.2015 14:46:06,515 DEBUG logic.TextParser - Error of analysis of a line - basic
+04.06.2015 14:46:06,515 DEBUG logic.TextParser - Error of analysis of a line - of
+04.06.2015 14:46:06,515 DEBUG logic.TextParser - Error of analysis of a line - all
+04.06.2015 14:46:06,515 DEBUG logic.TextParser - Error of analysis of a line - the
+04.06.2015 14:46:06,515 DEBUG logic.TextParser - Error of analysis of a line - control
+04.06.2015 14:46:06,516 DEBUG logic.TextParser - Error of analysis of a line - flow
+04.06.2015 14:46:06,516 DEBUG logic.TextParser - Error of analysis of a line - statements.
+04.06.2015 14:46:17,977 INFO  runner.Runner - Start
+04.06.2015 14:46:17,978 INFO  runner.Runner - Load data from file
+04.06.2015 14:46:23,889 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:46:26,034 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:46:27,965 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:46:29,139 DEBUG logic.TextParser - Error of analysis of a line - The
+04.06.2015 14:46:39,658 DEBUG logic.TextParser - Error of analysis of a line - if
+04.06.2015 14:46:42,458 DEBUG logic.TextParser - Error of analysis of a line - then
+04.06.2015 14:46:45,568 DEBUG logic.TextParser - Error of analysis of a line - statement
+04.06.2015 14:46:48,403 DEBUG logic.TextParser - Error of analysis of a line - is
+04.06.2015 14:46:51,156 DEBUG logic.TextParser - Error of analysis of a line - the
+04.06.2015 14:46:54,242 DEBUG logic.TextParser - Error of analysis of a line - most
+04.06.2015 14:46:57,625 DEBUG logic.TextParser - Error of analysis of a line - basic
+04.06.2015 14:47:00,648 DEBUG logic.TextParser - Error of analysis of a line - of
+04.06.2015 14:47:03,716 DEBUG logic.TextParser - Error of analysis of a line - all
+04.06.2015 14:47:06,451 DEBUG logic.TextParser - Error of analysis of a line - the
+04.06.2015 14:47:09,101 DEBUG logic.TextParser - Error of analysis of a line - control
+04.06.2015 14:47:12,776 DEBUG logic.TextParser - Error of analysis of a line - flow
+04.06.2015 14:50:54,269 INFO  runner.Runner - Start
+04.06.2015 14:50:54,269 INFO  runner.Runner - Load data from file
+04.06.2015 14:50:59,698 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:51:00,568 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:51:34,075 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:53:53,537 INFO  runner.Runner - Start
+04.06.2015 14:53:53,538 INFO  runner.Runner - Load data from file
+04.06.2015 14:53:53,545 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:53:53,546 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:53:53,546 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:53:53,546 DEBUG logic.TextParser - Error of analysis of a line - statements.
+04.06.2015 14:54:31,066 INFO  runner.Runner - Start
+04.06.2015 14:54:31,067 INFO  runner.Runner - Load data from file
+04.06.2015 14:54:43,111 INFO  runner.Runner - Start
+04.06.2015 14:54:43,111 INFO  runner.Runner - Load data from file
+04.06.2015 14:54:43,118 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:54:43,119 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:54:43,120 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:54:43,120 DEBUG logic.TextParser - Error of analysis of a line - statements.
+04.06.2015 14:54:56,710 INFO  runner.Runner - Start
+04.06.2015 14:54:56,710 INFO  runner.Runner - Load data from file
+04.06.2015 14:55:06,063 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:55:22,410 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:55:22,412 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:55:22,412 DEBUG logic.TextParser - Error of analysis of a line - statements.
+04.06.2015 14:55:34,284 INFO  runner.Runner - Start
+04.06.2015 14:55:34,284 INFO  runner.Runner - Load data from file
+04.06.2015 14:55:38,876 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:55:45,366 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:55:45,367 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:55:45,368 DEBUG logic.TextParser - Error of analysis of a line - statements.
+04.06.2015 14:55:48,646 INFO  runner.Runner - Start
+04.06.2015 14:55:48,646 INFO  runner.Runner - Load data from file
+04.06.2015 14:55:52,360 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:56:08,108 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:56:14,308 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:56:14,368 DEBUG logic.TextParser - Error of analysis of a line - statements.
+04.06.2015 14:56:22,287 INFO  runner.Runner - Start
+04.06.2015 14:56:22,287 INFO  runner.Runner - Load data from file
+04.06.2015 14:56:26,076 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:56:26,192 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:56:39,361 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:59:21,201 INFO  runner.Runner - Start
+04.06.2015 14:59:21,202 INFO  runner.Runner - Load data from file
+04.06.2015 14:59:21,210 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 14:59:21,210 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 14:59:21,211 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 14:59:21,211 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 14:59:21,211 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 14:59:21,211 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 14:59:21,211 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 14:59:21,212 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 14:59:21,212 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 14:59:21,212 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 14:59:21,212 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 14:59:21,212 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 14:59:21,212 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 14:59:21,212 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 14:59:21,213 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 14:59:21,213 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 14:59:21,213 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,802 INFO  runner.Runner - Start
+04.06.2015 15:00:06,803 INFO  runner.Runner - Load data from file
+04.06.2015 15:00:06,813 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:00:06,814 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:00:06,814 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:00:06,815 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,815 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,815 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,815 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,815 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,815 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,815 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,816 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,816 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,816 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,816 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,816 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,816 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:06,817 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,816 INFO  runner.Runner - Start
+04.06.2015 15:00:54,816 INFO  runner.Runner - Load data from file
+04.06.2015 15:00:54,825 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 15:00:54,826 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 15:00:54,826 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:00:54,826 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:00:54,827 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:00:54,827 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,827 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,828 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,828 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,828 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,828 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,828 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,828 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,828 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,829 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,829 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,829 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,829 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,829 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,829 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,830 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,830 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,830 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,830 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,830 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,830 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,830 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,831 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,831 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,831 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,831 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,831 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,831 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,831 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,831 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,832 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,832 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,832 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,832 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,832 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,832 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,832 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,833 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,833 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,833 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,833 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,833 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,833 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,833 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,833 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,834 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,834 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,834 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,834 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,834 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,834 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,834 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,835 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,835 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,835 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,835 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,835 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,835 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,835 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,836 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,836 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,836 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,836 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,836 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,836 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,836 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,836 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,837 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,837 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,837 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,837 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,837 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,837 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,837 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,838 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,838 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,838 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,838 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,838 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,838 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,838 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,839 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,839 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,839 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,839 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,839 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,839 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,839 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,839 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,840 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,840 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,840 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,840 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,840 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,840 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,840 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,840 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,841 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,841 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,841 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,841 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,841 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,841 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,841 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,841 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,842 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,842 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,842 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,842 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,842 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,842 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,842 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,842 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,842 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,843 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,843 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,843 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,843 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,843 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,843 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,843 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,843 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,844 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,844 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,844 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,844 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,844 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,844 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,844 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,844 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,844 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,845 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,845 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,845 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,845 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,845 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,845 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,845 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,845 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,845 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,846 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,846 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,846 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,846 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,846 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,846 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,846 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,846 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,846 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,846 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,847 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,847 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,847 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,847 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,847 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,847 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,847 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,847 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,848 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,848 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,848 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,848 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,848 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,848 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,848 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,848 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,848 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,849 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,849 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,849 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,849 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,849 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,849 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,849 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,849 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,849 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,850 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,850 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,850 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,850 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,850 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,850 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,850 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,850 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,850 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,850 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,850 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,851 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,851 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,851 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,851 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,851 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,851 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,851 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,851 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,851 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,851 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,851 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,852 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,852 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,852 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,852 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,852 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,852 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,852 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,852 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,852 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,852 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,852 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,853 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,853 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,853 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,853 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,853 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,853 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,853 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,853 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,853 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,853 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,853 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,854 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,854 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,854 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,854 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,854 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,854 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,854 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,854 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,854 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,854 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,854 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,855 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,855 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,855 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,855 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,855 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,855 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,855 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,855 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,855 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,855 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,856 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,856 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,856 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,856 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,856 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,856 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,856 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,856 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,856 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,857 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,857 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,857 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,857 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,857 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,857 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,857 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,857 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,857 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,857 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,857 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,857 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,858 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,858 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,858 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,858 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,858 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,858 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,858 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,858 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,858 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,858 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,858 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,859 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,859 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,859 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,859 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,859 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,859 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,859 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,859 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,859 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,859 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,859 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,859 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,859 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,860 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,860 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,860 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,860 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,860 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,860 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,860 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,860 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,860 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,860 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,860 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,860 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,860 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,861 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,862 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,862 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,862 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,862 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,862 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,862 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,862 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,862 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,862 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,862 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,863 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,863 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,863 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,863 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,863 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,863 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,863 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,863 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,863 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,863 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,863 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,863 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,863 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,864 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,865 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,866 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,866 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,866 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,866 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,866 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,866 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,866 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,866 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,866 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,866 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:00:54,866 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,680 INFO  runner.Runner - Start
+04.06.2015 15:02:54,681 INFO  runner.Runner - Load data from file
+04.06.2015 15:02:54,688 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 15:02:54,689 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 15:02:54,689 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:02:54,689 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:02:54,690 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:02:54,690 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,690 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,690 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,690 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,691 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,691 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,691 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,691 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,691 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,691 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,691 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,692 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,692 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,692 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,692 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,692 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,692 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,692 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,693 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,693 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,693 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,693 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,693 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,693 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,693 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,694 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,694 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,694 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,694 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,694 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,694 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,694 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,695 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,695 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,695 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,695 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,695 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,695 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,695 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,696 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,696 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,696 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,696 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,696 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,696 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,696 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,696 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,697 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,697 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,697 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,697 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,697 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,697 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,697 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,698 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,698 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,698 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,698 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,698 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,698 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,698 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,699 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,699 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,699 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,699 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,699 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,699 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,699 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,700 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,700 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,700 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,700 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,701 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,701 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,701 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,701 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,701 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,701 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,701 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,702 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,702 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,702 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,702 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,702 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,702 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,702 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,703 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,703 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,703 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,703 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,703 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,703 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,703 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,703 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,704 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,704 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,704 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,704 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,704 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,704 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,704 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,704 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,704 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,705 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,705 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,705 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,705 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,705 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,705 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,705 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,705 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,705 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,706 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,706 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,706 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,706 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,706 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,706 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,706 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,706 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,707 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,707 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,707 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,707 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,707 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,707 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,707 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,707 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,708 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,708 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,708 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,708 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,708 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,708 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,708 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,708 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,708 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,709 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,709 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,709 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,709 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,709 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,709 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,709 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,709 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,709 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,709 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,709 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,710 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,710 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,710 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,710 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,710 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,710 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,710 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,710 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,711 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,711 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,711 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,711 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,711 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,711 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,711 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,712 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,712 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,712 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,712 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,712 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,712 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,713 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,713 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,713 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,713 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,713 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,713 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,713 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,713 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,713 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,714 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,714 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,714 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,714 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,714 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,714 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,714 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,714 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,714 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,714 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,715 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,715 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,716 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,716 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,716 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,716 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,716 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,716 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,716 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,716 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,717 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,717 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,717 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,717 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,717 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,717 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,717 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,717 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,718 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,718 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,718 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,718 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,718 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,718 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,718 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,718 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,718 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,718 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,718 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,719 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,719 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,719 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,719 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,719 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,719 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,719 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,719 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,719 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,719 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,720 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,720 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,720 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,720 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,720 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,720 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,720 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,720 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,721 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,721 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,721 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,721 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,721 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,721 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,721 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,721 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,722 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,722 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,722 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,722 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,722 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,722 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,723 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,723 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,723 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,723 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,723 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,723 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,723 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,724 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,724 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,724 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,724 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,724 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,724 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,724 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,724 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,724 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,725 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,725 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,725 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,725 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,725 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,725 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,725 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,725 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,726 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,726 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,726 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,726 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,726 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,726 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,726 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,726 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,727 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,727 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,727 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,727 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,727 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,727 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,727 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,727 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,727 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,727 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,728 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,728 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,728 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,728 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,728 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,728 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,728 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,728 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,728 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,728 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,728 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,729 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,729 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,729 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,729 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,729 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,729 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,729 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,729 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,729 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,729 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,729 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,729 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,730 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,731 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,731 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,731 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,731 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,731 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,731 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,731 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,731 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,731 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,731 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,731 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,731 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,731 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,732 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,733 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,734 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,734 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,734 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,734 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:02:54,734 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:04:11,320 INFO  runner.Runner - Start
+04.06.2015 15:04:11,321 INFO  runner.Runner - Load data from file
+04.06.2015 15:04:21,040 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 15:04:33,558 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 15:04:43,463 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:04:49,241 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:04:56,937 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:15:55,636 INFO  runner.Runner - Start
+04.06.2015 15:15:55,637 INFO  runner.Runner - Load data from file
+04.06.2015 15:15:55,644 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 15:17:15,808 INFO  runner.Runner - Start
+04.06.2015 15:17:15,809 INFO  runner.Runner - Load data from file
+04.06.2015 15:17:15,817 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 15:18:57,318 INFO  runner.Runner - Start
+04.06.2015 15:19:01,260 INFO  regex.TextRegex - Load LISTING regex
+04.06.2015 15:19:18,981 INFO  runner.Runner - Start
+04.06.2015 15:19:18,987 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 15:19:18,987 INFO  runner.Runner - Load data from file
+04.06.2015 15:19:18,989 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 15:20:59,754 INFO  runner.Runner - Start
+04.06.2015 15:20:59,761 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 15:20:59,761 INFO  runner.Runner - Load data from file
+04.06.2015 15:20:59,763 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 15:20:59,764 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:20:59,764 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:20:59,764 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:20:59,765 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,765 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,765 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,765 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,765 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,765 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,766 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,766 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,766 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,766 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,766 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,766 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,766 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,767 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,767 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,767 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,767 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,767 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,767 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,768 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,768 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,768 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,768 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,768 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,768 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,768 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,769 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,769 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,769 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,769 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,769 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,769 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,769 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,770 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,770 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,770 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,770 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,770 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,770 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,770 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,771 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,771 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,771 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,771 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,771 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,771 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,771 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,771 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,772 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,772 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,772 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,772 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,772 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,772 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,772 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,773 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,773 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,773 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,773 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,773 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,774 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,774 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,774 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,774 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,774 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,775 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,775 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,775 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,775 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,775 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,775 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,775 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,776 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,776 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,776 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,776 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,776 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,776 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,776 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,777 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,777 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,777 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,777 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,777 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,777 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,777 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,777 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,777 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,778 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,778 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,778 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,778 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,778 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,778 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,778 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,778 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,779 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,779 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,779 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,779 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,779 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,779 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,779 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,779 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,780 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,780 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,780 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,780 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,780 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,780 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,780 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,780 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,781 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,781 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,781 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,781 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,781 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,781 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,781 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,781 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,781 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,782 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,782 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,782 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,782 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,782 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,782 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,782 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,782 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,783 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,783 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,783 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,783 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,783 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,783 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,783 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,783 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,783 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,783 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,784 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,784 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,784 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,784 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,784 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,784 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,784 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,784 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,784 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,784 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,785 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,785 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,785 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,785 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,785 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,785 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,785 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,785 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,785 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,786 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,786 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,786 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,786 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,786 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,786 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,786 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,786 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,786 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,786 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,787 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,787 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,787 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,787 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,787 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,787 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,787 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,787 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,787 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,787 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,787 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,788 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,788 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,788 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,788 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,788 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,788 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,788 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,788 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,788 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,788 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,789 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,789 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,789 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,789 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,789 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,789 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,789 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,789 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,789 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,789 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,790 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,790 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,790 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,790 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,790 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,790 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,790 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,790 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,791 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,791 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,791 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,791 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,791 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,791 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,791 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,791 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,792 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,792 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,792 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,792 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,792 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,792 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,792 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,792 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,793 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,793 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,793 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,793 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,793 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,793 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,793 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,794 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,794 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,794 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,794 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,794 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,794 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,795 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,795 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,795 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,795 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,795 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,795 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,795 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,795 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,795 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,795 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,796 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,796 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,796 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,796 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,796 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,796 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,796 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,796 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,796 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,797 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,798 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,798 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,798 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,798 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,798 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,798 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,798 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,798 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,798 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,798 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,798 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,798 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,799 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,799 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,799 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,799 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,799 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,799 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,799 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,799 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,799 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,799 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,799 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,799 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,799 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,800 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,801 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,801 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,801 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,801 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,801 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,801 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,801 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,801 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,801 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,801 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,801 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,801 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,801 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,802 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,802 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,802 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,802 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,802 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,802 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,802 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,802 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,802 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,802 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,802 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,802 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,803 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,804 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,805 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,805 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,805 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,805 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,805 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,805 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,805 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,805 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,805 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,805 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,805 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,805 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:20:59,805 DEBUG logic.TextParser - Error of analysis of a line - 
+04.06.2015 15:28:36,326 INFO  runner.Runner - Start
+04.06.2015 15:28:36,332 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 15:28:36,332 INFO  runner.Runner - Load data from file
+04.06.2015 15:28:36,338 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 15:28:36,338 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:28:36,338 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:28:36,339 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:28:36,339 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,339 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,340 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,340 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,340 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,340 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,340 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,340 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,341 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,341 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,341 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,341 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,341 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,341 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,342 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,342 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,342 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,342 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,342 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,342 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,342 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,343 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,343 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,343 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,343 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,343 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,343 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,344 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,344 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,344 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,344 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,344 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,344 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,345 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,345 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,345 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,345 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,345 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,345 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,345 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,345 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,346 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,346 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,346 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,346 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,346 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,346 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,346 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,347 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,347 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,347 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,347 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,347 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,347 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,347 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,348 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,348 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,348 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,348 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,348 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,348 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,348 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,348 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,349 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,349 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,349 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,349 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,349 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,349 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,349 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,349 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,350 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,350 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,350 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,350 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,350 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,350 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,350 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,350 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,351 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,351 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,351 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,351 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,351 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,351 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,351 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,351 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,352 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,352 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,352 INFO  regex.TextRegex - Load LISTING regex
+04.06.2015 15:28:36,352 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,352 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,352 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,353 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,353 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,353 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,353 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,353 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,353 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,353 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,353 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,354 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,354 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,354 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,354 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,354 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,354 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,354 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,354 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,354 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,355 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,355 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,355 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,355 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,355 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,355 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,355 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,356 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,356 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,356 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,356 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,356 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,356 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,356 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,357 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,357 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,357 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,357 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,357 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,357 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,357 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,357 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,358 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,358 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,358 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,358 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,358 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,358 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,358 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,359 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,359 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,359 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,359 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,359 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,359 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,359 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,359 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,359 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,360 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,360 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,360 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,360 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,360 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,360 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,360 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,360 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,360 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,361 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,361 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,361 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,361 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,361 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,361 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,361 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,361 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,361 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,362 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,362 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,362 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,362 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,362 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,362 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,362 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,362 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,362 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,362 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,363 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,363 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,363 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,363 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,363 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,363 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,363 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,363 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,364 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,364 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,364 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,364 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,364 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,364 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,364 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,364 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,364 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,365 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,365 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,365 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,365 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,365 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,365 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,365 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,365 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,366 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,366 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,366 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,366 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,366 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,366 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,366 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,366 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,366 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,366 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,366 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,367 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,367 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,367 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,367 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,367 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,367 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,367 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,367 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,367 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,367 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,368 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,368 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,368 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,368 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,368 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,368 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,368 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,369 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,369 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,369 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,369 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,369 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,369 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,370 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,370 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,370 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,370 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,370 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,370 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,370 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,371 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,371 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,371 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,371 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,371 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,371 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,371 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,371 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,372 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,372 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,372 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,372 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,372 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,372 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,372 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,372 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,372 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,372 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,372 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,373 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,373 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,373 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,373 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,373 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,373 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,373 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,373 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,373 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,373 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,373 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,373 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,374 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,374 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,374 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,374 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,374 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,374 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,374 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,374 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,374 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,374 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,374 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,374 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,374 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,375 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,375 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,375 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,375 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,375 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,375 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,375 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,375 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,375 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,375 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,375 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,375 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,375 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,376 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,376 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,376 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,376 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,376 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,376 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,376 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,376 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,376 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,376 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,376 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,377 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,377 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,377 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,377 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,377 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,377 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,377 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,378 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,378 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,378 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,378 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,378 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,378 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,378 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,378 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,379 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,379 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,379 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,379 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,379 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,379 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,379 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,379 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,379 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,380 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,380 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,380 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,380 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,380 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,380 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,380 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,380 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,380 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,380 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,381 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,381 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,381 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,381 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,381 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,381 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,381 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,381 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,381 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,381 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,382 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,382 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,382 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,382 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,382 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,382 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,382 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,383 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,383 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,383 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,383 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,383 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,383 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,383 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,383 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,383 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,383 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,383 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,384 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,384 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,384 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:28:36,384 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,963 INFO  runner.Runner - Start
+04.06.2015 15:30:56,968 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 15:30:56,968 INFO  runner.Runner - Load data from file
+04.06.2015 15:30:56,972 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 15:30:56,973 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:30:56,973 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:30:56,973 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:30:56,974 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,974 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,974 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,974 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,974 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,975 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,975 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,975 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,975 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,975 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,975 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,976 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,976 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,976 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,976 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,976 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,976 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,977 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,977 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,977 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,977 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,977 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,977 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,977 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,978 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,978 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,978 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,978 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,978 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,978 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,979 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,979 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,979 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,979 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,979 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,979 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,980 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,980 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,980 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,980 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,980 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,980 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,980 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,981 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,981 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,981 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,981 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,981 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,981 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,981 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,981 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,982 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,982 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,982 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,982 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,982 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,982 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,982 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,983 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,983 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,983 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,983 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,983 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,983 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,983 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,983 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,983 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,984 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,984 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,984 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,984 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,984 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,984 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,984 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,984 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,985 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,985 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,985 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,985 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,985 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,985 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,985 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,986 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,986 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,986 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,986 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,986 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,986 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,986 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,986 INFO  regex.TextRegex - Load LISTING regex
+04.06.2015 15:30:56,987 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,987 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,987 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,987 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,987 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,987 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,987 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,988 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,988 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,988 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,988 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,988 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,988 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,988 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,988 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,989 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,989 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,989 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,989 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,989 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,989 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,989 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,989 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,989 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,990 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,990 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,990 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,990 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,990 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,990 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,990 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,991 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,991 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,991 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,991 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,991 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,991 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,991 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,992 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,992 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,992 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,992 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,992 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,992 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,992 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,993 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,993 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,993 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,993 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,993 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,993 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,993 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,994 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,994 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,994 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,994 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,994 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,994 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,994 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,994 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,995 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,995 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,995 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,995 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,995 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,995 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,995 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,995 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,995 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,996 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,996 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,996 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,996 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,996 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,996 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,996 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,996 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,996 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,996 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,997 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,997 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,997 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,997 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,997 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,997 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,997 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,997 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,998 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,998 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,998 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,998 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,998 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,998 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,998 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,999 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,999 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,999 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,999 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,999 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:56,999 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,000 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,000 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,000 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,000 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,000 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,000 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,000 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,000 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,000 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,000 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,000 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,001 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,001 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,001 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,001 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,001 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,001 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,001 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,001 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,001 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,002 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,002 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,002 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,002 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,002 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,002 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,002 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,002 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,003 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,003 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,003 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,003 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,003 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,003 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,003 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,003 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,003 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,003 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,003 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,004 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,004 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,004 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,004 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,004 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,004 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,004 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,004 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,004 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,004 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,005 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,005 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,005 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,005 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,005 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,005 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,005 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,005 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,005 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,006 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,006 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,006 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,006 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,006 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,006 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,006 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,006 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,007 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,007 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,007 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,007 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,007 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,007 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,007 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,007 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,007 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,007 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,007 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,007 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,007 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,008 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,008 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,008 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,008 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,008 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,008 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,008 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,008 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,008 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,008 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,008 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,008 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,009 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,009 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,009 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,009 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,009 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,009 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,009 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,009 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,009 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,009 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,009 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,009 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,010 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,010 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,010 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,010 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,010 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,010 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,010 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,010 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,010 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,010 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,010 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,010 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,011 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,011 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,011 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,011 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,011 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,011 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,011 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,011 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,011 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,012 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,012 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,012 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,012 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,012 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,012 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,012 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,012 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,012 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,012 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,013 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,013 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,013 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,013 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,013 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,013 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,013 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,013 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,014 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,014 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,014 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,014 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,014 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,014 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,014 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,014 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,014 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,015 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,015 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,015 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,015 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,015 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,015 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,015 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,015 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,015 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,015 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,016 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,016 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,016 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,016 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,016 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,016 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,016 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,016 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,016 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,016 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,017 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:30:57,018 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:31:35,512 INFO  runner.Runner - Start
+04.06.2015 15:31:40,067 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 15:31:41,302 INFO  runner.Runner - Load data from file
+04.06.2015 15:32:16,284 INFO  runner.Runner - Start
+04.06.2015 15:32:16,285 INFO  runner.Runner - Load data from file
+04.06.2015 15:32:24,225 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 15:32:32,837 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 15:32:48,171 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:32:54,835 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:33:11,761 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:34:02,935 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:34:48,513 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:35:05,193 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:35:11,268 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:35:42,456 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:36:32,315 INFO  runner.Runner - Start
+04.06.2015 15:36:32,316 INFO  runner.Runner - Load data from file
+04.06.2015 15:36:39,919 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:36:41,899 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:40:36,603 INFO  runner.Runner - Start
+04.06.2015 15:40:36,604 INFO  runner.Runner - Load data from file
+04.06.2015 15:40:36,611 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:40:36,611 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:40:36,611 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:40:36,612 DEBUG logic.TextParser - Error of analysis of a line - The if, SENTENCE
+04.06.2015 15:40:36,612 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:40:36,612 DEBUG logic.TextParser - Error of analysis of a line - then statement is the most basic of all the control flow statements, SENTENCE
+04.06.2015 15:40:36,613 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,516 INFO  runner.Runner - Start
+04.06.2015 15:41:01,517 INFO  runner.Runner - Load data from file
+04.06.2015 15:41:01,525 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:41:01,525 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:41:01,526 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:41:01,526 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,526 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,526 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,526 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,527 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,527 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,527 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,527 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,527 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,527 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,528 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,528 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,528 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:01,528 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:11,791 INFO  runner.Runner - Start
+04.06.2015 15:41:11,792 INFO  runner.Runner - Load data from file
+04.06.2015 15:41:11,799 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:41:11,800 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:41:11,800 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:41:11,800 DEBUG logic.TextParser - Error of analysis of a line - The if, SENTENCE
+04.06.2015 15:41:11,800 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:11,801 DEBUG logic.TextParser - Error of analysis of a line - then statement is the most basic of all the control flow statements, SENTENCE
+04.06.2015 15:41:11,801 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,108 INFO  runner.Runner - Start
+04.06.2015 15:41:25,109 INFO  runner.Runner - Load data from file
+04.06.2015 15:41:25,117 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:41:25,118 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:41:25,118 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:41:25,119 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,119 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,119 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,119 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,119 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,119 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,120 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,120 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,120 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,120 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,120 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,120 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,121 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:41:25,121 DEBUG logic.TextParser - Error of analysis of a line - , SENTENCE
+04.06.2015 15:42:48,030 INFO  runner.Runner - Start
+04.06.2015 15:42:48,031 INFO  runner.Runner - Load data from file
+04.06.2015 15:42:48,040 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:42:48,041 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:42:48,042 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:43:16,349 INFO  runner.Runner - Start
+04.06.2015 15:43:16,350 INFO  runner.Runner - Load data from file
+04.06.2015 15:43:16,360 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 15:43:16,360 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 15:43:16,361 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:43:16,361 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:43:16,362 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:43:16,363 INFO  regex.TextRegex - Load LISTING regex
+04.06.2015 15:47:37,869 INFO  runner.Runner - Start
+04.06.2015 15:47:37,870 INFO  runner.Runner - Load data from file
+04.06.2015 15:47:37,880 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+04.06.2015 15:47:37,880 INFO  regex.TextRegex - Load SENTENCE regex
+04.06.2015 15:47:37,880 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+04.06.2015 15:47:37,880 INFO  regex.TextRegex - Load WORD regex
+04.06.2015 15:47:37,881 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+04.06.2015 15:47:37,882 INFO  regex.TextRegex - Load LISTING regex
