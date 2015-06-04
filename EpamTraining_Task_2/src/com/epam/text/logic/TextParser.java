@@ -18,11 +18,17 @@ import com.epam.text.regex.TextRegex;
  */
 public class TextParser {
 	private static final Logger LOG = Logger.getLogger(TextParser.class);
-	private static final String EMPTY_STRING="";
 	private static final String LOG_DEBUG_ERROR_TEXT="Error of analysis of a line - %s, %s";
 	private static final String LOG_DEBUG_ERROR_TYPE="Wrong text type - %s";
+	private TextRegex patternInstance;
 	
-	public IComponent createCompositeText(String text){
+	
+	public TextParser() {
+		super();
+		patternInstance=TextRegex.getTextRegexInstance();
+	}
+
+	public IComponent createCompositeText(String text) {
 		if(text==null || text.isEmpty()) {
 			return null;
 		}
@@ -30,14 +36,10 @@ public class TextParser {
 		IComponent head=new Composite(TypeText.TEXT);
 		parseText(head,text);
 		
-		//IComponent head=new Composite(TypeText.SENTENCE);
-		//parseText(head,"The if-then statement is the most basic of all the control flow statements.");
-		
 		return head;
 	}
 	
-	private void parseText(IComponent component, String text){
-		TextRegex patternInstance=TextRegex.getTextRegexInstance();
+	private void parseText(IComponent component, String text) {
 		Matcher matcher=null;
 		Matcher matcherGroup=null;
 		IComponent newComponent=null;
@@ -61,7 +63,7 @@ public class TextParser {
 				
 				matcher=patternInstance.getPattern(TypeText.LISTING).matcher(findElement);
 				
-				if(matcher.matches()){			
+				if(matcher.matches()) {			
 					newComponent=new Leaf(TypeText.LISTING,findElement);
 					component.add(newComponent);
 					continue;
@@ -77,11 +79,9 @@ public class TextParser {
 			while (matcherGroup.find()) {
 				findElement=matcherGroup.group();
 							
-				//if(findElement.isEmpty())continue;
-				
 				matcher=patternInstance.getPattern(TypeText.WORD).matcher(findElement);
 				
-				if(matcher.matches()){
+				if(matcher.matches()) {
 					newComponent=new Leaf(TypeText.WORD,findElement);
 					component.add(newComponent);
 					continue;
@@ -89,7 +89,7 @@ public class TextParser {
 				
 				matcher=patternInstance.getPattern(TypeText.PUNKTUATION_MARK).matcher(findElement);
 				
-				if(matcher.matches()){
+				if(matcher.matches()) {
 					newComponent=new Leaf(TypeText.PUNKTUATION_MARK,findElement);
 					component.add(newComponent);
 					continue;

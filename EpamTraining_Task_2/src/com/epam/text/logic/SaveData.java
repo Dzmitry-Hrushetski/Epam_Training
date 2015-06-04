@@ -9,6 +9,8 @@ import java.io.IOException;
 
 import org.apache.log4j.Logger;
 
+import com.epam.text.exception.BusinessException;
+
 /**
  * @author Dzmitry Hrushetski
  *
@@ -16,13 +18,13 @@ import org.apache.log4j.Logger;
 public class SaveData {
 	private static final Logger LOG = Logger.getLogger(SaveData.class);
 	
-	public static void saveCompositeToFile(String fileName,StringBuilder data){
+	public static void saveCompositeToFile(String fileName,StringBuilder data) throws BusinessException{
 		
 		BufferedWriter fileOutput = null;
 		
 		if(fileName==null || fileName.isEmpty()) {
 			LOG.error("Incorrect file name");
-			return;
+			throw new BusinessException("Incorrect file name");
 		}
 		
 	    try {
@@ -30,6 +32,7 @@ public class SaveData {
 	    	fileOutput.write(data.toString());	  
 	    } catch (IOException e) {
 	    	LOG.error(e.getMessage());
+	    	throw new BusinessException(e.getMessage());
 	    } finally {
 	    	try {
 				if(fileOutput!=null) {
@@ -37,6 +40,7 @@ public class SaveData {
 				}
 			} catch (IOException e) {
 				LOG.error(e.getMessage());
+				throw new BusinessException(e.getMessage());
 			}  	
 	    }
 	    LOG.info("Composite are successfully saved");

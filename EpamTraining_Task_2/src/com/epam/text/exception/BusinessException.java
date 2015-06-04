@@ -7,23 +7,23 @@ package com.epam.text.exception;
  * @author Dzmitry Hrushetski
  *
  */
-public class LogicalException extends Exception {
+public class BusinessException extends Exception {
 	private static final long serialVersionUID = 1L;
 
-	public LogicalException() {
+	public BusinessException() {
 	}
 
 	/**
 	 * @param message
 	 */
-	public LogicalException(String message) {
+	public BusinessException(String message) {
 		super(message);
 	}
 
 	/**
 	 * @param cause
 	 */
-	public LogicalException(Throwable cause) {
+	public BusinessException(Throwable cause) {
 		super(cause);
 	}
 
@@ -31,7 +31,7 @@ public class LogicalException extends Exception {
 	 * @param message
 	 * @param cause
 	 */
-	public LogicalException(String message, Throwable cause) {
+	public BusinessException(String message, Throwable cause) {
 		super(message, cause);
 	}
 
@@ -41,7 +41,7 @@ public class LogicalException extends Exception {
 	 * @param enableSuppression
 	 * @param writableStackTrace
 	 */
-	public LogicalException(String message, Throwable cause,
+	public BusinessException(String message, Throwable cause,
 			boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 	}

@@ -61,20 +61,10 @@ public class Composite implements IComponent {
 	 * @see com.epam.text.logic.IComponent#RestoreComposit(java.lang.StringBuilder)
 	 */
 	@Override
-	public StringBuilder RecoverComposit(StringBuilder data) {
+	public StringBuilder recoverComposit(StringBuilder data) {
 		for(IComponent component:components){
-			data=component.RecoverComposit(data);
+			data=component.recoverComposit(data);
 		}
 		return data;
-	}
-
-	/* (non-Javadoc)
-	 * @see com.epam.text.logic.IComponent#print()
-	 */
-	@Override
-	public void print() {
-		for(IComponent c:components){
-			c.print();
-		}	
 	}
 }

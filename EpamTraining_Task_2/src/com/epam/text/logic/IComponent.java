@@ -16,6 +16,5 @@ public interface IComponent {
 	void remove(IComponent component);
 	IComponent getElement(int index);
 	TypeText getTypeText();
-	StringBuilder RecoverComposit(StringBuilder data);
-	void print();
+	StringBuilder recoverComposit(StringBuilder data);
 }

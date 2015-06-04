@@ -27,18 +27,17 @@ public class TextRegex {
 
 	
 	private TextRegex() {
-		// check exceptions !!!!!
 		resource = ResourceBundle.getBundle(RESOURCE_NAME);
 	}
 	
-	public static TextRegex getTextRegexInstance(){
+	public static TextRegex getTextRegexInstance() {
 		if(instance==null) {
 			instance = new TextRegex();
 		}
 		return instance;
 	}
 
-	public Pattern getPattern(TypeText typeText){
+	public Pattern getPattern(TypeText typeText) {
 		Pattern pattern=null;
 		
 		
