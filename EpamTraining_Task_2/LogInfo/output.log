@@ -173,3 +173,118 @@
 05.06.2015 22:17:21,325 INFO  regex.TextRegex - Load WORD regex
 05.06.2015 22:17:21,325 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
 05.06.2015 22:17:21,325 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 22:40:50,828 INFO  runner.Runner - Start
+05.06.2015 22:40:50,828 INFO  logic.LoadData - Data are successfully loaded
+05.06.2015 22:40:50,828 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+05.06.2015 22:40:50,828 INFO  regex.TextRegex - Load SENTENCE regex
+05.06.2015 22:40:50,828 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+05.06.2015 22:40:50,828 INFO  regex.TextRegex - Load WORD regex
+05.06.2015 22:40:50,828 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+05.06.2015 22:40:50,828 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 22:40:50,828 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 22:41:48,189 INFO  runner.Runner - Start
+05.06.2015 22:41:48,205 INFO  logic.LoadData - Data are successfully loaded
+05.06.2015 22:41:48,205 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+05.06.2015 22:41:48,205 INFO  regex.TextRegex - Load SENTENCE regex
+05.06.2015 22:41:48,205 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+05.06.2015 22:41:48,205 INFO  regex.TextRegex - Load WORD regex
+05.06.2015 22:41:48,205 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+05.06.2015 22:41:48,205 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 22:41:48,205 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:23:34,494 INFO  runner.Runner - Start
+05.06.2015 23:23:34,494 INFO  logic.LoadData - Data are successfully loaded
+05.06.2015 23:23:34,509 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+05.06.2015 23:23:34,509 INFO  regex.TextRegex - Load SENTENCE regex
+05.06.2015 23:23:34,509 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+05.06.2015 23:23:34,509 INFO  regex.TextRegex - Load WORD regex
+05.06.2015 23:23:34,509 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+05.06.2015 23:23:34,509 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:24:29,178 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:25:54,881 INFO  runner.Runner - Start
+05.06.2015 23:25:54,881 INFO  logic.LoadData - Data are successfully loaded
+05.06.2015 23:25:54,881 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+05.06.2015 23:25:54,881 INFO  regex.TextRegex - Load SENTENCE regex
+05.06.2015 23:25:54,881 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+05.06.2015 23:25:54,881 INFO  regex.TextRegex - Load WORD regex
+05.06.2015 23:25:54,881 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+05.06.2015 23:25:54,881 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:27:54,818 INFO  runner.Runner - Start
+05.06.2015 23:27:54,818 INFO  logic.LoadData - Data are successfully loaded
+05.06.2015 23:27:54,818 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+05.06.2015 23:27:54,818 INFO  regex.TextRegex - Load SENTENCE regex
+05.06.2015 23:27:54,818 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+05.06.2015 23:27:54,818 INFO  regex.TextRegex - Load WORD regex
+05.06.2015 23:27:54,818 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+05.06.2015 23:27:54,818 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:31:54,447 INFO  runner.Runner - Start
+05.06.2015 23:31:54,447 INFO  logic.LoadData - Data are successfully loaded
+05.06.2015 23:31:54,447 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+05.06.2015 23:31:54,447 INFO  regex.TextRegex - Load SENTENCE regex
+05.06.2015 23:31:54,447 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+05.06.2015 23:31:54,447 INFO  regex.TextRegex - Load WORD regex
+05.06.2015 23:31:54,463 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+05.06.2015 23:31:54,463 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:31:54,463 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:34:08,568 INFO  runner.Runner - Start
+05.06.2015 23:34:08,584 INFO  logic.LoadData - Data are successfully loaded
+05.06.2015 23:34:08,584 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+05.06.2015 23:34:08,584 INFO  regex.TextRegex - Load SENTENCE regex
+05.06.2015 23:34:08,584 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+05.06.2015 23:34:08,584 INFO  regex.TextRegex - Load WORD regex
+05.06.2015 23:34:08,584 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+05.06.2015 23:34:08,600 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:35:01,317 INFO  runner.Runner - Start
+05.06.2015 23:35:01,332 INFO  logic.LoadData - Data are successfully loaded
+05.06.2015 23:35:01,332 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+05.06.2015 23:35:01,332 INFO  regex.TextRegex - Load SENTENCE regex
+05.06.2015 23:35:01,332 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+05.06.2015 23:35:01,332 INFO  regex.TextRegex - Load WORD regex
+05.06.2015 23:35:01,332 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+05.06.2015 23:35:01,332 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:35:16,715 INFO  runner.Runner - Start
+05.06.2015 23:35:16,715 INFO  logic.LoadData - Data are successfully loaded
+05.06.2015 23:35:16,715 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+05.06.2015 23:35:16,715 INFO  regex.TextRegex - Load SENTENCE regex
+05.06.2015 23:35:16,715 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+05.06.2015 23:35:16,715 INFO  regex.TextRegex - Load WORD regex
+05.06.2015 23:35:16,715 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+05.06.2015 23:35:16,715 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:35:52,365 INFO  runner.Runner - Start
+05.06.2015 23:35:52,365 INFO  logic.LoadData - Data are successfully loaded
+05.06.2015 23:35:52,381 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+05.06.2015 23:35:52,381 INFO  regex.TextRegex - Load SENTENCE regex
+05.06.2015 23:35:52,381 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+05.06.2015 23:35:52,381 INFO  regex.TextRegex - Load WORD regex
+05.06.2015 23:35:52,381 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+05.06.2015 23:35:52,381 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:39:43,760 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:40:25,921 INFO  runner.Runner - Start
+05.06.2015 23:40:25,925 INFO  logic.LoadData - Data are successfully loaded
+05.06.2015 23:40:25,933 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+05.06.2015 23:40:25,933 INFO  regex.TextRegex - Load SENTENCE regex
+05.06.2015 23:40:25,933 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+05.06.2015 23:40:25,933 INFO  regex.TextRegex - Load WORD regex
+05.06.2015 23:40:25,934 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+05.06.2015 23:40:25,936 INFO  regex.TextRegex - Load LISTING regex
+05.06.2015 23:40:25,942 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:40:25,944 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:43:34,313 INFO  runner.Runner - Start
+05.06.2015 23:43:34,313 INFO  logic.LoadData - Data are successfully loaded
+05.06.2015 23:43:34,313 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+05.06.2015 23:43:34,313 INFO  regex.TextRegex - Load SENTENCE regex
+05.06.2015 23:43:34,313 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+05.06.2015 23:43:34,313 INFO  regex.TextRegex - Load WORD regex
+05.06.2015 23:43:34,313 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+05.06.2015 23:43:34,313 INFO  regex.TextRegex - Load LISTING regex
+05.06.2015 23:43:34,328 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:43:34,328 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:44:42,859 INFO  runner.Runner - Start
+05.06.2015 23:44:42,874 INFO  logic.LoadData - Data are successfully loaded
+05.06.2015 23:44:42,874 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+05.06.2015 23:44:42,874 INFO  regex.TextRegex - Load SENTENCE regex
+05.06.2015 23:44:42,874 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+05.06.2015 23:44:42,874 INFO  regex.TextRegex - Load WORD regex
+05.06.2015 23:44:42,874 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+05.06.2015 23:44:42,874 INFO  regex.TextRegex - Load LISTING regex
+05.06.2015 23:44:42,890 INFO  logic.SaveData - Composite are successfully saved
+05.06.2015 23:46:27,072 INFO  logic.SaveData - Composite are successfully saved

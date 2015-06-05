@@ -19,8 +19,8 @@ import com.epam.text.logic.TextProcessing;
  */
 public class Runner {
 	private static final Logger LOG = Logger.getLogger(Runner.class);
-	//private static final String INPUT_FILE_NAME="InputData\\input.txt";
-	private static final String INPUT_FILE_NAME="InputData\\test.txt";
+	private static final String INPUT_FILE_NAME="InputData\\input.txt";
+	//private static final String INPUT_FILE_NAME="InputData\\test.txt";
 	private static final String COMPOSITE_FILE_NAME="OutputData\\composite.txt";
 	
 	/**
