@@ -3,6 +3,7 @@
  */
 package com.epam.text.bean;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -57,6 +58,15 @@ public class Composite implements IComponent {
 		return typeText;
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.epam.text.logic.IComponent#getIterator()
+	 */
+	@Override
+	public Iterator<IComponent> getIterator() {
+		//return components.iterator();
+		return components.listIterator();
+	}
+
 	/* (non-Javadoc)
 	 * @see com.epam.text.logic.IComponent#RestoreComposit(java.lang.StringBuilder)
 	 */

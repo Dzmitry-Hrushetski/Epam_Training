@@ -3,6 +3,8 @@
  */
 package com.epam.text.bean;
 
+import java.util.Iterator;
+
 import com.epam.text.logic.IComponent;
 
 /**
@@ -48,6 +50,14 @@ public class Leaf implements IComponent {
 	 */
 	@Override
 	public IComponent getElement(int index) {
+		throw new UnsupportedOperationException();
+	}
+
+	/* (non-Javadoc)
+	 * @see com.epam.text.logic.IComponent#getIterator(com.epam.text.logic.IComponent)
+	 */
+	@Override
+	public Iterator<IComponent> getIterator() {
 		throw new UnsupportedOperationException();
 	}
 

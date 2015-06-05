@@ -26,11 +26,9 @@ public class Runner {
 	 */
 	public static void main(String[] args) {
 		LOG.info("Start");
-				
-		String inputText=null;
-		
+						
 		try {
-			inputText = LoadData.loadDataFromFile(INPUT_FILE_NAME);
+			String inputText = LoadData.loadDataFromFile(INPUT_FILE_NAME);
 			
 			TextParser parser=new TextParser();
 			IComponent compositeText=parser.createCompositeText(inputText);

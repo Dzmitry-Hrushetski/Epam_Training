@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import com.epam.text.bean.Composite;
 import com.epam.text.bean.Leaf;
 import com.epam.text.bean.TypeText;
+import com.epam.text.exception.BusinessException;
 import com.epam.text.regex.TextRegex;
 
 /**
@@ -28,9 +29,10 @@ public class TextParser {
 		patternInstance=TextRegex.getTextRegexInstance();
 	}
 
-	public IComponent createCompositeText(String text) {
+	public IComponent createCompositeText(String text) throws BusinessException {
 		if(text==null || text.isEmpty()) {
-			return null;
+			LOG.error("Incorrect input string");
+			throw new BusinessException("Incorrect input string");
 		}
 		
 		IComponent head=new Composite(TypeText.TEXT);
