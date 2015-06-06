@@ -3,13 +3,20 @@
  */
 package com.epam.text.logic;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.regex.Matcher;
 
+import com.epam.text.bean.Leaf;
 import com.epam.text.bean.TypeText;
 import com.epam.text.exception.BusinessException;
+import com.epam.text.regex.TextRegex;
 
 /**
  * @author Dzmitry Hrushetski
@@ -17,99 +24,118 @@ import com.epam.text.exception.BusinessException;
  */
 public class TextProcessing {
 	private static final String NEW_LINE="\n\r";
+	private static final String TAB="\t";
 	
 	
-	public static StringBuilder sortSentenceByWordLenght(IComponent component) {
-		int countWord=0;
-		StringBuilder ouputResult=new StringBuilder();
-		IComponent currentSentence=null;
-		IComponent currentWord=null;
-		Map<Integer,IComponent> sentenceInstance=new TreeMap<Integer,IComponent>();
-		//Iterator<IComponent> sentenceIterator=component.getIterator();
+	
+
+	public static void deleteConsonantWordLenght(IComponent component, int wordLenght) {
+		Iterator<IComponent> sentenceIterator=component.getIterator();
+		TextRegex patternInstance=TextRegex.getTextRegexInstance();
 		
-		try {
-			int sentenceIndex=0;
-			while(true){
-				currentSentence=component.getElement(sentenceIndex);
-				if(TypeText.SENTENCE==currentSentence.getTypeText()) {
-					try {
-						int wordIndex=0;
-						countWord=0;
-						while(true){
-							currentWord=currentSentence.getElement(wordIndex);
-							if(TypeText.WORD==currentWord.getTypeText()) {
-								countWord++;
+		while(sentenceIterator.hasNext()) {
+			IComponent element = sentenceIterator.next();
+			if (TypeText.SENTENCE.equals(element.getTypeText())) {
+				Iterator<IComponent> elementIterator=element.getIterator();
+				while(elementIterator.hasNext()) {
+					Leaf word = (Leaf) elementIterator.next();
+					if (TypeText.WORD.equals(word.getTypeText())) {
+						String text=word.getText();
+						Matcher matcher=patternInstance.getPattern(TypeText.CONSONANT).matcher(text.toLowerCase());
+						if(wordLenght==text.length()) {
+							if(matcher.matches()) {
+								element.remove(word);
+								elementIterator=element.getIterator();
 							}
-							wordIndex++;
-						}	
-					} catch (IndexOutOfBoundsException e) {
-						sentenceInstance.put(countWord, currentSentence);
+						}
 					}
-				}		
-				sentenceIndex++;
-			}	
-		} catch (IndexOutOfBoundsException e) {
-				
-		}	
+				}
+			}
+		}
+	}
+	
+	public static StringBuilder sortWord(IComponent component) {
+		StringBuilder ouputResult=new StringBuilder();
+		List<String> listWords=new ArrayList<String>();
+		Iterator<IComponent> sentenceIterator=component.getIterator();
 		
-		// вот тут и происходит сбой
-		Set set = sentenceInstance.entrySet();
-        Iterator iterator = set.iterator();
-        IComponent tmpComponent;
-        while(iterator.hasNext()) {
-        	 Map.Entry temp = (Map.Entry)iterator.next();
-             tmpComponent=(IComponent)temp.getValue();
-             ouputResult.append(tmpComponent.recoverComposit(new StringBuilder()));
-             ouputResult.append(NEW_LINE);
-        }
+		while(sentenceIterator.hasNext()) {
+			IComponent element = sentenceIterator.next();
+			if (TypeText.SENTENCE.equals(element.getTypeText())) {
+				Iterator<IComponent> elementIterator=element.getIterator();
+				while(elementIterator.hasNext()) {
+					Leaf word = (Leaf) elementIterator.next();
+					if (TypeText.WORD.equals(word.getTypeText())) {
+						listWords.add(word.getText());
+					}
+				}
+			}
+		}
+		
+		Collections.sort(listWords);
+		
+		char previous=listWords.get(0).charAt(0);
+		for(String tempString: listWords) {
+			if(previous!=tempString.charAt(0)) {
+				ouputResult.append(TAB);
+				previous=tempString.charAt(0);
+			}
+			ouputResult.append(tempString).append(NEW_LINE);
+		}
 		return ouputResult;
 	}
-
-	public static StringBuilder deleteWordLenght(IComponent component) {
-		int countWord=0;
-		StringBuilder ouputResult=new StringBuilder();
-		IComponent currentSentence=null;
-		IComponent currentWord=null;
-		Map<Integer,IComponent> sentenceInstance=new TreeMap<Integer,IComponent>();
-		//Iterator<IComponent> sentenceIterator=component.getIterator();
-		
-		try {
-			int sentenceIndex=0;
-			while(true){
-				currentSentence=component.getElement(sentenceIndex);
-				if(TypeText.SENTENCE==currentSentence.getTypeText()) {
-					try {
-						int wordIndex=0;
-						countWord=0;
-						while(true){
-							currentWord=currentSentence.getElement(wordIndex);
-							if(TypeText.WORD==currentWord.getTypeText()) {
-								countWord++;
-							}
-							wordIndex++;
-						}	
-					} catch (IndexOutOfBoundsException e) {
-						sentenceInstance.put(countWord, currentSentence);
-					}
-				}		
-				sentenceIndex++;
-			}	
-		} catch (IndexOutOfBoundsException e) {
+	
+	public static void tradeWordPlaces(IComponent component) {
+		Iterator<IComponent> sentenceIterator=component.getIterator();
 				
-		}	
-		
-		// вот тут и происходит сбой
-		Set set = sentenceInstance.entrySet();
-        Iterator iterator = set.iterator();
-        IComponent tmpComponent;
-        while(iterator.hasNext()) {
-             Map.Entry temp = (Map.Entry)iterator.next();
-             tmpComponent=(IComponent)temp.getValue();
-             StringBuilder vv;
-             vv=tmpComponent.recoverComposit(new StringBuilder());
-             ouputResult.append(vv);
-             ouputResult.append(NEW_LINE);
-        }
-		return ouputResult;
+		while(sentenceIterator.hasNext()) {
+			IComponent element = sentenceIterator.next();
+			if (TypeText.SENTENCE.equals(element.getTypeText())) {
+				List<IComponent> newSentence=new LinkedList<IComponent>();
+				Iterator<IComponent> elementIterator=element.getIterator();
+				int maxIndex=-1;
+				
+				while(elementIterator.hasNext()) {
+					maxIndex++;
+					newSentence.add(elementIterator.next());
+				}
+
+				if(newSentence.size()<=2) {
+					continue;
+				}
+				
+				for(IComponent tempComponent:newSentence) {
+					element.remove(tempComponent);
+				}
+				
+				/*int index=maxIndex;
+				while(index!=0) {
+					if(TypeText.WORD.equals(newSentence.get(index).getTypeText())) {
+						if(index>1) {
+							break;
+						}else {
+							index--;
+							continue;
+						}
+						
+					}
+					//else {
+					//	index--;
+					//}
+				
+				}*/
+				IComponent firstElement=newSentence.get(0);
+				IComponent lastElement=newSentence.get(maxIndex-1);
+				newSentence.remove(firstElement);
+				newSentence.remove(lastElement);
+				newSentence.add(0, lastElement);
+				newSentence.add(maxIndex-1,firstElement);
+				
+				for(IComponent tempComponent:newSentence) {
+					element.add(tempComponent);
+				}
+				
+			}
+		}
 	}
 }

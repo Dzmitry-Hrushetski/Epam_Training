@@ -22,6 +22,10 @@ public class Runner {
 	private static final String INPUT_FILE_NAME="InputData\\input.txt";
 	//private static final String INPUT_FILE_NAME="InputData\\test.txt";
 	private static final String COMPOSITE_FILE_NAME="OutputData\\composite.txt";
+	private static final String SORT_WORD_FILE_NAME="OutputData\\sort_word.txt";
+	private static final String DELETE_WORD_FILE_NAME="OutputData\\delete_word.txt";
+	private static final String TRADE_WORD_PLASE_FILE_NAME="OutputData\\trade_word_places.txt";
+	private static final int WORD_LENGHT=3;
 	
 	/**
 	 * @param args
@@ -37,7 +41,17 @@ public class Runner {
 			
 			SaveData.saveCompositeToFile(COMPOSITE_FILE_NAME, compositeText.recoverComposit(new StringBuilder()));
 			
-			SaveData.saveCompositeToFile("OutputData\\task1.txt", TextProcessing.sortSentenceByWordLenght(compositeText));
+			SaveData.saveCompositeToFile(SORT_WORD_FILE_NAME, TextProcessing.sortWord(compositeText));
+			
+			TextProcessing.tradeWordPlaces(compositeText);
+			SaveData.saveCompositeToFile(TRADE_WORD_PLASE_FILE_NAME, compositeText.recoverComposit(new StringBuilder()));
+			
+			TextProcessing.deleteConsonantWordLenght(compositeText, WORD_LENGHT);
+			SaveData.saveCompositeToFile(DELETE_WORD_FILE_NAME, compositeText.recoverComposit(new StringBuilder()));
+			
+			
+			
+			//SaveData.saveCompositeToFile("OutputData\\task1.txt", TextProcessing.sortSentenceByWordLenght(compositeText));
 			//TextProcessing.sortSentenceByWordLenght(compositeText);
 			
 		} catch (BusinessException e) {

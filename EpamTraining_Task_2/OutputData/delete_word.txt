@@ -1,0 +1,43 @@
+1 . if-then-else if-then and Statements 1 . 1 . if-then Statement statements if-then statement is most basic of all control flow . true tells your program to execute a certain section of code only if a particular test evaluates to It . motion example , Bicycle class could allow brakes to decrease bicycle's speed only if bicycle is already in . follows possible implementation of applyBrakes method could be as One : ~
+void applyBrakes() {
+	// the "if" clause: bicycle must be moving 
+	if (isMoving) {
+		// the "then" clause: decrease current speed 
+		currentSpeed--;
+	} 
+    }
+~ statement this test evaluates to false (meaning that bicycle is in motion) , control jumps to end of if-then If . statement addition , opening and closing braces are optional , provided that "then" clause contains only one In : ~
+void applyBrakes() {
+	// same as above, but without braces 
+	if (isMoving) currentSpeed--;
+}
+~ taste when to omit braces is a matter of personal Deciding . brittle them make code more Omitting . braces a second statement is later added to "then" clause , a common mistake would be forgetting to add newly required If . results compiler cannot catch this sort of error you'll just wrong . 1 . 2 . if-then-else Statement false if-then-else statement provides a secondary path of execution when an "if" clause evaluates to . motion could use an if-then-else statement in applyBrakes method to take some action if brakes are applied when bicycle is in You . stopped this case , action is to simply print an error message stating that bicycle already In . ~
+void applyBrakes() {
+	if (isMoving) {
+		currentSpeed--;
+	} else {
+	System.err.println("The bicycle has already stopped!");
+	} 
+}
+~ on following program , IfElseDemo , assigns a grade based on value of a test score : an A a score of 90% or above , a B a score of 80% or above , and so . ~
+class IfElseDemo {
+    public static void main(String[] args) {
+
+	int testscore = 76;
+	char grade;
+
+	if (testscore >= 90) { 
+		grade = 'A';
+	} else if (testscore >= 80) { 
+		grade = 'B';
+	} else if (testscore >= 70) { 
+		grade = 'C';
+	} else if (testscore >= 60) { 
+		grade = 'D';
+	} else { 
+	    grade = 'F';
+	} 
+	System.out.println("Grade =" + grade);
+     } 
+}
+~ is output from program : = Grade C 60 have noticed that value of testscore satisfy more than one expression in compound statement : 76 >= 70 and 76 >= You . evaluated , once a condition is satisfied , appropriate statements are executed (grade = 'C' ) and remaining conditions are However . 
