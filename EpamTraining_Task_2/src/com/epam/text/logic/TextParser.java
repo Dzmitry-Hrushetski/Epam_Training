@@ -56,7 +56,7 @@ public class TextParser {
 			while (matcherGroup.find()) {
 				findElement=matcherGroup.group();
 				matcher=patternInstance.getPattern(TypeText.SENTENCE).matcher(findElement);
-				if(matcher.matches()){
+				if(matcher.matches()) {
 					newComponent=new Composite(TypeText.SENTENCE);
 					component.add(newComponent);
 					parseText(newComponent,findElement);

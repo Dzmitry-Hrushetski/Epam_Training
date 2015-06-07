@@ -18,7 +18,7 @@ import com.epam.text.exception.BusinessException;
 public class SaveData {
 	private static final Logger LOG = Logger.getLogger(SaveData.class);
 	
-	public static void saveCompositeToFile(String fileName,StringBuilder data) throws BusinessException{
+	public static void saveDataToFile(String fileName,StringBuilder data) throws BusinessException{
 		
 		BufferedWriter fileOutput = null;
 		
@@ -43,6 +43,6 @@ public class SaveData {
 				throw new BusinessException(e.getMessage());
 			}  	
 	    }
-	    LOG.info("Composite are successfully saved");
+	    LOG.info("Data are successfully saved");
 	}
 }

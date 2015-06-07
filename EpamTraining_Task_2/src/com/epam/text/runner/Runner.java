@@ -39,21 +39,17 @@ public class Runner {
 			TextParser parser=new TextParser();
 			IComponent compositeText=parser.createCompositeText(inputText);
 			
-			SaveData.saveCompositeToFile(COMPOSITE_FILE_NAME, compositeText.recoverComposit(new StringBuilder()));
+			SaveData.saveDataToFile(COMPOSITE_FILE_NAME, compositeText.recoverComposit(new StringBuilder()));
 			
-			SaveData.saveCompositeToFile(SORT_WORD_FILE_NAME, TextProcessing.sortWord(compositeText));
+			SaveData.saveDataToFile(SORT_WORD_FILE_NAME, TextProcessing.sortWord(compositeText));
 			
 			TextProcessing.tradeWordPlaces(compositeText);
-			SaveData.saveCompositeToFile(TRADE_WORD_PLASE_FILE_NAME, compositeText.recoverComposit(new StringBuilder()));
+			SaveData.saveDataToFile(TRADE_WORD_PLASE_FILE_NAME, compositeText.recoverComposit(new StringBuilder()));
 			
 			TextProcessing.deleteConsonantWordLenght(compositeText, WORD_LENGHT);
-			SaveData.saveCompositeToFile(DELETE_WORD_FILE_NAME, compositeText.recoverComposit(new StringBuilder()));
+			SaveData.saveDataToFile(DELETE_WORD_FILE_NAME, compositeText.recoverComposit(new StringBuilder()));
 			
-			
-			
-			//SaveData.saveCompositeToFile("OutputData\\task1.txt", TextProcessing.sortSentenceByWordLenght(compositeText));
-			//TextProcessing.sortSentenceByWordLenght(compositeText);
-			
+			LOG.info("Job finish");
 		} catch (BusinessException e) {
 			LOG.error(e.getMessage());
 		}	

@@ -1,4 +1,4 @@
-1 . if-then-else if-then and Statements 1 . 1 . if-then Statement statements if-then statement is most basic of all control flow . true tells your program to execute a certain section of code only if a particular test evaluates to It . motion example , Bicycle class could allow brakes to decrease bicycle's speed only if bicycle is already in . follows possible implementation of applyBrakes method could be as One : ~
+1 . Statements if-then and if-then-else 1 . 1 . Statement if-then statements if-then statement is most basic of all control flow . true tells your program to execute a certain section of code only if a particular test evaluates to It . motion example , Bicycle class could allow brakes to decrease bicycle's speed only if bicycle is already in . follows possible implementation of applyBrakes method could be as One : ~
 void applyBrakes() {
 	// the "if" clause: bicycle must be moving 
 	if (isMoving) {
@@ -11,7 +11,7 @@ void applyBrakes() {
 	// same as above, but without braces 
 	if (isMoving) currentSpeed--;
 }
-~ taste when to omit braces is a matter of personal Deciding . brittle them make code more Omitting . braces a second statement is later added to "then" clause , a common mistake would be forgetting to add newly required If . results compiler cannot catch this sort of error you'll just wrong . 1 . 2 . if-then-else Statement false if-then-else statement provides a secondary path of execution when an "if" clause evaluates to . motion could use an if-then-else statement in applyBrakes method to take some action if brakes are applied when bicycle is in You . stopped this case , action is to simply print an error message stating that bicycle already In . ~
+~ taste when to omit braces is a matter of personal Deciding . brittle them make code more Omitting . braces a second statement is later added to "then" clause , a common mistake would be forgetting to add newly required If . results compiler cannot catch this sort of error you'll just wrong . 1 . 2 . Statement if-then-else false if-then-else statement provides a secondary path of execution when an "if" clause evaluates to . motion could use an if-then-else statement in applyBrakes method to take some action if brakes are applied when bicycle is in You . stopped this case , action is to simply print an error message stating that bicycle already In . ~
 void applyBrakes() {
 	if (isMoving) {
 		currentSpeed--;
@@ -40,4 +40,4 @@ class IfElseDemo {
 	System.out.println("Grade =" + grade);
      } 
 }
-~ is output from program : = Grade C 60 have noticed that value of testscore satisfy more than one expression in compound statement : 76 >= 70 and 76 >= You . evaluated , once a condition is satisfied , appropriate statements are executed (grade = 'C' ) and remaining conditions are However . 
+~ is output from program : C = Grade 60 have noticed that value of testscore satisfy more than one expression in compound statement : 76 >= 70 and 76 >= You . evaluated , once a condition is satisfied , appropriate statements are executed (grade = 'C' ) and remaining conditions are However . 

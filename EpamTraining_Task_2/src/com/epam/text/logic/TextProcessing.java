@@ -8,14 +8,10 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
 import java.util.regex.Matcher;
 
 import com.epam.text.bean.Leaf;
 import com.epam.text.bean.TypeText;
-import com.epam.text.exception.BusinessException;
 import com.epam.text.regex.TextRegex;
 
 /**
@@ -26,9 +22,6 @@ public class TextProcessing {
 	private static final String NEW_LINE="\n\r";
 	private static final String TAB="\t";
 	
-	
-	
-
 	public static void deleteConsonantWordLenght(IComponent component, int wordLenght) {
 		Iterator<IComponent> sentenceIterator=component.getIterator();
 		TextRegex patternInstance=TextRegex.getTextRegexInstance();
@@ -100,41 +93,31 @@ public class TextProcessing {
 					newSentence.add(elementIterator.next());
 				}
 
-				if(newSentence.size()<=2) {
+				if(newSentence.size()<=1) {
 					continue;
+				}
+				
+				if(TypeText.PUNKTUATION_MARK.equals(newSentence.get(maxIndex).getTypeText())) {
+					if(newSentence.size()==2) {
+						continue;
+					}
+					maxIndex--;
 				}
 				
 				for(IComponent tempComponent:newSentence) {
 					element.remove(tempComponent);
 				}
 				
-				/*int index=maxIndex;
-				while(index!=0) {
-					if(TypeText.WORD.equals(newSentence.get(index).getTypeText())) {
-						if(index>1) {
-							break;
-						}else {
-							index--;
-							continue;
-						}
-						
-					}
-					//else {
-					//	index--;
-					//}
-				
-				}*/
 				IComponent firstElement=newSentence.get(0);
-				IComponent lastElement=newSentence.get(maxIndex-1);
+				IComponent lastElement=newSentence.get(maxIndex);
 				newSentence.remove(firstElement);
 				newSentence.remove(lastElement);
 				newSentence.add(0, lastElement);
-				newSentence.add(maxIndex-1,firstElement);
+				newSentence.add(maxIndex,firstElement);
 				
 				for(IComponent tempComponent:newSentence) {
 					element.add(tempComponent);
 				}
-				
 			}
 		}
 	}

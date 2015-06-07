@@ -72,7 +72,7 @@ public class Composite implements IComponent {
 	 */
 	@Override
 	public StringBuilder recoverComposit(StringBuilder data) {
-		for(IComponent component:components){
+		for(IComponent component:components) {
 			data=component.recoverComposit(data);
 		}
 		return data;
