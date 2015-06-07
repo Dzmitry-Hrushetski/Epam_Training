@@ -31,8 +31,8 @@ public class TextParser {
 
 	public IComponent createCompositeText(String text) throws BusinessException {
 		if(text==null || text.isEmpty()) {
-			LOG.error("Incorrect input string");
-			throw new BusinessException("Incorrect input string");
+			LOG.error("Input string cannot be null or empty");
+			throw new BusinessException("Input string cannot be null or emptyg");
 		}
 		
 		IComponent head=new Composite(TypeText.TEXT);

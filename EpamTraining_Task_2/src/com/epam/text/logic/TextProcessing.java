@@ -10,8 +10,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
 
+import org.apache.log4j.Logger;
+
 import com.epam.text.bean.Leaf;
 import com.epam.text.bean.TypeText;
+import com.epam.text.exception.BusinessException;
 import com.epam.text.regex.TextRegex;
 
 /**
@@ -19,10 +22,24 @@ import com.epam.text.regex.TextRegex;
  * 
  */
 public class TextProcessing {
+	private static final Logger LOG = Logger.getLogger(TextProcessing.class);
 	private static final String NEW_LINE="\n\r";
 	private static final String TAB="\t";
+	private static final int START_INDEX=0;
+	private static final int MIN_SENTENCE_ELEMENT=1;
+	private static final int MIN_WORD_IN_SENTENCE=2;
+	private static final int MIN_WORD_LENGHT=1;
 	
-	public static void deleteConsonantWordLenght(IComponent component, int wordLenght) {
+	public static void deleteConsonantWordLenght(IComponent component, int wordLenght) throws BusinessException {
+		if(component==null) {
+			LOG.error("Input composite cannot be null");
+			throw new BusinessException("Input composite cannot be null");
+		}
+		if(wordLenght<MIN_WORD_LENGHT) {
+			LOG.error("The word length shall be at least one character");
+			throw new BusinessException("The word length shall be at least one character");
+		}
+		
 		Iterator<IComponent> sentenceIterator=component.getIterator();
 		TextRegex patternInstance=TextRegex.getTextRegexInstance();
 		
@@ -47,7 +64,12 @@ public class TextProcessing {
 		}
 	}
 	
-	public static StringBuilder sortWord(IComponent component) {
+	public static StringBuilder sortWord(IComponent component) throws BusinessException {
+		if(component==null) {
+			LOG.error("Input composite cannot be null");
+			throw new BusinessException("Input composite cannot be null");
+		}
+		
 		StringBuilder ouputResult=new StringBuilder();
 		List<String> listWords=new ArrayList<String>();
 		Iterator<IComponent> sentenceIterator=component.getIterator();
@@ -67,18 +89,23 @@ public class TextProcessing {
 		
 		Collections.sort(listWords);
 		
-		char previous=listWords.get(0).charAt(0);
+		char previous=listWords.get(START_INDEX).charAt(START_INDEX);
 		for(String tempString: listWords) {
-			if(previous!=tempString.charAt(0)) {
+			if(previous!=tempString.charAt(START_INDEX)) {
 				ouputResult.append(TAB);
-				previous=tempString.charAt(0);
+				previous=tempString.charAt(START_INDEX);
 			}
 			ouputResult.append(tempString).append(NEW_LINE);
 		}
 		return ouputResult;
 	}
 	
-	public static void tradeWordPlaces(IComponent component) {
+	public static void tradeWordPlaces(IComponent component) throws BusinessException {
+		if(component==null) {
+			LOG.error("Input composite cannot be null");
+			throw new BusinessException("Input composite cannot be null");
+		}
+		
 		Iterator<IComponent> sentenceIterator=component.getIterator();
 				
 		while(sentenceIterator.hasNext()) {
@@ -93,12 +120,12 @@ public class TextProcessing {
 					newSentence.add(elementIterator.next());
 				}
 
-				if(newSentence.size()<=1) {
+				if(newSentence.size()<=MIN_SENTENCE_ELEMENT) {
 					continue;
 				}
 				
 				if(TypeText.PUNKTUATION_MARK.equals(newSentence.get(maxIndex).getTypeText())) {
-					if(newSentence.size()==2) {
+					if(newSentence.size()==MIN_WORD_IN_SENTENCE) {
 						continue;
 					}
 					maxIndex--;
@@ -108,11 +135,11 @@ public class TextProcessing {
 					element.remove(tempComponent);
 				}
 				
-				IComponent firstElement=newSentence.get(0);
+				IComponent firstElement=newSentence.get(START_INDEX);
 				IComponent lastElement=newSentence.get(maxIndex);
 				newSentence.remove(firstElement);
 				newSentence.remove(lastElement);
-				newSentence.add(0, lastElement);
+				newSentence.add(START_INDEX, lastElement);
 				newSentence.add(maxIndex,firstElement);
 				
 				for(IComponent tempComponent:newSentence) {

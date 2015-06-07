@@ -18,15 +18,15 @@ import com.epam.text.exception.BusinessException;
  */
 public class LoadData {
 	private static final Logger LOG = Logger.getLogger(LoadData.class);
-	private static final String STRING_FORMAT="UTF-8";
+	private static final String UTF_8="UTF-8";
 		
 	public static String loadDataFromFile(String fileName) throws BusinessException {
 		String inputString=null;
 		BufferedInputStream fileInput=null;
 		
 		if(fileName==null || fileName.isEmpty()) {
-			LOG.error("Incorrect file name");
-			throw new BusinessException("Incorrect file name");
+			LOG.error("File name cannot be null or empty");
+			throw new BusinessException("File name cannot be null or empty");
 		}
 	    try {
 	    	fileInput=new BufferedInputStream(new FileInputStream(fileName));
@@ -41,7 +41,7 @@ public class LoadData {
 	    	byte[] inputData=new byte[fileLenght];
 	    	
 	    	fileInput.read(inputData);
-	    	inputString=new String(inputData,STRING_FORMAT);
+	    	inputString=new String(inputData,UTF_8);
 	    } catch (IOException e) {
 	    	LOG.error(e.getMessage());
 	    	throw new BusinessException(e.getMessage());

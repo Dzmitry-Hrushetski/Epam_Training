@@ -1,14 +1,14 @@
-07.06.2015 15:02:01,963 INFO  runner.Runner - Start
-07.06.2015 15:02:01,978 INFO  logic.LoadData - Data are successfully loaded
-07.06.2015 15:02:01,978 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
-07.06.2015 15:02:01,978 INFO  regex.TextRegex - Load SENTENCE regex
-07.06.2015 15:02:01,978 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
-07.06.2015 15:02:01,978 INFO  regex.TextRegex - Load WORD regex
-07.06.2015 15:02:01,978 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
-07.06.2015 15:02:01,978 INFO  regex.TextRegex - Load LISTING regex
-07.06.2015 15:02:01,978 INFO  logic.SaveData - Data are successfully saved
-07.06.2015 15:02:01,994 INFO  logic.SaveData - Data are successfully saved
-07.06.2015 15:02:01,994 INFO  logic.SaveData - Data are successfully saved
-07.06.2015 15:02:01,994 INFO  regex.TextRegex - Load CONSONANT regex
-07.06.2015 15:02:01,994 INFO  logic.SaveData - Data are successfully saved
-07.06.2015 15:02:01,994 INFO  runner.Runner - Job finish
+07.06.2015 22:46:48,067 INFO  runner.Runner - Start
+07.06.2015 22:46:48,067 INFO  logic.LoadData - Data are successfully loaded
+07.06.2015 22:46:48,083 INFO  regex.TextRegex - Load SENTENCE_OR_LISTING regex
+07.06.2015 22:46:48,083 INFO  regex.TextRegex - Load SENTENCE regex
+07.06.2015 22:46:48,083 INFO  regex.TextRegex - Load WORD_OR_PUNKTUATION_MARK regex
+07.06.2015 22:46:48,083 INFO  regex.TextRegex - Load WORD regex
+07.06.2015 22:46:48,083 INFO  regex.TextRegex - Load PUNKTUATION_MARK regex
+07.06.2015 22:46:48,083 INFO  regex.TextRegex - Load LISTING regex
+07.06.2015 22:46:48,083 INFO  logic.SaveData - Data are successfully saved
+07.06.2015 22:46:48,099 INFO  logic.SaveData - Data are successfully saved
+07.06.2015 22:46:48,099 INFO  logic.SaveData - Data are successfully saved
+07.06.2015 22:46:48,099 INFO  regex.TextRegex - Load CONSONANT regex
+07.06.2015 22:46:48,099 INFO  logic.SaveData - Data are successfully saved
+07.06.2015 22:46:48,099 INFO  runner.Runner - Job finish

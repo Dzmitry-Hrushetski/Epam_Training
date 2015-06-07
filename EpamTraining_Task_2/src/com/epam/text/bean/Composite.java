@@ -63,8 +63,7 @@ public class Composite implements IComponent {
 	 */
 	@Override
 	public Iterator<IComponent> getIterator() {
-		//return components.iterator();
-		return components.listIterator();
+		return components.iterator();
 	}
 
 	/* (non-Javadoc)
