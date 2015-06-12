@@ -5,7 +5,7 @@ package com.epam.text.runner;
 
 import org.apache.log4j.Logger;
 
-import com.epam.text.exception.BusinessException;
+import com.epam.text.logic.BusinessException;
 import com.epam.text.logic.IComponent;
 import com.epam.text.logic.LoadData;
 import com.epam.text.logic.SaveData;

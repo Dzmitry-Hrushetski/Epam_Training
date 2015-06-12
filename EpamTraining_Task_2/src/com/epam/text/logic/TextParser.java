@@ -10,7 +10,6 @@ import org.apache.log4j.Logger;
 import com.epam.text.bean.Composite;
 import com.epam.text.bean.Leaf;
 import com.epam.text.bean.TypeText;
-import com.epam.text.exception.BusinessException;
 import com.epam.text.regex.TextRegex;
 
 /**

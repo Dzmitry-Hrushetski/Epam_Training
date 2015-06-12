@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.epam.text.exception;
+package com.epam.text.logic;
 
 /**
  * @author Dzmitry Hrushetski

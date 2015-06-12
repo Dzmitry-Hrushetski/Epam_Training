@@ -9,8 +9,6 @@ import java.io.IOException;
 
 import org.apache.log4j.Logger;
 
-import com.epam.text.exception.BusinessException;
-
 /**
  * @author Dzmitry Hrushetski
  *
@@ -23,12 +21,10 @@ public class SaveData {
 		BufferedWriter fileOutput = null;
 		
 		if(fileName==null || fileName.isEmpty()) {
-			LOG.error("File name cannot be null or empty");
 			throw new BusinessException("File name cannot be null or empty");
 		}
 		
 		if(data==null) {
-			LOG.error("Input data cannot be null");
 			throw new BusinessException("Input data cannot be null");
 		}
 		
@@ -36,8 +32,7 @@ public class SaveData {
 	    	fileOutput = new BufferedWriter(new FileWriter(fileName));
 	    	fileOutput.write(data.toString());	  
 	    } catch (IOException e) {
-	    	LOG.error(e.getMessage());
-	    	throw new BusinessException(e.getMessage());
+	    	throw new BusinessException(e.getMessage(),e);
 	    } finally {
 	    	try {
 				if(fileOutput!=null) {
@@ -45,7 +40,6 @@ public class SaveData {
 				}
 			} catch (IOException e) {
 				LOG.error(e.getMessage());
-				throw new BusinessException(e.getMessage());
 			}  	
 	    }
 	    LOG.info("Data are successfully saved");

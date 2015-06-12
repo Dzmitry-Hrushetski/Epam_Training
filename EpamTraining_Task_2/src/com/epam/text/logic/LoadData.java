@@ -9,8 +9,6 @@ import java.io.IOException;
 
 import org.apache.log4j.Logger;
 
-import com.epam.text.exception.BusinessException;
-
 
 /**
  * @author Dzmitry Hrushetski
@@ -25,7 +23,6 @@ public class LoadData {
 		BufferedInputStream fileInput=null;
 		
 		if(fileName==null || fileName.isEmpty()) {
-			LOG.error("File name cannot be null or empty");
 			throw new BusinessException("File name cannot be null or empty");
 		}
 	    try {
@@ -34,7 +31,6 @@ public class LoadData {
 	    	int fileLenght=fileInput.available();
 	    	
 	    	if(fileLenght==0) {
-	    		LOG.error("File is empty");
 	    		throw new BusinessException("File is empty");
 	    	}
 	    	
@@ -43,8 +39,7 @@ public class LoadData {
 	    	fileInput.read(inputData);
 	    	inputString=new String(inputData,UTF_8);
 	    } catch (IOException e) {
-	    	LOG.error(e.getMessage());
-	    	throw new BusinessException(e.getMessage());
+	    	throw new BusinessException(e.getMessage(),e);
 	    } finally{
 	    	try {
 	    		if(fileInput!=null) {
@@ -52,7 +47,6 @@ public class LoadData {
 	    		}
 			} catch (IOException e) {
 				LOG.error(e.getMessage());
-				throw new BusinessException(e.getMessage());
 			}  	
 	    }
 	    LOG.info("Data are successfully loaded");
