@@ -7,7 +7,7 @@ package com.epam.aircompany.parser;
  * @author Dzmitry Hrushetski
  *
  */
-public class SAXAirCompany extends AbstractAirCompanyBuilder {
+public class DOMAirCompanyBuilder extends AbstractAirCompanyBuilder {
 
 	/* (non-Javadoc)
 	 * @see com.epam.aircompany.parser.AbstractAirCompanyBuilder#buildAirCompany(java.lang.String)

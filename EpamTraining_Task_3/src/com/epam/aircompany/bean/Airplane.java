@@ -19,34 +19,14 @@ public class Airplane implements Comparable<Airplane>{
 	private int maxLoadCapacity;
 	
 	public Airplane(AirplaneModelName modelName, int boardNumber,
-			int flyingRange, int capacityFuelTank, int maxLoadCapacity) throws LogicalExeption {
+			int flyingRange, int capacityFuelTank, int maxLoadCapacity) {
 		
 		super();
 		this.modelName = modelName;
-		
-		if(ConstantsBean.MIN_BOARD_NUMBER<=boardNumber){
-			this.boardNumber = boardNumber;
-		} else {
-			throw new LogicalExeption("Incorrect boardNumber value");
-		}
-		
-		if(flyingRange>=ConstantsBean.MIN_FLYING_RANGE){
-			this.flyingRange = flyingRange;
-		} else {
-			throw new LogicalExeption("Incorrect flyingRange value");
-		}
-		
-		if(capacityFuelTank>=ConstantsBean.MIN_CAP_FUEL_TANK){
-			this.capacityFuelTank = capacityFuelTank;
-		} else {
-			throw new LogicalExeption("Incorrect capacityFuelTank value");
-		}
-		
-		if(maxLoadCapacity>=ConstantsBean.MIN_LOAD_CAPACITY){
-			this.maxLoadCapacity = maxLoadCapacity;
-		} else {
-			throw new LogicalExeption("Incorrect maxLoadCapacity value");
-		}		
+		this.boardNumber = boardNumber;
+		this.flyingRange = flyingRange;
+		this.capacityFuelTank = capacityFuelTank;
+		this.maxLoadCapacity = maxLoadCapacity;
 	}
 	
 	public int getFuelUsage() {
@@ -54,11 +34,7 @@ public class Airplane implements Comparable<Airplane>{
 	}
 
 	public void setFuelUsage(int fuelUsage) {
-		if(ConstantsBean.MIN_FUEL_USAGE<=fuelUsage && fuelUsage<=ConstantsBean.MAX_FUEL_USAGE){
-			this.fuelUsage = fuelUsage;
-		} else {
-			this.fuelUsage = ConstantsBean.DEFAULT_FUEL_USAGE;
-		}
+		this.fuelUsage = fuelUsage;
 	}	
 	
 	public AirplaneModelName getModelName() {

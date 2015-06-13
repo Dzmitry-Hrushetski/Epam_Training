@@ -45,12 +45,8 @@ public class AirCompany {
 		return companyName;
 	}
 
-	public void setCompanyName(String companyName) throws LogicalExeption {
-			if(companyName!=null && !companyName.isEmpty()){
+	public void setCompanyName(String companyName) {
 			this.companyName = companyName;
-		} else {
-			throw new LogicalExeption("Incorrect companyName");
-		}
 	}
 
 	@Override

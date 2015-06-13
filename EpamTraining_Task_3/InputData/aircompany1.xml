@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:air-company xmlns:tns="http://www.example.org/aircompany" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/aircompany aircompany.xsd ">
+  <tns:company-name>TransExpress</tns:company-name>
+  <tns:passanger-airplane ID="i12">
+    <tns:model-name>AIRBUS_A310</tns:model-name>
+    <tns:flying-range>101</tns:flying-range>
+    <tns:capacity-fuel-tank>2</tns:capacity-fuel-tank>
+    <tns:fuel-usage>11</tns:fuel-usage>
+    <tns:max-load-capacity>2</tns:max-load-capacity>
+    <tns:econom-place>1</tns:econom-place>
+    <tns:business-place>1</tns:business-place>
+    <tns:max-baggage-place>1</tns:max-baggage-place>
+    <tns:max-baggage-weight>1</tns:max-baggage-weight>
+    <tns:cur-baggage-place>1</tns:cur-baggage-place>
+    <tns:cur-baggage-weight>1</tns:cur-baggage-weight>
+  </tns:passanger-airplane>
+  <tns:transport-airplane ID="i15">
+  	<tns:model-name>AIRBUS_A400M</tns:model-name>
+  	<tns:flying-range>200</tns:flying-range>
+  	<tns:capacity-fuel-tank>5</tns:capacity-fuel-tank>
+  	<tns:fuel-usage>15</tns:fuel-usage>
+  	<tns:max-load-capacity>6</tns:max-load-capacity>
+  	<tns:cargo-long>2</tns:cargo-long>
+  	<tns:cargo-width>2</tns:cargo-width>
+  	<tns:cargo-height>2</tns:cargo-height>
+  	<tns:max-cargo-weight>2</tns:max-cargo-weight>
+  	<tns:cur-cargo-weight>2</tns:cur-cargo-weight>
+  	<tns:cargo-hatch-width>2</tns:cargo-hatch-width>
+  	<tns:cargo-hatch-height>2</tns:cargo-hatch-height>
+  </tns:transport-airplane>
+</tns:air-company>

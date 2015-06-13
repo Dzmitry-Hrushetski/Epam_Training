@@ -29,6 +29,8 @@ public class CompanyOutputData {
 		BufferedWriter output = null;
 		boolean rezult=false;
 		
+		
+		// переделать проверку!!!!!!!!!!!!!!!
 		if(fileName==null || fileName.isEmpty() || airplanes==null || findAirplanes==null){
 			return rezult;
 		}

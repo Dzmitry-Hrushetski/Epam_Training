@@ -19,22 +19,13 @@ public class PassangerAirplane extends Airplane {
 	
 	public PassangerAirplane(AirplaneModelName modelName, int boardNumber,
 			int flyingRange, int capacityFuelTank, int maxLoadCapacity,
-			int maxBaggagePlace, int maxBaggageWeight) throws LogicalExeption {
+			int maxBaggagePlace, int maxBaggageWeight) {
 		
 		super(modelName, boardNumber, flyingRange, capacityFuelTank,
 				maxLoadCapacity);
 		
-		if(maxBaggagePlace<=ConstantsBean.MAX_BAGGAGE_PLACE){
-			this.maxBaggagePlace = maxBaggagePlace;
-		} else {
-			throw new LogicalExeption("Incorrect maxBaggagePlace value");
-		}
-		
-		if(maxBaggageWeight<=ConstantsBean.MAX_BAGGAGE_WEIGHT){
-			this.maxBaggageWeight = maxBaggageWeight;
-		} else {
-			throw new LogicalExeption("Incorrect maxBaggageWeight value");
-		}	
+		this.maxBaggagePlace = maxBaggagePlace;
+		this.maxBaggageWeight = maxBaggageWeight;
 	}
 	
 	public int getEconomPlace() {

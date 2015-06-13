@@ -21,59 +21,25 @@ public class TransportAirplane extends Airplane{
 	public TransportAirplane(AirplaneModelName modelName, int boardNumber,
 			int flyingRange, int capacityFuelTank, int maxLoadCapacity,
 			int cargoLong, int cargoWidth, int cargoHeight, int maxCargoWeight,
-			int cargoHatchWidth, int cargoHatchHeight) throws LogicalExeption {
+			int cargoHatchWidth, int cargoHatchHeight) {
 		
 		super(modelName, boardNumber, flyingRange, capacityFuelTank,
 				maxLoadCapacity);
 		
-		if(cargoLong>=ConstantsBean.MIN_CARGO_VALUE){
-			this.cargoLong = cargoLong;
-		} else {
-			throw new LogicalExeption("Incorrect cargoLong value");
-		}
-		
-		if(cargoWidth>=ConstantsBean.MIN_CARGO_VALUE){
-			this.cargoWidth = cargoWidth;
-		} else {
-			throw new LogicalExeption("Incorrect cargoWidth value");
-		}
-		
-		if(cargoHeight>=ConstantsBean.MIN_CARGO_VALUE){
-			this.cargoHeight = cargoHeight;
-		} else {
-			throw new LogicalExeption("Incorrect cargoHeight value");
-		}
-		
-		if(maxCargoWeight>=ConstantsBean.MIN_CARGO_VALUE){
-			this.maxCargoWeight = maxCargoWeight;
-		} else {
-			throw new LogicalExeption("Incorrect maxCargoWeight value");
-		}
-		
-		if(cargoHatchWidth>=ConstantsBean.MIN_CARGO_VALUE){
-			this.cargoHatchWidth = cargoHatchWidth;
-		} else {
-			throw new LogicalExeption("Incorrect cargoHatchWidth value");
-		}
-		
-		if(cargoHatchHeight>=ConstantsBean.MIN_CARGO_VALUE){
-			this.cargoHatchHeight = cargoHatchHeight;
-		} else {
-			throw new LogicalExeption("Incorrect cargoHatchHeighth value");
-		}
+		this.cargoLong = cargoLong;
+		this.cargoWidth = cargoWidth;
+		this.cargoHeight = cargoHeight;
+		this.maxCargoWeight = maxCargoWeight;
+		this.cargoHatchWidth = cargoHatchWidth;
+		this.cargoHatchHeight = cargoHatchHeight;
 	}
 		
 	public int getCurCargoWeight() {
 		return curCargoWeight;
 	}
 
-	public void setCurCargoWeight(int curCargoWeight) throws LogicalExeption {
-		
-		if(curCargoWeight>=ConstantsBean.MIN_CARGO_VALUE){
-			this.curCargoWeight = curCargoWeight;
-		} else {
-			throw new LogicalExeption("Incorrect curCargoWeight value");
-		}	
+	public void setCurCargoWeight(int curCargoWeight) {
+		this.curCargoWeight = curCargoWeight;
 	}
 
 	public int getCargoLong() {

@@ -16,3 +16,81 @@
 08.06.2015 22:10:08,737 INFO  runner.Runner - Save data to file
 08.06.2015 22:10:08,737 INFO  runner.Runner - Data are saved correctly
 08.06.2015 22:10:08,737 INFO  runner.Runner - Job finish
+13.06.2015 14:17:51,805 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 14:18:54,331 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 16:50:58,001 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 16:52:07,704 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 16:54:51,794 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 21:13:16,645 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 21:14:46,846 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 21:17:01,352 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 21:19:29,006 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 21:23:32,954 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 21:23:52,457 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 21:32:14,219 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 21:33:22,497 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 21:34:43,736 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 21:39:13,527 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 21:40:13,548 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 21:41:12,883 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 23:08:43,861 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 23:10:03,164 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 23:10:20,533 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 23:11:10,861 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 23:12:15,730 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 23:12:15,761 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+13.06.2015 23:12:15,777 INFO  runner.Runner - Save data to file
+13.06.2015 23:12:15,777 INFO  runner.Runner - Data are saved correctly
+13.06.2015 23:12:15,777 INFO  runner.Runner - Job finish
+13.06.2015 23:14:21,299 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 23:14:21,314 ERROR parser.SAXAirCompanyBuilder - I/O stream error
+java.io.FileNotFoundException: C:\Java_workspace\Git_Local_Repo\Epam_Training\EpamTraining_Task_3\InputData1\aircompany1.xml (Системе не удается найти указанный путь)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:622)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:189)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:812)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1140)
+	at com.epam.aircompany.parser.SAXAirCompanyBuilder.buildAirCompany(SAXAirCompanyBuilder.java:40)
+	at com.epam.aircompany.creator.CompanyCreator.generateXMLCompany(CompanyCreator.java:25)
+	at com.epam.aircompany.runner.Runner.main(Runner.java:46)
+13.06.2015 23:14:21,330 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+13.06.2015 23:14:21,330 INFO  runner.Runner - Save data to file
+13.06.2015 23:14:21,330 INFO  runner.Runner - Data are saved correctly
+13.06.2015 23:14:21,346 INFO  runner.Runner - Job finish
+13.06.2015 23:15:23,800 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 23:15:23,832 ERROR parser.SAXAirCompanyBuilder - I/O stream error
+java.net.MalformedURLException
+	at java.net.URL.<init>(URL.java:620)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:619)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:189)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:812)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1140)
+	at com.epam.aircompany.parser.SAXAirCompanyBuilder.buildAirCompany(SAXAirCompanyBuilder.java:40)
+	at com.epam.aircompany.creator.CompanyCreator.generateXMLCompany(CompanyCreator.java:25)
+	at com.epam.aircompany.runner.Runner.main(Runner.java:46)
+Caused by: java.lang.NullPointerException
+	at java.net.URL.<init>(URL.java:525)
+	... 11 more
+13.06.2015 23:15:23,832 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+13.06.2015 23:15:23,832 INFO  runner.Runner - Save data to file
+13.06.2015 23:15:23,832 INFO  runner.Runner - Data are saved correctly
+13.06.2015 23:15:23,832 INFO  runner.Runner - Job finish
+13.06.2015 23:19:25,976 INFO  runner.Runner - Create company and airplanes in the company
+13.06.2015 23:19:26,007 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+13.06.2015 23:19:26,007 INFO  runner.Runner - Save data to file
+13.06.2015 23:19:26,007 INFO  runner.Runner - Data are saved correctly
+13.06.2015 23:19:26,007 INFO  runner.Runner - Job finish
+14.06.2015 00:28:33,878 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 00:28:56,355 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 00:29:26,324 INFO  runner.Runner - Create company and airplanes in the company
