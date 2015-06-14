@@ -12,6 +12,8 @@ import com.epam.aircompany.bean.AirCompany;
 import com.epam.aircompany.bean.AirplaneModelName;
 import com.epam.aircompany.bean.PassangerAirplane;
 import com.epam.aircompany.bean.TransportAirplane;
+import com.epam.aircompany.parser.enumeration.AirplaneEnum;
+import static com.epam.aircompany.parser.constant.ParserConstant.*;
 
 /**
  * @author Dzmitry Hrushetski
@@ -19,8 +21,6 @@ import com.epam.aircompany.bean.TransportAirplane;
  */
 public class AirCompanyHandler extends DefaultHandler {
 	private static final Logger LOG = Logger.getLogger(AirCompanyHandler.class);
-	private static final String PASSANGER_AIRPLANE="passanger-airplane";
-	private static final String TRANSPORT_AIRPLANE="transport-airplane";
 	private AirCompany company=new AirCompany();
 	private PassangerAirplane passangerAirplane;
 	private TransportAirplane transportAirplane;
@@ -62,16 +62,13 @@ public class AirCompanyHandler extends DefaultHandler {
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 		switch (localName) {
-		/*case COMPANY_NAME:
-			company.setCompanyName(attributes.getValue(0));
-			break;*/
 		case PASSANGER_AIRPLANE:
 		case TRANSPORT_AIRPLANE:
 			boardNumber=Integer.parseInt(attributes.getValue(0).substring(1));
 			break;
 		default:
-			if (!localName.equals("air-company")) {
-				currentEnum = AirplaneEnum.valueOf(localName.replace("-","_").toUpperCase());
+			if (!localName.equals(XML_ROOT)) {
+				currentEnum = AirplaneEnum.valueOf(localName.replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase());
 			}
 			break;
 		}
@@ -98,8 +95,7 @@ public class AirCompanyHandler extends DefaultHandler {
 			transportAirplane.setCurCargoWeight(curCargoWeight);
 			company.add(transportAirplane);
 			break;
-		default:
-			
+		default:	
 			break;
 		}
 	}

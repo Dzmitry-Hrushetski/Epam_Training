@@ -1,8 +1,8 @@
 Total passanger place - 2 and cargo weight - 3
 
 The list of airplanes sorted by flying range:
-Airplane AIRBUS_A400M, board number - 15, flying range 50
 Airplane AIRBUS_A310, board number - 12, flying range 101
+Airplane AIRBUS_A400M, board number - 15, flying range 200
 
 The list of airplanes fuelUsage:
-Airplane AIRBUS_A400M, board number - 15, flying range 50, fuel usage 15
+Airplane AIRBUS_A400M, board number - 15, flying range 200, fuel usage 15

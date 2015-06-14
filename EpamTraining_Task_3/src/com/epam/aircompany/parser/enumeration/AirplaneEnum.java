@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.epam.aircompany.parser.handler;
+package com.epam.aircompany.parser.enumeration;
 
 /**
  * @author Dzmitry Hrushetski

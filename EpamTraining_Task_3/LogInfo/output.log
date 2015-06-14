@@ -94,3 +94,10 @@ Caused by: java.lang.NullPointerException
 14.06.2015 00:28:33,878 INFO  runner.Runner - Create company and airplanes in the company
 14.06.2015 00:28:56,355 INFO  runner.Runner - Create company and airplanes in the company
 14.06.2015 00:29:26,324 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 12:34:07,643 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 12:53:28,042 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 12:56:17,182 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 12:56:17,213 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+14.06.2015 12:56:17,213 INFO  runner.Runner - Save data to file
+14.06.2015 12:56:17,229 INFO  runner.Runner - Data are saved correctly
+14.06.2015 12:56:17,229 INFO  runner.Runner - Job finish
