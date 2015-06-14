@@ -101,3 +101,22 @@ Caused by: java.lang.NullPointerException
 14.06.2015 12:56:17,213 INFO  runner.Runner - Save data to file
 14.06.2015 12:56:17,229 INFO  runner.Runner - Data are saved correctly
 14.06.2015 12:56:17,229 INFO  runner.Runner - Job finish
+14.06.2015 15:20:41,768 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 15:21:17,300 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 15:22:25,615 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 15:23:34,539 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 15:25:43,925 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 15:29:38,585 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 15:47:22,499 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 15:50:41,900 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 15:57:01,334 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 17:31:13,084 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 17:33:33,803 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 17:36:49,723 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 17:37:12,180 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 17:39:54,320 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 17:40:43,765 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 17:41:22,664 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 17:56:55,987 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 18:02:46,860 INFO  runner.Runner - Create company and airplanes in the company
+14.06.2015 21:09:12,442 INFO  runner.Runner - Create company and airplanes in the company

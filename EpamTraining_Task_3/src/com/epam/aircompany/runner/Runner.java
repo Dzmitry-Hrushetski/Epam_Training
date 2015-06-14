@@ -42,7 +42,7 @@ public class Runner {
 		//AirCompany company=CompanyCreator.generateHardCoreCompany(COMPANY_NAME);
 		try {
 			//AbstractAirCompanyBuilder builder = AirCompanyBuilder.createAirCompanyBuilder(ParserType.SAX);
-			AbstractAirCompanyBuilder builder = AirCompanyBuilder.createAirCompanyBuilder(ParserType.STAX);
+			AbstractAirCompanyBuilder builder = AirCompanyBuilder.createAirCompanyBuilder(ParserType.DOM);
 		
 			company = CompanyCreator.generateXMLCompany(builder, INPUT_FILE_PATH);
 		
