@@ -24,6 +24,7 @@ import com.epam.aircompany.parser.enumeration.AirplaneEnum;
 
 
 
+
 import static com.epam.aircompany.parser.constant.ParserConstant.*;
 
 /**
@@ -32,6 +33,7 @@ import static com.epam.aircompany.parser.constant.ParserConstant.*;
  */
 public class DOMAirCompanyBuilder extends AbstractAirCompanyBuilder {
 	private static final Logger LOG=Logger.getLogger(DOMAirCompanyBuilder.class);
+	private static final String NAME_SPASE_PREFIX="tns:";
 	private DocumentBuilder documentBuilder;
 
 	//Airplane fields
@@ -71,40 +73,59 @@ public class DOMAirCompanyBuilder extends AbstractAirCompanyBuilder {
 		}
 	}
 
+	
+	/*public void buildAirCompany(String filePath) {
+		  try{
+		   //File fXmlFile = new File("c://staff.xml");
+		   File fXmlFile = new File(filePath);
+		   DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		   DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		   Document doc = dBuilder.parse(fXmlFile);
+		  
+		   //optional, but recommended
+		   //read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
+		   //doc.getDocumentElement().normalize();
+		  
+		   System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
+		  
+		   NodeList nList = doc.getElementsByTagName("tns:company-name");
+		   System.out.println("----------------------------");
+		    
+		   for (int temp = 0; temp < nList.getLength(); temp++) {
+		   
+		    Node nNode = nList.item(temp);
+		    System.out.println("\nCurrent Element :" + nNode.getNodeName()+nNode.getTextContent());
+		    
+		   }
+		  }catch(Exception err){
+		   LOG.error(err);
+		  }
+		  
+		 }*/
+	
+	
+	
+	
+	
+	
 	/* (non-Javadoc)
 	 * @see com.epam.aircompany.parser.AbstractAirCompanyBuilder#buildAirCompany(java.lang.String)
 	 */
 	@Override
 	public void buildAirCompany(String filePath) {
-		Document document;
+		Document document;//,root;
 		try {
 			document=documentBuilder.parse(new File(filePath));
 			//document.getDocumentElement().normalize();
-			Element root=document.getDocumentElement();
+			Element root=document.getDocumentElement();		
 			
-			/*String str1=root.getTagName();
-			
-			NodeList child=root.getChildNodes();
-			int len=child.getLength();
-			
-			
-			String strt;
-			for(int i=0;i<child.getLength();i++) {
-				Node e=child.item(i);
-				strt=e.getNodeName();
-			}
-			*/
-			
-			NodeList companyName=root.getElementsByTagName("company-name");
-			//NodeList companyName=root.getElementsByTagName(COMPANY_NAME);
-			NodeList passangerAirplaneList=root.getElementsByTagName(PASSANGER_AIRPLANE);
-			NodeList transportAirplaneList=root.getElementsByTagName(TRANSPORT_AIRPLANE);
+			NodeList companyName=root.getElementsByTagName(NAME_SPASE_PREFIX+COMPANY_NAME);
+			NodeList passangerAirplaneList=root.getElementsByTagName(NAME_SPASE_PREFIX+PASSANGER_AIRPLANE);
+			NodeList transportAirplaneList=root.getElementsByTagName(NAME_SPASE_PREFIX+TRANSPORT_AIRPLANE);
 
-			Element name=(Element) companyName.item(0);
-			//airCompany.setCompanyName(getElementTextContent(name, AirplaneEnum.COMPANY_NAME.getValue()).replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase().trim());
-			
-			String str=getElementTextContent(name, COMPANY_NAME);
-			
+			Element name=(Element)companyName.item(0);
+			airCompany.setCompanyName(name.getTextContent().trim());
+						
 			for (int i=0;i<passangerAirplaneList.getLength();i++) {
 				Element passangerAirplaneElement=(Element) passangerAirplaneList.item(i);
 				PassangerAirplane passangerAirplane = buildPassangerAirplane(passangerAirplaneElement);
@@ -125,29 +146,17 @@ public class DOMAirCompanyBuilder extends AbstractAirCompanyBuilder {
 	
 	private PassangerAirplane buildPassangerAirplane(Element passangerAirplaneElement) {
 		boardNumber=Integer.parseInt(passangerAirplaneElement.getAttribute(ID).substring(1));
-		
-		//String str=getElementTextContent(passangerAirplaneElement,(AirplaneEnum.MODEL_NAME).getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase());
-		modelName=AirplaneModelName.valueOf(getElementTextContent(passangerAirplaneElement,getElementTextContent(passangerAirplaneElement,AirplaneEnum.MODEL_NAME.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		flyingRange=Integer.parseInt(getElementTextContent(passangerAirplaneElement,getElementTextContent(passangerAirplaneElement,AirplaneEnum.FLYING_RANGE.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		capacityFuelTank=Integer.parseInt(getElementTextContent(passangerAirplaneElement,getElementTextContent(passangerAirplaneElement,AirplaneEnum.CAPACITY_FUEL_TANK.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-	
-		fuelUsage=Integer.parseInt(getElementTextContent(passangerAirplaneElement,getElementTextContent(passangerAirplaneElement,AirplaneEnum.FUEL_USAGE.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		maxLoadCapacity=Integer.parseInt(getElementTextContent(passangerAirplaneElement,getElementTextContent(passangerAirplaneElement,AirplaneEnum.MAX_LOAD_CAPACITY.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		economPlace=Integer.parseInt(getElementTextContent(passangerAirplaneElement,getElementTextContent(passangerAirplaneElement,AirplaneEnum.ECONOM_PLACE.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		businessPlace=Integer.parseInt(getElementTextContent(passangerAirplaneElement,getElementTextContent(passangerAirplaneElement,AirplaneEnum.BUSINESS_PLACE.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		maxBaggagePlace=Integer.parseInt(getElementTextContent(passangerAirplaneElement,getElementTextContent(passangerAirplaneElement,AirplaneEnum.MAX_BAGGAGE_PLACE.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		maxBaggageWeight=Integer.parseInt(getElementTextContent(passangerAirplaneElement,getElementTextContent(passangerAirplaneElement,AirplaneEnum.MAX_BAGGAGE_WEIGHT.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		curBaggagePlace=Integer.parseInt(getElementTextContent(passangerAirplaneElement,getElementTextContent(passangerAirplaneElement,AirplaneEnum.CUR_BAGGAGE_PLACE.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		curBaggageWeight=Integer.parseInt(getElementTextContent(passangerAirplaneElement,getElementTextContent(passangerAirplaneElement,AirplaneEnum.CUR_BAGGAGE_WEIGHT.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
+		modelName=AirplaneModelName.valueOf(getElementTextContent(passangerAirplaneElement,AirplaneEnum.MODEL_NAME.getValue()));
+		flyingRange=Integer.parseInt(getElementTextContent(passangerAirplaneElement,AirplaneEnum.FLYING_RANGE.getValue()));
+		capacityFuelTank=Integer.parseInt(getElementTextContent(passangerAirplaneElement,AirplaneEnum.CAPACITY_FUEL_TANK.getValue()));
+		fuelUsage=Integer.parseInt(getElementTextContent(passangerAirplaneElement,AirplaneEnum.FUEL_USAGE.getValue()));
+		maxLoadCapacity=Integer.parseInt(getElementTextContent(passangerAirplaneElement,AirplaneEnum.MAX_LOAD_CAPACITY.getValue()));
+		economPlace=Integer.parseInt(getElementTextContent(passangerAirplaneElement,AirplaneEnum.ECONOM_PLACE.getValue()));
+		businessPlace=Integer.parseInt(getElementTextContent(passangerAirplaneElement,AirplaneEnum.BUSINESS_PLACE.getValue()));
+		maxBaggagePlace=Integer.parseInt(getElementTextContent(passangerAirplaneElement,AirplaneEnum.MAX_BAGGAGE_PLACE.getValue()));
+		maxBaggageWeight=Integer.parseInt(getElementTextContent(passangerAirplaneElement,AirplaneEnum.MAX_BAGGAGE_WEIGHT.getValue()));
+		curBaggagePlace=Integer.parseInt(getElementTextContent(passangerAirplaneElement,AirplaneEnum.CUR_BAGGAGE_PLACE.getValue()));
+		curBaggageWeight=Integer.parseInt(getElementTextContent(passangerAirplaneElement,AirplaneEnum.CUR_BAGGAGE_WEIGHT.getValue()));
 		
 		PassangerAirplane passangerAirplane=new PassangerAirplane(modelName,boardNumber,flyingRange,capacityFuelTank,maxLoadCapacity,maxBaggagePlace,maxBaggageWeight);
 		passangerAirplane.setFuelUsage(fuelUsage);
@@ -160,31 +169,18 @@ public class DOMAirCompanyBuilder extends AbstractAirCompanyBuilder {
 	
 	private TransportAirplane buildTransportAirplane(Element transportAirplaneElement) {
 		boardNumber=Integer.parseInt(transportAirplaneElement.getAttribute(ID).substring(1));
-		
-		//String str=getElementTextContent(passangerAirplaneElement,(AirplaneEnum.MODEL_NAME).getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase());
-		modelName=AirplaneModelName.valueOf(getElementTextContent(transportAirplaneElement,getElementTextContent(transportAirplaneElement,AirplaneEnum.MODEL_NAME.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		flyingRange=Integer.parseInt(getElementTextContent(transportAirplaneElement,getElementTextContent(transportAirplaneElement,AirplaneEnum.FLYING_RANGE.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		capacityFuelTank=Integer.parseInt(getElementTextContent(transportAirplaneElement,getElementTextContent(transportAirplaneElement,AirplaneEnum.CAPACITY_FUEL_TANK.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-	
-		fuelUsage=Integer.parseInt(getElementTextContent(transportAirplaneElement,getElementTextContent(transportAirplaneElement,AirplaneEnum.FUEL_USAGE.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		maxLoadCapacity=Integer.parseInt(getElementTextContent(transportAirplaneElement,getElementTextContent(transportAirplaneElement,AirplaneEnum.MAX_LOAD_CAPACITY.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		cargoLong=Integer.parseInt(getElementTextContent(transportAirplaneElement,getElementTextContent(transportAirplaneElement,AirplaneEnum.CARGO_LONG.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		cargoWidth=Integer.parseInt(getElementTextContent(transportAirplaneElement,getElementTextContent(transportAirplaneElement,AirplaneEnum.CARGO_WIDTH.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		cargoHeight=Integer.parseInt(getElementTextContent(transportAirplaneElement,getElementTextContent(transportAirplaneElement,AirplaneEnum.CARGO_HEIGHT.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));	
-	
-		maxCargoWeight=Integer.parseInt(getElementTextContent(transportAirplaneElement,getElementTextContent(transportAirplaneElement,AirplaneEnum.MAX_CARGO_WEIGHT.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		curCargoWeight=Integer.parseInt(getElementTextContent(transportAirplaneElement,getElementTextContent(transportAirplaneElement,AirplaneEnum.CUR_CARGO_WEIGHT.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		cargoHatchWidth=Integer.parseInt(getElementTextContent(transportAirplaneElement,getElementTextContent(transportAirplaneElement,AirplaneEnum.CARGO_HATCH_WIDTH.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
-		
-		cargoHatchHeight=Integer.parseInt(getElementTextContent(transportAirplaneElement,getElementTextContent(transportAirplaneElement,AirplaneEnum.CARGO_HATCH_HEIGHT.getValue().replace(REPLACE_OLD_SYMBOL,REPLACE_NEW_SYMBOL).toUpperCase())));
+		modelName=AirplaneModelName.valueOf(getElementTextContent(transportAirplaneElement,AirplaneEnum.MODEL_NAME.getValue()));
+		flyingRange=Integer.parseInt(getElementTextContent(transportAirplaneElement,AirplaneEnum.FLYING_RANGE.getValue()));
+		capacityFuelTank=Integer.parseInt(getElementTextContent(transportAirplaneElement,AirplaneEnum.CAPACITY_FUEL_TANK.getValue()));
+		fuelUsage=Integer.parseInt(getElementTextContent(transportAirplaneElement,AirplaneEnum.FUEL_USAGE.getValue()));
+		maxLoadCapacity=Integer.parseInt(getElementTextContent(transportAirplaneElement,AirplaneEnum.MAX_LOAD_CAPACITY.getValue()));
+		cargoLong=Integer.parseInt(getElementTextContent(transportAirplaneElement,AirplaneEnum.CARGO_LONG.getValue()));
+		cargoWidth=Integer.parseInt(getElementTextContent(transportAirplaneElement,AirplaneEnum.CARGO_WIDTH.getValue()));
+		cargoHeight=Integer.parseInt(getElementTextContent(transportAirplaneElement,AirplaneEnum.CARGO_HEIGHT.getValue()));	
+		maxCargoWeight=Integer.parseInt(getElementTextContent(transportAirplaneElement,AirplaneEnum.MAX_CARGO_WEIGHT.getValue()));
+		curCargoWeight=Integer.parseInt(getElementTextContent(transportAirplaneElement,AirplaneEnum.CUR_CARGO_WEIGHT.getValue()));
+		cargoHatchWidth=Integer.parseInt(getElementTextContent(transportAirplaneElement,AirplaneEnum.CARGO_HATCH_WIDTH.getValue()));
+		cargoHatchHeight=Integer.parseInt(getElementTextContent(transportAirplaneElement,AirplaneEnum.CARGO_HATCH_HEIGHT.getValue()));
 		
 		TransportAirplane transportAirplane=new TransportAirplane(modelName,boardNumber,flyingRange,capacityFuelTank,maxLoadCapacity,cargoLong,cargoWidth,cargoHeight,maxCargoWeight,cargoHatchWidth,cargoHatchHeight);
 		transportAirplane.setFuelUsage(fuelUsage);

@@ -120,3 +120,72 @@ Caused by: java.lang.NullPointerException
 14.06.2015 17:56:55,987 INFO  runner.Runner - Create company and airplanes in the company
 14.06.2015 18:02:46,860 INFO  runner.Runner - Create company and airplanes in the company
 14.06.2015 21:09:12,442 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 12:17:31,375 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 12:23:03,564 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 12:26:03,436 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 13:59:53,249 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:03:26,510 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:06:19,109 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:07:21,295 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:25:20,303 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:29:42,721 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:31:08,336 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:31:08,477 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+16.06.2015 14:31:08,477 INFO  runner.Runner - Save data to file
+16.06.2015 14:31:08,492 INFO  runner.Runner - Data are saved correctly
+16.06.2015 14:31:08,492 INFO  runner.Runner - Job finish
+16.06.2015 14:31:40,500 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:32:28,110 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:32:28,158 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+16.06.2015 14:32:28,158 INFO  runner.Runner - Save data to file
+16.06.2015 14:32:28,158 INFO  runner.Runner - Data are saved correctly
+16.06.2015 14:32:28,158 INFO  runner.Runner - Job finish
+16.06.2015 14:32:42,667 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:34:04,825 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:35:05,103 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:35:27,570 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:35:27,617 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+16.06.2015 14:35:27,633 INFO  runner.Runner - Save data to file
+16.06.2015 14:35:27,633 INFO  runner.Runner - Data are saved correctly
+16.06.2015 14:35:27,633 INFO  runner.Runner - Job finish
+16.06.2015 14:35:40,126 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:35:40,173 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+16.06.2015 14:35:40,173 INFO  runner.Runner - Save data to file
+16.06.2015 14:35:40,189 INFO  runner.Runner - Data are saved correctly
+16.06.2015 14:35:40,189 INFO  runner.Runner - Job finish
+16.06.2015 14:48:27,889 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 14:50:57,861 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:04:07,605 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:05:56,553 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:05:56,710 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+16.06.2015 15:05:56,726 INFO  runner.Runner - Save data to file
+16.06.2015 15:05:56,756 INFO  runner.Runner - Data are saved correctly
+16.06.2015 15:05:56,756 INFO  runner.Runner - Job finish
+16.06.2015 15:06:10,460 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:06:10,539 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+16.06.2015 15:06:10,554 INFO  runner.Runner - Save data to file
+16.06.2015 15:06:10,554 INFO  runner.Runner - Data are saved correctly
+16.06.2015 15:06:10,554 INFO  runner.Runner - Job finish
+16.06.2015 15:07:39,638 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:08:04,136 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:15:27,098 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:16:13,946 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:17:28,534 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:19:43,342 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:20:15,861 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:23:59,251 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:32:13,847 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:32:13,909 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+16.06.2015 15:32:13,925 INFO  runner.Runner - Save data to file
+16.06.2015 15:32:13,941 INFO  runner.Runner - Data are saved correctly
+16.06.2015 15:32:13,941 INFO  runner.Runner - Job finish
+16.06.2015 15:35:59,673 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:35:59,861 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+16.06.2015 15:35:59,861 INFO  runner.Runner - Save data to file
+16.06.2015 15:35:59,876 INFO  runner.Runner - Data are saved correctly
+16.06.2015 15:35:59,876 INFO  runner.Runner - Job finish
+16.06.2015 15:37:13,555 INFO  runner.Runner - Create company and airplanes in the company
+16.06.2015 15:37:13,618 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+16.06.2015 15:37:13,618 INFO  runner.Runner - Save data to file
+16.06.2015 15:37:13,633 INFO  runner.Runner - Data are saved correctly
+16.06.2015 15:37:13,633 INFO  runner.Runner - Job finish
