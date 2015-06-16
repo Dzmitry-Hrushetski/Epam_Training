@@ -4,6 +4,7 @@
 package com.epam.aircompany.parser;
 
 import com.epam.aircompany.bean.AirCompany;
+import com.epam.aircompany.exeption.BusinessExeption;
 
 
 /**
@@ -21,5 +22,5 @@ public abstract class AbstractAirCompanyBuilder {
 		return airCompany;
 	}
 
-	public abstract void buildAirCompany(String filePath);
+	public abstract void buildAirCompany(String filePath) throws BusinessExeption;
 }

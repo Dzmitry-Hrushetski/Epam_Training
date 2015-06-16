@@ -5,7 +5,6 @@ package com.epam.aircompany.parser;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javax.xml.stream.XMLInputFactory;
@@ -15,10 +14,10 @@ import javax.xml.stream.XMLStreamReader;
 
 import org.apache.log4j.Logger;
 
-import com.epam.aircompany.bean.AirCompany;
 import com.epam.aircompany.bean.AirplaneModelName;
 import com.epam.aircompany.bean.PassangerAirplane;
 import com.epam.aircompany.bean.TransportAirplane;
+import com.epam.aircompany.exeption.BusinessExeption;
 import com.epam.aircompany.parser.enumeration.AirplaneEnum;
 
 import static com.epam.aircompany.parser.constant.ParserConstant.*;
@@ -70,12 +69,17 @@ public class StAXAirCompanyBuilder extends AbstractAirCompanyBuilder {
 	 * @see com.epam.aircompany.parser.AbstractAirCompanyBuilder#buildAirCompany(java.lang.String)
 	 */
 	@Override
-	public void buildAirCompany(String filePath) {
+	public void buildAirCompany(String filePath) throws BusinessExeption {
 		XMLStreamReader reader = null;
 		String elementName;
 		
-		try (FileInputStream inputStream = new FileInputStream(new File(filePath))) {
+		if(filePath==null || filePath.isEmpty()) {
+			throw new BusinessExeption("File name cannot be null or empty");
+		}
+		try {
+			FileInputStream inputStream = new FileInputStream(new File(filePath));
 			reader = inputFactory.createXMLStreamReader(inputStream);
+			
 			while (reader.hasNext()) {
 				int type = reader.next();
 				if (type == XMLStreamConstants.START_ELEMENT) {
@@ -98,18 +102,18 @@ public class StAXAirCompanyBuilder extends AbstractAirCompanyBuilder {
 				}
 			}
 		} catch (XMLStreamException exception) {
-			LOG.error("StAX parser error!", exception);
-		} catch (FileNotFoundException exception) {
-			LOG.error("File '" + filePath + "' not found!", exception);
-		} catch (IOException exception) {
-			LOG.error("Unable to close the file!", exception);
+			LOG.error("StAX parser error", exception);
+			throw new BusinessExeption("StAX parser error",exception);
+		}  catch (IOException exception) {
+			LOG.error("IO error", exception);
+			throw new BusinessExeption("IO error",exception);
 		}
 
 	}
 	
 	private PassangerAirplane buildPassangerAirplane(XMLStreamReader reader) throws XMLStreamException {
 		
-		boardNumber=Integer.parseInt(reader.getAttributeValue(0).substring(1));
+		boardNumber=Integer.parseInt(reader.getAttributeValue(START_INDEX).substring(ID_SUBSTRING));
 		
 		String elementName;
 		while (reader.hasNext()) {
@@ -151,27 +155,6 @@ public class StAXAirCompanyBuilder extends AbstractAirCompanyBuilder {
 				case CUR_BAGGAGE_WEIGHT:
 					curBaggageWeight=Integer.parseInt(getXMLText(reader));
 					break;
-				/*case CARGO_LONG:
-					cargoLong=Integer.parseInt(str);
-					break;
-				case CARGO_WIDTH:
-					cargoWidth=Integer.parseInt(str);
-					break;	
-				case CARGO_HEIGHT:
-					cargoHeight=Integer.parseInt(str);
-					break;	
-				case MAX_CARGO_WEIGHT:
-					maxCargoWeight=Integer.parseInt(str);
-					break;	
-				case CUR_CARGO_WEIGHT:
-					curCargoWeight=Integer.parseInt(str);
-					break;
-				case CARGO_HATCH_WIDTH:
-					cargoHatchWidth=Integer.parseInt(str);
-					break;	
-				case CARGO_HATCH_HEIGHT:
-					cargoHatchHeight=Integer.parseInt(str);
-					break;	*/	
 				default:
 					break;
 				}
@@ -219,24 +202,6 @@ public class StAXAirCompanyBuilder extends AbstractAirCompanyBuilder {
 				case MAX_LOAD_CAPACITY:
 					maxLoadCapacity=Integer.parseInt(getXMLText(reader));
 					break;
-				/*case ECONOM_PLACE:
-					economPlace=Integer.parseInt(getXMLText(reader));
-					break;
-				case BUSINESS_PLACE:
-					businessPlace=Integer.parseInt(getXMLText(reader));
-					break;
-				case MAX_BAGGAGE_PLACE:
-					maxBaggagePlace=Integer.parseInt(getXMLText(reader));
-					break;
-				case MAX_BAGGAGE_WEIGHT:
-					maxBaggageWeight=Integer.parseInt(getXMLText(reader));
-					break;
-				case CUR_BAGGAGE_PLACE:
-					curBaggagePlace=Integer.parseInt(getXMLText(reader));
-					break;
-				case CUR_BAGGAGE_WEIGHT:
-					curBaggageWeight=Integer.parseInt(getXMLText(reader));
-					break;*/
 				case CARGO_LONG:
 					cargoLong=Integer.parseInt(getXMLText(reader));
 					break;

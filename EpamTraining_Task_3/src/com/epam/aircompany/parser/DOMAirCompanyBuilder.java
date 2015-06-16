@@ -20,10 +20,8 @@ import org.xml.sax.SAXException;
 import com.epam.aircompany.bean.AirplaneModelName;
 import com.epam.aircompany.bean.PassangerAirplane;
 import com.epam.aircompany.bean.TransportAirplane;
+import com.epam.aircompany.exeption.BusinessExeption;
 import com.epam.aircompany.parser.enumeration.AirplaneEnum;
-
-
-
 
 import static com.epam.aircompany.parser.constant.ParserConstant.*;
 
@@ -60,70 +58,40 @@ public class DOMAirCompanyBuilder extends AbstractAirCompanyBuilder {
 	private int cargoHatchHeight;	
 	
 	/**
+	 * @throws BusinessExeption 
 	 * 
 	 */
-	public DOMAirCompanyBuilder() {
+	public DOMAirCompanyBuilder() throws BusinessExeption {
 		super();
 		DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		try {
 			this.documentBuilder=factory.newDocumentBuilder();
 		} catch (ParserConfigurationException exception) {
-			LOG.error("Error configuration parser", exception);
+			LOG.error("Error configuration DOM parser", exception);
+			throw new BusinessExeption("Error configuration DOM parser",exception);
 		}
 	}
 
-	
-	/*public void buildAirCompany(String filePath) {
-		  try{
-		   //File fXmlFile = new File("c://staff.xml");
-		   File fXmlFile = new File(filePath);
-		   DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-		   DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-		   Document doc = dBuilder.parse(fXmlFile);
-		  
-		   //optional, but recommended
-		   //read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
-		   //doc.getDocumentElement().normalize();
-		  
-		   System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
-		  
-		   NodeList nList = doc.getElementsByTagName("tns:company-name");
-		   System.out.println("----------------------------");
-		    
-		   for (int temp = 0; temp < nList.getLength(); temp++) {
-		   
-		    Node nNode = nList.item(temp);
-		    System.out.println("\nCurrent Element :" + nNode.getNodeName()+nNode.getTextContent());
-		    
-		   }
-		  }catch(Exception err){
-		   LOG.error(err);
-		  }
-		  
-		 }*/
-	
-	
-	
-	
-	
 	
 	/* (non-Javadoc)
 	 * @see com.epam.aircompany.parser.AbstractAirCompanyBuilder#buildAirCompany(java.lang.String)
 	 */
 	@Override
-	public void buildAirCompany(String filePath) {
-		Document document;//,root;
+	public void buildAirCompany(String filePath) throws BusinessExeption {
+		Document document;
+		if(filePath==null || filePath.isEmpty()) {
+			throw new BusinessExeption("File name cannot be null or empty");
+		}
 		try {
 			document=documentBuilder.parse(new File(filePath));
-			//document.getDocumentElement().normalize();
 			Element root=document.getDocumentElement();		
 			
 			NodeList companyName=root.getElementsByTagName(NAME_SPASE_PREFIX+COMPANY_NAME);
 			NodeList passangerAirplaneList=root.getElementsByTagName(NAME_SPASE_PREFIX+PASSANGER_AIRPLANE);
 			NodeList transportAirplaneList=root.getElementsByTagName(NAME_SPASE_PREFIX+TRANSPORT_AIRPLANE);
 
-			Element name=(Element)companyName.item(0);
+			Element name=(Element)companyName.item(START_INDEX);
 			airCompany.setCompanyName(name.getTextContent().trim());
 						
 			for (int i=0;i<passangerAirplaneList.getLength();i++) {
@@ -139,13 +107,15 @@ public class DOMAirCompanyBuilder extends AbstractAirCompanyBuilder {
 			}
 		} catch (SAXException exception) {
 			LOG.error("Document parsing error", exception);
+			throw new BusinessExeption("Document parsing error",exception);
 		} catch (IOException exception) {
 			LOG.error("I/O error", exception);
+			throw new BusinessExeption("I/O error",exception);
 		}
 	}
 	
 	private PassangerAirplane buildPassangerAirplane(Element passangerAirplaneElement) {
-		boardNumber=Integer.parseInt(passangerAirplaneElement.getAttribute(ID).substring(1));
+		boardNumber=Integer.parseInt(passangerAirplaneElement.getAttribute(ID).substring(ID_SUBSTRING));
 		modelName=AirplaneModelName.valueOf(getElementTextContent(passangerAirplaneElement,AirplaneEnum.MODEL_NAME.getValue()));
 		flyingRange=Integer.parseInt(getElementTextContent(passangerAirplaneElement,AirplaneEnum.FLYING_RANGE.getValue()));
 		capacityFuelTank=Integer.parseInt(getElementTextContent(passangerAirplaneElement,AirplaneEnum.CAPACITY_FUEL_TANK.getValue()));
@@ -168,7 +138,7 @@ public class DOMAirCompanyBuilder extends AbstractAirCompanyBuilder {
 	}
 	
 	private TransportAirplane buildTransportAirplane(Element transportAirplaneElement) {
-		boardNumber=Integer.parseInt(transportAirplaneElement.getAttribute(ID).substring(1));
+		boardNumber=Integer.parseInt(transportAirplaneElement.getAttribute(ID).substring(ID_SUBSTRING));
 		modelName=AirplaneModelName.valueOf(getElementTextContent(transportAirplaneElement,AirplaneEnum.MODEL_NAME.getValue()));
 		flyingRange=Integer.parseInt(getElementTextContent(transportAirplaneElement,AirplaneEnum.FLYING_RANGE.getValue()));
 		capacityFuelTank=Integer.parseInt(getElementTextContent(transportAirplaneElement,AirplaneEnum.CAPACITY_FUEL_TANK.getValue()));
@@ -190,7 +160,7 @@ public class DOMAirCompanyBuilder extends AbstractAirCompanyBuilder {
 		
 	private String getElementTextContent(Element element, String elementName) {
 		NodeList nList = element.getElementsByTagName(elementName);
-		Node node = nList.item(0);
+		Node node = nList.item(START_INDEX);
 		String text = node.getTextContent();
 		return text;
 	}

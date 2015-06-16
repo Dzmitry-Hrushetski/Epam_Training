@@ -11,6 +11,7 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 
 import com.epam.aircompany.bean.Airplane;
+import com.epam.aircompany.exeption.BusinessExeption;
 
 /**
  * @author Dzmitry Hrushetski
@@ -25,14 +26,12 @@ public class CompanyOutputData {
 	private static final String MESSAGE_NOT_FOUND="Airplanes not found\n";
 	private static final String NEW_LINE="\n";
 	
-	public static boolean saveFile(String fileName, int totalPlace, int totalCargo, Set<Airplane> airplanes, Set<Airplane> findAirplanes){
+	public static void saveFile(String fileName, int totalPlace, int totalCargo, Set<Airplane> airplanes, Set<Airplane> findAirplanes) throws BusinessExeption{
 		BufferedWriter output = null;
-		boolean rezult=false;
 		
-		
-		// переделать проверку!!!!!!!!!!!!!!!
-		if(fileName==null || fileName.isEmpty() || airplanes==null || findAirplanes==null){
-			return rezult;
+		if(fileName==null || fileName.isEmpty() || airplanes==null || findAirplanes==null) {
+			LOG.error("Incorrect argumens");
+			throw new BusinessExeption("Incorrect argumens");
 		}
 			    
 	    try {
@@ -61,18 +60,18 @@ public class CompanyOutputData {
 	    	  }else {
 	    		  output.write(MESSAGE_NOT_FOUND);  
 	    	  }
-	    	  rezult=true;
+	    	 
 	    } catch (IOException e) {
-	    	LOG.error(e.getMessage());
+	    	throw new BusinessExeption("IO error",e);
 	    } finally {
 	    	try {
 				if(output!=null){
 					output.close();
 				}
 			} catch (IOException e) {
-				LOG.error(e.getMessage());
+				LOG.error("Error close file",e);
 			}  	
 	    }
-	    return rezult;
+	    LOG.info("Data are saved correctly");
 	}
 }

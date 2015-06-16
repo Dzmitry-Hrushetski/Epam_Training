@@ -17,5 +17,6 @@ public class ParserConstant {
 	public static final String ID="ID";
 	
 	public static final int ID_SUBSTRING=1;
+	public static final int START_INDEX=0;
 
 }

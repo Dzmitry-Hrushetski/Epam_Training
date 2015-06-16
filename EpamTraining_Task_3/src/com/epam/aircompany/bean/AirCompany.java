@@ -6,7 +6,6 @@ package com.epam.aircompany.bean;
 import java.util.Set;
 import java.util.TreeSet;
 
-import com.epam.aircompany.exeption.LogicalExeption;
 
 /**
  * @author Dzmitry Hrushetski
@@ -17,15 +16,6 @@ public class AirCompany {
 	private static final String MESSAGE_TO_STRING_2="The %s has %d airplanes.";
 	private String companyName;
 	private Set<Airplane> airplanes=new TreeSet<Airplane>();
-	
-	public AirCompany(String companyName) throws LogicalExeption {
-		super();
-		if(companyName!=null && !companyName.isEmpty()){
-			this.companyName = companyName;
-		} else {
-			throw new LogicalExeption("Incorrect companyName");
-		}
-	}
 		
 	/**
 	 * 

@@ -3,7 +3,6 @@
  */
 package com.epam.aircompany.parser.handler;
 
-import org.apache.log4j.Logger;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -20,7 +19,6 @@ import static com.epam.aircompany.parser.constant.ParserConstant.*;
  *
  */
 public class AirCompanyHandler extends DefaultHandler {
-	private static final Logger LOG = Logger.getLogger(AirCompanyHandler.class);
 	private AirCompany company=new AirCompany();
 	private PassangerAirplane passangerAirplane;
 	private TransportAirplane transportAirplane;
@@ -64,7 +62,7 @@ public class AirCompanyHandler extends DefaultHandler {
 		switch (localName) {
 		case PASSANGER_AIRPLANE:
 		case TRANSPORT_AIRPLANE:
-			boardNumber=Integer.parseInt(attributes.getValue(0).substring(1));
+			boardNumber=Integer.parseInt(attributes.getValue(START_INDEX).substring(ID_SUBSTRING));
 			break;
 		default:
 			if (!localName.equals(XML_ROOT)) {

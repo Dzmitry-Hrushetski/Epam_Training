@@ -3,7 +3,6 @@
  */
 package com.epam.aircompany.bean;
 
-import com.epam.aircompany.exeption.LogicalExeption;
 
 /**
  * @author Dzmitry Hrushetski
