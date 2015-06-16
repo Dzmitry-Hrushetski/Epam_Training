@@ -27,6 +27,7 @@ public class Runner {
 	private static final int MIN_FUEL_USAGE=14;
 	private static final int MAX_FUEL_USAGE=25;
 	private static final String INPUT_FILE_PATH="InputData\\aircompany1.xml";
+	private static final String OUTPUT_FILE_PATH="result.txt";
 	/**
 	 * @param args
 	 */
@@ -53,7 +54,7 @@ public class Runner {
 			findAirplanes=companyBusiness.findAirplaneFuelUsageRange(company,MIN_FUEL_USAGE,MAX_FUEL_USAGE);
 			
 			LOG.info("Save data to file");
-			CompanyOutputData.saveFile("result.txt", totalPlace, totalCargo, company.getAirplanes(),findAirplanes);
+			CompanyOutputData.saveFile(OUTPUT_FILE_PATH, totalPlace, totalCargo, company.getAirplanes(),findAirplanes);
 			
 			LOG.info("Job finish");
 		} catch (BusinessExeption | EnumConstantNotPresentException e) {
