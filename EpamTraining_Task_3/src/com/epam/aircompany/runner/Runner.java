@@ -25,7 +25,7 @@ import com.epam.aircompany.parser.ParserType;
 public class Runner {
 	private static final Logger LOG = Logger.getLogger(Runner.class);
 	private static final int MIN_FUEL_USAGE=14;
-	private static final int MAX_FUEL_USAGE=25;
+	private static final int MAX_FUEL_USAGE=45;
 	private static final String INPUT_FILE_PATH="InputData\\aircompany1.xml";
 	private static final String OUTPUT_FILE_PATH="result.txt";
 	/**

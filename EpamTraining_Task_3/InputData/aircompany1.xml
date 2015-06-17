@@ -3,29 +3,110 @@
   <tns:company-name>TransExpress</tns:company-name>
   <tns:passanger-airplane ID="i12">
     <tns:model-name>AIRBUS_A310</tns:model-name>
-    <tns:flying-range>101</tns:flying-range>
-    <tns:capacity-fuel-tank>2</tns:capacity-fuel-tank>
-    <tns:fuel-usage>11</tns:fuel-usage>
-    <tns:max-load-capacity>2</tns:max-load-capacity>
-    <tns:econom-place>1</tns:econom-place>
-    <tns:business-place>1</tns:business-place>
-    <tns:max-baggage-place>1</tns:max-baggage-place>
-    <tns:max-baggage-weight>1</tns:max-baggage-weight>
-    <tns:cur-baggage-place>1</tns:cur-baggage-place>
-    <tns:cur-baggage-weight>1</tns:cur-baggage-weight>
+    <tns:flying-range>280</tns:flying-range>
+    <tns:capacity-fuel-tank>55</tns:capacity-fuel-tank>
+    <tns:fuel-usage>12</tns:fuel-usage>
+    <tns:max-load-capacity>20</tns:max-load-capacity>
+    <tns:econom-place>90</tns:econom-place>
+    <tns:business-place>30</tns:business-place>
+    <tns:max-baggage-place>150</tns:max-baggage-place>
+    <tns:max-baggage-weight>4</tns:max-baggage-weight>
+    <tns:cur-baggage-place>99</tns:cur-baggage-place>
+    <tns:cur-baggage-weight>2</tns:cur-baggage-weight>
   </tns:passanger-airplane>
   <tns:transport-airplane ID="i15">
   	<tns:model-name>AIRBUS_A400M</tns:model-name>
-  	<tns:flying-range>200</tns:flying-range>
-  	<tns:capacity-fuel-tank>5</tns:capacity-fuel-tank>
-  	<tns:fuel-usage>15</tns:fuel-usage>
-  	<tns:max-load-capacity>6</tns:max-load-capacity>
-  	<tns:cargo-long>2</tns:cargo-long>
-  	<tns:cargo-width>2</tns:cargo-width>
-  	<tns:cargo-height>2</tns:cargo-height>
-  	<tns:max-cargo-weight>2</tns:max-cargo-weight>
-  	<tns:cur-cargo-weight>2</tns:cur-cargo-weight>
-  	<tns:cargo-hatch-width>2</tns:cargo-hatch-width>
-  	<tns:cargo-hatch-height>2</tns:cargo-hatch-height>
+  	<tns:flying-range>300</tns:flying-range>
+  	<tns:capacity-fuel-tank>75</tns:capacity-fuel-tank>
+  	<tns:fuel-usage>22</tns:fuel-usage>
+  	<tns:max-load-capacity>30</tns:max-load-capacity>
+  	<tns:cargo-long>15</tns:cargo-long>
+  	<tns:cargo-width>8</tns:cargo-width>
+  	<tns:cargo-height>3</tns:cargo-height>
+  	<tns:max-cargo-weight>55</tns:max-cargo-weight>
+  	<tns:cur-cargo-weight>12</tns:cur-cargo-weight>
+  	<tns:cargo-hatch-width>5</tns:cargo-hatch-width>
+  	<tns:cargo-hatch-height>4</tns:cargo-hatch-height>
+  </tns:transport-airplane>
+  <tns:passanger-airplane ID="i16">
+  	<tns:model-name>BOING_737</tns:model-name>	
+  	<tns:flying-range>201</tns:flying-range>
+  	<tns:capacity-fuel-tank>55</tns:capacity-fuel-tank>
+  	<tns:fuel-usage>17</tns:fuel-usage>
+  	<tns:max-load-capacity>45</tns:max-load-capacity>
+  	<tns:econom-place>60</tns:econom-place>
+  	<tns:business-place>20</tns:business-place>
+  	<tns:max-baggage-place>93</tns:max-baggage-place>
+  	<tns:max-baggage-weight>3</tns:max-baggage-weight>
+  	<tns:cur-baggage-place>20</tns:cur-baggage-place>
+  	<tns:cur-baggage-weight>1</tns:cur-baggage-weight>
+  </tns:passanger-airplane>
+  <tns:transport-airplane ID="i17">
+  	<tns:model-name>IL_76TD</tns:model-name>
+  	<tns:flying-range>450</tns:flying-range>
+  	<tns:capacity-fuel-tank>80</tns:capacity-fuel-tank>
+  	<tns:fuel-usage>24</tns:fuel-usage>
+  	<tns:max-load-capacity>56</tns:max-load-capacity>
+  	<tns:cargo-long>12</tns:cargo-long>
+  	<tns:cargo-width>5</tns:cargo-width>
+  	<tns:cargo-height>3</tns:cargo-height>
+  	<tns:max-cargo-weight>50</tns:max-cargo-weight>
+  	<tns:cur-cargo-weight>45</tns:cur-cargo-weight>
+  	<tns:cargo-hatch-width>4</tns:cargo-hatch-width>
+  	<tns:cargo-hatch-height>3</tns:cargo-hatch-height>
+  </tns:transport-airplane>
+  <tns:passanger-airplane ID="i18">
+    <tns:model-name>TU_154</tns:model-name>
+    <tns:flying-range>220</tns:flying-range>
+    <tns:capacity-fuel-tank>35</tns:capacity-fuel-tank>
+    <tns:fuel-usage>9</tns:fuel-usage>
+    <tns:max-load-capacity>12</tns:max-load-capacity>
+    <tns:econom-place>45</tns:econom-place>
+    <tns:business-place>15</tns:business-place>
+    <tns:max-baggage-place>75</tns:max-baggage-place>
+    <tns:max-baggage-weight>2</tns:max-baggage-weight>
+    <tns:cur-baggage-place>20</tns:cur-baggage-place>
+    <tns:cur-baggage-weight>1</tns:cur-baggage-weight>
+  </tns:passanger-airplane>
+  <tns:transport-airplane ID="i19">
+  	<tns:model-name>IL_76TD</tns:model-name>
+  	<tns:flying-range>260</tns:flying-range>
+  	<tns:capacity-fuel-tank>57</tns:capacity-fuel-tank>
+  	<tns:fuel-usage>19</tns:fuel-usage>
+  	<tns:max-load-capacity>33</tns:max-load-capacity>
+  	<tns:cargo-long>10</tns:cargo-long>
+  	<tns:cargo-width>4</tns:cargo-width>
+  	<tns:cargo-height>3</tns:cargo-height>
+  	<tns:max-cargo-weight>50</tns:max-cargo-weight>
+  	<tns:cur-cargo-weight>27</tns:cur-cargo-weight>
+  	<tns:cargo-hatch-width>3</tns:cargo-hatch-width>
+  	<tns:cargo-hatch-height>3</tns:cargo-hatch-height>
+  </tns:transport-airplane>
+  <tns:passanger-airplane ID="i20">
+  	<tns:model-name>BOING_737</tns:model-name>	
+  	<tns:flying-range>201</tns:flying-range>
+  	<tns:capacity-fuel-tank>55</tns:capacity-fuel-tank>
+  	<tns:fuel-usage>17</tns:fuel-usage>
+  	<tns:max-load-capacity>45</tns:max-load-capacity>
+  	<tns:econom-place>60</tns:econom-place>
+  	<tns:business-place>20</tns:business-place>
+  	<tns:max-baggage-place>93</tns:max-baggage-place>
+  	<tns:max-baggage-weight>3</tns:max-baggage-weight>
+  	<tns:cur-baggage-place>23</tns:cur-baggage-place>
+  	<tns:cur-baggage-weight>1</tns:cur-baggage-weight>
+  </tns:passanger-airplane>
+  <tns:transport-airplane ID="i21">
+  	<tns:model-name>IL_76TD</tns:model-name>
+  	<tns:flying-range>450</tns:flying-range>
+  	<tns:capacity-fuel-tank>80</tns:capacity-fuel-tank>
+  	<tns:fuel-usage>24</tns:fuel-usage>
+  	<tns:max-load-capacity>56</tns:max-load-capacity>
+  	<tns:cargo-long>12</tns:cargo-long>
+  	<tns:cargo-width>5</tns:cargo-width>
+  	<tns:cargo-height>3</tns:cargo-height>
+  	<tns:max-cargo-weight>50</tns:max-cargo-weight>
+  	<tns:cur-cargo-weight>37</tns:cur-cargo-weight>
+  	<tns:cargo-hatch-width>4</tns:cargo-hatch-width>
+  	<tns:cargo-hatch-height>3</tns:cargo-hatch-height>
   </tns:transport-airplane>
 </tns:air-company>

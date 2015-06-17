@@ -1,8 +1,15 @@
-Total passanger place - 2 and cargo weight - 3
+Total passanger place - 260 and cargo weight - 164
 
 The list of airplanes sorted by flying range:
-Airplane AIRBUS_A310, board number - 12, flying range 101
-Airplane AIRBUS_A400M, board number - 15, flying range 200
+Airplane BOING_737, board number - 16, flying range 201
+Airplane TU_154, board number - 18, flying range 220
+Airplane IL_76TD, board number - 19, flying range 260
+Airplane AIRBUS_A310, board number - 12, flying range 280
+Airplane AIRBUS_A400M, board number - 15, flying range 300
+Airplane IL_76TD, board number - 17, flying range 450
 
 The list of airplanes fuelUsage:
-Airplane AIRBUS_A400M, board number - 15, flying range 200, fuel usage 15
+Airplane BOING_737, board number - 16, flying range 201, fuel usage 17
+Airplane IL_76TD, board number - 19, flying range 260, fuel usage 19
+Airplane AIRBUS_A400M, board number - 15, flying range 300, fuel usage 22
+Airplane IL_76TD, board number - 17, flying range 450, fuel usage 24

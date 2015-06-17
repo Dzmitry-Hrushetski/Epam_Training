@@ -4,3 +4,27 @@
 16.06.2015 23:20:58,368 INFO  runner.Runner - Save data to file
 16.06.2015 23:20:58,372 INFO  logic.CompanyOutputData - Data are saved correctly
 16.06.2015 23:20:58,373 INFO  runner.Runner - Job finish
+17.06.2015 02:50:15,038 INFO  runner.Runner - Create company and airplanes in the company
+17.06.2015 02:50:15,048 INFO  runner.Runner - Parse input XML data file
+17.06.2015 02:50:15,158 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+17.06.2015 02:50:15,188 INFO  runner.Runner - Save data to file
+17.06.2015 02:50:15,198 INFO  logic.CompanyOutputData - Data are saved correctly
+17.06.2015 02:50:15,198 INFO  runner.Runner - Job finish
+17.06.2015 02:50:59,303 INFO  runner.Runner - Create company and airplanes in the company
+17.06.2015 02:50:59,323 INFO  runner.Runner - Parse input XML data file
+17.06.2015 02:50:59,333 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+17.06.2015 02:50:59,333 INFO  runner.Runner - Save data to file
+17.06.2015 02:50:59,333 INFO  logic.CompanyOutputData - Data are saved correctly
+17.06.2015 02:50:59,333 INFO  runner.Runner - Job finish
+17.06.2015 02:51:48,749 INFO  runner.Runner - Create company and airplanes in the company
+17.06.2015 02:51:48,759 INFO  runner.Runner - Parse input XML data file
+17.06.2015 02:51:48,769 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+17.06.2015 02:51:48,769 INFO  runner.Runner - Save data to file
+17.06.2015 02:51:48,779 INFO  logic.CompanyOutputData - Data are saved correctly
+17.06.2015 02:51:48,779 INFO  runner.Runner - Job finish
+17.06.2015 03:04:12,233 INFO  runner.Runner - Create company and airplanes in the company
+17.06.2015 03:04:12,243 INFO  runner.Runner - Parse input XML data file
+17.06.2015 03:04:12,263 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+17.06.2015 03:04:12,263 INFO  runner.Runner - Save data to file
+17.06.2015 03:04:12,263 INFO  logic.CompanyOutputData - Data are saved correctly
+17.06.2015 03:04:12,263 INFO  runner.Runner - Job finish
