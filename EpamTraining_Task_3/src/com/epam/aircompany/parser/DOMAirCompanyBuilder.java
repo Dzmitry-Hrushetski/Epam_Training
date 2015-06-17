@@ -10,7 +10,6 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -30,7 +29,6 @@ import static com.epam.aircompany.parser.constant.ParserConstant.*;
  *
  */
 public class DOMAirCompanyBuilder extends AbstractAirCompanyBuilder {
-	private static final Logger LOG=Logger.getLogger(DOMAirCompanyBuilder.class);
 	private static final String NAME_SPASE_PREFIX="tns:";
 	private DocumentBuilder documentBuilder;
 
@@ -68,7 +66,6 @@ public class DOMAirCompanyBuilder extends AbstractAirCompanyBuilder {
 		try {
 			this.documentBuilder=factory.newDocumentBuilder();
 		} catch (ParserConfigurationException exception) {
-			LOG.error("Error configuration DOM parser", exception);
 			throw new BusinessExeption("Error configuration DOM parser",exception);
 		}
 	}
@@ -81,7 +78,7 @@ public class DOMAirCompanyBuilder extends AbstractAirCompanyBuilder {
 	public void buildAirCompany(String filePath) throws BusinessExeption {
 		Document document;
 		if(filePath==null || filePath.isEmpty()) {
-			throw new BusinessExeption("File name cannot be null or empty");
+			throw new BusinessExeption("Input file name cannot be null or empty");
 		}
 		try {
 			document=documentBuilder.parse(new File(filePath));
@@ -106,10 +103,8 @@ public class DOMAirCompanyBuilder extends AbstractAirCompanyBuilder {
 				airCompany.add(transportAirplane);
 			}
 		} catch (SAXException exception) {
-			LOG.error("Document parsing error", exception);
 			throw new BusinessExeption("Document parsing error",exception);
 		} catch (IOException exception) {
-			LOG.error("I/O error", exception);
 			throw new BusinessExeption("I/O error",exception);
 		}
 	}

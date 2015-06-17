@@ -5,7 +5,6 @@ package com.epam.aircompany.parser;
 
 import java.io.IOException;
 
-import org.apache.log4j.Logger;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
@@ -18,7 +17,6 @@ import com.epam.aircompany.parser.handler.AirCompanyHandler;
  *
  */
 public class SAXAirCompanyBuilder extends AbstractAirCompanyBuilder {
-	private static final Logger LOG = Logger.getLogger(SAXAirCompanyBuilder.class);
 	private AirCompanyHandler handler= new AirCompanyHandler();;
 	private XMLReader xmlReader;
 
@@ -28,7 +26,6 @@ public class SAXAirCompanyBuilder extends AbstractAirCompanyBuilder {
 			this.xmlReader = XMLReaderFactory.createXMLReader();
 			xmlReader.setContentHandler(handler);
 		} catch (SAXException exception) {
-			LOG.error("Error SAX parser", exception);
 			throw new BusinessExeption("Error SAX parser",exception);
 		}
 	}
@@ -39,15 +36,13 @@ public class SAXAirCompanyBuilder extends AbstractAirCompanyBuilder {
 	@Override
 	public void buildAirCompany(String filePath) throws BusinessExeption {
 		if(filePath==null || filePath.isEmpty()) {
-			throw new BusinessExeption("File name cannot be null or empty");
+			throw new BusinessExeption("Input file name cannot be null or empty");
 		}
 		try {
 			xmlReader.parse(filePath);
 		} catch (SAXException exception) {
-			LOG.error("Error SAX parser", exception);
 			throw new BusinessExeption("Error SAX parser",exception);
 		} catch (IOException exception) {
-			LOG.error("I/O stream error", exception);
 			throw new BusinessExeption("I/O stream error",exception);
 		}	
 		this.airCompany = handler.getAirCompany(); 

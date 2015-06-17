@@ -164,8 +164,7 @@ public class AirCompanyHandler extends DefaultHandler {
 				cargoHatchHeight=Integer.parseInt(str);
 				break;			
 			default:
-				throw new EnumConstantNotPresentException(
-						currentEnum.getDeclaringClass(), currentEnum.name());
+				throw new EnumConstantNotPresentException(currentEnum.getDeclaringClass(), currentEnum.name());
 			}
 		}
 		currentEnum = null;

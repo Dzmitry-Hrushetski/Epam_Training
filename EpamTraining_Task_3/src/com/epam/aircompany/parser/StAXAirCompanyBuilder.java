@@ -12,7 +12,6 @@ import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
-import org.apache.log4j.Logger;
 
 import com.epam.aircompany.bean.AirplaneModelName;
 import com.epam.aircompany.bean.PassangerAirplane;
@@ -27,7 +26,6 @@ import static com.epam.aircompany.parser.constant.ParserConstant.*;
  *
  */
 public class StAXAirCompanyBuilder extends AbstractAirCompanyBuilder {
-	private static final Logger LOG = Logger.getLogger(StAXAirCompanyBuilder.class);
 	private XMLInputFactory inputFactory;
 	private PassangerAirplane passangerAirplane;
 	private TransportAirplane transportAirplane;
@@ -74,7 +72,7 @@ public class StAXAirCompanyBuilder extends AbstractAirCompanyBuilder {
 		String elementName;
 		
 		if(filePath==null || filePath.isEmpty()) {
-			throw new BusinessExeption("File name cannot be null or empty");
+			throw new BusinessExeption("Input file name cannot be null or empty");
 		}
 		try {
 			FileInputStream inputStream = new FileInputStream(new File(filePath));
@@ -102,10 +100,8 @@ public class StAXAirCompanyBuilder extends AbstractAirCompanyBuilder {
 				}
 			}
 		} catch (XMLStreamException exception) {
-			LOG.error("StAX parser error", exception);
 			throw new BusinessExeption("StAX parser error",exception);
 		}  catch (IOException exception) {
-			LOG.error("IO error", exception);
 			throw new BusinessExeption("IO error",exception);
 		}
 

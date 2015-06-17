@@ -30,8 +30,7 @@ public class CompanyOutputData {
 		BufferedWriter output = null;
 		
 		if(fileName==null || fileName.isEmpty() || airplanes==null || findAirplanes==null) {
-			LOG.error("Incorrect argumens");
-			throw new BusinessExeption("Incorrect argumens");
+			throw new BusinessExeption("Incorrect argumens in metod saveFile");
 		}
 			    
 	    try {
