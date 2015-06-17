@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/aircompany" xmlns:tns="http://www.example.org/aircompany" elementFormDefault="qualified">
+
+
+    <complexType name="Airplane">
+    	<sequence>
+    		<element name="model-name">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="AIRBUS_A310"></enumeration>
+    					<enumeration value="BOING_737"></enumeration>
+    					<enumeration value="TU_154"></enumeration>
+    					<enumeration value="AN_12"></enumeration>
+    					<enumeration value="AN_26D"></enumeration>
+    					<enumeration value="IL_76TD"></enumeration>
+    					<enumeration value="AIRBUS_A400M"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="flying-range">
+    			<simpleType>
+    				<restriction base="positiveInteger">
+    					<minExclusive value="100"></minExclusive>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="capacity-fuel-tank">
+    			<simpleType>
+    				<restriction base="positiveInteger">
+    					<minExclusive value="1"></minExclusive>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="fuel-usage">
+    			<simpleType>
+    				<restriction base="positiveInteger">
+    					<minExclusive value="10"></minExclusive>
+    					<maxExclusive value="10000"></maxExclusive>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="max-load-capacity">
+    			<simpleType>
+    				<restriction base="positiveInteger">
+    					<minExclusive value="1"></minExclusive>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    	</sequence>
+    	<attribute name="ID" use="required">
+    		<simpleType>
+    			<restriction base="string">
+    				<pattern value="[i][\\d]{2,15}"></pattern>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+
+    <complexType name="Passanger">
+    	<complexContent>
+    		<extension base="tns:Airplane">
+    			<sequence>
+    				<element name="econom-place"
+    					type="positiveInteger">
+    				</element>
+    				<element name="business-place"
+    					type="positiveInteger">
+    				</element>
+    				<element name="max-baggage-place">
+    					<simpleType>
+    						<restriction base="positiveInteger">
+    							<maxExclusive value="100"></maxExclusive>
+    						</restriction>
+    					</simpleType>
+    				</element>
+    				<element name="max-baggage-weight">
+    					<simpleType>
+    						<restriction base="positiveInteger">
+    							<maxExclusive value="10000"></maxExclusive>
+    						</restriction>
+    					</simpleType>
+    				</element>
+    				<element name="cur-baggage-place"
+    					type="positiveInteger">
+    				</element>
+    				<element name="cur-baggage-weight" type="positiveInteger"></element>
+    			</sequence>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="Transport">
+    	<complexContent>
+    		<extension base="tns:Airplane">
+    			<sequence>
+    				<element name="cargo-long">
+    					<simpleType>
+    						<restriction base="positiveInteger">
+    							<minExclusive value="1"></minExclusive>
+    						</restriction>
+    					</simpleType>
+    				</element>
+    				<element name="cargo-width">
+    					<simpleType>
+    						<restriction base="positiveInteger">
+    							<minExclusive value="1"></minExclusive>
+    						</restriction>
+    					</simpleType>
+    				</element>
+    				<element name="cargo-height">
+    					<simpleType>
+    						<restriction base="positiveInteger">
+    							<minExclusive value="1"></minExclusive>
+    						</restriction>
+    					</simpleType>
+    				</element>
+    				<element name="max-cargo-weight">
+    					<simpleType>
+    						<restriction base="positiveInteger">
+    							<minExclusive value="1"></minExclusive>
+    						</restriction>
+    					</simpleType>
+    				</element>
+    				<element name="cur-cargo-weight">
+    					<simpleType>
+    						<restriction base="positiveInteger">
+    							<minExclusive value="1"></minExclusive>
+    						</restriction>
+    					</simpleType>
+    				</element>
+    				<element name="cargo-hatch-width">
+    					<simpleType>
+    						<restriction base="positiveInteger">
+    							<minExclusive value="1"></minExclusive>
+    						</restriction>
+    					</simpleType>
+    				</element>
+    				<element name="cargo-hatch-height">
+    					<simpleType>
+    						<restriction base="positiveInteger">
+    							<minExclusive value="1"></minExclusive>
+    						</restriction>
+    					</simpleType>
+    				</element>
+    			</sequence>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+
+
+    <element name="passanger-airplane" type="tns:Passanger" substitutionGroup="tns:airplanes"></element>
+
+    <element name="transport-airplane" type="tns:Transport" substitutionGroup="tns:airplanes"></element>
+
+    <element name="airplanes" type="tns:Airplane" abstract="true"></element>
+
+
+
+
+    <element name="air-company">
+    	<complexType>
+    	<sequence>
+    			<element ref="tns:company-name"/>
+				<element ref="tns:airplanes" minOccurs="1" maxOccurs="unbounded"/>
+		</sequence>
+    	</complexType>
+    </element>
+
+
+
+    <element name="company-name">
+    	<simpleType>
+    		<restriction base="string">
+    			<pattern value="[\\w -_]+"></pattern>
+    		</restriction>
+    	</simpleType>
+    </element>
+</schema>
