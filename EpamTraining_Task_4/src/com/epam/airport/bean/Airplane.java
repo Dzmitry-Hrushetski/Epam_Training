@@ -8,7 +8,9 @@ package com.epam.airport.bean;
  *
  */
 public class Airplane {
+	private static int airplaneCount=0;
 	private int passangerCount;
+	private int airplaneID;
 
 	/**
 	 * @param passangerCount
@@ -16,6 +18,7 @@ public class Airplane {
 	public Airplane(int passangerCount) {
 		super();
 		this.passangerCount = passangerCount;
+		airplaneID=++airplaneCount;
 	}
 
 	/**
@@ -30,6 +33,13 @@ public class Airplane {
 	 */
 	public void setPassangerCount(int passangerCount) {
 		this.passangerCount = passangerCount;
+	}
+
+	/**
+	 * @return the airplaneID
+	 */
+	public int getAirplaneID() {
+		return airplaneID;
 	}
 	
 	

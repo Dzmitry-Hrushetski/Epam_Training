@@ -17,8 +17,8 @@ import static com.epam.airport.constant.AirportConstants.*;
  *
  */
 public class Airport {
-	BlockingQueue<Terminal> terminalQueue=new LinkedBlockingQueue<Terminal>(AIRPORT_TERMINAL_COUNT);
-	BlockingQueue<Ladder> ladderQueue=new LinkedBlockingQueue<Ladder>(AIRPORT_LADDER_COUNT);
+	private BlockingQueue<Terminal> terminalQueue=new LinkedBlockingQueue<Terminal>(AIRPORT_TERMINAL_COUNT);
+	private BlockingQueue<Ladder> ladderQueue=new LinkedBlockingQueue<Ladder>(AIRPORT_LADDER_COUNT);
 	/**
 	 * @throws BusinessExeption 
 	 * 
