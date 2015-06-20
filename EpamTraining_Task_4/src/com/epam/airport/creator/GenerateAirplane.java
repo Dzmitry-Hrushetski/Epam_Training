@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.epam.airport.logic;
+package com.epam.airport.creator;
 
 import java.util.Random;
 

@@ -7,10 +7,10 @@ import org.apache.log4j.Logger;
 
 import com.epam.airport.bean.Airplane;
 import com.epam.airport.bean.Airport;
-import com.epam.airport.exeption.BusinessExeption;
+import com.epam.airport.creator.CreateAirport;
+import com.epam.airport.creator.GenerateAirplane;
 import com.epam.airport.logic.ProcessingAirplane;
 
-import static com.epam.airport.logic.GenerateAirplane.*;
 import static com.epam.airport.constant.AirportConstants.*;
 
 /**
@@ -25,20 +25,13 @@ public class Runner {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-		Airport airport=null;
 		Airplane newAirplane=null;
-		// уберется при переделке на простую очередь
-		try {
-			airport=new Airport();
-		} catch (BusinessExeption e) {
-			LOG.error(e.getMessage());
-		}
+		Airport airport=CreateAirport.createAirport();
 		
 		
 		while(true) {
 			
-			newAirplane=generateNewAirplane();
+			newAirplane=GenerateAirplane.generateNewAirplane();
 			
 			if(MAX_GENERATED_AIRPLANE_COUNT<newAirplane.getAirplaneID()) {
 				LOG.info("Job finish");
