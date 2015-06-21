@@ -40,8 +40,4 @@ public class Terminal {
 	public int getNumberTerminal() {
 		return numberTerminal;
 	}
-	
-	
-	
-
 }

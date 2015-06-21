@@ -28,12 +28,13 @@ public class Runner {
 		Airplane newAirplane=null;
 		Airport airport=CreateAirport.createAirport();
 		
+		LOG.info("Job start");
 		
 		while(true) {
 			
 			newAirplane=GenerateAirplane.generateNewAirplane();
 			
-			if(MAX_GENERATED_AIRPLANE_COUNT<newAirplane.getAirplaneID()) {
+			if(newAirplane==null) {
 				LOG.info("Job finish");
 				break;
 			}

@@ -40,7 +40,4 @@ public class Ladder {
 	public int getNumberLadder() {
 		return numberLadder;
 	}
-	
-	
-
 }

@@ -21,11 +21,10 @@ import com.epam.airport.bean.Terminal;
  */
 public class ProcessingAirplane extends Thread {
 	private static final Logger LOG = Logger.getLogger(ProcessingAirplane.class);
-	private static final ReentrantLock lock = new ReentrantLock(true);
-	Airport currentAirport;
-	Airplane currentAirplane;
+	private static final ReentrantLock LOCK = new ReentrantLock(true);
+	private Airport currentAirport;
+	private Airplane currentAirplane;
 	
-
 	/**
 	 * @param currentAirport
 	 * @param currentAirplane
@@ -47,12 +46,15 @@ public class ProcessingAirplane extends Thread {
 		Terminal terminal=null;
 		Ladder ladder=null;
 		
+		long time=0;
 		
 		LOG.info(String.format(PROCESSING_LOG_MESSAGE_WAIT,currentAirplane.getAirplaneID()));
 		
+		time=System.currentTimeMillis();
+		
 		while(true) {
 		
-		lock.lock();
+		LOCK.lock();
 		try {
 			if(!terminalQueue.isEmpty()) {
 				terminal=terminalQueue.removeFirst();
@@ -64,10 +66,13 @@ public class ProcessingAirplane extends Thread {
 				break;
 			}	
 		     } finally {
-		       lock.unlock();
+		       LOCK.unlock();
 		     }
 			Thread.yield();
 		}
+		
+		time=System.currentTimeMillis()-time;
+		Statistics.getInstance().addStatisticsData(time, currentAirplane.getAirplaneID());
 		
 		LOG.info(String.format(PROCESSING_LOG_MESSAGE_START,currentAirplane.getAirplaneID(),currentAirplane.getPassangerCount(),currentAirplane.getPassangerCount()*SPEED_FIT));
 		
@@ -83,18 +88,19 @@ public class ProcessingAirplane extends Thread {
 			LOG.error(e);
 		}
 		
-		lock.lock();
+		LOCK.lock();
 		try {
 			if(terminal!=null) {
 				terminalQueue.add(terminal);		
 			} else {
 				ladderQueue.add(ladder);
-			}
-			
+			}	
 		     } finally {
-		       lock.unlock();
+		       LOCK.unlock();
 		     }
 		
 		LOG.info(String.format(PROCESSING_LOG_MESSAGE_END,currentAirplane.getAirplaneID()));
+			
+		Statistics.getInstance().decThreadsCount();
 	}
 }
