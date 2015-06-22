@@ -5438,3 +5438,906 @@
 22.06.2015 15:26:41,535 INFO  logic.Statistics - The airplane ID  98 expects service  51076 milliseconds
 22.06.2015 15:26:41,535 INFO  logic.Statistics - The airplane ID  65 expects service  67788 milliseconds
 22.06.2015 15:26:41,535 INFO  logic.Statistics - The general operating time 108720 milliseconds
+22.06.2015 21:06:38,645 INFO  runner.Runner - Job start
+22.06.2015 21:06:38,645 INFO  creator.GenerateAirplane - Generate new airplane ID-1, passanger 33
+22.06.2015 21:06:38,645 INFO  logic.ProcessingAirplane - The airplane ID-1 expects service
+22.06.2015 21:06:38,645 INFO  logic.ProcessingAirplane - Processing airplane ID-1, passanger count 33, necessary time 3300
+22.06.2015 21:06:38,645 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-1
+22.06.2015 21:06:39,145 INFO  creator.GenerateAirplane - Generate new airplane ID-2, passanger 25
+22.06.2015 21:06:39,145 INFO  logic.ProcessingAirplane - The airplane ID-2 expects service
+22.06.2015 21:06:39,145 INFO  logic.ProcessingAirplane - Processing airplane ID-2, passanger count 25, necessary time 2500
+22.06.2015 21:06:39,145 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-2
+22.06.2015 21:06:39,645 INFO  creator.GenerateAirplane - Generate new airplane ID-3, passanger 69
+22.06.2015 21:06:39,645 INFO  logic.ProcessingAirplane - The airplane ID-3 expects service
+22.06.2015 21:06:39,645 INFO  logic.ProcessingAirplane - Processing airplane ID-3, passanger count 69, necessary time 6900
+22.06.2015 21:06:39,645 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-3
+22.06.2015 21:06:40,147 INFO  creator.GenerateAirplane - Generate new airplane ID-4, passanger 50
+22.06.2015 21:06:40,147 INFO  logic.ProcessingAirplane - The airplane ID-4 expects service
+22.06.2015 21:06:40,147 INFO  logic.ProcessingAirplane - Processing airplane ID-4, passanger count 50, necessary time 5000
+22.06.2015 21:06:40,147 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-4
+22.06.2015 21:06:40,647 INFO  creator.GenerateAirplane - Generate new airplane ID-5, passanger 88
+22.06.2015 21:06:40,647 INFO  logic.ProcessingAirplane - The airplane ID-5 expects service
+22.06.2015 21:06:40,647 INFO  logic.ProcessingAirplane - Processing airplane ID-5, passanger count 88, necessary time 8800
+22.06.2015 21:06:40,647 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-5
+22.06.2015 21:06:41,148 INFO  creator.GenerateAirplane - Generate new airplane ID-6, passanger 41
+22.06.2015 21:06:41,148 INFO  logic.ProcessingAirplane - The airplane ID-6 expects service
+22.06.2015 21:06:41,148 INFO  logic.ProcessingAirplane - Processing airplane ID-6, passanger count 41, necessary time 4100
+22.06.2015 21:06:41,148 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-6
+22.06.2015 21:06:41,648 INFO  logic.ProcessingAirplane - Processing of the airplane ID-2 is complete
+22.06.2015 21:06:41,649 INFO  creator.GenerateAirplane - Generate new airplane ID-7, passanger 93
+22.06.2015 21:06:41,649 INFO  logic.ProcessingAirplane - The airplane ID-7 expects service
+22.06.2015 21:06:41,649 INFO  logic.ProcessingAirplane - Processing airplane ID-7, passanger count 93, necessary time 9300
+22.06.2015 21:06:41,649 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-7
+22.06.2015 21:06:41,960 INFO  logic.ProcessingAirplane - Processing of the airplane ID-1 is complete
+22.06.2015 21:06:42,163 INFO  creator.GenerateAirplane - Generate new airplane ID-8, passanger 14
+22.06.2015 21:06:42,163 INFO  logic.ProcessingAirplane - The airplane ID-8 expects service
+22.06.2015 21:06:42,163 INFO  logic.ProcessingAirplane - Processing airplane ID-8, passanger count 14, necessary time 1400
+22.06.2015 21:06:42,163 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-8
+22.06.2015 21:06:42,663 INFO  creator.GenerateAirplane - Generate new airplane ID-9, passanger 84
+22.06.2015 21:06:42,664 INFO  logic.ProcessingAirplane - The airplane ID-9 expects service
+22.06.2015 21:06:42,664 INFO  logic.ProcessingAirplane - Processing airplane ID-9, passanger count 84, necessary time 8400
+22.06.2015 21:06:42,664 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-9
+22.06.2015 21:06:43,165 INFO  creator.GenerateAirplane - Generate new airplane ID-10, passanger 73
+22.06.2015 21:06:43,165 INFO  logic.ProcessingAirplane - The airplane ID-10 expects service
+22.06.2015 21:06:43,165 INFO  logic.ProcessingAirplane - Processing airplane ID-10, passanger count 73, necessary time 7300
+22.06.2015 21:06:43,165 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-10
+22.06.2015 21:06:43,571 INFO  logic.ProcessingAirplane - Processing of the airplane ID-8 is complete
+22.06.2015 21:06:43,665 INFO  creator.GenerateAirplane - Generate new airplane ID-11, passanger 95
+22.06.2015 21:06:43,665 INFO  logic.ProcessingAirplane - The airplane ID-11 expects service
+22.06.2015 21:06:43,665 INFO  logic.ProcessingAirplane - Processing airplane ID-11, passanger count 95, necessary time 9500
+22.06.2015 21:06:43,665 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-11
+22.06.2015 21:06:44,167 INFO  creator.GenerateAirplane - Generate new airplane ID-12, passanger 44
+22.06.2015 21:06:44,167 INFO  logic.ProcessingAirplane - The airplane ID-12 expects service
+22.06.2015 21:06:44,682 INFO  creator.GenerateAirplane - Generate new airplane ID-13, passanger 46
+22.06.2015 21:06:44,683 INFO  logic.ProcessingAirplane - The airplane ID-13 expects service
+22.06.2015 21:06:45,152 INFO  logic.ProcessingAirplane - Processing of the airplane ID-4 is complete
+22.06.2015 21:06:45,152 INFO  logic.ProcessingAirplane - Processing airplane ID-12, passanger count 44, necessary time 4400
+22.06.2015 21:06:45,152 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-12
+22.06.2015 21:06:45,184 INFO  creator.GenerateAirplane - Generate new airplane ID-14, passanger 36
+22.06.2015 21:06:45,184 INFO  logic.ProcessingAirplane - The airplane ID-14 expects service
+22.06.2015 21:06:45,262 INFO  logic.ProcessingAirplane - Processing of the airplane ID-6 is complete
+22.06.2015 21:06:45,262 INFO  logic.ProcessingAirplane - Processing airplane ID-14, passanger count 36, necessary time 3600
+22.06.2015 21:06:45,262 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-14
+22.06.2015 21:06:45,684 INFO  creator.GenerateAirplane - Generate new airplane ID-15, passanger 30
+22.06.2015 21:06:45,684 INFO  logic.ProcessingAirplane - The airplane ID-15 expects service
+22.06.2015 21:06:46,185 INFO  creator.GenerateAirplane - Generate new airplane ID-16, passanger 17
+22.06.2015 21:06:46,185 INFO  logic.ProcessingAirplane - The airplane ID-16 expects service
+22.06.2015 21:06:46,560 INFO  logic.ProcessingAirplane - Processing of the airplane ID-3 is complete
+22.06.2015 21:06:46,560 INFO  logic.ProcessingAirplane - Processing airplane ID-15, passanger count 30, necessary time 3000
+22.06.2015 21:06:46,560 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-15
+22.06.2015 21:06:46,701 INFO  creator.GenerateAirplane - Generate new airplane ID-17, passanger 51
+22.06.2015 21:06:46,701 INFO  logic.ProcessingAirplane - The airplane ID-17 expects service
+22.06.2015 21:06:47,202 INFO  creator.GenerateAirplane - Generate new airplane ID-18, passanger 84
+22.06.2015 21:06:47,202 INFO  logic.ProcessingAirplane - The airplane ID-18 expects service
+22.06.2015 21:06:47,702 INFO  creator.GenerateAirplane - Generate new airplane ID-19, passanger 69
+22.06.2015 21:06:47,702 INFO  logic.ProcessingAirplane - The airplane ID-19 expects service
+22.06.2015 21:06:48,203 INFO  creator.GenerateAirplane - Generate new airplane ID-20, passanger 55
+22.06.2015 21:06:48,203 INFO  logic.ProcessingAirplane - The airplane ID-20 expects service
+22.06.2015 21:06:48,703 INFO  creator.GenerateAirplane - Generate new airplane ID-21, passanger 11
+22.06.2015 21:06:48,704 INFO  logic.ProcessingAirplane - The airplane ID-21 expects service
+22.06.2015 21:06:48,877 INFO  logic.ProcessingAirplane - Processing of the airplane ID-14 is complete
+22.06.2015 21:06:48,877 INFO  logic.ProcessingAirplane - Processing airplane ID-20, passanger count 55, necessary time 5500
+22.06.2015 21:06:48,877 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-20
+22.06.2015 21:06:49,205 INFO  creator.GenerateAirplane - Generate new airplane ID-22, passanger 61
+22.06.2015 21:06:49,205 INFO  logic.ProcessingAirplane - The airplane ID-22 expects service
+22.06.2015 21:06:49,455 INFO  logic.ProcessingAirplane - Processing of the airplane ID-5 is complete
+22.06.2015 21:06:49,455 INFO  logic.ProcessingAirplane - Processing airplane ID-19, passanger count 69, necessary time 6900
+22.06.2015 21:06:49,455 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-19
+22.06.2015 21:06:49,564 INFO  logic.ProcessingAirplane - Processing of the airplane ID-12 is complete
+22.06.2015 21:06:49,564 INFO  logic.ProcessingAirplane - Processing airplane ID-13, passanger count 46, necessary time 4600
+22.06.2015 21:06:49,564 INFO  logic.ProcessingAirplane - Processing airplane ID-21, passanger count 11, necessary time 1100
+22.06.2015 21:06:49,564 INFO  logic.ProcessingAirplane - Processing of the airplane ID-15 is complete
+22.06.2015 21:06:49,564 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-21
+22.06.2015 21:06:49,564 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-13
+22.06.2015 21:06:49,705 INFO  creator.GenerateAirplane - Generate new airplane ID-23, passanger 16
+22.06.2015 21:06:49,705 INFO  logic.ProcessingAirplane - The airplane ID-23 expects service
+22.06.2015 21:06:50,206 INFO  creator.GenerateAirplane - Generate new airplane ID-24, passanger 61
+22.06.2015 21:06:50,206 INFO  logic.ProcessingAirplane - The airplane ID-24 expects service
+22.06.2015 21:06:50,472 INFO  logic.ProcessingAirplane - Processing of the airplane ID-10 is complete
+22.06.2015 21:06:50,472 INFO  logic.ProcessingAirplane - Processing airplane ID-18, passanger count 84, necessary time 8400
+22.06.2015 21:06:50,472 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-18
+22.06.2015 21:06:50,675 INFO  logic.ProcessingAirplane - Processing of the airplane ID-21 is complete
+22.06.2015 21:06:50,675 INFO  logic.ProcessingAirplane - Processing airplane ID-17, passanger count 51, necessary time 5100
+22.06.2015 21:06:50,675 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-17
+22.06.2015 21:06:50,706 INFO  creator.GenerateAirplane - Generate new airplane ID-25, passanger 39
+22.06.2015 21:06:50,707 INFO  logic.ProcessingAirplane - The airplane ID-25 expects service
+22.06.2015 21:06:50,958 INFO  logic.ProcessingAirplane - Processing of the airplane ID-7 is complete
+22.06.2015 21:06:50,958 INFO  logic.ProcessingAirplane - Processing airplane ID-23, passanger count 16, necessary time 1600
+22.06.2015 21:06:50,958 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-23
+22.06.2015 21:06:51,067 INFO  logic.ProcessingAirplane - Processing of the airplane ID-9 is complete
+22.06.2015 21:06:51,067 INFO  logic.ProcessingAirplane - Processing airplane ID-22, passanger count 61, necessary time 6100
+22.06.2015 21:06:51,067 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-22
+22.06.2015 21:06:51,208 INFO  creator.GenerateAirplane - Generate new airplane ID-26, passanger 38
+22.06.2015 21:06:51,208 INFO  logic.ProcessingAirplane - The airplane ID-26 expects service
+22.06.2015 21:06:51,708 INFO  creator.GenerateAirplane - Generate new airplane ID-27, passanger 31
+22.06.2015 21:06:51,708 INFO  logic.ProcessingAirplane - The airplane ID-27 expects service
+22.06.2015 21:06:52,209 INFO  creator.GenerateAirplane - Generate new airplane ID-28, passanger 40
+22.06.2015 21:06:52,209 INFO  logic.ProcessingAirplane - The airplane ID-28 expects service
+22.06.2015 21:06:52,568 INFO  logic.ProcessingAirplane - Processing of the airplane ID-23 is complete
+22.06.2015 21:06:52,568 INFO  logic.ProcessingAirplane - Processing airplane ID-16, passanger count 17, necessary time 1700
+22.06.2015 21:06:52,568 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-16
+22.06.2015 21:06:52,709 INFO  creator.GenerateAirplane - Generate new airplane ID-29, passanger 47
+22.06.2015 21:06:52,709 INFO  logic.ProcessingAirplane - The airplane ID-29 expects service
+22.06.2015 21:06:53,179 INFO  logic.ProcessingAirplane - Processing of the airplane ID-11 is complete
+22.06.2015 21:06:53,179 INFO  logic.ProcessingAirplane - Processing airplane ID-28, passanger count 40, necessary time 4000
+22.06.2015 21:06:53,179 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-28
+22.06.2015 21:06:53,211 INFO  creator.GenerateAirplane - Generate new airplane ID-30, passanger 67
+22.06.2015 21:06:53,211 INFO  logic.ProcessingAirplane - The airplane ID-30 expects service
+22.06.2015 21:06:53,711 INFO  creator.GenerateAirplane - Generate new airplane ID-31, passanger 55
+22.06.2015 21:06:53,711 INFO  logic.ProcessingAirplane - The airplane ID-31 expects service
+22.06.2015 21:06:54,165 INFO  logic.ProcessingAirplane - Processing of the airplane ID-13 is complete
+22.06.2015 21:06:54,165 INFO  logic.ProcessingAirplane - Processing airplane ID-29, passanger count 47, necessary time 4700
+22.06.2015 21:06:54,165 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-29
+22.06.2015 21:06:54,212 INFO  creator.GenerateAirplane - Generate new airplane ID-32, passanger 92
+22.06.2015 21:06:54,212 INFO  logic.ProcessingAirplane - The airplane ID-32 expects service
+22.06.2015 21:06:54,274 INFO  logic.ProcessingAirplane - Processing of the airplane ID-16 is complete
+22.06.2015 21:06:54,274 INFO  logic.ProcessingAirplane - Processing airplane ID-27, passanger count 31, necessary time 3100
+22.06.2015 21:06:54,274 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-27
+22.06.2015 21:06:54,384 INFO  logic.ProcessingAirplane - Processing of the airplane ID-20 is complete
+22.06.2015 21:06:54,384 INFO  logic.ProcessingAirplane - Processing airplane ID-24, passanger count 61, necessary time 6100
+22.06.2015 21:06:54,384 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-24
+22.06.2015 21:06:54,712 INFO  creator.GenerateAirplane - Generate new airplane ID-33, passanger 35
+22.06.2015 21:06:54,712 INFO  logic.ProcessingAirplane - The airplane ID-33 expects service
+22.06.2015 21:06:55,213 INFO  creator.GenerateAirplane - Generate new airplane ID-34, passanger 25
+22.06.2015 21:06:55,213 INFO  logic.ProcessingAirplane - The airplane ID-34 expects service
+22.06.2015 21:06:55,713 INFO  creator.GenerateAirplane - Generate new airplane ID-35, passanger 96
+22.06.2015 21:06:55,714 INFO  logic.ProcessingAirplane - The airplane ID-35 expects service
+22.06.2015 21:06:55,777 INFO  logic.ProcessingAirplane - Processing of the airplane ID-17 is complete
+22.06.2015 21:06:55,777 INFO  logic.ProcessingAirplane - Processing airplane ID-34, passanger count 25, necessary time 2500
+22.06.2015 21:06:55,777 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-34
+22.06.2015 21:06:56,215 INFO  creator.GenerateAirplane - Generate new airplane ID-36, passanger 73
+22.06.2015 21:06:56,215 INFO  logic.ProcessingAirplane - The airplane ID-36 expects service
+22.06.2015 21:06:56,355 INFO  logic.ProcessingAirplane - Processing of the airplane ID-19 is complete
+22.06.2015 21:06:56,355 INFO  logic.ProcessingAirplane - Processing airplane ID-36, passanger count 73, necessary time 7300
+22.06.2015 21:06:56,355 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-36
+22.06.2015 21:06:56,715 INFO  creator.GenerateAirplane - Generate new airplane ID-37, passanger 79
+22.06.2015 21:06:56,715 INFO  logic.ProcessingAirplane - The airplane ID-37 expects service
+22.06.2015 21:06:57,169 INFO  logic.ProcessingAirplane - Processing of the airplane ID-22 is complete
+22.06.2015 21:06:57,169 INFO  logic.ProcessingAirplane - Processing airplane ID-26, passanger count 38, necessary time 3800
+22.06.2015 21:06:57,169 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-26
+22.06.2015 21:06:57,185 INFO  logic.ProcessingAirplane - Processing of the airplane ID-28 is complete
+22.06.2015 21:06:57,185 INFO  logic.ProcessingAirplane - Processing airplane ID-25, passanger count 39, necessary time 3900
+22.06.2015 21:06:57,185 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-25
+22.06.2015 21:06:57,216 INFO  creator.GenerateAirplane - Generate new airplane ID-38, passanger 68
+22.06.2015 21:06:57,216 INFO  logic.ProcessingAirplane - The airplane ID-38 expects service
+22.06.2015 21:06:57,388 INFO  logic.ProcessingAirplane - Processing of the airplane ID-27 is complete
+22.06.2015 21:06:57,388 INFO  logic.ProcessingAirplane - Processing airplane ID-33, passanger count 35, necessary time 3500
+22.06.2015 21:06:57,388 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-33
+22.06.2015 21:06:57,716 INFO  creator.GenerateAirplane - Generate new airplane ID-39, passanger 27
+22.06.2015 21:06:57,717 INFO  logic.ProcessingAirplane - The airplane ID-39 expects service
+22.06.2015 21:06:58,218 INFO  creator.GenerateAirplane - Generate new airplane ID-40, passanger 53
+22.06.2015 21:06:58,218 INFO  logic.ProcessingAirplane - The airplane ID-40 expects service
+22.06.2015 21:06:58,280 INFO  logic.ProcessingAirplane - Processing of the airplane ID-34 is complete
+22.06.2015 21:06:58,280 INFO  logic.ProcessingAirplane - Processing airplane ID-40, passanger count 53, necessary time 5300
+22.06.2015 21:06:58,280 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-40
+22.06.2015 21:06:58,718 INFO  creator.GenerateAirplane - Generate new airplane ID-41, passanger 68
+22.06.2015 21:06:58,718 INFO  logic.ProcessingAirplane - The airplane ID-41 expects service
+22.06.2015 21:06:58,875 INFO  logic.ProcessingAirplane - Processing of the airplane ID-18 is complete
+22.06.2015 21:06:58,875 INFO  logic.ProcessingAirplane - Processing airplane ID-41, passanger count 68, necessary time 6800
+22.06.2015 21:06:58,875 INFO  logic.ProcessingAirplane - Processing airplane ID-30, passanger count 67, necessary time 6700
+22.06.2015 21:06:58,875 INFO  logic.ProcessingAirplane - Processing of the airplane ID-29 is complete
+22.06.2015 21:06:58,875 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-30
+22.06.2015 21:06:58,875 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-41
+22.06.2015 21:06:59,219 INFO  creator.GenerateAirplane - Generate new airplane ID-42, passanger 93
+22.06.2015 21:06:59,219 INFO  logic.ProcessingAirplane - The airplane ID-42 expects service
+22.06.2015 21:06:59,719 INFO  creator.GenerateAirplane - Generate new airplane ID-43, passanger 85
+22.06.2015 21:06:59,719 INFO  logic.ProcessingAirplane - The airplane ID-43 expects service
+22.06.2015 21:07:00,220 INFO  creator.GenerateAirplane - Generate new airplane ID-44, passanger 39
+22.06.2015 21:07:00,220 INFO  logic.ProcessingAirplane - The airplane ID-44 expects service
+22.06.2015 21:07:00,486 INFO  logic.ProcessingAirplane - Processing of the airplane ID-24 is complete
+22.06.2015 21:07:00,486 INFO  logic.ProcessingAirplane - Processing airplane ID-31, passanger count 55, necessary time 5500
+22.06.2015 21:07:00,486 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-31
+22.06.2015 21:07:00,720 INFO  creator.GenerateAirplane - Generate new airplane ID-45, passanger 91
+22.06.2015 21:07:00,721 INFO  logic.ProcessingAirplane - The airplane ID-45 expects service
+22.06.2015 21:07:00,894 INFO  logic.ProcessingAirplane - Processing of the airplane ID-33 is complete
+22.06.2015 21:07:00,894 INFO  logic.ProcessingAirplane - Processing airplane ID-42, passanger count 93, necessary time 9300
+22.06.2015 21:07:00,894 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-42
+22.06.2015 21:07:00,972 INFO  logic.ProcessingAirplane - Processing of the airplane ID-26 is complete
+22.06.2015 21:07:00,972 INFO  logic.ProcessingAirplane - Processing airplane ID-32, passanger count 92, necessary time 9200
+22.06.2015 21:07:00,972 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-32
+22.06.2015 21:07:01,097 INFO  logic.ProcessingAirplane - Processing of the airplane ID-25 is complete
+22.06.2015 21:07:01,097 INFO  logic.ProcessingAirplane - Processing airplane ID-38, passanger count 68, necessary time 6800
+22.06.2015 21:07:01,097 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-38
+22.06.2015 21:07:01,225 INFO  creator.GenerateAirplane - Generate new airplane ID-46, passanger 21
+22.06.2015 21:07:01,225 INFO  logic.ProcessingAirplane - The airplane ID-46 expects service
+22.06.2015 21:07:01,741 INFO  creator.GenerateAirplane - Generate new airplane ID-47, passanger 72
+22.06.2015 21:07:01,741 INFO  logic.ProcessingAirplane - The airplane ID-47 expects service
+22.06.2015 21:07:02,242 INFO  creator.GenerateAirplane - Generate new airplane ID-48, passanger 93
+22.06.2015 21:07:02,242 INFO  logic.ProcessingAirplane - The airplane ID-48 expects service
+22.06.2015 21:07:02,742 INFO  creator.GenerateAirplane - Generate new airplane ID-49, passanger 63
+22.06.2015 21:07:02,743 INFO  logic.ProcessingAirplane - The airplane ID-49 expects service
+22.06.2015 21:07:03,245 INFO  creator.GenerateAirplane - Generate new airplane ID-50, passanger 19
+22.06.2015 21:07:03,245 INFO  logic.ProcessingAirplane - The airplane ID-50 expects service
+22.06.2015 21:07:03,588 INFO  logic.ProcessingAirplane - Processing of the airplane ID-40 is complete
+22.06.2015 21:07:03,588 INFO  logic.ProcessingAirplane - Processing airplane ID-37, passanger count 79, necessary time 7900
+22.06.2015 21:07:03,588 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-37
+22.06.2015 21:07:03,666 INFO  logic.ProcessingAirplane - Processing of the airplane ID-36 is complete
+22.06.2015 21:07:03,666 INFO  logic.ProcessingAirplane - Processing airplane ID-44, passanger count 39, necessary time 3900
+22.06.2015 21:07:03,666 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-44
+22.06.2015 21:07:03,745 INFO  creator.GenerateAirplane - Generate new airplane ID-51, passanger 55
+22.06.2015 21:07:03,745 INFO  logic.ProcessingAirplane - The airplane ID-51 expects service
+22.06.2015 21:07:04,246 INFO  creator.GenerateAirplane - Generate new airplane ID-52, passanger 63
+22.06.2015 21:07:04,246 INFO  logic.ProcessingAirplane - The airplane ID-52 expects service
+22.06.2015 21:07:04,746 INFO  creator.GenerateAirplane - Generate new airplane ID-53, passanger 33
+22.06.2015 21:07:04,746 INFO  logic.ProcessingAirplane - The airplane ID-53 expects service
+22.06.2015 21:07:05,247 INFO  creator.GenerateAirplane - Generate new airplane ID-54, passanger 64
+22.06.2015 21:07:05,247 INFO  logic.ProcessingAirplane - The airplane ID-54 expects service
+22.06.2015 21:07:05,575 INFO  logic.ProcessingAirplane - Processing of the airplane ID-30 is complete
+22.06.2015 21:07:05,575 INFO  logic.ProcessingAirplane - Processing airplane ID-50, passanger count 19, necessary time 1900
+22.06.2015 21:07:05,575 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-50
+22.06.2015 21:07:05,685 INFO  logic.ProcessingAirplane - Processing of the airplane ID-41 is complete
+22.06.2015 21:07:05,685 INFO  logic.ProcessingAirplane - Processing airplane ID-46, passanger count 21, necessary time 2100
+22.06.2015 21:07:05,685 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-46
+22.06.2015 21:07:05,747 INFO  creator.GenerateAirplane - Generate new airplane ID-55, passanger 66
+22.06.2015 21:07:05,748 INFO  logic.ProcessingAirplane - The airplane ID-55 expects service
+22.06.2015 21:07:05,999 INFO  logic.ProcessingAirplane - Processing of the airplane ID-31 is complete
+22.06.2015 21:07:05,999 INFO  logic.ProcessingAirplane - Processing airplane ID-39, passanger count 27, necessary time 2700
+22.06.2015 21:07:05,999 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-39
+22.06.2015 21:07:06,249 INFO  creator.GenerateAirplane - Generate new airplane ID-56, passanger 48
+22.06.2015 21:07:06,249 INFO  logic.ProcessingAirplane - The airplane ID-56 expects service
+22.06.2015 21:07:06,749 INFO  creator.GenerateAirplane - Generate new airplane ID-57, passanger 82
+22.06.2015 21:07:06,750 INFO  logic.ProcessingAirplane - The airplane ID-57 expects service
+22.06.2015 21:07:07,251 INFO  creator.GenerateAirplane - Generate new airplane ID-58, passanger 18
+22.06.2015 21:07:07,251 INFO  logic.ProcessingAirplane - The airplane ID-58 expects service
+22.06.2015 21:07:07,485 INFO  logic.ProcessingAirplane - Processing of the airplane ID-50 is complete
+22.06.2015 21:07:07,485 INFO  logic.ProcessingAirplane - Processing airplane ID-35, passanger count 96, necessary time 9600
+22.06.2015 21:07:07,485 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-35
+22.06.2015 21:07:07,579 INFO  logic.ProcessingAirplane - Processing of the airplane ID-44 is complete
+22.06.2015 21:07:07,579 INFO  logic.ProcessingAirplane - Processing airplane ID-58, passanger count 18, necessary time 1800
+22.06.2015 21:07:07,579 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-58
+22.06.2015 21:07:07,757 INFO  creator.GenerateAirplane - Generate new airplane ID-59, passanger 13
+22.06.2015 21:07:07,758 INFO  logic.ProcessingAirplane - The airplane ID-59 expects service
+22.06.2015 21:07:07,790 INFO  logic.ProcessingAirplane - Processing of the airplane ID-46 is complete
+22.06.2015 21:07:07,790 INFO  logic.ProcessingAirplane - Processing airplane ID-51, passanger count 55, necessary time 5500
+22.06.2015 21:07:07,790 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-51
+22.06.2015 21:07:07,899 INFO  logic.ProcessingAirplane - Processing of the airplane ID-38 is complete
+22.06.2015 21:07:07,899 INFO  logic.ProcessingAirplane - Processing airplane ID-56, passanger count 48, necessary time 4800
+22.06.2015 21:07:07,899 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-56
+22.06.2015 21:07:08,259 INFO  creator.GenerateAirplane - Generate new airplane ID-60, passanger 37
+22.06.2015 21:07:08,259 INFO  logic.ProcessingAirplane - The airplane ID-60 expects service
+22.06.2015 21:07:08,712 INFO  logic.ProcessingAirplane - Processing of the airplane ID-39 is complete
+22.06.2015 21:07:08,712 INFO  logic.ProcessingAirplane - Processing airplane ID-54, passanger count 64, necessary time 6400
+22.06.2015 21:07:08,712 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-54
+22.06.2015 21:07:08,759 INFO  creator.GenerateAirplane - Generate new airplane ID-61, passanger 60
+22.06.2015 21:07:08,759 INFO  logic.ProcessingAirplane - The airplane ID-61 expects service
+22.06.2015 21:07:09,260 INFO  creator.GenerateAirplane - Generate new airplane ID-62, passanger 40
+22.06.2015 21:07:09,260 INFO  logic.ProcessingAirplane - The airplane ID-62 expects service
+22.06.2015 21:07:09,385 INFO  logic.ProcessingAirplane - Processing of the airplane ID-58 is complete
+22.06.2015 21:07:09,385 INFO  logic.ProcessingAirplane - Processing airplane ID-57, passanger count 82, necessary time 8200
+22.06.2015 21:07:09,385 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-57
+22.06.2015 21:07:09,760 INFO  creator.GenerateAirplane - Generate new airplane ID-63, passanger 77
+22.06.2015 21:07:09,760 INFO  logic.ProcessingAirplane - The airplane ID-63 expects service
+22.06.2015 21:07:10,183 INFO  logic.ProcessingAirplane - Processing of the airplane ID-32 is complete
+22.06.2015 21:07:10,183 INFO  logic.ProcessingAirplane - Processing airplane ID-63, passanger count 77, necessary time 7700
+22.06.2015 21:07:10,183 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-63
+22.06.2015 21:07:10,199 INFO  logic.ProcessingAirplane - Processing of the airplane ID-42 is complete
+22.06.2015 21:07:10,199 INFO  logic.ProcessingAirplane - Processing airplane ID-62, passanger count 40, necessary time 4000
+22.06.2015 21:07:10,199 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-62
+22.06.2015 21:07:10,261 INFO  creator.GenerateAirplane - Generate new airplane ID-64, passanger 35
+22.06.2015 21:07:10,261 INFO  logic.ProcessingAirplane - The airplane ID-64 expects service
+22.06.2015 21:07:10,761 INFO  creator.GenerateAirplane - Generate new airplane ID-65, passanger 54
+22.06.2015 21:07:10,762 INFO  logic.ProcessingAirplane - The airplane ID-65 expects service
+22.06.2015 21:07:11,263 INFO  creator.GenerateAirplane - Generate new airplane ID-66, passanger 66
+22.06.2015 21:07:11,263 INFO  logic.ProcessingAirplane - The airplane ID-66 expects service
+22.06.2015 21:07:11,500 INFO  logic.ProcessingAirplane - Processing of the airplane ID-37 is complete
+22.06.2015 21:07:11,500 INFO  logic.ProcessingAirplane - Processing airplane ID-60, passanger count 37, necessary time 3700
+22.06.2015 21:07:11,500 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-60
+22.06.2015 21:07:11,766 INFO  creator.GenerateAirplane - Generate new airplane ID-67, passanger 11
+22.06.2015 21:07:11,766 INFO  logic.ProcessingAirplane - The airplane ID-67 expects service
+22.06.2015 21:07:12,267 INFO  creator.GenerateAirplane - Generate new airplane ID-68, passanger 18
+22.06.2015 21:07:12,267 INFO  logic.ProcessingAirplane - The airplane ID-68 expects service
+22.06.2015 21:07:12,705 INFO  logic.ProcessingAirplane - Processing of the airplane ID-56 is complete
+22.06.2015 21:07:12,705 INFO  logic.ProcessingAirplane - Processing airplane ID-43, passanger count 85, necessary time 8500
+22.06.2015 21:07:12,705 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-43
+22.06.2015 21:07:12,767 INFO  creator.GenerateAirplane - Generate new airplane ID-69, passanger 74
+22.06.2015 21:07:12,767 INFO  logic.ProcessingAirplane - The airplane ID-69 expects service
+22.06.2015 21:07:13,268 INFO  creator.GenerateAirplane - Generate new airplane ID-70, passanger 81
+22.06.2015 21:07:13,268 INFO  logic.ProcessingAirplane - The airplane ID-70 expects service
+22.06.2015 21:07:13,300 INFO  logic.ProcessingAirplane - Processing of the airplane ID-51 is complete
+22.06.2015 21:07:13,300 INFO  logic.ProcessingAirplane - Processing airplane ID-49, passanger count 63, necessary time 6300
+22.06.2015 21:07:13,300 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-49
+22.06.2015 21:07:13,778 INFO  creator.GenerateAirplane - Generate new airplane ID-71, passanger 99
+22.06.2015 21:07:13,778 INFO  logic.ProcessingAirplane - The airplane ID-71 expects service
+22.06.2015 21:07:14,201 INFO  logic.ProcessingAirplane - Processing of the airplane ID-62 is complete
+22.06.2015 21:07:14,201 INFO  logic.ProcessingAirplane - Processing airplane ID-52, passanger count 63, necessary time 6300
+22.06.2015 21:07:14,201 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-52
+22.06.2015 21:07:14,279 INFO  creator.GenerateAirplane - Generate new airplane ID-72, passanger 88
+22.06.2015 21:07:14,279 INFO  logic.ProcessingAirplane - The airplane ID-72 expects service
+22.06.2015 21:07:14,779 INFO  creator.GenerateAirplane - Generate new airplane ID-73, passanger 18
+22.06.2015 21:07:14,780 INFO  logic.ProcessingAirplane - The airplane ID-73 expects service
+22.06.2015 21:07:15,124 INFO  logic.ProcessingAirplane - Processing of the airplane ID-54 is complete
+22.06.2015 21:07:15,124 INFO  logic.ProcessingAirplane - Processing airplane ID-70, passanger count 81, necessary time 8100
+22.06.2015 21:07:15,124 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-70
+22.06.2015 21:07:15,203 INFO  logic.ProcessingAirplane - Processing of the airplane ID-60 is complete
+22.06.2015 21:07:15,203 INFO  logic.ProcessingAirplane - Processing airplane ID-47, passanger count 72, necessary time 7200
+22.06.2015 21:07:15,203 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-47
+22.06.2015 21:07:15,281 INFO  creator.GenerateAirplane - Generate new airplane ID-74, passanger 26
+22.06.2015 21:07:15,281 INFO  logic.ProcessingAirplane - The airplane ID-74 expects service
+22.06.2015 21:07:15,781 INFO  creator.GenerateAirplane - Generate new airplane ID-75, passanger 23
+22.06.2015 21:07:15,781 INFO  logic.ProcessingAirplane - The airplane ID-75 expects service
+22.06.2015 21:07:16,282 INFO  creator.GenerateAirplane - Generate new airplane ID-76, passanger 74
+22.06.2015 21:07:16,282 INFO  logic.ProcessingAirplane - The airplane ID-76 expects service
+22.06.2015 21:07:16,782 INFO  creator.GenerateAirplane - Generate new airplane ID-77, passanger 10
+22.06.2015 21:07:16,782 INFO  logic.ProcessingAirplane - The airplane ID-77 expects service
+22.06.2015 21:07:17,096 INFO  logic.ProcessingAirplane - Processing of the airplane ID-35 is complete
+22.06.2015 21:07:17,096 INFO  logic.ProcessingAirplane - Processing airplane ID-68, passanger count 18, necessary time 1800
+22.06.2015 21:07:17,096 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-68
+22.06.2015 21:07:17,283 INFO  creator.GenerateAirplane - Generate new airplane ID-78, passanger 99
+22.06.2015 21:07:17,283 INFO  logic.ProcessingAirplane - The airplane ID-78 expects service
+22.06.2015 21:07:17,596 INFO  logic.ProcessingAirplane - Processing of the airplane ID-57 is complete
+22.06.2015 21:07:17,596 INFO  logic.ProcessingAirplane - Processing airplane ID-75, passanger count 23, necessary time 2300
+22.06.2015 21:07:17,596 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-75
+22.06.2015 21:07:17,783 INFO  creator.GenerateAirplane - Generate new airplane ID-79, passanger 16
+22.06.2015 21:07:17,784 INFO  logic.ProcessingAirplane - The airplane ID-79 expects service
+22.06.2015 21:07:17,894 INFO  logic.ProcessingAirplane - Processing of the airplane ID-63 is complete
+22.06.2015 21:07:17,894 INFO  logic.ProcessingAirplane - Processing airplane ID-77, passanger count 10, necessary time 1000
+22.06.2015 21:07:17,894 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-77
+22.06.2015 21:07:18,285 INFO  creator.GenerateAirplane - Generate new airplane ID-80, passanger 66
+22.06.2015 21:07:18,285 INFO  logic.ProcessingAirplane - The airplane ID-80 expects service
+22.06.2015 21:07:18,785 INFO  creator.GenerateAirplane - Generate new airplane ID-81, passanger 68
+22.06.2015 21:07:18,785 INFO  logic.ProcessingAirplane - The airplane ID-81 expects service
+22.06.2015 21:07:18,895 INFO  logic.ProcessingAirplane - Processing of the airplane ID-77 is complete
+22.06.2015 21:07:18,895 INFO  logic.ProcessingAirplane - Processing airplane ID-79, passanger count 16, necessary time 1600
+22.06.2015 21:07:18,895 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-79
+22.06.2015 21:07:18,911 INFO  logic.ProcessingAirplane - Processing of the airplane ID-68 is complete
+22.06.2015 21:07:18,911 INFO  logic.ProcessingAirplane - Processing airplane ID-81, passanger count 68, necessary time 6800
+22.06.2015 21:07:18,911 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-81
+22.06.2015 21:07:19,286 INFO  creator.GenerateAirplane - Generate new airplane ID-82, passanger 52
+22.06.2015 21:07:19,286 INFO  logic.ProcessingAirplane - The airplane ID-82 expects service
+22.06.2015 21:07:19,614 INFO  logic.ProcessingAirplane - Processing of the airplane ID-49 is complete
+22.06.2015 21:07:19,614 INFO  logic.ProcessingAirplane - Processing airplane ID-73, passanger count 18, necessary time 1800
+22.06.2015 21:07:19,614 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-73
+22.06.2015 21:07:19,786 INFO  creator.GenerateAirplane - Generate new airplane ID-83, passanger 73
+22.06.2015 21:07:19,786 INFO  logic.ProcessingAirplane - The airplane ID-83 expects service
+22.06.2015 21:07:19,897 INFO  logic.ProcessingAirplane - Processing of the airplane ID-75 is complete
+22.06.2015 21:07:19,897 INFO  logic.ProcessingAirplane - Processing airplane ID-45, passanger count 91, necessary time 9100
+22.06.2015 21:07:19,897 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-45
+22.06.2015 21:07:20,287 INFO  creator.GenerateAirplane - Generate new airplane ID-84, passanger 53
+22.06.2015 21:07:20,287 INFO  logic.ProcessingAirplane - The airplane ID-84 expects service
+22.06.2015 21:07:20,506 INFO  logic.ProcessingAirplane - Processing of the airplane ID-52 is complete
+22.06.2015 21:07:20,506 INFO  logic.ProcessingAirplane - Processing airplane ID-67, passanger count 11, necessary time 1100
+22.06.2015 21:07:20,506 INFO  logic.ProcessingAirplane - Processing airplane ID-78, passanger count 99, necessary time 9900
+22.06.2015 21:07:20,506 INFO  logic.ProcessingAirplane - Processing of the airplane ID-79 is complete
+22.06.2015 21:07:20,506 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-78
+22.06.2015 21:07:20,506 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-67
+22.06.2015 21:07:20,787 INFO  creator.GenerateAirplane - Generate new airplane ID-85, passanger 77
+22.06.2015 21:07:20,788 INFO  logic.ProcessingAirplane - The airplane ID-85 expects service
+22.06.2015 21:07:21,210 INFO  logic.ProcessingAirplane - Processing of the airplane ID-43 is complete
+22.06.2015 21:07:21,210 INFO  logic.ProcessingAirplane - Processing airplane ID-74, passanger count 26, necessary time 2600
+22.06.2015 21:07:21,210 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-74
+22.06.2015 21:07:21,289 INFO  creator.GenerateAirplane - Generate new airplane ID-86, passanger 57
+22.06.2015 21:07:21,289 INFO  logic.ProcessingAirplane - The airplane ID-86 expects service
+22.06.2015 21:07:21,429 INFO  logic.ProcessingAirplane - Processing of the airplane ID-73 is complete
+22.06.2015 21:07:21,429 INFO  logic.ProcessingAirplane - Processing airplane ID-66, passanger count 66, necessary time 6600
+22.06.2015 21:07:21,429 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-66
+22.06.2015 21:07:21,617 INFO  logic.ProcessingAirplane - Processing of the airplane ID-67 is complete
+22.06.2015 21:07:21,617 INFO  logic.ProcessingAirplane - Processing airplane ID-65, passanger count 54, necessary time 5400
+22.06.2015 21:07:21,617 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-65
+22.06.2015 21:07:21,789 INFO  creator.GenerateAirplane - Generate new airplane ID-87, passanger 90
+22.06.2015 21:07:21,789 INFO  logic.ProcessingAirplane - The airplane ID-87 expects service
+22.06.2015 21:07:22,290 INFO  creator.GenerateAirplane - Generate new airplane ID-88, passanger 19
+22.06.2015 21:07:22,290 INFO  logic.ProcessingAirplane - The airplane ID-88 expects service
+22.06.2015 21:07:22,415 INFO  logic.ProcessingAirplane - Processing of the airplane ID-47 is complete
+22.06.2015 21:07:22,415 INFO  logic.ProcessingAirplane - Processing airplane ID-87, passanger count 90, necessary time 9000
+22.06.2015 21:07:22,415 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-87
+22.06.2015 21:07:22,790 INFO  creator.GenerateAirplane - Generate new airplane ID-89, passanger 49
+22.06.2015 21:07:22,790 INFO  logic.ProcessingAirplane - The airplane ID-89 expects service
+22.06.2015 21:07:23,229 INFO  logic.ProcessingAirplane - Processing of the airplane ID-70 is complete
+22.06.2015 21:07:23,229 INFO  logic.ProcessingAirplane - Processing airplane ID-72, passanger count 88, necessary time 8800
+22.06.2015 21:07:23,229 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-72
+22.06.2015 21:07:23,291 INFO  creator.GenerateAirplane - Generate new airplane ID-90, passanger 17
+22.06.2015 21:07:23,291 INFO  logic.ProcessingAirplane - The airplane ID-90 expects service
+22.06.2015 21:07:23,791 INFO  creator.GenerateAirplane - Generate new airplane ID-91, passanger 63
+22.06.2015 21:07:23,792 INFO  logic.ProcessingAirplane - The airplane ID-91 expects service
+22.06.2015 21:07:23,824 INFO  logic.ProcessingAirplane - Processing of the airplane ID-74 is complete
+22.06.2015 21:07:23,824 INFO  logic.ProcessingAirplane - Processing airplane ID-69, passanger count 74, necessary time 7400
+22.06.2015 21:07:23,824 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-69
+22.06.2015 21:07:24,293 INFO  creator.GenerateAirplane - Generate new airplane ID-92, passanger 99
+22.06.2015 21:07:24,293 INFO  logic.ProcessingAirplane - The airplane ID-92 expects service
+22.06.2015 21:07:24,793 INFO  creator.GenerateAirplane - Generate new airplane ID-93, passanger 91
+22.06.2015 21:07:24,793 INFO  logic.ProcessingAirplane - The airplane ID-93 expects service
+22.06.2015 21:07:25,294 INFO  creator.GenerateAirplane - Generate new airplane ID-94, passanger 16
+22.06.2015 21:07:25,294 INFO  logic.ProcessingAirplane - The airplane ID-94 expects service
+22.06.2015 21:07:25,716 INFO  logic.ProcessingAirplane - Processing of the airplane ID-81 is complete
+22.06.2015 21:07:25,716 INFO  logic.ProcessingAirplane - Processing airplane ID-76, passanger count 74, necessary time 7400
+22.06.2015 21:07:25,716 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-76
+22.06.2015 21:07:25,794 INFO  creator.GenerateAirplane - Generate new airplane ID-95, passanger 92
+22.06.2015 21:07:25,794 INFO  logic.ProcessingAirplane - The airplane ID-95 expects service
+22.06.2015 21:07:26,295 INFO  creator.GenerateAirplane - Generate new airplane ID-96, passanger 27
+22.06.2015 21:07:26,295 INFO  logic.ProcessingAirplane - The airplane ID-96 expects service
+22.06.2015 21:07:26,795 INFO  creator.GenerateAirplane - Generate new airplane ID-97, passanger 85
+22.06.2015 21:07:26,795 INFO  logic.ProcessingAirplane - The airplane ID-97 expects service
+22.06.2015 21:07:27,031 INFO  logic.ProcessingAirplane - Processing of the airplane ID-65 is complete
+22.06.2015 21:07:27,031 INFO  logic.ProcessingAirplane - Processing airplane ID-86, passanger count 57, necessary time 5700
+22.06.2015 21:07:27,031 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-86
+22.06.2015 21:07:27,296 INFO  creator.GenerateAirplane - Generate new airplane ID-98, passanger 60
+22.06.2015 21:07:27,296 INFO  logic.ProcessingAirplane - The airplane ID-98 expects service
+22.06.2015 21:07:27,796 INFO  creator.GenerateAirplane - Generate new airplane ID-99, passanger 95
+22.06.2015 21:07:27,797 INFO  logic.ProcessingAirplane - The airplane ID-99 expects service
+22.06.2015 21:07:28,032 INFO  logic.ProcessingAirplane - Processing of the airplane ID-66 is complete
+22.06.2015 21:07:28,032 INFO  logic.ProcessingAirplane - Processing airplane ID-89, passanger count 49, necessary time 4900
+22.06.2015 21:07:28,032 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-89
+22.06.2015 21:07:28,298 INFO  creator.GenerateAirplane - Generate new airplane ID-100, passanger 87
+22.06.2015 21:07:28,298 INFO  logic.ProcessingAirplane - The airplane ID-100 expects service
+22.06.2015 21:07:28,798 INFO  creator.GenerateAirplane - Generate new airplane ID-101, passanger 39
+22.06.2015 21:07:28,798 INFO  logic.ProcessingAirplane - The airplane ID-101 expects service
+22.06.2015 21:07:29,002 INFO  logic.ProcessingAirplane - Processing of the airplane ID-45 is complete
+22.06.2015 21:07:29,002 INFO  logic.ProcessingAirplane - Processing airplane ID-84, passanger count 53, necessary time 5300
+22.06.2015 21:07:29,002 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-84
+22.06.2015 21:07:29,299 INFO  creator.GenerateAirplane - Generate new airplane ID-102, passanger 66
+22.06.2015 21:07:29,299 INFO  logic.ProcessingAirplane - The airplane ID-102 expects service
+22.06.2015 21:07:29,799 INFO  creator.GenerateAirplane - Generate new airplane ID-103, passanger 71
+22.06.2015 21:07:29,799 INFO  logic.ProcessingAirplane - The airplane ID-103 expects service
+22.06.2015 21:07:30,300 INFO  creator.GenerateAirplane - Generate new airplane ID-104, passanger 96
+22.06.2015 21:07:30,300 INFO  logic.ProcessingAirplane - The airplane ID-104 expects service
+22.06.2015 21:07:30,410 INFO  logic.ProcessingAirplane - Processing of the airplane ID-78 is complete
+22.06.2015 21:07:30,410 INFO  logic.ProcessingAirplane - Processing airplane ID-64, passanger count 35, necessary time 3500
+22.06.2015 21:07:30,410 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-64
+22.06.2015 21:07:30,800 INFO  creator.GenerateAirplane - Generate new airplane ID-105, passanger 16
+22.06.2015 21:07:30,801 INFO  logic.ProcessingAirplane - The airplane ID-105 expects service
+22.06.2015 21:07:31,239 INFO  logic.ProcessingAirplane - Processing of the airplane ID-69 is complete
+22.06.2015 21:07:31,239 INFO  logic.ProcessingAirplane - Processing airplane ID-92, passanger count 99, necessary time 9900
+22.06.2015 21:07:31,239 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-92
+22.06.2015 21:07:31,302 INFO  creator.GenerateAirplane - Generate new airplane ID-106, passanger 59
+22.06.2015 21:07:31,302 INFO  logic.ProcessingAirplane - The airplane ID-106 expects service
+22.06.2015 21:07:31,427 INFO  logic.ProcessingAirplane - Processing of the airplane ID-87 is complete
+22.06.2015 21:07:31,427 INFO  logic.ProcessingAirplane - Processing airplane ID-71, passanger count 99, necessary time 9900
+22.06.2015 21:07:31,427 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-71
+22.06.2015 21:07:31,802 INFO  creator.GenerateAirplane - Generate new airplane ID-107, passanger 71
+22.06.2015 21:07:31,802 INFO  logic.ProcessingAirplane - The airplane ID-107 expects service
+22.06.2015 21:07:32,037 INFO  logic.ProcessingAirplane - Processing of the airplane ID-72 is complete
+22.06.2015 21:07:32,037 INFO  logic.ProcessingAirplane - Processing airplane ID-103, passanger count 71, necessary time 7100
+22.06.2015 21:07:32,037 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-103
+22.06.2015 21:07:32,303 INFO  creator.GenerateAirplane - Generate new airplane ID-108, passanger 55
+22.06.2015 21:07:32,303 INFO  logic.ProcessingAirplane - The airplane ID-108 expects service
+22.06.2015 21:07:32,741 INFO  logic.ProcessingAirplane - Processing of the airplane ID-86 is complete
+22.06.2015 21:07:32,741 INFO  logic.ProcessingAirplane - Processing airplane ID-100, passanger count 87, necessary time 8700
+22.06.2015 21:07:32,741 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-100
+22.06.2015 21:07:32,803 INFO  creator.GenerateAirplane - Generate new airplane ID-109, passanger 81
+22.06.2015 21:07:32,803 INFO  logic.ProcessingAirplane - The airplane ID-109 expects service
+22.06.2015 21:07:32,945 INFO  logic.ProcessingAirplane - Processing of the airplane ID-89 is complete
+22.06.2015 21:07:32,945 INFO  logic.ProcessingAirplane - Processing airplane ID-107, passanger count 71, necessary time 7100
+22.06.2015 21:07:32,945 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-107
+22.06.2015 21:07:33,117 INFO  logic.ProcessingAirplane - Processing of the airplane ID-76 is complete
+22.06.2015 21:07:33,117 INFO  logic.ProcessingAirplane - Processing airplane ID-93, passanger count 91, necessary time 9100
+22.06.2015 21:07:33,117 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-93
+22.06.2015 21:07:33,304 INFO  creator.GenerateAirplane - Generate new airplane ID-110, passanger 18
+22.06.2015 21:07:33,304 INFO  logic.ProcessingAirplane - The airplane ID-110 expects service
+22.06.2015 21:07:33,804 INFO  creator.GenerateAirplane - Generate new airplane ID-111, passanger 10
+22.06.2015 21:07:33,805 INFO  logic.ProcessingAirplane - The airplane ID-111 expects service
+22.06.2015 21:07:33,915 INFO  logic.ProcessingAirplane - Processing of the airplane ID-64 is complete
+22.06.2015 21:07:33,915 INFO  logic.ProcessingAirplane - Processing airplane ID-109, passanger count 81, necessary time 8100
+22.06.2015 21:07:33,915 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-109
+22.06.2015 21:07:34,306 INFO  creator.GenerateAirplane - Generate new airplane ID-112, passanger 28
+22.06.2015 21:07:34,306 INFO  logic.ProcessingAirplane - Processing airplane ID-101, passanger count 39, necessary time 3900
+22.06.2015 21:07:34,306 INFO  logic.ProcessingAirplane - Processing of the airplane ID-84 is complete
+22.06.2015 21:07:34,306 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-101
+22.06.2015 21:07:34,306 INFO  logic.ProcessingAirplane - The airplane ID-112 expects service
+22.06.2015 21:07:34,806 INFO  creator.GenerateAirplane - Generate new airplane ID-113, passanger 77
+22.06.2015 21:07:34,806 INFO  logic.ProcessingAirplane - The airplane ID-113 expects service
+22.06.2015 21:07:35,313 INFO  creator.GenerateAirplane - Generate new airplane ID-114, passanger 90
+22.06.2015 21:07:35,313 INFO  logic.ProcessingAirplane - The airplane ID-114 expects service
+22.06.2015 21:07:35,813 INFO  creator.GenerateAirplane - Generate new airplane ID-115, passanger 76
+22.06.2015 21:07:35,813 INFO  logic.ProcessingAirplane - The airplane ID-115 expects service
+22.06.2015 21:07:36,314 INFO  creator.GenerateAirplane - Generate new airplane ID-116, passanger 39
+22.06.2015 21:07:36,314 INFO  logic.ProcessingAirplane - The airplane ID-116 expects service
+22.06.2015 21:07:36,814 INFO  creator.GenerateAirplane - Generate new airplane ID-117, passanger 61
+22.06.2015 21:07:36,814 INFO  logic.ProcessingAirplane - The airplane ID-117 expects service
+22.06.2015 21:07:37,316 INFO  creator.GenerateAirplane - Generate new airplane ID-118, passanger 44
+22.06.2015 21:07:37,316 INFO  logic.ProcessingAirplane - The airplane ID-118 expects service
+22.06.2015 21:07:37,816 INFO  creator.GenerateAirplane - Generate new airplane ID-119, passanger 60
+22.06.2015 21:07:37,816 INFO  logic.ProcessingAirplane - The airplane ID-119 expects service
+22.06.2015 21:07:38,208 INFO  logic.ProcessingAirplane - Processing of the airplane ID-101 is complete
+22.06.2015 21:07:38,208 INFO  logic.ProcessingAirplane - Processing airplane ID-115, passanger count 76, necessary time 7600
+22.06.2015 21:07:38,208 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-115
+22.06.2015 21:07:38,317 INFO  creator.GenerateAirplane - Generate new airplane ID-120, passanger 24
+22.06.2015 21:07:38,317 INFO  logic.ProcessingAirplane - The airplane ID-120 expects service
+22.06.2015 21:07:38,817 INFO  creator.GenerateAirplane - Generate new airplane ID-121, passanger 20
+22.06.2015 21:07:38,818 INFO  logic.ProcessingAirplane - The airplane ID-121 expects service
+22.06.2015 21:07:39,147 INFO  logic.ProcessingAirplane - Processing of the airplane ID-103 is complete
+22.06.2015 21:07:39,147 INFO  logic.ProcessingAirplane - Processing airplane ID-55, passanger count 66, necessary time 6600
+22.06.2015 21:07:39,147 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-55
+22.06.2015 21:07:39,319 INFO  creator.GenerateAirplane - Generate new airplane ID-122, passanger 40
+22.06.2015 21:07:39,319 INFO  logic.ProcessingAirplane - The airplane ID-122 expects service
+22.06.2015 21:07:39,819 INFO  creator.GenerateAirplane - Generate new airplane ID-123, passanger 48
+22.06.2015 21:07:39,819 INFO  logic.ProcessingAirplane - The airplane ID-123 expects service
+22.06.2015 21:07:40,055 INFO  logic.ProcessingAirplane - Processing of the airplane ID-107 is complete
+22.06.2015 21:07:40,055 INFO  logic.ProcessingAirplane - Processing airplane ID-116, passanger count 39, necessary time 3900
+22.06.2015 21:07:40,055 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-116
+22.06.2015 21:07:40,321 INFO  creator.GenerateAirplane - Generate new airplane ID-124, passanger 93
+22.06.2015 21:07:40,321 INFO  logic.ProcessingAirplane - The airplane ID-124 expects service
+22.06.2015 21:07:40,821 INFO  creator.GenerateAirplane - Generate new airplane ID-125, passanger 51
+22.06.2015 21:07:40,821 INFO  logic.ProcessingAirplane - The airplane ID-125 expects service
+22.06.2015 21:07:41,150 INFO  logic.ProcessingAirplane - Processing of the airplane ID-92 is complete
+22.06.2015 21:07:41,150 INFO  logic.ProcessingAirplane - Processing airplane ID-106, passanger count 59, necessary time 5900
+22.06.2015 21:07:41,150 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-106
+22.06.2015 21:07:41,322 INFO  creator.GenerateAirplane - Generate new airplane ID-126, passanger 12
+22.06.2015 21:07:41,322 INFO  logic.ProcessingAirplane - The airplane ID-126 expects service
+22.06.2015 21:07:41,337 INFO  logic.ProcessingAirplane - Processing of the airplane ID-71 is complete
+22.06.2015 21:07:41,337 INFO  logic.ProcessingAirplane - Processing airplane ID-99, passanger count 95, necessary time 9500
+22.06.2015 21:07:41,337 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-99
+22.06.2015 21:07:41,447 INFO  logic.ProcessingAirplane - Processing of the airplane ID-100 is complete
+22.06.2015 21:07:41,447 INFO  logic.ProcessingAirplane - Processing airplane ID-124, passanger count 93, necessary time 9300
+22.06.2015 21:07:41,447 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-124
+22.06.2015 21:07:41,835 INFO  creator.GenerateAirplane - Generate new airplane ID-127, passanger 90
+22.06.2015 21:07:41,835 INFO  logic.ProcessingAirplane - The airplane ID-127 expects service
+22.06.2015 21:07:42,024 INFO  logic.ProcessingAirplane - Processing of the airplane ID-109 is complete
+22.06.2015 21:07:42,024 INFO  logic.ProcessingAirplane - Processing airplane ID-98, passanger count 60, necessary time 6000
+22.06.2015 21:07:42,024 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-98
+22.06.2015 21:07:42,227 INFO  logic.ProcessingAirplane - Processing of the airplane ID-93 is complete
+22.06.2015 21:07:42,227 INFO  logic.ProcessingAirplane - Processing airplane ID-127, passanger count 90, necessary time 9000
+22.06.2015 21:07:42,227 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-127
+22.06.2015 21:07:42,336 INFO  creator.GenerateAirplane - Generate new airplane ID-128, passanger 88
+22.06.2015 21:07:42,336 INFO  logic.ProcessingAirplane - The airplane ID-128 expects service
+22.06.2015 21:07:42,836 INFO  creator.GenerateAirplane - Generate new airplane ID-129, passanger 95
+22.06.2015 21:07:42,837 INFO  logic.ProcessingAirplane - The airplane ID-129 expects service
+22.06.2015 21:07:43,338 INFO  creator.GenerateAirplane - Generate new airplane ID-130, passanger 41
+22.06.2015 21:07:43,338 INFO  logic.ProcessingAirplane - The airplane ID-130 expects service
+22.06.2015 21:07:43,838 INFO  creator.GenerateAirplane - Generate new airplane ID-131, passanger 16
+22.06.2015 21:07:43,838 INFO  logic.ProcessingAirplane - The airplane ID-131 expects service
+22.06.2015 21:07:43,964 INFO  logic.ProcessingAirplane - Processing of the airplane ID-116 is complete
+22.06.2015 21:07:43,964 INFO  logic.ProcessingAirplane - Processing airplane ID-117, passanger count 61, necessary time 6100
+22.06.2015 21:07:43,964 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-117
+22.06.2015 21:07:44,339 INFO  creator.GenerateAirplane - Generate new airplane ID-132, passanger 19
+22.06.2015 21:07:44,339 INFO  logic.ProcessingAirplane - The airplane ID-132 expects service
+22.06.2015 21:07:44,845 INFO  creator.GenerateAirplane - Generate new airplane ID-133, passanger 43
+22.06.2015 21:07:44,845 INFO  logic.ProcessingAirplane - The airplane ID-133 expects service
+22.06.2015 21:07:45,353 INFO  creator.GenerateAirplane - Generate new airplane ID-134, passanger 76
+22.06.2015 21:07:45,353 INFO  logic.ProcessingAirplane - The airplane ID-134 expects service
+22.06.2015 21:07:45,759 INFO  logic.ProcessingAirplane - Processing of the airplane ID-55 is complete
+22.06.2015 21:07:45,759 INFO  logic.ProcessingAirplane - Processing airplane ID-53, passanger count 33, necessary time 3300
+22.06.2015 21:07:45,759 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-53
+22.06.2015 21:07:45,822 INFO  logic.ProcessingAirplane - Processing of the airplane ID-115 is complete
+22.06.2015 21:07:45,822 INFO  logic.ProcessingAirplane - Processing airplane ID-134, passanger count 76, necessary time 7600
+22.06.2015 21:07:45,822 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-134
+22.06.2015 21:07:45,853 INFO  creator.GenerateAirplane - Generate new airplane ID-135, passanger 19
+22.06.2015 21:07:45,853 INFO  logic.ProcessingAirplane - The airplane ID-135 expects service
+22.06.2015 21:07:46,354 INFO  creator.GenerateAirplane - Generate new airplane ID-136, passanger 83
+22.06.2015 21:07:46,354 INFO  logic.ProcessingAirplane - The airplane ID-136 expects service
+22.06.2015 21:07:46,854 INFO  creator.GenerateAirplane - Generate new airplane ID-137, passanger 73
+22.06.2015 21:07:46,854 INFO  logic.ProcessingAirplane - The airplane ID-137 expects service
+22.06.2015 21:07:47,058 INFO  logic.ProcessingAirplane - Processing of the airplane ID-106 is complete
+22.06.2015 21:07:47,058 INFO  logic.ProcessingAirplane - Processing airplane ID-130, passanger count 41, necessary time 4100
+22.06.2015 21:07:47,058 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-130
+22.06.2015 21:07:47,355 INFO  creator.GenerateAirplane - Generate new airplane ID-138, passanger 75
+22.06.2015 21:07:47,355 INFO  logic.ProcessingAirplane - The airplane ID-138 expects service
+22.06.2015 21:07:47,855 INFO  creator.GenerateAirplane - Generate new airplane ID-139, passanger 43
+22.06.2015 21:07:47,856 INFO  logic.ProcessingAirplane - The airplane ID-139 expects service
+22.06.2015 21:07:48,028 INFO  logic.ProcessingAirplane - Processing of the airplane ID-98 is complete
+22.06.2015 21:07:48,028 INFO  logic.ProcessingAirplane - Processing airplane ID-119, passanger count 60, necessary time 6000
+22.06.2015 21:07:48,028 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-119
+22.06.2015 21:07:48,357 INFO  creator.GenerateAirplane - Generate new airplane ID-140, passanger 24
+22.06.2015 21:07:48,357 INFO  logic.ProcessingAirplane - The airplane ID-140 expects service
+22.06.2015 21:07:48,857 INFO  creator.GenerateAirplane - Generate new airplane ID-141, passanger 54
+22.06.2015 21:07:48,857 INFO  logic.ProcessingAirplane - The airplane ID-141 expects service
+22.06.2015 21:07:49,061 INFO  logic.ProcessingAirplane - Processing of the airplane ID-53 is complete
+22.06.2015 21:07:49,061 INFO  logic.ProcessingAirplane - Processing airplane ID-126, passanger count 12, necessary time 1200
+22.06.2015 21:07:49,061 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-126
+22.06.2015 21:07:49,358 INFO  creator.GenerateAirplane - Generate new airplane ID-142, passanger 75
+22.06.2015 21:07:49,358 INFO  logic.ProcessingAirplane - The airplane ID-142 expects service
+22.06.2015 21:07:49,858 INFO  creator.GenerateAirplane - Generate new airplane ID-143, passanger 94
+22.06.2015 21:07:49,858 INFO  logic.ProcessingAirplane - The airplane ID-143 expects service
+22.06.2015 21:07:50,078 INFO  logic.ProcessingAirplane - Processing of the airplane ID-117 is complete
+22.06.2015 21:07:50,078 INFO  logic.ProcessingAirplane - Processing airplane ID-125, passanger count 51, necessary time 5100
+22.06.2015 21:07:50,078 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-125
+22.06.2015 21:07:50,265 INFO  logic.ProcessingAirplane - Processing of the airplane ID-126 is complete
+22.06.2015 21:07:50,265 INFO  logic.ProcessingAirplane - Processing airplane ID-129, passanger count 95, necessary time 9500
+22.06.2015 21:07:50,265 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-129
+22.06.2015 21:07:50,359 INFO  creator.GenerateAirplane - Generate new airplane ID-144, passanger 27
+22.06.2015 21:07:50,359 INFO  logic.ProcessingAirplane - The airplane ID-144 expects service
+22.06.2015 21:07:50,750 INFO  logic.ProcessingAirplane - Processing of the airplane ID-124 is complete
+22.06.2015 21:07:50,750 INFO  logic.ProcessingAirplane - Processing airplane ID-138, passanger count 75, necessary time 7500
+22.06.2015 21:07:50,750 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-138
+22.06.2015 21:07:50,844 INFO  logic.ProcessingAirplane - Processing of the airplane ID-99 is complete
+22.06.2015 21:07:50,844 INFO  logic.ProcessingAirplane - Processing airplane ID-90, passanger count 17, necessary time 1700
+22.06.2015 21:07:50,844 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-90
+22.06.2015 21:07:50,859 INFO  creator.GenerateAirplane - Generate new airplane ID-145, passanger 54
+22.06.2015 21:07:50,859 INFO  logic.ProcessingAirplane - The airplane ID-145 expects service
+22.06.2015 21:07:51,173 INFO  logic.ProcessingAirplane - Processing of the airplane ID-130 is complete
+22.06.2015 21:07:51,173 INFO  logic.ProcessingAirplane - Processing airplane ID-123, passanger count 48, necessary time 4800
+22.06.2015 21:07:51,173 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-123
+22.06.2015 21:07:51,235 INFO  logic.ProcessingAirplane - Processing of the airplane ID-127 is complete
+22.06.2015 21:07:51,235 INFO  logic.ProcessingAirplane - Processing airplane ID-141, passanger count 54, necessary time 5400
+22.06.2015 21:07:51,235 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-141
+22.06.2015 21:07:51,361 INFO  creator.GenerateAirplane - Generate new airplane ID-146, passanger 98
+22.06.2015 21:07:51,361 INFO  logic.ProcessingAirplane - The airplane ID-146 expects service
+22.06.2015 21:07:51,861 INFO  creator.GenerateAirplane - Generate new airplane ID-147, passanger 38
+22.06.2015 21:07:51,861 INFO  logic.ProcessingAirplane - The airplane ID-147 expects service
+22.06.2015 21:07:52,362 INFO  creator.GenerateAirplane - Generate new airplane ID-148, passanger 52
+22.06.2015 21:07:52,362 INFO  logic.ProcessingAirplane - The airplane ID-148 expects service
+22.06.2015 21:07:52,549 INFO  logic.ProcessingAirplane - Processing of the airplane ID-90 is complete
+22.06.2015 21:07:52,549 INFO  logic.ProcessingAirplane - Processing airplane ID-128, passanger count 88, necessary time 8800
+22.06.2015 21:07:52,549 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-128
+22.06.2015 21:07:52,862 INFO  creator.GenerateAirplane - Generate new airplane ID-149, passanger 76
+22.06.2015 21:07:52,862 INFO  logic.ProcessingAirplane - The airplane ID-149 expects service
+22.06.2015 21:07:53,363 INFO  creator.GenerateAirplane - Generate new airplane ID-150, passanger 96
+22.06.2015 21:07:53,363 INFO  logic.ProcessingAirplane - The airplane ID-150 expects service
+22.06.2015 21:07:53,426 INFO  logic.ProcessingAirplane - Processing of the airplane ID-134 is complete
+22.06.2015 21:07:53,426 INFO  logic.ProcessingAirplane - Processing airplane ID-105, passanger count 16, necessary time 1600
+22.06.2015 21:07:53,426 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-105
+22.06.2015 21:07:53,863 INFO  runner.Runner - Job finish
+22.06.2015 21:07:54,036 INFO  logic.ProcessingAirplane - Processing of the airplane ID-119 is complete
+22.06.2015 21:07:54,036 INFO  logic.ProcessingAirplane - Processing airplane ID-59, passanger count 13, necessary time 1300
+22.06.2015 21:07:54,036 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-59
+22.06.2015 21:07:55,036 INFO  logic.ProcessingAirplane - Processing of the airplane ID-105 is complete
+22.06.2015 21:07:55,036 INFO  logic.ProcessingAirplane - Processing airplane ID-122, passanger count 40, necessary time 4000
+22.06.2015 21:07:55,037 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-122
+22.06.2015 21:07:55,178 INFO  logic.ProcessingAirplane - Processing of the airplane ID-125 is complete
+22.06.2015 21:07:55,178 INFO  logic.ProcessingAirplane - Processing airplane ID-137, passanger count 73, necessary time 7300
+22.06.2015 21:07:55,178 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-137
+22.06.2015 21:07:55,350 INFO  logic.ProcessingAirplane - Processing of the airplane ID-59 is complete
+22.06.2015 21:07:55,350 INFO  logic.ProcessingAirplane - Processing airplane ID-131, passanger count 16, necessary time 1600
+22.06.2015 21:07:55,350 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-131
+22.06.2015 21:07:55,975 INFO  logic.ProcessingAirplane - Processing of the airplane ID-123 is complete
+22.06.2015 21:07:55,975 INFO  logic.ProcessingAirplane - Processing airplane ID-149, passanger count 76, necessary time 7600
+22.06.2015 21:07:55,975 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-149
+22.06.2015 21:07:56,647 INFO  logic.ProcessingAirplane - Processing of the airplane ID-141 is complete
+22.06.2015 21:07:56,647 INFO  logic.ProcessingAirplane - Processing airplane ID-102, passanger count 66, necessary time 6600
+22.06.2015 21:07:56,647 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-102
+22.06.2015 21:07:56,961 INFO  logic.ProcessingAirplane - Processing of the airplane ID-131 is complete
+22.06.2015 21:07:56,961 INFO  logic.ProcessingAirplane - Processing airplane ID-110, passanger count 18, necessary time 1800
+22.06.2015 21:07:56,961 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-110
+22.06.2015 21:07:58,258 INFO  logic.ProcessingAirplane - Processing of the airplane ID-138 is complete
+22.06.2015 21:07:58,258 INFO  logic.ProcessingAirplane - Processing airplane ID-94, passanger count 16, necessary time 1600
+22.06.2015 21:07:58,258 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-94
+22.06.2015 21:07:58,775 INFO  logic.ProcessingAirplane - Processing of the airplane ID-110 is complete
+22.06.2015 21:07:58,775 INFO  logic.ProcessingAirplane - Processing airplane ID-82, passanger count 52, necessary time 5200
+22.06.2015 21:07:58,775 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-82
+22.06.2015 21:07:59,041 INFO  logic.ProcessingAirplane - Processing of the airplane ID-122 is complete
+22.06.2015 21:07:59,041 INFO  logic.ProcessingAirplane - Processing airplane ID-135, passanger count 19, necessary time 1900
+22.06.2015 21:07:59,041 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-135
+22.06.2015 21:07:59,775 INFO  logic.ProcessingAirplane - Processing of the airplane ID-129 is complete
+22.06.2015 21:07:59,775 INFO  logic.ProcessingAirplane - Processing airplane ID-150, passanger count 96, necessary time 9600
+22.06.2015 21:07:59,775 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-150
+22.06.2015 21:07:59,870 INFO  logic.ProcessingAirplane - Processing of the airplane ID-94 is complete
+22.06.2015 21:07:59,870 INFO  logic.ProcessingAirplane - Processing airplane ID-146, passanger count 98, necessary time 9800
+22.06.2015 21:07:59,870 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-146
+22.06.2015 21:08:00,948 INFO  logic.ProcessingAirplane - Processing of the airplane ID-135 is complete
+22.06.2015 21:08:00,948 INFO  logic.ProcessingAirplane - Processing airplane ID-85, passanger count 77, necessary time 7700
+22.06.2015 21:08:00,949 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-85
+22.06.2015 21:08:01,356 INFO  logic.ProcessingAirplane - Processing of the airplane ID-128 is complete
+22.06.2015 21:08:01,356 INFO  logic.ProcessingAirplane - Processing airplane ID-132, passanger count 19, necessary time 1900
+22.06.2015 21:08:01,356 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-132
+22.06.2015 21:08:02,481 INFO  logic.ProcessingAirplane - Processing of the airplane ID-137 is complete
+22.06.2015 21:08:02,481 INFO  logic.ProcessingAirplane - Processing airplane ID-148, passanger count 52, necessary time 5200
+22.06.2015 21:08:02,481 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-148
+22.06.2015 21:08:03,248 INFO  logic.ProcessingAirplane - Processing of the airplane ID-102 is complete
+22.06.2015 21:08:03,248 INFO  logic.ProcessingAirplane - Processing airplane ID-145, passanger count 54, necessary time 5400
+22.06.2015 21:08:03,248 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-145
+22.06.2015 21:08:03,264 INFO  logic.ProcessingAirplane - Processing of the airplane ID-132 is complete
+22.06.2015 21:08:03,264 INFO  logic.ProcessingAirplane - Processing airplane ID-114, passanger count 90, necessary time 9000
+22.06.2015 21:08:03,264 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-114
+22.06.2015 21:08:03,576 INFO  logic.ProcessingAirplane - Processing of the airplane ID-149 is complete
+22.06.2015 21:08:03,576 INFO  logic.ProcessingAirplane - Processing airplane ID-91, passanger count 63, necessary time 6300
+22.06.2015 21:08:03,576 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-91
+22.06.2015 21:08:03,984 INFO  logic.ProcessingAirplane - Processing of the airplane ID-82 is complete
+22.06.2015 21:08:03,984 INFO  logic.ProcessingAirplane - Processing airplane ID-111, passanger count 10, necessary time 1000
+22.06.2015 21:08:03,984 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-111
+22.06.2015 21:08:04,984 INFO  logic.ProcessingAirplane - Processing of the airplane ID-111 is complete
+22.06.2015 21:08:04,984 INFO  logic.ProcessingAirplane - Processing airplane ID-136, passanger count 83, necessary time 8300
+22.06.2015 21:08:04,984 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-136
+22.06.2015 21:08:07,688 INFO  logic.ProcessingAirplane - Processing of the airplane ID-148 is complete
+22.06.2015 21:08:07,688 INFO  logic.ProcessingAirplane - Processing airplane ID-118, passanger count 44, necessary time 4400
+22.06.2015 21:08:07,689 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-118
+22.06.2015 21:08:08,658 INFO  logic.ProcessingAirplane - Processing of the airplane ID-145 is complete
+22.06.2015 21:08:08,658 INFO  logic.ProcessingAirplane - Processing airplane ID-96, passanger count 27, necessary time 2700
+22.06.2015 21:08:08,658 INFO  logic.ProcessingAirplane - Processing of the airplane ID-85 is complete
+22.06.2015 21:08:08,658 INFO  logic.ProcessingAirplane - Processing airplane ID-88, passanger count 19, necessary time 1900
+22.06.2015 21:08:08,658 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-96
+22.06.2015 21:08:08,658 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-88
+22.06.2015 21:08:09,380 INFO  logic.ProcessingAirplane - Processing of the airplane ID-150 is complete
+22.06.2015 21:08:09,380 INFO  logic.ProcessingAirplane - Processing airplane ID-112, passanger count 28, necessary time 2800
+22.06.2015 21:08:09,380 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-112
+22.06.2015 21:08:09,678 INFO  logic.ProcessingAirplane - Processing of the airplane ID-146 is complete
+22.06.2015 21:08:09,678 INFO  logic.ProcessingAirplane - Processing airplane ID-144, passanger count 27, necessary time 2700
+22.06.2015 21:08:09,678 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-144
+22.06.2015 21:08:09,881 INFO  logic.ProcessingAirplane - Processing of the airplane ID-91 is complete
+22.06.2015 21:08:09,881 INFO  logic.ProcessingAirplane - Processing airplane ID-140, passanger count 24, necessary time 2400
+22.06.2015 21:08:09,881 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-140
+22.06.2015 21:08:10,569 INFO  logic.ProcessingAirplane - Processing of the airplane ID-88 is complete
+22.06.2015 21:08:10,569 INFO  logic.ProcessingAirplane - Processing airplane ID-104, passanger count 96, necessary time 9600
+22.06.2015 21:08:10,569 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-104
+22.06.2015 21:08:11,368 INFO  logic.ProcessingAirplane - Processing of the airplane ID-96 is complete
+22.06.2015 21:08:11,368 INFO  logic.ProcessingAirplane - Processing airplane ID-133, passanger count 43, necessary time 4300
+22.06.2015 21:08:11,368 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-133
+22.06.2015 21:08:12,102 INFO  logic.ProcessingAirplane - Processing of the airplane ID-118 is complete
+22.06.2015 21:08:12,102 INFO  logic.ProcessingAirplane - Processing airplane ID-139, passanger count 43, necessary time 4300
+22.06.2015 21:08:12,102 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-139
+22.06.2015 21:08:12,182 INFO  logic.ProcessingAirplane - Processing of the airplane ID-112 is complete
+22.06.2015 21:08:12,182 INFO  logic.ProcessingAirplane - Processing airplane ID-97, passanger count 85, necessary time 8500
+22.06.2015 21:08:12,182 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-97
+22.06.2015 21:08:12,275 INFO  logic.ProcessingAirplane - Processing of the airplane ID-114 is complete
+22.06.2015 21:08:12,275 INFO  logic.ProcessingAirplane - Processing airplane ID-83, passanger count 73, necessary time 7300
+22.06.2015 21:08:12,275 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-83
+22.06.2015 21:08:12,291 INFO  logic.ProcessingAirplane - Processing of the airplane ID-140 is complete
+22.06.2015 21:08:12,291 INFO  logic.ProcessingAirplane - Processing airplane ID-48, passanger count 93, necessary time 9300
+22.06.2015 21:08:12,291 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-48
+22.06.2015 21:08:12,385 INFO  logic.ProcessingAirplane - Processing of the airplane ID-144 is complete
+22.06.2015 21:08:12,385 INFO  logic.ProcessingAirplane - Processing airplane ID-121, passanger count 20, necessary time 2000
+22.06.2015 21:08:12,385 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-121
+22.06.2015 21:08:13,291 INFO  logic.ProcessingAirplane - Processing of the airplane ID-136 is complete
+22.06.2015 21:08:13,291 INFO  logic.ProcessingAirplane - Processing airplane ID-147, passanger count 38, necessary time 3800
+22.06.2015 21:08:13,291 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-147
+22.06.2015 21:08:14,388 INFO  logic.ProcessingAirplane - Processing of the airplane ID-121 is complete
+22.06.2015 21:08:14,388 INFO  logic.ProcessingAirplane - Processing airplane ID-142, passanger count 75, necessary time 7500
+22.06.2015 21:08:14,388 INFO  logic.ProcessingAirplane - Use ladder number 4, airplane ID-142
+22.06.2015 21:08:15,670 INFO  logic.ProcessingAirplane - Processing of the airplane ID-133 is complete
+22.06.2015 21:08:15,670 INFO  logic.ProcessingAirplane - Processing airplane ID-143, passanger count 94, necessary time 9400
+22.06.2015 21:08:15,671 INFO  logic.ProcessingAirplane - Use ladder number 2, airplane ID-143
+22.06.2015 21:08:16,406 INFO  logic.ProcessingAirplane - Processing of the airplane ID-139 is complete
+22.06.2015 21:08:16,406 INFO  logic.ProcessingAirplane - Processing airplane ID-61, passanger count 60, necessary time 6000
+22.06.2015 21:08:16,406 INFO  logic.ProcessingAirplane - Use ladder number 5, airplane ID-61
+22.06.2015 21:08:17,094 INFO  logic.ProcessingAirplane - Processing of the airplane ID-147 is complete
+22.06.2015 21:08:17,094 INFO  logic.ProcessingAirplane - Processing airplane ID-113, passanger count 77, necessary time 7700
+22.06.2015 21:08:17,094 INFO  logic.ProcessingAirplane - Use terminal number 2, airplane ID-113
+22.06.2015 21:08:19,576 INFO  logic.ProcessingAirplane - Processing of the airplane ID-83 is complete
+22.06.2015 21:08:19,576 INFO  logic.ProcessingAirplane - Processing airplane ID-120, passanger count 24, necessary time 2400
+22.06.2015 21:08:19,577 INFO  logic.ProcessingAirplane - Use terminal number 3, airplane ID-120
+22.06.2015 21:08:20,171 INFO  logic.ProcessingAirplane - Processing of the airplane ID-104 is complete
+22.06.2015 21:08:20,171 INFO  logic.ProcessingAirplane - Processing airplane ID-80, passanger count 66, necessary time 6600
+22.06.2015 21:08:20,171 INFO  logic.ProcessingAirplane - Use ladder number 1, airplane ID-80
+22.06.2015 21:08:20,687 INFO  logic.ProcessingAirplane - Processing of the airplane ID-97 is complete
+22.06.2015 21:08:20,687 INFO  logic.ProcessingAirplane - Processing airplane ID-95, passanger count 92, necessary time 9200
+22.06.2015 21:08:20,687 INFO  logic.ProcessingAirplane - Use ladder number 3, airplane ID-95
+22.06.2015 21:08:21,598 INFO  logic.ProcessingAirplane - Processing of the airplane ID-48 is complete
+22.06.2015 21:08:21,598 INFO  logic.ProcessingAirplane - Processing airplane ID-108, passanger count 55, necessary time 5500
+22.06.2015 21:08:21,598 INFO  logic.ProcessingAirplane - Use terminal number 1, airplane ID-108
+22.06.2015 21:08:21,895 INFO  logic.ProcessingAirplane - Processing of the airplane ID-142 is complete
+22.06.2015 21:08:21,990 INFO  logic.ProcessingAirplane - Processing of the airplane ID-120 is complete
+22.06.2015 21:08:22,412 INFO  logic.ProcessingAirplane - Processing of the airplane ID-61 is complete
+22.06.2015 21:08:24,803 INFO  logic.ProcessingAirplane - Processing of the airplane ID-113 is complete
+22.06.2015 21:08:25,085 INFO  logic.ProcessingAirplane - Processing of the airplane ID-143 is complete
+22.06.2015 21:08:26,773 INFO  logic.ProcessingAirplane - Processing of the airplane ID-80 is complete
+22.06.2015 21:08:27,103 INFO  logic.ProcessingAirplane - Processing of the airplane ID-108 is complete
+22.06.2015 21:08:29,888 INFO  logic.ProcessingAirplane - Processing of the airplane ID-95 is complete
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID   1 expects service      0 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID   2 expects service      0 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID   3 expects service      0 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID   4 expects service      0 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID   5 expects service      0 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID   6 expects service      0 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID   7 expects service      0 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID   8 expects service      0 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID   9 expects service      0 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  10 expects service      0 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  11 expects service      0 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  12 expects service    985 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  14 expects service     78 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  15 expects service    876 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  20 expects service    674 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  19 expects service   1753 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  21 expects service    860 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  13 expects service   4881 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  18 expects service   3270 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  17 expects service   3974 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  23 expects service   1253 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  22 expects service   1862 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  16 expects service   6383 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  28 expects service    970 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  29 expects service   1456 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  27 expects service   2566 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  24 expects service   4178 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  34 expects service    564 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  36 expects service    140 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  26 expects service   5961 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  25 expects service   6478 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  33 expects service   2676 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  40 expects service     62 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  30 expects service   5664 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  41 expects service    157 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  31 expects service   6775 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  42 expects service   1675 milliseconds
+22.06.2015 21:08:29,888 INFO  logic.Statistics - The airplane ID  32 expects service   6760 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  38 expects service   3881 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  37 expects service   6873 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  44 expects service   3446 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  50 expects service   2330 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  46 expects service   4460 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  39 expects service   8282 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  35 expects service  11771 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  58 expects service    328 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  51 expects service   4045 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  56 expects service   1650 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  54 expects service   3465 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  57 expects service   2635 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  63 expects service    423 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  62 expects service    939 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  60 expects service   3241 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  43 expects service  12986 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  49 expects service  10557 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  52 expects service   9955 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  70 expects service   1856 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  47 expects service  13462 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  68 expects service   4829 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  75 expects service   1815 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  77 expects service   1112 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  79 expects service   1111 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  81 expects service    126 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  73 expects service   4834 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  45 expects service  19176 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  78 expects service   3223 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  67 expects service   8740 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  74 expects service   5929 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  66 expects service  10166 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  65 expects service  10855 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  87 expects service    626 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  72 expects service   8950 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  69 expects service  11057 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  76 expects service   9434 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  86 expects service   5742 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  89 expects service   5242 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  84 expects service   8715 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  64 expects service  20149 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  92 expects service   6946 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  71 expects service  17649 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 103 expects service   2238 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 100 expects service   4443 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 107 expects service   1143 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  93 expects service   8324 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 109 expects service   1112 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 101 expects service   5508 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 115 expects service   2395 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  55 expects service  33399 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 116 expects service   3741 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 106 expects service   9848 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  99 expects service  13540 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 124 expects service   1126 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  98 expects service  14728 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 127 expects service    392 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 117 expects service   7150 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  53 expects service  41013 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 134 expects service    469 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 130 expects service   3720 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 119 expects service  10212 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 126 expects service   7739 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 125 expects service   9257 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 129 expects service   7428 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 138 expects service   3395 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  90 expects service  27553 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 123 expects service  11354 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 141 expects service   2378 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 128 expects service  10213 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 105 expects service  22625 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  59 expects service  46278 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 122 expects service  15717 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 137 expects service   8324 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 131 expects service  11512 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 149 expects service   3113 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 102 expects service  27348 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 110 expects service  23657 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  94 expects service  32964 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  82 expects service  39489 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 135 expects service  13188 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 150 expects service   6412 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 146 expects service   8509 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  85 expects service  40160 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 132 expects service  17017 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 148 expects service  10119 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 145 expects service  12389 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 114 expects service  27951 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  91 expects service  39784 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 111 expects service  30179 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 136 expects service  18630 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 118 expects service  30372 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  88 expects service  46368 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  96 expects service  42363 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 112 expects service  35074 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 144 expects service  19319 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 140 expects service  21524 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 104 expects service  40269 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 133 expects service  26523 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 139 expects service  24246 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  97 expects service  45387 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  83 expects service  52489 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  48 expects service  70049 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 121 expects service  33567 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 147 expects service  21430 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 142 expects service  25030 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 143 expects service  25812 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  61 expects service  67647 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 113 expects service  42288 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 120 expects service  41259 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  80 expects service  61886 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID  95 expects service  54893 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The airplane ID 108 expects service  49295 milliseconds
+22.06.2015 21:08:29,889 INFO  logic.Statistics - The general operating time 111243 milliseconds

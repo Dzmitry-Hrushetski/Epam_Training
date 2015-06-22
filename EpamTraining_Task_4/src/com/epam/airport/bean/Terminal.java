@@ -3,12 +3,13 @@
  */
 package com.epam.airport.bean;
 
+import com.epam.airport.creator.CodeGenerator;
+
 /**
  * @author Dzmitry Hrushetski
  *
  */
 public class Terminal {
-	private static int createCount=0;
 	private int numberTerminal;
 	private boolean state;
 	
@@ -17,7 +18,7 @@ public class Terminal {
 	 */
 	public Terminal() {
 		super();
-		numberTerminal=++createCount;
+		numberTerminal=CodeGenerator.getInstance().nextTerminalNumber();
 	}
 
 	/**

@@ -3,12 +3,13 @@
  */
 package com.epam.airport.bean;
 
+import com.epam.airport.creator.CodeGenerator;
+
 /**
  * @author Dzmitry Hrushetski
  *
  */
 public class Airplane {
-	private static int airplaneCount=0;
 	private int passangerCount;
 	private int airplaneID;
 
@@ -18,7 +19,7 @@ public class Airplane {
 	public Airplane(int passangerCount) {
 		super();
 		this.passangerCount = passangerCount;
-		airplaneID=++airplaneCount;
+		airplaneID=CodeGenerator.getInstance().nextAirplaneNumber();
 	}
 
 	/**

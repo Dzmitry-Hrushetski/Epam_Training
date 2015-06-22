@@ -3,12 +3,13 @@
  */
 package com.epam.airport.bean;
 
+import com.epam.airport.creator.CodeGenerator;
+
 /**
  * @author Dzmitry Hrushetski
  *
  */
 public class Ladder {
-	private static int createCount=0;
 	private int numberLadder;
 	private boolean state;
 	
@@ -17,7 +18,7 @@ public class Ladder {
 	 */
 	public Ladder() {
 		super();
-		numberLadder=++createCount;
+		numberLadder=CodeGenerator.getInstance().nextLadderNumber();
 	}
 
 	/**
