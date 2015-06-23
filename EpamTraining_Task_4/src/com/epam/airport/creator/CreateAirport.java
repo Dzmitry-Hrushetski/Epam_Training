@@ -22,11 +22,11 @@ public class CreateAirport {
 		LinkedList<Ladder> ladderQueue=new LinkedList<Ladder>();
 		
 		for(int i=0;i<AIRPORT_TERMINAL_COUNT;i++) {
-			terminalQueue.add(new Terminal());
+			terminalQueue.add(new Terminal(CodeGeneratorSingleton.getInstance().nextTerminalNumber()));
 		}
 		
 		for(int i=0;i<AIRPORT_LADDER_COUNT;i++) {
-			ladderQueue.add(new Ladder());
+			ladderQueue.add(new Ladder(CodeGeneratorSingleton.getInstance().nextLadderNumber()));
 		}
 		return new Airport(terminalQueue, ladderQueue);
 	}

@@ -3,7 +3,6 @@
  */
 package com.epam.airport.bean;
 
-import com.epam.airport.creator.CodeGeneratorSingleton;
 
 /**
  * @author Dzmitry Hrushetski
@@ -15,11 +14,12 @@ public class Airplane {
 
 	/**
 	 * @param passangerCount
+	 * @param airplaneID
 	 */
-	public Airplane(int passangerCount) {
+	public Airplane(int passangerCount, int airplaneID) {
 		super();
 		this.passangerCount = passangerCount;
-		airplaneID=CodeGeneratorSingleton.getInstance().nextAirplaneNumber();
+		this.airplaneID = airplaneID;
 	}
 
 	/**
@@ -42,7 +42,4 @@ public class Airplane {
 	public int getAirplaneID() {
 		return airplaneID;
 	}
-	
-	
-
 }

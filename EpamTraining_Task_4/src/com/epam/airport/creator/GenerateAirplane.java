@@ -25,7 +25,7 @@ public class GenerateAirplane {
 		
 		int countPassanger=MIN_PASSANGER_COUNT+ rand.nextInt(MAX_PASSANGER_COUNT-MIN_PASSANGER_COUNT);
 		
-		airplane=new Airplane(countPassanger);
+		airplane=new Airplane(countPassanger, CodeGeneratorSingleton.getInstance().nextAirplaneNumber());
 		
 		if(MAX_GENERATED_AIRPLANE_COUNT<airplane.getAirplaneID()) {
 			return null;

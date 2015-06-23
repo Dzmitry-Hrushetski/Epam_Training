@@ -10,13 +10,12 @@ import org.apache.log4j.Logger;
 
 import static com.epam.airport.constant.AirportConstants.*;
 
-
 /**
  * @author Dzmitry Hrushetski
  *
  */
 public class StatisticsSingleton {
-	private static final Logger LOG = Logger.getLogger(StatisticsSingleton.class);
+	private final Logger LOG = Logger.getLogger(StatisticsSingleton.class);
 	private static StatisticsSingleton instance=null;
 	private static ReentrantLock lock = new ReentrantLock();
 	
@@ -24,8 +23,6 @@ public class StatisticsSingleton {
 	private long totalWorkTime;
 	private LinkedList<String> waitServiceTime=new LinkedList<String>();
 	
-	
-
 	/**
 	 * 
 	 */

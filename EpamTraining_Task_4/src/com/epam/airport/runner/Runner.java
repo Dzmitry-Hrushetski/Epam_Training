@@ -20,7 +20,6 @@ import static com.epam.airport.constant.AirportConstants.*;
 public class Runner {
 	private static final Logger LOG = Logger.getLogger(Runner.class);
 		
-
 	/**
 	 * @param args
 	 */
@@ -30,8 +29,7 @@ public class Runner {
 		
 		LOG.info("Job start");
 		
-		while(true) {
-			
+		while(true) {	
 			newAirplane=GenerateAirplane.generateNewAirplane();
 			
 			if(newAirplane==null) {

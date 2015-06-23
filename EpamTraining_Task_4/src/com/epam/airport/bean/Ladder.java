@@ -3,7 +3,6 @@
  */
 package com.epam.airport.bean;
 
-import com.epam.airport.creator.CodeGeneratorSingleton;
 
 /**
  * @author Dzmitry Hrushetski
@@ -14,11 +13,11 @@ public class Ladder {
 	private boolean state;
 	
 	/**
-	 * 
+	 * @param numberLadder
 	 */
-	public Ladder() {
+	public Ladder(int numberLadder) {
 		super();
-		numberLadder=CodeGeneratorSingleton.getInstance().nextLadderNumber();
+		this.numberLadder = numberLadder;
 	}
 
 	/**

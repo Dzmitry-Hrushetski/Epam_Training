@@ -14,7 +14,7 @@ public class AirportConstants {
 	public static final int MAX_PASSANGER_COUNT=100;
 	
 	public static final int AIRPLANE_GENERATOR_SPEED=500;
-	public static final int MAX_GENERATED_AIRPLANE_COUNT=150;
+	public static final int MAX_GENERATED_AIRPLANE_COUNT=50;
 	public static final int SPEED_FIT=100;
 	
 	public static final String AIRPLANE_LOG_MESSAGE="Generate new airplane ID-%d, passanger %d";
@@ -25,5 +25,4 @@ public class AirportConstants {
 	public static final String LADDER_USE_MESSAGE="Use ladder number %d, airplane ID-%d";
 	public static final String STATISTICS_MESSAGE="The airplane ID %3d expects service %6d milliseconds";
 	public static final String STATISTICS_TIME_MESSAGE="The general operating time %d milliseconds";
-
 }

@@ -14,7 +14,6 @@ public class Airport {
 	private LinkedList<Terminal> terminalQueue;
 	private LinkedList<Ladder> ladderQueue;
 	
-	
 	/**
 	 * @param terminalQueue
 	 * @param ladderQueue
@@ -24,20 +23,18 @@ public class Airport {
 		this.terminalQueue = terminalQueue;
 		this.ladderQueue = ladderQueue;
 	}
+	
 	/**
 	 * @return the terminalQueue
 	 */
 	public LinkedList<Terminal> getTerminalQueue() {
 		return terminalQueue;
 	}
+	
 	/**
 	 * @return the ladderQueue
 	 */
 	public LinkedList<Ladder> getLadderQueue() {
 		return ladderQueue;
 	}
-	
-	
-	
-
 }

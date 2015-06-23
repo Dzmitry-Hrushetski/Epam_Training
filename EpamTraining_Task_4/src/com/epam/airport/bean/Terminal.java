@@ -3,7 +3,6 @@
  */
 package com.epam.airport.bean;
 
-import com.epam.airport.creator.CodeGeneratorSingleton;
 
 /**
  * @author Dzmitry Hrushetski
@@ -14,11 +13,11 @@ public class Terminal {
 	private boolean state;
 	
 	/**
-	 * 
+	 * @param numberTerminal
 	 */
-	public Terminal() {
+	public Terminal(int numberTerminal) {
 		super();
-		numberTerminal=CodeGeneratorSingleton.getInstance().nextTerminalNumber();
+		this.numberTerminal = numberTerminal;
 	}
 
 	/**
