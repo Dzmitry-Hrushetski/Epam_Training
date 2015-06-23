@@ -22,14 +22,11 @@ import com.epam.airport.bean.Terminal;
 public class ProcessingAirplane extends Thread {
 	private final Logger LOG = Logger.getLogger(ProcessingAirplane.class);
 	private static final ReentrantLock LOCK = new ReentrantLock(true);
-	private Airport currentAirport;
+	//private Airport currentAirport;
 	private Airplane currentAirplane;
 	
 	private LinkedList<Terminal> terminalQueue;
 	private LinkedList<Ladder> ladderQueue;
-	
-	//private ThreadLocal<Terminal> terminal=new ThreadLocal<Terminal>();
-	//private ThreadLocal<Ladder> ladder=new ThreadLocal<Ladder>();
 	
 	/**
 	 * @param currentAirport
@@ -37,7 +34,7 @@ public class ProcessingAirplane extends Thread {
 	 */
 	public ProcessingAirplane(Airport currentAirport, Airplane currentAirplane) {
 		super();
-		this.currentAirport = currentAirport;
+		//this.currentAirport = currentAirport;
 		this.currentAirplane = currentAirplane;
 		
 		terminalQueue=currentAirport.getTerminalQueue();
@@ -49,9 +46,6 @@ public class ProcessingAirplane extends Thread {
 	 */
 	@Override
 	public void run() {
-		//LinkedList<Terminal> terminalQueue=currentAirport.getTerminalQueue();
-		//LinkedList<Ladder> ladderQueue=currentAirport.getLadderQueue();
-		
 		Terminal terminal=null;
 		Ladder ladder=null;
 		long time;
