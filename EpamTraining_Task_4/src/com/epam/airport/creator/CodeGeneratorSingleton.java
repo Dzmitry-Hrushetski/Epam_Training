@@ -11,26 +11,26 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author Dzmitry Hrushetski
  *
  */
-public class CodeGenerator {
-	private static CodeGenerator instance=null;
+public class CodeGeneratorSingleton {
+	private static CodeGeneratorSingleton instance=null;
 	private static ReentrantLock lock = new ReentrantLock();
 	
-	private static int airplaneCount;
-	private static int terminalCount;
-	private static int ladderCount;
+	private int airplaneCount;
+	private int terminalCount;
+	private int ladderCount;
 	
 	/**
 	 * 
 	 */
-	private CodeGenerator() {
+	private CodeGeneratorSingleton() {
 		super();
 	}
 	
-	public static CodeGenerator getInstance() {
+	public static CodeGeneratorSingleton getInstance() {
 		lock.lock();
 		try {
 			if (instance == null) {
-				instance = new CodeGenerator();
+				instance = new CodeGeneratorSingleton();
 			}
 		} finally {
 			lock.unlock(); 

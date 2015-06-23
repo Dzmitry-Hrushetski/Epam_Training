@@ -20,7 +20,7 @@ import com.epam.airport.bean.Terminal;
  *
  */
 public class ProcessingAirplane extends Thread {
-	private static final Logger LOG = Logger.getLogger(ProcessingAirplane.class);
+	private final Logger LOG = Logger.getLogger(ProcessingAirplane.class);
 	private static final ReentrantLock LOCK = new ReentrantLock(true);
 	private Airport currentAirport;
 	private Airplane currentAirplane;
@@ -28,8 +28,8 @@ public class ProcessingAirplane extends Thread {
 	private LinkedList<Terminal> terminalQueue;
 	private LinkedList<Ladder> ladderQueue;
 	
-	private ThreadLocal<Terminal> terminal=new ThreadLocal<Terminal>();
-	private ThreadLocal<Ladder> ladder=new ThreadLocal<Ladder>();
+	//private ThreadLocal<Terminal> terminal=new ThreadLocal<Terminal>();
+	//private ThreadLocal<Ladder> ladder=new ThreadLocal<Ladder>();
 	
 	/**
 	 * @param currentAirport
@@ -52,45 +52,37 @@ public class ProcessingAirplane extends Thread {
 		//LinkedList<Terminal> terminalQueue=currentAirport.getTerminalQueue();
 		//LinkedList<Ladder> ladderQueue=currentAirport.getLadderQueue();
 		
-		//Terminal terminal=null;
-		//Ladder ladder=null;
-		
-		long time=0;
+		Terminal terminal=null;
+		Ladder ladder=null;
+		long time;
 		
 		LOG.info(String.format(PROCESSING_LOG_MESSAGE_WAIT,currentAirplane.getAirplaneID()));
 		
 		time=System.currentTimeMillis();
 		
-		/*while(true) {
-		
-		LOCK.lock();
-		try {
-			if(!terminalQueue.isEmpty()) {
-				terminal=terminalQueue.removeFirst();
+		while(true) {
+			terminal=findTerminal();
+			if(terminal!=null) {
 				break;
 			}
 			
-			if(!ladderQueue.isEmpty()) {
-				ladder=ladderQueue.removeFirst();
+			ladder=findLadder();
+			if(ladder!=null) {
 				break;
-			}	
-		     } finally {
-		       LOCK.unlock();
-		     }
+			}
+			
 			Thread.yield();
-		}*/
-		
-		findTerminalOrLadder();
+		}
 		
 		time=System.currentTimeMillis()-time;
-		Statistics.getInstance().addStatisticsData(time, currentAirplane.getAirplaneID());
+		StatisticsSingleton.getInstance().addStatisticsData(time, currentAirplane.getAirplaneID());
 		
 		LOG.info(String.format(PROCESSING_LOG_MESSAGE_START,currentAirplane.getAirplaneID(),currentAirplane.getPassangerCount(),currentAirplane.getPassangerCount()*SPEED_FIT));
 		
-		if(terminal.get()!=null) {
-			LOG.info(String.format(TERMINAL_USE_MESSAGE,terminal.get().getNumberTerminal(),currentAirplane.getAirplaneID()));
+		if(terminal!=null) {
+			LOG.info(String.format(TERMINAL_USE_MESSAGE,terminal.getNumberTerminal(),currentAirplane.getAirplaneID()));
 		} else {
-			LOG.info(String.format(LADDER_USE_MESSAGE,ladder.get().getNumberLadder(),currentAirplane.getAirplaneID()));
+			LOG.info(String.format(LADDER_USE_MESSAGE,ladder.getNumberLadder(),currentAirplane.getAirplaneID()));
 		}
 		
 		try {
@@ -99,53 +91,56 @@ public class ProcessingAirplane extends Thread {
 			LOG.error(e);
 		}
 		
-		/*LOCK.lock();
-		try {
-			if(terminal!=null) {
-				terminalQueue.add(terminal);		
-			} else {
-				ladderQueue.add(ladder);
-			}	
-		     } finally {
-		       LOCK.unlock();
-		     }*/
-		
-		releaseTerminalOrLadder();
-		
+		if(terminal!=null) {
+			releaseTerminal(terminal);
+		} else {
+			releaseLadder(ladder);
+		}
+			
 		LOG.info(String.format(PROCESSING_LOG_MESSAGE_END,currentAirplane.getAirplaneID()));
 			
-		Statistics.getInstance().decThreadsCount();
+		StatisticsSingleton.getInstance().decThreadsCount();
 	}
 	
-	private void findTerminalOrLadder() {
-		while(true) {
-			
-			LOCK.lock();
-			try {
-				if(!terminalQueue.isEmpty()) {
-					terminal.set(terminalQueue.removeFirst());
-					break;
-				}
-				
-				if(!ladderQueue.isEmpty()) {
-					ladder.set(ladderQueue.removeFirst());
-					break;
-				}	
-			     } finally {
-			       LOCK.unlock();
-			     }
-				Thread.yield();
-			}
-	}
-	
-	private void releaseTerminalOrLadder() {
+	private Terminal findTerminal() {
 		LOCK.lock();
 		try {
-			if(terminal.get()!=null) {
-				terminalQueue.add(terminal.get());		
+			if(!terminalQueue.isEmpty()) {
+				return terminalQueue.removeFirst();
 			} else {
-				ladderQueue.add(ladder.get());
-			}	
+				return null;
+			}
+			 } finally {
+		       LOCK.unlock();
+		     }
+	}
+	
+	private Ladder findLadder() {
+		LOCK.lock();
+		try {
+			if(!ladderQueue.isEmpty()) {
+				return ladderQueue.removeFirst();
+			} else {
+				return null;
+			}
+		     } finally {
+		       LOCK.unlock();
+		     }
+	}
+	
+	private void releaseTerminal(Terminal terminal) {
+		LOCK.lock();
+		try {
+			terminalQueue.add(terminal);		
+			 } finally {
+		       LOCK.unlock();
+		     }
+	}
+	
+	private void releaseLadder(Ladder ladder) {
+		LOCK.lock();
+		try {
+			ladderQueue.add(ladder);	
 		     } finally {
 		       LOCK.unlock();
 		     }

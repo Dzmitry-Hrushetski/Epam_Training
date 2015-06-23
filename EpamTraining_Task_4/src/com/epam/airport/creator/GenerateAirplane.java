@@ -8,7 +8,7 @@ import java.util.Random;
 import org.apache.log4j.Logger;
 
 import com.epam.airport.bean.Airplane;
-import com.epam.airport.logic.Statistics;
+import com.epam.airport.logic.StatisticsSingleton;
 
 import static com.epam.airport.constant.AirportConstants.*;
 
@@ -33,7 +33,7 @@ public class GenerateAirplane {
 		
 		LOG.info(String.format(AIRPLANE_LOG_MESSAGE,airplane.getAirplaneID(),countPassanger));
 		
-		Statistics.getInstance().incThreadsCount();
+		StatisticsSingleton.getInstance().incThreadsCount();
 		
 		return airplane;
 	}

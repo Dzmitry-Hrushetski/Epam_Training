@@ -3,7 +3,7 @@
  */
 package com.epam.airport.bean;
 
-import com.epam.airport.creator.CodeGenerator;
+import com.epam.airport.creator.CodeGeneratorSingleton;
 
 /**
  * @author Dzmitry Hrushetski
@@ -18,7 +18,7 @@ public class Ladder {
 	 */
 	public Ladder() {
 		super();
-		numberLadder=CodeGenerator.getInstance().nextLadderNumber();
+		numberLadder=CodeGeneratorSingleton.getInstance().nextLadderNumber();
 	}
 
 	/**

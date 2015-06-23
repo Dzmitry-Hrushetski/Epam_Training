@@ -14,7 +14,7 @@ public class AirportConstants {
 	public static final int MAX_PASSANGER_COUNT=100;
 	
 	public static final int AIRPLANE_GENERATOR_SPEED=500;
-	public static final int MAX_GENERATED_AIRPLANE_COUNT=150;
+	public static final int MAX_GENERATED_AIRPLANE_COUNT=50;
 	public static final int SPEED_FIT=100;
 	
 	public static final String AIRPLANE_LOG_MESSAGE="Generate new airplane ID-%d, passanger %d";

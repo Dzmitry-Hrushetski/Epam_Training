@@ -3,7 +3,7 @@
  */
 package com.epam.airport.bean;
 
-import com.epam.airport.creator.CodeGenerator;
+import com.epam.airport.creator.CodeGeneratorSingleton;
 
 /**
  * @author Dzmitry Hrushetski
@@ -19,7 +19,7 @@ public class Airplane {
 	public Airplane(int passangerCount) {
 		super();
 		this.passangerCount = passangerCount;
-		airplaneID=CodeGenerator.getInstance().nextAirplaneNumber();
+		airplaneID=CodeGeneratorSingleton.getInstance().nextAirplaneNumber();
 	}
 
 	/**

@@ -15,28 +15,29 @@ import static com.epam.airport.constant.AirportConstants.*;
  * @author Dzmitry Hrushetski
  *
  */
-public class Statistics {
-	private static final Logger LOG = Logger.getLogger(Statistics.class);
-	private static Statistics instance=null;
+public class StatisticsSingleton {
+	private static final Logger LOG = Logger.getLogger(StatisticsSingleton.class);
+	private static StatisticsSingleton instance=null;
 	private static ReentrantLock lock = new ReentrantLock();
-	private static int threadsCount=0;
 	
+	private int threadsCount;
+	private long totalWorkTime;
 	private LinkedList<String> waitServiceTime=new LinkedList<String>();
 	
-	private long totalWorkTime;
+	
 
 	/**
 	 * 
 	 */
-	private Statistics() {
+	private StatisticsSingleton() {
 		super();
 	}
 	
-	public static Statistics getInstance() {
+	public static StatisticsSingleton getInstance() {
 		lock.lock();
 		try {
 			if (instance == null) {
-				instance = new Statistics();
+				instance = new StatisticsSingleton();
 			}
 		} finally {
 			lock.unlock(); 
