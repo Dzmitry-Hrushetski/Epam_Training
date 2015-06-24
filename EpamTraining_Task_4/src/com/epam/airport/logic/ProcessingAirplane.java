@@ -20,9 +20,8 @@ import com.epam.airport.bean.Terminal;
  *
  */
 public class ProcessingAirplane extends Thread {
-	private final Logger LOG = Logger.getLogger(ProcessingAirplane.class);
+	private static final Logger LOG = Logger.getLogger(ProcessingAirplane.class);
 	private static final ReentrantLock LOCK = new ReentrantLock(true);
-	//private Airport currentAirport;
 	private Airplane currentAirplane;
 	
 	private LinkedList<Terminal> terminalQueue;
@@ -34,7 +33,6 @@ public class ProcessingAirplane extends Thread {
 	 */
 	public ProcessingAirplane(Airport currentAirport, Airplane currentAirplane) {
 		super();
-		//this.currentAirport = currentAirport;
 		this.currentAirplane = currentAirplane;
 		
 		terminalQueue=currentAirport.getTerminalQueue();
@@ -97,29 +95,31 @@ public class ProcessingAirplane extends Thread {
 	}
 	
 	private Terminal findTerminal() {
+		Terminal findTterminal=null;
+		
 		LOCK.lock();
 		try {
 			if(!terminalQueue.isEmpty()) {
-				return terminalQueue.removeFirst();
-			} else {
-				return null;
+				findTterminal=terminalQueue.removeFirst();
 			}
 			 } finally {
 		       LOCK.unlock();
 		     }
+		return findTterminal;
 	}
 	
 	private Ladder findLadder() {
+		Ladder findLadder=null;
+		
 		LOCK.lock();
 		try {
 			if(!ladderQueue.isEmpty()) {
-				return ladderQueue.removeFirst();
-			} else {
-				return null;
+				findLadder=ladderQueue.removeFirst();
 			}
 		     } finally {
 		       LOCK.unlock();
 		     }
+		return findLadder;
 	}
 	
 	private void releaseTerminal(Terminal terminal) {

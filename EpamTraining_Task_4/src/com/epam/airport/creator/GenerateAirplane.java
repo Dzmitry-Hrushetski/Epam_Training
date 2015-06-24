@@ -23,13 +23,15 @@ public class GenerateAirplane {
 	public static Airplane generateNewAirplane() {
 		Airplane airplane=null;
 		
+		int airplaneNumber=CodeGeneratorSingleton.getInstance().nextAirplaneNumber();
+		
+		if(MAX_GENERATED_AIRPLANE_COUNT<airplaneNumber) {
+			return airplane;
+		}
+		
 		int countPassanger=MIN_PASSANGER_COUNT+ rand.nextInt(MAX_PASSANGER_COUNT-MIN_PASSANGER_COUNT);
 		
-		airplane=new Airplane(countPassanger, CodeGeneratorSingleton.getInstance().nextAirplaneNumber());
-		
-		if(MAX_GENERATED_AIRPLANE_COUNT<airplane.getAirplaneID()) {
-			return null;
-		}
+		airplane=new Airplane(countPassanger, airplaneNumber);
 		
 		LOG.info(String.format(AIRPLANE_LOG_MESSAGE,airplane.getAirplaneID(),countPassanger));
 		
