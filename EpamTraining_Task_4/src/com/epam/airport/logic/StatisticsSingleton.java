@@ -16,7 +16,7 @@ import static com.epam.airport.constant.AirportConstants.*;
  */
 public class StatisticsSingleton {
 	private static final Logger LOG = Logger.getLogger(StatisticsSingleton.class);
-	private static StatisticsSingleton instance=null;
+	private static StatisticsSingleton instance;
 	private static ReentrantLock lock = new ReentrantLock();
 	
 	private int threadsCount;

@@ -12,7 +12,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  */
 public class CodeGeneratorSingleton {
-	private static CodeGeneratorSingleton instance=null;
+	private static CodeGeneratorSingleton instance;
 	private static ReentrantLock lock = new ReentrantLock();
 	
 	private int airplaneCount;
