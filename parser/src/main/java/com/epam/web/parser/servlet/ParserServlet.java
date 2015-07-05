@@ -41,16 +41,13 @@ public class ParserServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		System.out.println(request.getParameter("userName"));
-		System.out.println(request.getParameter("password"));
-		System.out.println(request.getParameter("xml"));
-		request.setAttribute("lang", request.getParameter("userName"));
+		//System.out.println(request.getParameter("typeParser"));
+		//request.setAttribute("lang", request.getParameter("userName"));
 		
-		
-		Runner.webStart(request.getParameter("xml"));
+		request.setAttribute("airplanes", Runner.webStart(request.getParameter("typeParser")));
+		//Runner.webStart(request.getParameter("xml"));
 
 		this.servletConfig.getServletContext().getRequestDispatcher(MAIN_PAGE)
 				.forward(request, response);
-
 	}
 }

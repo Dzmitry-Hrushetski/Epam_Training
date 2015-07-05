@@ -63,7 +63,7 @@ public class Runner {
 	}
 	
 	
-	public static void webStart(String type) {
+	public static Set<Airplane> webStart(String type) {
 		int totalPlace=0;
 		int totalCargo=0;
 		Set<Airplane> findAirplanes=null;
@@ -103,6 +103,8 @@ public class Runner {
 		} catch (BusinessExeption | EnumConstantNotPresentException e) {
 			LOG.error(e.getMessage());
 		}
+		
+		return company.getAirplanes();
 		
 	}
 }
