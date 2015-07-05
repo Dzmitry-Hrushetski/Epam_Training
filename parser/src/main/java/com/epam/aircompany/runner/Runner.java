@@ -105,6 +105,5 @@ public class Runner {
 		}
 		
 		return company.getAirplanes();
-		
 	}
 }

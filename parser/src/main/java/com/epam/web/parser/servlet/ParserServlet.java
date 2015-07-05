@@ -4,8 +4,6 @@
 package com.epam.web.parser.servlet;
 
 import java.io.IOException;
-import java.util.Set;
-import java.util.TreeSet;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -13,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.epam.aircompany.bean.Airplane;
 import com.epam.aircompany.runner.Runner;
 
 /**
@@ -27,6 +24,8 @@ public class ParserServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = -2615203379383467833L;
 	private static final String MAIN_PAGE = "/page/main.jsp";
+	private static final String ATTRIBUTE_NAME = "airplanes";
+	private static final String PARAMETR_NAME = "typeParser";
 	private ServletConfig servletConfig;
 
 	public void init(ServletConfig servletConfig) throws ServletException {
@@ -44,13 +43,8 @@ public class ParserServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		//System.out.println(request.getParameter("typeParser"));
-		//request.setAttribute("lang", request.getParameter("userName"));
-		
-		request.setAttribute("airplanes", Runner.webStart(request.getParameter("typeParser")));
-		//request.setAttribute("airplanes", new TreeSet<Airplane>());
+		request.setAttribute(ATTRIBUTE_NAME, Runner.webStart(request.getParameter(PARAMETR_NAME)));
 
-		//this.servletConfig.getServletContext().getRequestDispatcher(MAIN_PAGE).forward(request, response);
 		request.getRequestDispatcher(MAIN_PAGE).forward(request, response);
 	}
 }
