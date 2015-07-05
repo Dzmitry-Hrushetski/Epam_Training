@@ -1,0 +1,33 @@
+Total passanger place - 680 and cargo weight - 434
+
+The list of airplanes sorted by flying range:
+Airplane BOING_737, board number - 20, flying range 201
+Airplane BOING_737, board number - 24, flying range 206
+Airplane BOING_737, board number - 28, flying range 208
+Airplane BOING_737, board number - 16, flying range 211
+Airplane TU_154, board number - 18, flying range 220
+Airplane TU_154, board number - 26, flying range 226
+Airplane IL_76TD, board number - 19, flying range 260
+Airplane IL_76TD, board number - 27, flying range 266
+Airplane AIRBUS_A310, board number - 12, flying range 280
+Airplane AIRBUS_A310, board number - 22, flying range 285
+Airplane AIRBUS_A400M, board number - 15, flying range 300
+Airplane AIRBUS_A400M, board number - 23, flying range 305
+Airplane IL_76TD, board number - 21, flying range 450
+Airplane IL_76TD, board number - 25, flying range 456
+Airplane IL_76TD, board number - 29, flying range 459
+Airplane IL_76TD, board number - 17, flying range 473
+
+The list of airplanes fuelUsage:
+Airplane BOING_737, board number - 20, flying range 201, fuel usage 17
+Airplane BOING_737, board number - 24, flying range 206, fuel usage 17
+Airplane BOING_737, board number - 28, flying range 208, fuel usage 17
+Airplane BOING_737, board number - 16, flying range 211, fuel usage 17
+Airplane IL_76TD, board number - 19, flying range 260, fuel usage 19
+Airplane IL_76TD, board number - 27, flying range 266, fuel usage 19
+Airplane AIRBUS_A400M, board number - 15, flying range 300, fuel usage 22
+Airplane AIRBUS_A400M, board number - 23, flying range 305, fuel usage 22
+Airplane IL_76TD, board number - 21, flying range 450, fuel usage 24
+Airplane IL_76TD, board number - 25, flying range 456, fuel usage 24
+Airplane IL_76TD, board number - 29, flying range 459, fuel usage 24
+Airplane IL_76TD, board number - 17, flying range 473, fuel usage 24
