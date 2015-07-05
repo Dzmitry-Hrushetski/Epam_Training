@@ -4,6 +4,8 @@
 package com.epam.web.parser.servlet;
 
 import java.io.IOException;
+import java.util.Set;
+import java.util.TreeSet;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -11,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.epam.aircompany.bean.Airplane;
 import com.epam.aircompany.runner.Runner;
 
 /**
@@ -45,9 +48,9 @@ public class ParserServlet extends HttpServlet {
 		//request.setAttribute("lang", request.getParameter("userName"));
 		
 		request.setAttribute("airplanes", Runner.webStart(request.getParameter("typeParser")));
-		//Runner.webStart(request.getParameter("xml"));
+		//request.setAttribute("airplanes", new TreeSet<Airplane>());
 
-		this.servletConfig.getServletContext().getRequestDispatcher(MAIN_PAGE)
-				.forward(request, response);
+		//this.servletConfig.getServletContext().getRequestDispatcher(MAIN_PAGE).forward(request, response);
+		request.getRequestDispatcher(MAIN_PAGE).forward(request, response);
 	}
 }

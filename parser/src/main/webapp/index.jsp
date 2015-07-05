@@ -1,4 +1,7 @@
 <html>
+<head>
+<title>Select parser type</title>
+</head>
 <body>
 	<p>Choose XML parser type</p>
 	<div>
