@@ -1,0 +1,201 @@
+05.07.2015 00:31:11,610 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 00:31:11,631 INFO  runner.Runner - Parse input XML data file
+05.07.2015 00:31:11,632 ERROR runner.Runner - IO error
+05.07.2015 00:32:59,847 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 00:32:59,849 INFO  runner.Runner - Parse input XML data file
+05.07.2015 00:32:59,883 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 00:32:59,883 INFO  runner.Runner - Save data to file
+05.07.2015 00:32:59,886 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 00:32:59,886 INFO  runner.Runner - Job finish
+05.07.2015 00:35:49,534 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 00:35:49,535 INFO  runner.Runner - Parse input XML data file
+05.07.2015 00:35:49,578 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 00:35:49,578 INFO  runner.Runner - Save data to file
+05.07.2015 00:35:49,580 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 00:35:49,580 INFO  runner.Runner - Job finish
+05.07.2015 00:36:47,947 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 00:36:47,948 INFO  runner.Runner - Parse input XML data file
+05.07.2015 00:36:47,951 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 00:36:47,951 INFO  runner.Runner - Save data to file
+05.07.2015 00:36:47,953 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 00:36:47,953 INFO  runner.Runner - Job finish
+05.07.2015 15:57:49,923 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 15:57:49,984 INFO  runner.Runner - Parse input XML data file
+05.07.2015 15:57:50,044 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 15:57:50,045 INFO  runner.Runner - Save data to file
+05.07.2015 15:57:50,049 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 15:57:50,049 INFO  runner.Runner - Job finish
+05.07.2015 16:01:47,371 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 16:01:47,460 INFO  runner.Runner - Parse input XML data file
+05.07.2015 16:01:47,470 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 16:01:47,471 INFO  runner.Runner - Save data to file
+05.07.2015 16:01:47,473 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 16:01:47,473 INFO  runner.Runner - Job finish
+05.07.2015 16:04:08,797 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 16:04:08,798 INFO  runner.Runner - Parse input XML data file
+05.07.2015 16:04:08,801 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 16:04:08,801 INFO  runner.Runner - Save data to file
+05.07.2015 16:04:08,803 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 16:04:08,803 INFO  runner.Runner - Job finish
+05.07.2015 16:16:30,005 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 16:16:30,006 INFO  runner.Runner - Parse input XML data file
+05.07.2015 16:16:30,055 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 16:16:30,055 INFO  runner.Runner - Save data to file
+05.07.2015 16:16:30,057 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 16:16:30,057 INFO  runner.Runner - Job finish
+05.07.2015 16:17:07,239 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 16:17:07,239 INFO  runner.Runner - Parse input XML data file
+05.07.2015 16:17:07,241 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 16:17:07,241 INFO  runner.Runner - Save data to file
+05.07.2015 16:17:07,242 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 16:17:07,243 INFO  runner.Runner - Job finish
+05.07.2015 16:17:16,144 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 16:17:16,145 INFO  runner.Runner - Parse input XML data file
+05.07.2015 16:17:16,148 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 16:17:16,148 INFO  runner.Runner - Save data to file
+05.07.2015 16:17:16,149 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 16:17:16,149 INFO  runner.Runner - Job finish
+05.07.2015 16:17:42,308 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 16:17:42,309 INFO  runner.Runner - Parse input XML data file
+05.07.2015 16:17:42,311 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 16:17:42,311 INFO  runner.Runner - Save data to file
+05.07.2015 16:17:42,312 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 16:17:42,312 INFO  runner.Runner - Job finish
+05.07.2015 16:31:06,456 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 16:31:06,511 INFO  runner.Runner - Parse input XML data file
+05.07.2015 16:31:06,521 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 16:31:06,522 INFO  runner.Runner - Save data to file
+05.07.2015 16:31:06,525 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 16:31:06,525 INFO  runner.Runner - Job finish
+05.07.2015 16:34:30,435 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 16:34:30,439 INFO  runner.Runner - Parse input XML data file
+05.07.2015 16:34:30,447 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 16:34:30,448 INFO  runner.Runner - Save data to file
+05.07.2015 16:34:30,451 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 16:34:30,451 INFO  runner.Runner - Job finish
+05.07.2015 17:28:47,038 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 17:28:47,043 INFO  runner.Runner - Parse input XML data file
+05.07.2015 17:28:47,051 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 17:28:47,051 INFO  runner.Runner - Save data to file
+05.07.2015 17:28:47,054 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 17:28:47,054 INFO  runner.Runner - Job finish
+05.07.2015 17:29:08,410 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 17:29:08,412 INFO  runner.Runner - Parse input XML data file
+05.07.2015 17:29:08,419 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 17:29:08,419 INFO  runner.Runner - Save data to file
+05.07.2015 17:29:08,422 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 17:29:08,422 INFO  runner.Runner - Job finish
+05.07.2015 17:30:22,654 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 17:30:22,655 INFO  runner.Runner - Parse input XML data file
+05.07.2015 17:30:22,658 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 17:30:22,658 INFO  runner.Runner - Save data to file
+05.07.2015 17:30:22,660 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 17:30:22,660 INFO  runner.Runner - Job finish
+05.07.2015 17:32:11,479 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 17:32:11,480 INFO  runner.Runner - Parse input XML data file
+05.07.2015 17:32:11,481 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 17:32:11,481 INFO  runner.Runner - Save data to file
+05.07.2015 17:32:11,483 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 17:32:11,483 INFO  runner.Runner - Job finish
+05.07.2015 17:37:19,082 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 17:37:19,083 INFO  runner.Runner - Parse input XML data file
+05.07.2015 17:37:19,085 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 17:37:19,085 INFO  runner.Runner - Save data to file
+05.07.2015 17:37:19,086 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 17:37:19,086 INFO  runner.Runner - Job finish
+05.07.2015 17:43:28,389 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 17:43:28,390 INFO  runner.Runner - Parse input XML data file
+05.07.2015 17:43:28,395 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 17:43:28,395 INFO  runner.Runner - Save data to file
+05.07.2015 17:43:28,396 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 17:43:28,397 INFO  runner.Runner - Job finish
+05.07.2015 17:44:15,020 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 17:44:15,021 INFO  runner.Runner - Parse input XML data file
+05.07.2015 17:44:15,023 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 17:44:15,023 INFO  runner.Runner - Save data to file
+05.07.2015 17:44:15,024 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 17:44:15,024 INFO  runner.Runner - Job finish
+05.07.2015 17:45:06,761 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 17:45:06,765 INFO  runner.Runner - Parse input XML data file
+05.07.2015 17:45:06,772 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 17:45:06,773 INFO  runner.Runner - Save data to file
+05.07.2015 17:45:06,775 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 17:45:06,776 INFO  runner.Runner - Job finish
+05.07.2015 22:20:33,200 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 22:20:33,203 INFO  runner.Runner - Parse input XML data file
+05.07.2015 22:20:33,212 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 22:20:33,213 INFO  runner.Runner - Save data to file
+05.07.2015 22:20:33,215 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 22:20:33,215 INFO  runner.Runner - Job finish
+05.07.2015 22:21:34,529 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 22:21:34,530 INFO  runner.Runner - Parse input XML data file
+05.07.2015 22:21:34,534 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 22:21:34,534 INFO  runner.Runner - Save data to file
+05.07.2015 22:21:34,537 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 22:21:34,537 INFO  runner.Runner - Job finish
+05.07.2015 22:23:52,927 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 22:23:52,930 INFO  runner.Runner - Parse input XML data file
+05.07.2015 22:23:52,939 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 22:23:52,939 INFO  runner.Runner - Save data to file
+05.07.2015 22:23:52,942 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 22:23:52,942 INFO  runner.Runner - Job finish
+05.07.2015 22:24:37,840 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 22:24:37,842 INFO  runner.Runner - Parse input XML data file
+05.07.2015 22:24:37,846 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 22:24:37,846 INFO  runner.Runner - Save data to file
+05.07.2015 22:24:37,847 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 22:24:37,848 INFO  runner.Runner - Job finish
+05.07.2015 22:25:18,584 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 22:25:18,585 INFO  runner.Runner - Parse input XML data file
+05.07.2015 22:25:18,588 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 22:25:18,588 INFO  runner.Runner - Save data to file
+05.07.2015 22:25:18,589 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 22:25:18,589 INFO  runner.Runner - Job finish
+05.07.2015 22:25:43,310 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 22:25:43,310 INFO  runner.Runner - Parse input XML data file
+05.07.2015 22:25:43,313 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 22:25:43,313 INFO  runner.Runner - Save data to file
+05.07.2015 22:25:43,315 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 22:25:43,315 INFO  runner.Runner - Job finish
+05.07.2015 22:26:47,226 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 22:26:47,226 INFO  runner.Runner - Parse input XML data file
+05.07.2015 22:26:47,229 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 22:26:47,229 INFO  runner.Runner - Save data to file
+05.07.2015 22:26:47,231 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 22:26:47,231 INFO  runner.Runner - Job finish
+05.07.2015 22:29:22,360 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 22:29:22,361 INFO  runner.Runner - Parse input XML data file
+05.07.2015 22:29:22,363 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 22:29:22,363 INFO  runner.Runner - Save data to file
+05.07.2015 22:29:22,365 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 22:29:22,365 INFO  runner.Runner - Job finish
+05.07.2015 23:02:38,923 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 23:02:38,923 INFO  runner.Runner - Parse input XML data file
+05.07.2015 23:02:38,925 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 23:02:38,925 INFO  runner.Runner - Save data to file
+05.07.2015 23:02:38,926 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 23:02:38,926 INFO  runner.Runner - Job finish
+05.07.2015 23:07:18,132 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 23:07:18,136 INFO  runner.Runner - Parse input XML data file
+05.07.2015 23:07:18,145 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 23:07:18,146 INFO  runner.Runner - Save data to file
+05.07.2015 23:07:18,148 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 23:07:18,148 INFO  runner.Runner - Job finish
+05.07.2015 23:07:26,656 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 23:07:26,658 INFO  runner.Runner - Parse input XML data file
+05.07.2015 23:07:26,665 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 23:07:26,665 INFO  runner.Runner - Save data to file
+05.07.2015 23:07:26,667 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 23:07:26,667 INFO  runner.Runner - Job finish
+05.07.2015 23:21:48,039 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 23:21:48,044 INFO  runner.Runner - Parse input XML data file
+05.07.2015 23:21:48,054 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 23:21:48,054 INFO  runner.Runner - Save data to file
+05.07.2015 23:21:48,058 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 23:21:48,058 INFO  runner.Runner - Job finish
+05.07.2015 23:42:10,800 INFO  runner.Runner - Create company and airplanes in the company
+05.07.2015 23:42:10,806 INFO  runner.Runner - Parse input XML data file
+05.07.2015 23:42:10,815 INFO  runner.Runner - To count the total capacity and loading capacity, search of the plane in fuel consumption.
+05.07.2015 23:42:10,816 INFO  runner.Runner - Save data to file
+05.07.2015 23:42:10,819 INFO  logic.CompanyOutputData - Data are saved correctly
+05.07.2015 23:42:10,819 INFO  runner.Runner - Job finish
