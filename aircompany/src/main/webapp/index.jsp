@@ -7,11 +7,10 @@
 		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
 		omit-xml-declaration="true" />
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>Insert title here</title>
-</head>
 <body>
-<h2>Hello World!</h2>
+
+Hello
+<jsp:forward page="/jsp/login/login.jsp"></jsp:forward>
 
 </body>
 </html>
