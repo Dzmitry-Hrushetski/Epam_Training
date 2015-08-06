@@ -22,8 +22,8 @@
 	<br></br>
 	<form action="controller" method="post">
 	
-		<input type="HIDDEN" name="action" value="auth">
-		<input type="HIDDEN" name="lang" value="${locale}">
+		<input type="HIDDEN" name="action" value="auth"/>
+		<input type="HIDDEN" name="lang" value="${locale}"/>
 		
 		<fmt:message key="login.enter_pass_message" bundle="${ rb }" />
 		<br></br>

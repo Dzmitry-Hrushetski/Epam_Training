@@ -10,7 +10,7 @@
 <body>
 
 Hello
-<jsp:forward page="/jsp/login/login.jsp"></jsp:forward>
+<jsp:forward page="/jsp/login/login3.jsp"></jsp:forward>
 
 </body>
 </html>
