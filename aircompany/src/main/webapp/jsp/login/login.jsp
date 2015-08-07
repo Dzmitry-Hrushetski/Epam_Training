@@ -26,7 +26,8 @@
 		<fmt:message key="login.auth_message" bundle="${ rb }" />
 	</h3>
 	<br>
-	<form action="controller" method="post">
+	<form action="ControllerServlet" method="post">
+		<input type="HIDDEN" name="action" value="no_command">
 		<table>
 			<tr>
 				<th><fmt:message key="login.login_message" bundle="${ rb }" /></th>
