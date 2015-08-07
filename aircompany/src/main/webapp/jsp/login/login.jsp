@@ -1,45 +1,44 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
-		xmlns:fmt="http://java.sun.com/jsp/jstl/fmt">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
+<fmt:setLocale value="${language}" />
+<fmt:setBundle basename="text" var="rb" />
 
-<fmt:setLocale value="en_EN" scope="session" />
-	<fmt:setBundle basename="text" var="rb" />
-	
-<title><fmt:message key="login.title" bundle="${ rb }" /></title>
-</head>
+<!DOCTYPE html>
 
-<body>
-<h2><fmt:message key="login.auth_message" bundle="${ rb }" /></h2>
-<form action="controller" method="post">
-  <table>
-    <tr>
-       <th>Login</th>
-       <th>Password</th>
-       <th></th>
-      </tr>
-    <tr>
-       <td><input type="text" value="" name="userName"/></td>
-       <td><input type="password" value="" name="password"/></td>
-       <td><input type="submit" value="Send" /></td>
-      </tr>
-
-  </table>
-  
-  <input type="email" name="login" size="30" maxlength="50" required="required">
-		<br> </br>
-		
-		<br></br>
-		<input type="password" name="password" maxlength="20" size="30"
-			pattern="[A-Za-z0-9\\._\\-]{5,20}" required="required"/>
- 
-  
- </form>
-
-
-</body>
+<html lang="${language}">
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title><fmt:message key="login.title" bundle="${ rb }" /></title>
+    </head>
+    <body>
+    	<p><fmt:message key="login.lang_message" bundle="${ rb }" /></p>
+        <form>
+            <select id="language" name="language" onchange="submit()">
+                <option value="en" ${language == 'en' ? 'selected' : ''}><fmt:message key="login.lang_en" bundle="${ rb }" /></option>
+                <option value="ru" ${language == 'ru' ? 'selected' : ''}><fmt:message key="login.lang_ru" bundle="${ rb }" /></option>
+            </select>
+        </form>
+    <br>
+	<br>
+	<h3>
+		<fmt:message key="login.auth_message" bundle="${ rb }" />
+	</h3>
+	<br>
+	<form action="controller" method="post">
+		<table>
+			<tr>
+				<th><fmt:message key="login.login_message" bundle="${ rb }" /></th>
+				<th><fmt:message key="login.password_message" bundle="${ rb }" /></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td><input type="email" name="login" size="30" maxlength="50" required="required"/></td>
+				<td><input type="password" name="password" maxlength="20" size="30"	pattern="[A-Za-z0-9\\._\\-]{5,20}" required="required" /></td>
+				<td><input type="submit" value="<fmt:message key="login.enter" bundle="${ rb }" />" /></td>
+			</tr>
+		</table>
+	</form>
+    </body>
 </html>
