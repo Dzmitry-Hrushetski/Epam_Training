@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
-<fmt:setLocale value="${language}" />
+<fmt:setLocale value="${language1}" />
 <fmt:setBundle basename="text" var="rb" />
 
 <!DOCTYPE html>
@@ -13,8 +13,8 @@
         <title><fmt:message key="login.title" bundle="${ rb }" /></title>
     </head>
     <body>
-    	<p><fmt:message key="login.lang_message" bundle="${ rb }" /></p>
         <form>
+        	<label for="language"><fmt:message key="login.lang_message" bundle="${ rb }" />:</label>
             <select id="language" name="language" onchange="submit()">
                 <option value="en" ${language == 'en' ? 'selected' : ''}><fmt:message key="login.lang_en" bundle="${ rb }" /></option>
                 <option value="ru" ${language == 'ru' ? 'selected' : ''}><fmt:message key="login.lang_ru" bundle="${ rb }" /></option>
@@ -27,7 +27,7 @@
 	</h3>
 	<br>
 	<form action="ControllerServlet" method="post">
-		<input type="HIDDEN" name="action" value="no_command">
+		<input type="HIDDEN" name="action" value="login_command">
 		<table>
 			<tr>
 				<th><fmt:message key="login.login_message" bundle="${ rb }" /></th>

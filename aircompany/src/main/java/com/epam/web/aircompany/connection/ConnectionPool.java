@@ -36,7 +36,7 @@ public class ConnectionPool {
 	private LinkedBlockingQueue<Connection> dbConnections;
 	
 	private static class ConnectionPoolHolder {
-		private static final ConnectionPool pool = new ConnectionPool();
+		private static final ConnectionPool POOL = new ConnectionPool();
 	}
 	
 	private ConnectionPool() {
@@ -66,7 +66,7 @@ public class ConnectionPool {
 	 * @return com.epam.web.aircompany.connection.ConnectionPool
 	 */
 	public static ConnectionPool getInstance() {
-		return ConnectionPoolHolder.pool;
+		return ConnectionPoolHolder.POOL;
 	}
 	
 	/**

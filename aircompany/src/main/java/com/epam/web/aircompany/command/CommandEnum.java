@@ -8,7 +8,8 @@ package com.epam.web.aircompany.command;
  *
  */
 public enum CommandEnum {
-	NO_COMMAND (new NoCommand());
+	NO_COMMAND (new NoCommand()),
+	LOGIN_COMMAND (new LoginCommand());
 	
 	private ICommand command;
 	
