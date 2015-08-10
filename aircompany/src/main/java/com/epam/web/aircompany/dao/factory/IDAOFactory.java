@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.epam.web.aircompany.dao.factrory;
+package com.epam.web.aircompany.dao.factory;
 
 /**
  * @author Dzmitry Hrushetski
