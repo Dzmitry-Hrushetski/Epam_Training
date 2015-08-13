@@ -9,12 +9,13 @@ import java.util.List;
 import com.epam.web.aircompany.bean.Employee;
 import com.epam.web.aircompany.dao.AbstractDAO;
 import com.epam.web.aircompany.dao.DAOException;
+import com.epam.web.aircompany.dao.IDAO;
 
 /**
  * @author Dzmitry Hrushetski
  *
  */
-public class MySQLEmployeeDAO extends AbstractDAO<Employee> {
+public class MySQLEmployeeDAO extends AbstractDAO implements IDAO<Employee>{
 
 	/**
 	 * @param connection

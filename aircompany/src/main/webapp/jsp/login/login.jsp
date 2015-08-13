@@ -15,7 +15,7 @@
     <body>
         <form>
         	<label for="language"><fmt:message key="login.lang_message" bundle="${ rb }" />:</label>
-            <select id="language" name="language" onchange="submit()">
+            <select autofocus id="language" name="language" onchange="submit()">
                 <option value="en" ${language eq 'en' ? 'selected' : ''}><fmt:message key="login.lang_en" bundle="${ rb }" /></option>
                 <option value="ru" ${language eq 'ru' ? 'selected' : ''}><fmt:message key="login.lang_ru" bundle="${ rb }" /></option>
             </select>

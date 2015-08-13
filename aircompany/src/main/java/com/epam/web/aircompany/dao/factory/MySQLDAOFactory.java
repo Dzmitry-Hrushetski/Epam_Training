@@ -6,6 +6,8 @@ package com.epam.web.aircompany.dao.factory;
 import com.epam.web.aircompany.bean.Employee;
 import com.epam.web.aircompany.bean.Entity;
 import com.epam.web.aircompany.dao.AbstractDAO;
+import com.epam.web.aircompany.dao.IDAO;
+import com.epam.web.aircompany.dao.mysqldao.MySQLAirportDAO;
 import com.epam.web.aircompany.dao.mysqldao.MySQLDAOType;
 import com.epam.web.aircompany.dao.mysqldao.MySQLEmployeeDAO;
 
@@ -28,12 +30,14 @@ public class MySQLDAOFactory extends AbstractDAOFactory {
 		return MySQLDAOFactorHolder.DAO_FACTORY;
 	}
 	
-	public AbstractDAO<Entity> getMySQLDAO(MySQLDAOType typeDAO) {
+	public AbstractDAO getMySQLDAO(MySQLDAOType typeDAO) {
 		
 		switch(typeDAO) {
 		case EMPLOYEE:
-			//return new MySQLEmployeeDAO(null);
-			break;
+			return new MySQLEmployeeDAO(null);
+		case AIRPORT:
+			return new MySQLAirportDAO(null);
+			//break;
 		}
 		return null;	
 	}

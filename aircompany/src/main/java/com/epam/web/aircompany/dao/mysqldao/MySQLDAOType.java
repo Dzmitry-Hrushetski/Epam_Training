@@ -8,6 +8,7 @@ package com.epam.web.aircompany.dao.mysqldao;
  *
  */
 public enum MySQLDAOType {
-	EMPLOYEE;
+	EMPLOYEE,
+	AIRPORT;
 
 }
