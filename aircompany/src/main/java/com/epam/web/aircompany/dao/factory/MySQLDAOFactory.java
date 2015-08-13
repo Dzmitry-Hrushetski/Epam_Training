@@ -32,7 +32,7 @@ public class MySQLDAOFactory extends AbstractDAOFactory {
 		
 		switch(typeDAO) {
 		case EMPLOYEE:
-			return new MySQLEmployeeDAO(null);
+			//return new MySQLEmployeeDAO(null);
 			break;
 		}
 		return null;	
