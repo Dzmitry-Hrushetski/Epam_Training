@@ -5,11 +5,10 @@ package com.epam.web.aircompany.command;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.epam.web.aircompany.dao.AbstractDAO;
-import com.epam.web.aircompany.dao.factory.AbstractDAOFactory;
+import com.epam.web.aircompany.dao.IDao;
+import com.epam.web.aircompany.dao.IEmployeeDao;
 import com.epam.web.aircompany.dao.factory.DaoFactoryType;
-import com.epam.web.aircompany.dao.factory.MySQLDAOFactory;
-import com.epam.web.aircompany.dao.mysqldao.MySQLDAOType;
+import com.epam.web.aircompany.dao.factory.DatabaseFactory;
 import com.epam.web.aircompany.dao.mysqldao.MySQLEmployeeDao;
 
 /**
@@ -24,9 +23,9 @@ public class LoginCommand implements ICommand {
 	@Override
 	public String execute(HttpServletRequest request) {
 		
-		MySQLDAOFactory factory = (MySQLDAOFactory)AbstractDAOFactory.getDAOFactory(DaoFactoryType.MYSQL);
+		IDao daoMySQL = DatabaseFactory.getInstance().getDatabaseDao(DaoFactoryType.MYSQL); 
 		
-		MySQLEmployeeDao aDAO=(MySQLEmployeeDao)factory.getMySQLDAO(MySQLDAOType.EMPLOYEE);
+		IEmployeeDao employee = daoMySQL.getIEmployeeDao(null);
 		
 		// TODO Auto-generated method stub
 		return null;
