@@ -11,7 +11,7 @@ import com.epam.web.aircompany.bean.Entity;
  * @author Dzmitry Hrushetski
  *
  */
-public interface IDAO <T extends Entity>{
+public interface IBaseDao<T extends Entity> {
 	
 	/**
 	 * Returns the list of type T Entity objects (T can be a Member, Project,
@@ -64,7 +64,5 @@ public interface IDAO <T extends Entity>{
 	 * @throws DAOException
 	 *             If a database access/handling error occurs.
 	 */
-	public boolean updateEntity(T entity, int id)
-			throws DAOException;
-
+	public boolean updateEntity(T entity, int id) throws DAOException;
 }
