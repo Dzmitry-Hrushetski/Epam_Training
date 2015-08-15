@@ -23,4 +23,7 @@
     <filter-name>EncodingFilter</filter-name>
     <url-pattern>/EncodingFilter</url-pattern>
   </filter-mapping>
+  <listener>
+    <listener-class>com.epam.web.aircompany.listener.AircompanyContextListener</listener-class>
+  </listener>
 </web-app>

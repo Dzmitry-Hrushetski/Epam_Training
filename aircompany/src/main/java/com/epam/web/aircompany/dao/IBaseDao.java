@@ -20,10 +20,10 @@ public interface IBaseDao<T extends Entity> {
 	 * 
 	 * @return The list of type T Entity objects (Members, Projects, Builds,
 	 *         etc.)
-	 * @throws DAOException
+	 * @throws DaoException
 	 *             If a database access/handling error occurs.
 	 */
-	public List<T> findAll() throws DAOException;
+	public List<T> findAll() throws DaoException;
 
 	/**
 	 * Returns an object of type T Entity (T can be a Member, Project, Issue,
@@ -33,10 +33,10 @@ public interface IBaseDao<T extends Entity> {
 	 * @param id
 	 *            The id of the Entity (Member, Project, Build, etc.)
 	 * @return Type T Entity object (Member, Project, Build, etc.)
-	 * @throws DAOException
+	 * @throws DaoException
 	 *             If a database access/handling error occurs.
 	 */
-	public T findEntityByID(int id) throws DAOException;
+	public T findEntityByID(int id) throws DaoException;
 
 	/**
 	 * Adds new object of type T Entity (T can be a Member, Project, Issue,
@@ -46,10 +46,10 @@ public interface IBaseDao<T extends Entity> {
 	 *            new type T Entity object (Member, Project, Build, etc.)
 	 * @return {@code true} if the object is successfully added and
 	 *         {@code false} otherwise
-	 * @throws DAOException
+	 * @throws DaoException
 	 *             If a database access/handling error occurs.
 	 */
-	public boolean addNewEntity(T entity) throws DAOException;
+	public boolean addNewEntity(T entity) throws DaoException;
 
 	/**
 	 * Updates the data of type T Entity object (T can be a Member, Project,
@@ -61,8 +61,8 @@ public interface IBaseDao<T extends Entity> {
 	 *            the ID of type T Entity object to be updated
 	 * @return {@code true} if the object's data is successfully updated and
 	 *         {@code false} otherwise
-	 * @throws DAOException
+	 * @throws DaoException
 	 *             If a database access/handling error occurs.
 	 */
-	public boolean updateEntity(T entity, int id) throws DAOException;
+	public boolean updateEntity(T entity, int id) throws DaoException;
 }

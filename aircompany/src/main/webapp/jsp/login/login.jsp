@@ -13,6 +13,9 @@
         <title><fmt:message key="login.title" bundle="${ rb }" /></title>
     </head>
     <body>
+    <h4>
+		<fmt:message key="aircompany.name" bundle="${ rb }" />
+	</h4>
         <form>
         	<label for="language"><fmt:message key="login.lang_message" bundle="${ rb }" />:</label>
             <select autofocus id="language" name="language" onchange="submit()">

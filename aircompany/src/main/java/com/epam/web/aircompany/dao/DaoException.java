@@ -7,7 +7,7 @@ package com.epam.web.aircompany.dao;
  * @author Dzmitry Hrushetski
  *
  */
-public class DAOException extends Exception {
+public class DaoException extends Exception {
 
 	/**
 	 * 
@@ -17,20 +17,20 @@ public class DAOException extends Exception {
 	/**
 	 * 
 	 */
-	public DAOException() {
+	public DaoException() {
 	}
 
 	/**
 	 * @param message
 	 */
-	public DAOException(String message) {
+	public DaoException(String message) {
 		super(message);
 	}
 
 	/**
 	 * @param cause
 	 */
-	public DAOException(Throwable cause) {
+	public DaoException(Throwable cause) {
 		super(cause);
 	}
 
@@ -38,7 +38,7 @@ public class DAOException extends Exception {
 	 * @param message
 	 * @param cause
 	 */
-	public DAOException(String message, Throwable cause) {
+	public DaoException(String message, Throwable cause) {
 		super(message, cause);
 	}
 
@@ -48,7 +48,7 @@ public class DAOException extends Exception {
 	 * @param enableSuppression
 	 * @param writableStackTrace
 	 */
-	public DAOException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+	public DaoException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 	}
 

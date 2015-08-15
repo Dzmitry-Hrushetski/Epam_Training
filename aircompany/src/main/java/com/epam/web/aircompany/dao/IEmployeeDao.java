@@ -10,5 +10,7 @@ import com.epam.web.aircompany.bean.Employee;
  *
  */
 public interface IEmployeeDao extends IBaseDao<Employee>{
+	
+	public Employee findEmployeeByUserName(String userName) throws DaoException;
 
 }
