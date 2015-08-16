@@ -1,2 +1,10 @@
 15.08.2015 22:47:44,671 INFO  command.LoginCommand - DAO
 15.08.2015 22:50:35,284 INFO  command.LoginCommand - DAO
+16.08.2015 21:54:11,639 INFO  listener.AircompanyContextListener - Create Pool
+16.08.2015 23:08:52,007 INFO  listener.AircompanyContextListener - Create Pool
+16.08.2015 23:13:38,904 INFO  listener.AircompanyContextListener - Create Pool
+16.08.2015 23:16:46,327 INFO  listener.AircompanyContextListener - Create Pool
+16.08.2015 23:20:24,916 INFO  listener.AircompanyContextListener - Create Pool
+16.08.2015 23:22:26,614 INFO  listener.AircompanyContextListener - Create Pool
+16.08.2015 23:34:07,070 INFO  listener.AircompanyContextListener - Create Pool
+16.08.2015 23:36:31,660 INFO  listener.AircompanyContextListener - Create Pool

@@ -9,7 +9,7 @@
 
 <html lang="${language}">
     <head>
-       	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title><fmt:message key="login.title" bundle="${ rb }" /></title>
     </head>
     <body>
@@ -38,8 +38,8 @@
 				<th></th>
 			</tr>
 			<tr>
-				<td><input type="email" name="user_name" size="30" maxlength="50" required="required"/></td>
-				<td><input type="password" name="password" size="25" maxlength="25" pattern="[A-Za-z0-9\\._\\-]{5,20}" required="required" /></td>
+				<td><input type="email" name="login" size="30" maxlength="50" required="required"/></td>
+				<td><input type="password" name="password" maxlength="20" size="30"	pattern="[A-Za-z0-9\\._\\-]{5,20}" required="required" /></td>
 				<td><input type="submit" value="<fmt:message key="login.enter" bundle="${ rb }" />" /></td>
 			</tr>
 		</table>
