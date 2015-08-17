@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
 <fmt:setLocale value="${language}" />
@@ -30,7 +31,8 @@
 	</h3>
 	<br>
 	<form action="ControllerServlet" method="post">
-		<input type="HIDDEN" name="action" value="login_command">
+		<input type="hidden" name="action" value="login_command">
+		<input type="hidden" name="locale" value="${language}">
 		<table>
 			<tr>
 				<th><fmt:message key="login.login_message" bundle="${ rb }" /></th>
@@ -38,11 +40,14 @@
 				<th></th>
 			</tr>
 			<tr>
-				<td><input type="email" name="user_name" size="30" maxlength="50" required="required"/></td>
+				<td><input type="email" name="user_name" value="${user_name}" size="30" maxlength="50" required="required"/></td>
 				<td><input type="password" name="password" size="25" maxlength="25" pattern="[A-Za-z0-9\\._\\-]{5,20}" required="required" /></td>
 				<td><input type="submit" value="<fmt:message key="login.enter" bundle="${ rb }" />" /></td>
 			</tr>
 		</table>
 	</form>
+	
+	<c:out value="${is_fault}" />
+	
     </body>
 </html>

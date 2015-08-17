@@ -4,8 +4,10 @@
 package com.epam.web.aircompany.command;
 
 import java.sql.Connection;
+import java.util.Enumeration;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
@@ -24,7 +26,7 @@ public class LoginCommand implements ICommand {
 	private static final Logger LOG = Logger.getLogger(LoginCommand.class);
 	private static final String PARAM_USER_NAME = "user_name";
 	private static final String PARAM_PASSWORD = "password";
-	private static final String PARAM_LANGUAGE = "param.language";
+	private static final String PARAM_LANGUAGE = "locale";
 
 	/* (non-Javadoc)
 	 * @see com.epam.web.aircompany.command.ICommand#execute(javax.servlet.http.HttpServletRequest)
@@ -37,6 +39,7 @@ public class LoginCommand implements ICommand {
 		String password = request.getParameter(PARAM_PASSWORD);
 		String language = request.getParameter(PARAM_LANGUAGE);
 		
+			
 		try {
 			if(Validator.validateUserName(userName) && Validator.validatePassword(password)) {
 				Employee employee = iEmployee.findEmployeeByUserName(userName);
@@ -46,6 +49,9 @@ public class LoginCommand implements ICommand {
 			} else {
 				
 			}
+			
+			request.setAttribute(PARAM_USER_NAME, userName);
+			request.setAttribute("is_fault", "Bab login");
 			
 		} catch (DaoException e) {
 			
