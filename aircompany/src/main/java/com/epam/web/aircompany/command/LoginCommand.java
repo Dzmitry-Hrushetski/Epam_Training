@@ -27,12 +27,16 @@ public class LoginCommand implements ICommand {
 	private static final String PARAM_USER_NAME = "user_name";
 	private static final String PARAM_PASSWORD = "password";
 	private static final String PARAM_LANGUAGE = "locale";
+	private static final String PARAM_NOT_VALID = "not_valid";
+	private static final String PARAM_INCORRECT = "incorrect";
+	private static final String URL_LOGIN = "login";
 
 	/* (non-Javadoc)
 	 * @see com.epam.web.aircompany.command.ICommand#execute(javax.servlet.http.HttpServletRequest)
 	 */
 	@Override
 	public String execute(HttpServletRequest request, ConnectionPool connectionPool, IDao databaseDao) {
+		String url = COMMAND_BOUNDLE.getString(URL_LOGIN);;
 		Connection connection = connectionPool.getConnection();		
 		IEmployeeDao iEmployee = databaseDao.getIEmployeeDao(connection);
 		String userName = request.getParameter(PARAM_USER_NAME);
@@ -43,15 +47,22 @@ public class LoginCommand implements ICommand {
 		try {
 			if(Validator.validateUserName(userName) && Validator.validatePassword(password)) {
 				Employee employee = iEmployee.findEmployeeByUserName(userName);
-				if(password.equals(employee.getPassword())) {
+				if(employee!= null && password.equals(employee.getPassword())) {
+					HttpSession session = request.getSession();
+					session.setAttribute(PARAM_LANGUAGE, language);
+					url = findURL(employee);
+					
+				} else {
+					request.setAttribute(PARAM_USER_NAME, userName);
+					request.setAttribute(PARAM_INCORRECT, true);
 					
 				}
 			} else {
-				
+				request.setAttribute(PARAM_USER_NAME, userName);
+				request.setAttribute(PARAM_NOT_VALID, true);
 			}
 			
-			request.setAttribute(PARAM_USER_NAME, userName);
-			request.setAttribute("is_fault", "Bab login");
+			
 			
 		} catch (DaoException e) {
 			
@@ -59,6 +70,11 @@ public class LoginCommand implements ICommand {
 			connectionPool.releaseConnection(connection);
 		}
 		
+		
+		return url;
+	}
+
+	private String findURL(Employee employee) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -46,8 +46,10 @@
 			</tr>
 		</table>
 	</form>
-	
-	<c:out value="${is_fault}" />
+	<!--
+	<c:if test="${not_valid}"> <c:out value="<fmt:message key="login.not_valid" bundle="${ rb }" />" />	</c:if>
+	<c:if test="${incorrect eq true}"> <c:out value="<fmt:message key="login.incorrect" bundle="${ rb }" />" /> </c:if>
+	-->
 	
     </body>
 </html>
