@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
+<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="request" />
 <fmt:setLocale value="${language}" />
 <fmt:setBundle basename="text" var="rb" />
 
@@ -14,9 +14,9 @@
         <title><fmt:message key="login.title" bundle="${ rb }" /></title>
     </head>
     <body>
-    <h4>
+    <h3>
 		<fmt:message key="aircompany.name" bundle="${ rb }" />
-	</h4>
+	</h3>
         <form>
         	<label for="language"><fmt:message key="login.lang_message" bundle="${ rb }" />:</label>
             <select autofocus id="language" name="language" onchange="submit()">
@@ -25,10 +25,9 @@
             </select>
         </form>
     <br>
-	<br>
-	<h3>
+	<h4>
 		<fmt:message key="login.auth_message" bundle="${ rb }" />
-	</h3>
+	</h4>
 	<br>
 	<form action="ControllerServlet" method="post">
 		<input type="hidden" name="action" value="login_command">
@@ -46,10 +45,10 @@
 			</tr>
 		</table>
 	</form>
-	<!--
-	<c:if test="${not_valid}"> <c:out value="<fmt:message key="login.not_valid" bundle="${ rb }" />" />	</c:if>
-	<c:if test="${incorrect eq true}"> <c:out value="<fmt:message key="login.incorrect" bundle="${ rb }" />" /> </c:if>
-	-->
 	
+	<br>
+	<c:if test="${not_valid eq true}"> <fmt:message key="login.not_valid" bundle="${ rb }" />	</c:if>
+	<c:if test="${incorrect eq true}"> <fmt:message key="login.incorrect" bundle="${ rb }" /> </c:if>
+		
     </body>
 </html>

@@ -1,34 +1,48 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
-<fmt:setLocale value="${language}" />
+
+<fmt:setLocale value="${locale}" />
 <fmt:setBundle basename="text" var="rb" />
 
 <!DOCTYPE html>
 
-<html lang="${language}">
+<html lang="${locale}">
     <head>
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title><fmt:message key="login.title" bundle="${ rb }" /></title>
+        <title><fmt:message key="cheef.title" bundle="${ rb }" /></title>
     </head>
     <body>
     <h4>
 		<fmt:message key="aircompany.name" bundle="${ rb }" />
 	</h4>
-        <form>
-        	<label for="language"><fmt:message key="login.lang_message" bundle="${ rb }" />:</label>
-            <select autofocus id="language" name="language" onchange="submit()">
-                <option value="en" ${language eq 'en' ? 'selected' : ''}><fmt:message key="login.lang_en" bundle="${ rb }" /></option>
-                <option value="ru" ${language eq 'ru' ? 'selected' : ''}><fmt:message key="login.lang_ru" bundle="${ rb }" /></option>
-            </select>
-        </form>
+	
     <br>
 	<br>
 	<h3>
-		<fmt:message key="login.auth_message" bundle="${ rb }" />
+		<fmt:message key="cheef.employee_list" bundle="${ rb }" />
 	</h3>
 	<br>
+	
+	<table border="1">
+				<tr>
+					<th>Model</th>
+					<th>Board number</th>
+					<th>Flying range</th>
+				</tr>
+				<c:forEach var="element" items="${employee_list}" varStatus="status">
+					<tr>
+						<td><c:out value="${element.firstName}"></c:out></td>
+						<td><c:out value="${element.lastName}"></c:out></td>
+						<td><c:out value="${element.addres}"></c:out></td>
+					</tr>
+				</c:forEach>
+			</table>
+	
+	<h:selectOneMenu value="#{employee_list}">
+ <f:selectItems value="#{employee_list}" />
+</h:selectOneMenu>
+	
 	<form action="ControllerServlet" method="post">
 		<input type="HIDDEN" name="action" value="login_command">
 		<table>

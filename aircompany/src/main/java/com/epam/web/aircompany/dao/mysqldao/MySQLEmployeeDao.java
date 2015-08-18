@@ -7,6 +7,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import com.epam.web.aircompany.bean.Employee;
@@ -20,10 +23,18 @@ import com.epam.web.aircompany.dao.IEmployeeDao;
  *
  */
 public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
+	private static final String ID = "employee.id";
+	private static final String START_DATE = "employee.start_date";
+	private static final String FIRST_NAME = "person.first_name";
+	private static final String LAST_NAME = "person.last_name";
+	private static final String ADDRES = "person.addres";
+	private static final String PHONE = "person.phone";
 	private static final String USER_NAME = "person.user_name";
-	private static final String POSITION_NAME = "position.position_name";
 	private static final String PASSWORD = "person.password";
-	private static final String FIND_EMPLOYEE_BY_USER_NAME = "SELECT person.user_name, person.password, position.position_name FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id WHERE person.user_name = ? AND (position.position_name = 'Директор' OR position.position_name = 'Администратор' OR position.position_name = 'Диспетчер') AND employee.disable = 0";
+	private static final String POSITION_NAME = "position.position_name";
+	private static final String POSITION_ID = "position.id";
+	private static final String FIND_EMPLOYEE_BY_USER_NAME = "SELECT person.user_name, person.password, position.id, position.position_name FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id WHERE person.user_name = ? AND (position.position_name = 'Директор' OR position.position_name = 'Администратор' OR position.position_name = 'Диспетчер') AND employee.disable = 0";
+	private static final String FIND_ALL_EMPLOYEE = "SELECT employee.id, position.id, position.position_name, employee.start_date, person.first_name, person.last_name, person.addres, person.phone, person.user_name, person.password FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id";
 
 	/**
 	 * @param connection
@@ -37,8 +48,44 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 	 */
 	@Override
 	public List<Employee> findAll() throws DaoException {
-		// TODO Auto-generated method stub
-		return null;
+		List<Employee> employeeList = new ArrayList<Employee>();
+		Statement statement = null;
+		Employee employee = null;
+		Position position = null;
+		GregorianCalendar startDate=null;
+		
+		try {
+			statement = connection.createStatement();
+			ResultSet rs = statement.executeQuery(FIND_ALL_EMPLOYEE);
+			while (rs.next()) {
+				/* creating a new Employee and initializing its fields */
+				position = new Position();
+				position.setId(rs.getInt(POSITION_ID));
+				position.setPositionName(rs.getString(POSITION_NAME));
+				
+				employee = new Employee();
+				employee.setId(rs.getInt(ID));
+				employee.setPosition(position);
+				
+				startDate = new GregorianCalendar();
+				startDate.setTime(rs.getDate(START_DATE));
+				employee.setStartDate(startDate);
+				
+				employee.setFirstName(rs.getString(FIRST_NAME));
+				employee.setLastName(rs.getString(LAST_NAME));
+				employee.setAddres(rs.getString(ADDRES));
+				employee.setPhone(rs.getString(PHONE));
+				employee.setUserName(rs.getString(USER_NAME));
+				employee.setPassword(rs.getString(PASSWORD));
+				
+				employeeList.add(employee);
+			}
+		} catch (SQLException ex) {
+			throw new DaoException("Database error.", ex);
+		} finally {
+			close(statement);
+		}
+		return employeeList;
 	}
 
 	/* (non-Javadoc)
@@ -81,6 +128,7 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 			while (rs.next()) {
 				/* creating a new Employee and initializing its fields */
 				position = new Position();
+				position.setId(rs.getInt(POSITION_ID));
 				position.setPositionName(rs.getString(POSITION_NAME));
 				
 				employee = new Employee();
@@ -90,7 +138,7 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 				
 			}
 		} catch (SQLException ex) {
-			throw new DaoException("Database error", ex);
+			throw new DaoException("Database error.", ex);
 		} finally {
 			close(prepStatement);
 		}

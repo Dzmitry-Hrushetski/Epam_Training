@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 import com.epam.web.aircompany.command.ICommand;
 import com.epam.web.aircompany.command.CommandEnum;
 import com.epam.web.aircompany.connection.ConnectionPool;
@@ -20,6 +22,7 @@ import static com.epam.web.aircompany.constant.Constants.*;
  * Servlet implementation class ControllerServlet
  */
 public class ControllerServlet extends HttpServlet {
+	private static final Logger LOG = Logger.getLogger(ControllerServlet.class);
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -27,21 +30,18 @@ public class ControllerServlet extends HttpServlet {
      */
     public ControllerServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
 	}
 
 	/**
 	 * @see Servlet#destroy()
 	 */
 	public void destroy() {
-		// TODO Auto-generated method stub
 	}
 
 	/**
@@ -84,18 +84,22 @@ public class ControllerServlet extends HttpServlet {
 		if(action == null || action.isEmpty()) {
 			command = CommandEnum.NO_COMMAND.getCommand();
  		} else {
- 			command = CommandEnum.valueOf(action.toUpperCase()).getCommand();
+ 			try {
+ 				command = CommandEnum.valueOf(action.toUpperCase()).getCommand();
+ 			} catch (IllegalArgumentException ex) {
+ 				LOG.error("Illegal 'action' parametr in JSP.");
+ 				command = CommandEnum.NO_COMMAND.getCommand();
+ 			}
  		}
-		
-		
-		//CommandEnum.valueOf(action.toUpperCase());
 		
 		//ICommand command = CommandFactory.getInstance().getCommand(request);
 		String url = command.execute(request, connectionPool, dataBaseDao);
+		
 		/* putting the reconstructed ControllerServlet URL into request */
-		request.setAttribute("base", request.getRequestURL().toString());
+		//request.setAttribute("base", request.getRequestURL().toString());
+		
 		/* forwarding the request to a proper JSP */
-		//request.getRequestDispatcher(url).forward(request, response);
-		request.getRequestDispatcher("/jsp/login/login.jsp").forward(request, response);
+		request.getRequestDispatcher(url).forward(request, response);
+		//request.getRequestDispatcher("/jsp/login/login.jsp").forward(request, response);
 	}
 }
