@@ -12,5 +12,6 @@ import java.sql.Connection;
 public interface IDao {
 	
 	public IEmployeeDao getIEmployeeDao(Connection connection);
+	public IPositionDao getIPositionDao(Connection connection);
 
 }

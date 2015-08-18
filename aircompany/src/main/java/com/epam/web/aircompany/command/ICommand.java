@@ -15,7 +15,7 @@ import com.epam.web.aircompany.dao.IDao;
  *
  */
 public interface ICommand {
-	ResourceBundle COMMAND_BOUNDLE = ResourceBundle.getBundle("jsp_URL");
+	ResourceBundle URL_BOUNDLE = ResourceBundle.getBundle("jsp_URL");
 	
 	/**
 	 * Method is called by a a Servlet (Controller) in order to process the

@@ -20,7 +20,7 @@ public class NoCommand implements ICommand {
 	@Override
 	public String execute(HttpServletRequest request, ConnectionPool connectionPool, IDao databaseDao) {
 		// TODO Auto-generated method stub
-		return null;
+		return "/jsp/cheef/cheef.jsp";
 	}
 
 }

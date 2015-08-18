@@ -3,6 +3,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="request" />
+
 <fmt:setLocale value="${language}" />
 <fmt:setBundle basename="text" var="rb" />
 
@@ -15,9 +16,14 @@
     </head>
     <body>
     <h3>
+    <c:out value="${language}"></c:out>
+    <c:out value="${language eq 'ru_RU' ? language='ru' : language='en'}"></c:out>
+    <c:out value="${language}"></c:out>
 		<fmt:message key="aircompany.name" bundle="${ rb }" />
 	</h3>
-        <form>
+        <form action="ControllerServlet" method="post">
+        <input type="hidden" name="action" value="language_command">
+        <input type="hidden" name="locale" value="${language}">
         	<label for="language"><fmt:message key="login.lang_message" bundle="${ rb }" />:</label>
             <select autofocus id="language" name="language" onchange="submit()">
                 <option value="en" ${language eq 'en' ? 'selected' : ''}><fmt:message key="login.lang_en" bundle="${ rb }" /></option>
@@ -31,7 +37,7 @@
 	<br>
 	<form action="ControllerServlet" method="post">
 		<input type="hidden" name="action" value="login_command">
-		<input type="hidden" name="locale" value="${language}">
+		<!-- <input type="hidden" name="locale" value="${language}">  -->
 		<table>
 			<tr>
 				<th><fmt:message key="login.login_message" bundle="${ rb }" /></th>
