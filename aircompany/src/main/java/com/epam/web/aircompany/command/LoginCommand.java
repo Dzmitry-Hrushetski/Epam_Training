@@ -28,7 +28,6 @@ public class LoginCommand implements ICommand {
 	private static final Logger LOG = Logger.getLogger(LoginCommand.class);
 	private static final String PARAM_USER_NAME = "user_name";
 	private static final String PARAM_PASSWORD = "password";
-	//private static final String PARAM_LANGUAGE = "locale";
 	private static final String PARAM_NOT_VALID = "not_valid";
 	private static final String PARAM_INCORRECT = "incorrect";
 	private static final String PARAM_EMPLOYEE_LIST = "employee_list";
@@ -53,17 +52,13 @@ public class LoginCommand implements ICommand {
 		Connection connection = connectionPool.getConnection();		
 		String userName = request.getParameter(PARAM_USER_NAME);
 		String password = request.getParameter(PARAM_PASSWORD);
-		//String language = request.getParameter(PARAM_LANGUAGE);
 		
-			
 		try {
 			if(Validator.validateUserName(userName) && Validator.validatePassword(password)) {
 				iEmployee = databaseDao.getIEmployeeDao(connection);
 				Employee employee = iEmployee.findEmployeeByUserName(userName);
 				if(employee!= null && password.equals(employee.getPassword())) {
-					/*HttpSession session = request.getSession();
-					session.setAttribute(PARAM_LANGUAGE, language);*/
-					
+										
 					iPosition = databaseDao.getIPositionDao(connection);
 					preparationJspData(request, databaseDao, employee);
 					
@@ -99,8 +94,11 @@ public class LoginCommand implements ICommand {
 		case CHEEF:
 			List<Employee> employeeList = iEmployee.findAll();
 			List<Position> positionList = iPosition.findAll();
-			request.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
-			request.setAttribute(PARAM_POSITION_LIST, positionList);
+			/*request.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
+			request.setAttribute(PARAM_POSITION_LIST, positionList);*/
+			HttpSession session = request.getSession();
+			session.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
+			session.setAttribute(PARAM_POSITION_LIST, positionList);
 			break;
 		case ADMIN:
 			

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
@@ -23,21 +22,39 @@
 	<h4>
 		<fmt:message key="cheef.employee_list" bundle="${ rb }" />
 	</h4>
+	
 	<br>
 
-
-
-	<c:set var="position" value="1" scope="request" />
 	<form action="ControllerServlet" method="post">
+		<input type="hidden" name="action" value="cheef_command">
+		<input type="hidden" name="operation" value="position">
+		
 		<label for="position"><fmt:message key="cheef.position_message"	bundle="${ rb }" />:</label>
 		 <select autofocus id="position" name="position" onchange="submit()">
 			<c:forEach items="${position_list}" var="p"> <option value="${p.id}" ${p.id eq 1 ? 'selected' : ''}>${p.positionName}</option> </c:forEach>
 		</select>
 	</form>
-	
+		
 	<br>
 	
-	
+	<form action="ControllerServlet" method="post">
+		<input type="hidden" name="action" value="cheef_command">
+		<input type="hidden" name="operation" value="employee">
+		
+		<label for="employee"><fmt:message key="cheef.employee_list" bundle="${ rb }" />:</label>
+		 <select autofocus id="employee" name="employee" onchange="submit()">
+			<c:forEach items="${employee_list}" var="e">
+			
+				<c:choose>
+					<c:when test="${e.position.id eq position}">
+						<option value="${e.id}" ${e.id eq 1 ? 'selected' : ''}>${e.firstName}: ${e.position.positionName}</option>
+					</c:when>
+				
+				</c:choose>		
+						 
+			</c:forEach>
+		</select>
+	</form>
 
 	
 

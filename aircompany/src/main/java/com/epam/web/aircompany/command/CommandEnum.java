@@ -10,7 +10,9 @@ package com.epam.web.aircompany.command;
 public enum CommandEnum {
 	NO_COMMAND (new NoCommand()),
 	LANGUAGE_COMMAND (new LanguageCommand()),
-	LOGIN_COMMAND (new LoginCommand());
+	LOGIN_COMMAND (new LoginCommand()),
+	CHEEF_COMMAND (new CheefCommand()),
+	POSITION_COMMAND (new PositionCommand());
 	
 	private ICommand command;
 	

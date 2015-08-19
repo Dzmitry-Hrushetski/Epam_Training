@@ -34,6 +34,7 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 	private static final String POSITION_NAME = "position.position_name";
 	private static final String POSITION_ID = "position.id";
 	private static final String FIND_EMPLOYEE_BY_USER_NAME = "SELECT person.user_name, person.password, position.id, position.position_name FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id WHERE person.user_name = ? AND (position.position_name = 'Директор' OR position.position_name = 'Администратор' OR position.position_name = 'Диспетчер') AND employee.disable = 0";
+	private static final String FIND_EMPLOYEE_BY_POSITION_ID = "SELECT person.user_name, person.password, position.id, position.position_name FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id WHERE person.id = ? AND employee.disable = 0";
 	private static final String FIND_ALL_EMPLOYEE = "SELECT employee.id, position.id, position.position_name, employee.start_date, person.first_name, person.last_name, person.addres, person.phone, person.user_name, person.password FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id";
 
 	/**
@@ -143,5 +144,54 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 			close(prepStatement);
 		}
 		return employee;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.epam.web.aircompany.dao.IEmployeeDao#findEmployeeByPositionId(int)
+	 */
+	@Override
+	public List<Employee> findEmployeeByPositionId(int positionId) throws DaoException {
+		List<Employee> employeeList = new ArrayList<Employee>();
+		PreparedStatement prepStatement = null;
+		Employee employee = null;
+		Position position = null;
+		GregorianCalendar startDate=null;
+ 		
+		try {
+			prepStatement = connection.prepareStatement(FIND_EMPLOYEE_BY_POSITION_ID);
+			
+			prepStatement.setInt(1,positionId);
+			ResultSet rs = prepStatement.executeQuery();
+			while (rs.next()) {
+				
+				position = new Position();
+				position.setId(rs.getInt(POSITION_ID));
+				position.setPositionName(rs.getString(POSITION_NAME));
+				
+				employee = new Employee();
+				employee.setId(rs.getInt(ID));
+				employee.setPosition(position);
+				
+				startDate = new GregorianCalendar();
+				startDate.setTime(rs.getDate(START_DATE));
+				employee.setStartDate(startDate);
+				
+				employee.setFirstName(rs.getString(FIRST_NAME));
+				employee.setLastName(rs.getString(LAST_NAME));
+				employee.setAddres(rs.getString(ADDRES));
+				employee.setPhone(rs.getString(PHONE));
+				employee.setUserName(rs.getString(USER_NAME));
+				employee.setPassword(rs.getString(PASSWORD));
+				
+				employeeList.add(employee);
+				
+			}
+		} catch (SQLException ex) {
+			throw new DaoException("Database error.", ex);
+		} finally {
+			close(prepStatement);
+		}
+		
+		return employeeList;
 	}
 }

@@ -84,3 +84,40 @@
 18.08.2015 23:35:23,651 INFO  listener.AircompanyContextListener - Create Pool
 18.08.2015 23:45:40,429 INFO  listener.AircompanyContextListener - Create Pool
 18.08.2015 23:50:49,501 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 09:18:59,491 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 09:21:25,496 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 09:23:38,607 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 09:33:12,631 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 09:38:26,936 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 09:41:38,873 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 09:45:16,923 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 09:47:14,101 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 09:50:43,361 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 09:55:00,952 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 09:56:00,115 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 09:57:23,102 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 09:58:33,854 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 10:16:42,076 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 10:18:13,725 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 10:22:20,893 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 10:29:16,065 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 10:34:10,550 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 10:34:49,535 ERROR servlet.ControllerServlet - Illegal 'action' parametr in JSP.
+19.08.2015 10:36:20,760 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 10:37:39,530 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 10:38:10,983 ERROR servlet.ControllerServlet - Illegal 'action' parametr in JSP.
+19.08.2015 10:39:23,680 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 10:40:52,773 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 10:59:50,021 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 11:00:20,833 ERROR servlet.ControllerServlet - Illegal 'action' parametr in JSP.
+19.08.2015 12:30:57,364 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 12:31:26,845 ERROR servlet.ControllerServlet - Illegal 'action' parametr in JSP.
+19.08.2015 12:31:44,386 ERROR servlet.ControllerServlet - Illegal 'action' parametr in JSP.
+19.08.2015 12:32:21,548 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 12:32:44,539 ERROR servlet.ControllerServlet - Illegal 'action' parametr in JSP.
+19.08.2015 12:49:19,448 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 12:50:32,102 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 13:15:24,418 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 13:17:27,490 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 13:18:36,291 INFO  listener.AircompanyContextListener - Create Pool
+19.08.2015 15:05:50,796 INFO  listener.AircompanyContextListener - Create Pool
