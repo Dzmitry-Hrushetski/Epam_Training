@@ -34,6 +34,9 @@ public class CheefCommand implements ICommand {
 		//String url = URL_BOUNDLE.getString(URL_CHEEF);
 		Connection connection = connectionPool.getConnection();
 		String operation = request.getParameter(PARAM_OPERATION);
+		
+		String language = request.getParameter("locale");
+		
 		/*if(operation == null || operation.isEmpty()) {
 			
 		}*/
@@ -46,6 +49,7 @@ public class CheefCommand implements ICommand {
 			try {
 				List<Employee> employeeList = iEmployee.findEmployeeByPositionId(positionId);
 				request.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
+				request.setAttribute(PARAM_POSITION, position);
 				
 			} catch (DaoException e) {
 				

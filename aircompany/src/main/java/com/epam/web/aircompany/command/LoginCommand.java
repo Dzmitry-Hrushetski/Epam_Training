@@ -53,6 +53,9 @@ public class LoginCommand implements ICommand {
 		String userName = request.getParameter(PARAM_USER_NAME);
 		String password = request.getParameter(PARAM_PASSWORD);
 		
+		
+		String language = request.getParameter("locale");
+		
 		try {
 			if(Validator.validateUserName(userName) && Validator.validatePassword(password)) {
 				iEmployee = databaseDao.getIEmployeeDao(connection);
@@ -92,12 +95,12 @@ public class LoginCommand implements ICommand {
 				
 		switch(employee.getPosition().getId()) {
 		case CHEEF:
-			List<Employee> employeeList = iEmployee.findAll();
+			List<Employee> employeeList = iEmployee.findEmployeeByPositionId(CHEEF);
 			List<Position> positionList = iPosition.findAll();
-			/*request.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
-			request.setAttribute(PARAM_POSITION_LIST, positionList);*/
+			request.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
+			//request.setAttribute(PARAM_POSITION_LIST, positionList);
 			HttpSession session = request.getSession();
-			session.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
+			//session.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
 			session.setAttribute(PARAM_POSITION_LIST, positionList);
 			break;
 		case ADMIN:

@@ -19,19 +19,13 @@
 
 	<br>
 
-	<h4>
-		<fmt:message key="cheef.employee_list" bundle="${ rb }" />
-	</h4>
-	
-	<br>
-
 	<form action="ControllerServlet" method="post">
 		<input type="hidden" name="action" value="cheef_command">
 		<input type="hidden" name="operation" value="position">
 		
 		<label for="position"><fmt:message key="cheef.position_message"	bundle="${ rb }" />:</label>
 		 <select autofocus id="position" name="position" onchange="submit()">
-			<c:forEach items="${position_list}" var="p"> <option value="${p.id}" ${p.id eq 1 ? 'selected' : ''}>${p.positionName}</option> </c:forEach>
+			<c:forEach items="${position_list}" var="p"> <option value="${p.id}" ${p.id eq position ? 'selected' : ''}>${p.positionName}</option> </c:forEach>
 		</select>
 	</form>
 		
@@ -45,13 +39,16 @@
 		 <select autofocus id="employee" name="employee" onchange="submit()">
 			<c:forEach items="${employee_list}" var="e">
 			
+			<option value="${e.id}" ${e.id eq 1 ? 'selected' : ''}>${e.firstName}: ${e.position.positionName}</option>
+			
+			<!--  
 				<c:choose>
 					<c:when test="${e.position.id eq position}">
 						<option value="${e.id}" ${e.id eq 1 ? 'selected' : ''}>${e.firstName}: ${e.position.positionName}</option>
 					</c:when>
 				
 				</c:choose>		
-						 
+						 -->
 			</c:forEach>
 		</select>
 	</form>
