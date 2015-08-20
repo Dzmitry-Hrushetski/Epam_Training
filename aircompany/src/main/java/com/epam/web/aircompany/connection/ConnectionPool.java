@@ -27,10 +27,12 @@ public class ConnectionPool {
 	private static final String CHARACTER_ENCODING = "characterEncoding";
 	private static final String USE_UNICODE = "useUnicode";
 	private static final String DB_URL = "url";
+	private static final String DB_DRIVER = "driver";
 	private static final ReentrantLock LOCK = new ReentrantLock(true);
 	private ResourceBundle rb;
 	private Properties prop;
 	private String dbUrl;
+	private String driver;
 	private int poolSize;
 	private int currentPoolSize;
 	private LinkedBlockingQueue<Connection> dbConnections;
@@ -46,7 +48,8 @@ public class ConnectionPool {
 			dbConnections = new LinkedBlockingQueue<Connection>(poolSize);
 			
 			dbUrl = rb.getString(DB_URL);
-					
+			driver = rb.getString(DB_DRIVER);
+								
 			prop = new Properties();
 			prop.put(USER, rb.getString(USER));
 			prop.put(PASSWORD, rb.getString(PASSWORD));
@@ -143,9 +146,10 @@ public class ConnectionPool {
 		Connection connection = null;
 		
 		try {
+			Class.forName(driver);
 			connection = DriverManager.getConnection(dbUrl, prop);
 			currentPoolSize++;
-		} catch (SQLException e) {
+		} catch (SQLException | ClassNotFoundException e) {
 			LOG.error("Error. Unable to create connection");
 			// собственное исключение ???
 		}

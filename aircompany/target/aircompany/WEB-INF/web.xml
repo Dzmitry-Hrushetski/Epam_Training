@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>aircompany</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>app servlet</description>
+    <display-name>controller</display-name>
+    <servlet-name>ControllerServlet</servlet-name>
+    <servlet-class>com.epam.web.aircompany.servlet.ControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServlet</servlet-name>
+    <url-pattern>/ControllerServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>encoding</display-name>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>com.epam.web.aircompany.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/EncodingFilter</url-pattern>
+  </filter-mapping>
+  <listener>
+    <listener-class>com.epam.web.aircompany.listener.AircompanyContextListener</listener-class>
+  </listener>
+</web-app>

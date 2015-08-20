@@ -25,6 +25,7 @@ public class CheefCommand implements ICommand {
 	private static final String PARAM_OPERATION = "operation";
 	private static final String PARAM_EMPLOYEE = "employee";
 	private static final String PARAM_POSITION = "position";
+	private static final String PARAM_EMPLOYEE_ENTITY = "employee_entity";
 
 	/* (non-Javadoc)
 	 * @see com.epam.web.aircompany.command.ICommand#execute(javax.servlet.http.HttpServletRequest, com.epam.web.aircompany.connection.ConnectionPool, com.epam.web.aircompany.dao.IDao)
@@ -34,6 +35,8 @@ public class CheefCommand implements ICommand {
 		//String url = URL_BOUNDLE.getString(URL_CHEEF);
 		Connection connection = connectionPool.getConnection();
 		String operation = request.getParameter(PARAM_OPERATION);
+		IEmployeeDao iEmployee = databaseDao.getIEmployeeDao(connection);
+		String param = null;
 		
 		String language = request.getParameter("locale");
 		
@@ -42,14 +45,13 @@ public class CheefCommand implements ICommand {
 		}*/
 		switch(operation) {
 		case PARAM_POSITION:
-			String position = request.getParameter(PARAM_POSITION);
-			int positionId = Integer.parseInt(position);
-			IEmployeeDao iEmployee = databaseDao.getIEmployeeDao(connection);
+			param = request.getParameter(PARAM_POSITION);
+			int positionId = Integer.parseInt(param);
 			
 			try {
 				List<Employee> employeeList = iEmployee.findEmployeeByPositionId(positionId);
 				request.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
-				request.setAttribute(PARAM_POSITION, position);
+				request.setAttribute(PARAM_POSITION, param);
 				
 			} catch (DaoException e) {
 				
@@ -61,6 +63,24 @@ public class CheefCommand implements ICommand {
 			break;
 			
 		case PARAM_EMPLOYEE:
+			param = request.getParameter(PARAM_EMPLOYEE);
+			int employeeId = Integer.parseInt(param);
+			
+			try {
+				
+				Employee employee = iEmployee.findEntityByID(employeeId);
+				request.setAttribute(PARAM_EMPLOYEE_ENTITY, employee);
+				//param = request.getParameter(PARAM_EMPLOYEE);
+				request.setAttribute(PARAM_EMPLOYEE, param);
+				param = request.getParameter(PARAM_POSITION);
+				request.setAttribute(PARAM_POSITION, param);
+				
+			} catch (DaoException e) {
+				
+				
+			} finally {
+				connectionPool.releaseConnection(connection);
+			}
 			break;
 			
 		default: 

@@ -97,10 +97,10 @@ public class LoginCommand implements ICommand {
 		case CHEEF:
 			List<Employee> employeeList = iEmployee.findEmployeeByPositionId(CHEEF);
 			List<Position> positionList = iPosition.findAll();
-			request.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
+			//request.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
 			//request.setAttribute(PARAM_POSITION_LIST, positionList);
 			HttpSession session = request.getSession();
-			//session.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
+			session.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
 			session.setAttribute(PARAM_POSITION_LIST, positionList);
 			break;
 		case ADMIN:
