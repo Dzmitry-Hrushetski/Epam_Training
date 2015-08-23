@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import com.epam.web.aircompany.bean.Employee;
 import com.epam.web.aircompany.connection.ConnectionPool;
@@ -21,11 +22,13 @@ import com.epam.web.aircompany.dao.IEmployeeDao;
 public class CheefCommand implements ICommand {
 	private static final String URL_CHEEF = "cheef";
 	private static final String PARAM_EMPLOYEE_LIST = "employee_list";
-	private static final String PARAM_POSITION_LIST = "position_list";
 	private static final String PARAM_OPERATION = "operation";
 	private static final String PARAM_EMPLOYEE = "employee";
 	private static final String PARAM_POSITION = "position";
 	private static final String PARAM_EMPLOYEE_ENTITY = "employee_entity";
+	private static final int FIRST_EMPLOYEE = 0;
+	
+	Employee employee;
 
 	/* (non-Javadoc)
 	 * @see com.epam.web.aircompany.command.ICommand#execute(javax.servlet.http.HttpServletRequest, com.epam.web.aircompany.connection.ConnectionPool, com.epam.web.aircompany.dao.IDao)
@@ -38,8 +41,6 @@ public class CheefCommand implements ICommand {
 		IEmployeeDao iEmployee = databaseDao.getIEmployeeDao(connection);
 		String param = null;
 		
-		String language = request.getParameter("locale");
-		
 		/*if(operation == null || operation.isEmpty()) {
 			
 		}*/
@@ -50,7 +51,14 @@ public class CheefCommand implements ICommand {
 			
 			try {
 				List<Employee> employeeList = iEmployee.findEmployeeByPositionId(positionId);
-				request.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
+				
+				if(!employeeList.isEmpty()) {
+					employee = iEmployee.findEntityByID(employeeList.get(FIRST_EMPLOYEE).getId());
+					request.setAttribute(PARAM_EMPLOYEE_ENTITY, employee);
+				}
+				
+				HttpSession session = request.getSession();
+				session.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
 				request.setAttribute(PARAM_POSITION, param);
 				
 			} catch (DaoException e) {
@@ -68,9 +76,12 @@ public class CheefCommand implements ICommand {
 			
 			try {
 				
-				Employee employee = iEmployee.findEntityByID(employeeId);
-				request.setAttribute(PARAM_EMPLOYEE_ENTITY, employee);
-				//param = request.getParameter(PARAM_EMPLOYEE);
+				employee = iEmployee.findEntityByID(employeeId);
+				
+				if(employee != null) {
+					request.setAttribute(PARAM_EMPLOYEE_ENTITY, employee);
+				}
+			
 				request.setAttribute(PARAM_EMPLOYEE, param);
 				param = request.getParameter(PARAM_POSITION);
 				request.setAttribute(PARAM_POSITION, param);
@@ -83,12 +94,14 @@ public class CheefCommand implements ICommand {
 			}
 			break;
 			
+		case PARAM_EMPLOYEE_ENTITY:
+			param = request.getParameter("save");
+			param = request.getParameter("delete");
+			break;
+			
 		default: 
 				break;
 		}
-		
-		
-		
 		return URL_BOUNDLE.getString(URL_CHEEF);
 	}
 

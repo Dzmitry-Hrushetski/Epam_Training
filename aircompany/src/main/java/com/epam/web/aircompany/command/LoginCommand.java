@@ -32,6 +32,7 @@ public class LoginCommand implements ICommand {
 	private static final String PARAM_INCORRECT = "incorrect";
 	private static final String PARAM_EMPLOYEE_LIST = "employee_list";
 	private static final String PARAM_POSITION_LIST = "position_list";
+	private static final String PARAM_EMPLOYEE_ENTITY = "employee_entity";
 	private static final String URL_LOGIN = "login";
 	private static final String URL_CHEEF = "cheef";
 	private static final String URL_ADMIN = "admin";
@@ -39,9 +40,11 @@ public class LoginCommand implements ICommand {
 	private static final int CHEEF = 1;
 	private static final int ADMIN = 2;
 	private static final int MANAGER = 3;
+	private static final int FIRST_EMPLOYEE = 0;
 	
 	IEmployeeDao iEmployee;
 	IPositionDao iPosition;
+	Employee employee;
 	
 	/* (non-Javadoc)
 	 * @see com.epam.web.aircompany.command.ICommand#execute(javax.servlet.http.HttpServletRequest)
@@ -53,20 +56,16 @@ public class LoginCommand implements ICommand {
 		String userName = request.getParameter(PARAM_USER_NAME);
 		String password = request.getParameter(PARAM_PASSWORD);
 		
-		
-		String language = request.getParameter("locale");
-		
 		try {
 			if(Validator.validateUserName(userName) && Validator.validatePassword(password)) {
 				iEmployee = databaseDao.getIEmployeeDao(connection);
-				Employee employee = iEmployee.findEmployeeByUserName(userName);
-				if(employee!= null && password.equals(employee.getPassword())) {
-										
+				employee = iEmployee.findEmployeeByUserName(userName);
+				if(employee!= null && password.equals(employee.getPassword())) {									
 					iPosition = databaseDao.getIPositionDao(connection);
+					
 					preparationJspData(request, databaseDao, employee);
 					
-					url = findURL(employee);
-					
+					url = findURL(employee);			
 				} else {
 					request.setAttribute(PARAM_USER_NAME, userName);
 					request.setAttribute(PARAM_INCORRECT, true);
@@ -97,8 +96,12 @@ public class LoginCommand implements ICommand {
 		case CHEEF:
 			List<Employee> employeeList = iEmployee.findEmployeeByPositionId(CHEEF);
 			List<Position> positionList = iPosition.findAll();
-			//request.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
-			//request.setAttribute(PARAM_POSITION_LIST, positionList);
+			
+			if(!employeeList.isEmpty()) {
+				employee = iEmployee.findEntityByID(employeeList.get(FIRST_EMPLOYEE).getId());
+				request.setAttribute(PARAM_EMPLOYEE_ENTITY, employee);
+			}
+			
 			HttpSession session = request.getSession();
 			session.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
 			session.setAttribute(PARAM_POSITION_LIST, positionList);

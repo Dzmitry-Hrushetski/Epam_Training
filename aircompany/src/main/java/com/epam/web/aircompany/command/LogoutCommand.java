@@ -13,9 +13,7 @@ import com.epam.web.aircompany.dao.IDao;
  * @author Dzmitry Hrushetski
  *
  */
-public class LanguageCommand implements ICommand {
-	private static final String PARAM_LANGUAGE = "sel_lang";
-	private static final String LOCALE = "locale";
+public class LogoutCommand implements ICommand {
 	private static final String URL_LOGIN = "login";
 
 	/* (non-Javadoc)
@@ -23,10 +21,12 @@ public class LanguageCommand implements ICommand {
 	 */
 	@Override
 	public String execute(HttpServletRequest request, ConnectionPool connectionPool, IDao databaseDao) {
-		String language = request.getParameter(PARAM_LANGUAGE);
-		HttpSession session = request.getSession();
-		session.setAttribute(LOCALE, language);
-		return URL_BOUNDLE.getString(URL_LOGIN);
+		String url = URL_BOUNDLE.getString(URL_LOGIN);
+		
+		HttpSession session = request.getSession(false);
+		session.invalidate();
+		
+		return url;
 	}
 
 }

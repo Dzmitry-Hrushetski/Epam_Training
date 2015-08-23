@@ -2,15 +2,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="request" />
-<c:set var="language" value="${language eq 'ru_RU' ? 'ru' : language eq 'en_US' ? 'en' : language}" scope="request"/>
-
-<fmt:setLocale value="${language}" />
+<c:if test="${empty locale}">
+<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
+<c:set var="locale" value="${language eq 'ru_RU' ? 'ru' : language eq 'en_US' ? 'en' : language}" scope="request"/>
+</c:if>
+<fmt:setLocale value="${locale}" />
 <fmt:setBundle basename="text" var="rb" />
 
 <!DOCTYPE html>
 
-<html lang="${language}">
+<html lang="${locale}">
     <head>
        	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title><fmt:message key="login.title" bundle="${ rb }" /></title>
@@ -21,11 +22,11 @@
 	</h3>
     <form action="ControllerServlet" method="post">
         <input type="hidden" name="action" value="language_command">
-        <input type="hidden" name="locale" value="${language}">
-        	<label for="language"><fmt:message key="login.lang_message" bundle="${ rb }" />:</label>
-            	<select autofocus id="language" name="language" onchange="submit()">
-                	<option value="en" ${language eq 'en' ? 'selected' : ''}><fmt:message key="login.lang_en" bundle="${ rb }" /></option>
-                	<option value="ru" ${language eq 'ru' ? 'selected' : ''}><fmt:message key="login.lang_ru" bundle="${ rb }" /></option>
+        <!-- <input type="hidden" name="locale1" value="${locale}"> -->
+        	<label for="sel_lang"><fmt:message key="login.lang_message" bundle="${ rb }" />:</label>
+            	<select autofocus id="sel_lang" name="sel_lang" onchange="submit()">
+                	<option value="en" ${locale eq 'en' ? 'selected' : ''}><fmt:message key="login.lang_en" bundle="${ rb }" /></option>
+                	<option value="ru" ${locale eq 'ru' ? 'selected' : ''}><fmt:message key="login.lang_ru" bundle="${ rb }" /></option>
             	</select>
     </form>
     
