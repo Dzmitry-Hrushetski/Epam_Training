@@ -67,6 +67,7 @@
 			<form action="ControllerServlet" method="post">
 				<input type="hidden" name="action" value="cheef_command"> 
 				<input type="hidden" name="operation" value="employee_entity">
+				<input type="hidden" name="employee_entity" value="${employee_entity.id}">
 
 				<fmt:message key="cheef.first_name" bundle="${ rb }" />
 				<input type="text" name="first_name" maxlength="50" value="${employee_entity.firstName}" required="required"/>

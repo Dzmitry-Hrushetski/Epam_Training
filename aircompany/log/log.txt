@@ -206,3 +206,10 @@
 23.08.2015 18:42:04,841 INFO  listener.AircompanyContextListener - Create Pool
 23.08.2015 18:43:32,493 INFO  listener.AircompanyContextListener - Create Pool
 23.08.2015 23:38:25,175 INFO  listener.AircompanyContextListener - Create Pool
+24.08.2015 09:25:21,162 INFO  listener.AircompanyContextListener - Create Pool
+24.08.2015 09:27:21,619 INFO  listener.AircompanyContextListener - Create Pool
+24.08.2015 09:29:37,007 INFO  listener.AircompanyContextListener - Create Pool
+24.08.2015 09:31:28,090 INFO  listener.AircompanyContextListener - Create Pool
+24.08.2015 09:51:42,593 INFO  listener.AircompanyContextListener - Create Pool
+24.08.2015 09:52:49,260 INFO  listener.AircompanyContextListener - Create Pool
+24.08.2015 10:20:41,971 INFO  listener.AircompanyContextListener - Create Pool

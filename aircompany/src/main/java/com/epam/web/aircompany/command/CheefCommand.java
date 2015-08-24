@@ -96,7 +96,9 @@ public class CheefCommand implements ICommand {
 			
 		case PARAM_EMPLOYEE_ENTITY:
 			param = request.getParameter("save");
-			param = request.getParameter("delete");
+			param = request.getParameter("delete");	
+			param = request.getParameter(PARAM_EMPLOYEE_ENTITY);
+			
 			break;
 			
 		default: 
