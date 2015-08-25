@@ -1,31 +1,36 @@
 /**
  * 
  */
-package com.epam.aircompany.pool;
+package com.epam.aircompany.logic;
 
 /**
  * @author Dzmitry Hrushetski
  *
  */
-public class ConnectionPoolExeption extends Exception {
+public class LogicException extends Exception {
 
 	/**
 	 * 
 	 */
-	public ConnectionPoolExeption() {
+	private static final long serialVersionUID = -5101468583994727585L;
+
+	/**
+	 * 
+	 */
+	public LogicException() {
 	}
 
 	/**
 	 * @param message
 	 */
-	public ConnectionPoolExeption(String message) {
+	public LogicException(String message) {
 		super(message);
 	}
 
 	/**
 	 * @param cause
 	 */
-	public ConnectionPoolExeption(Throwable cause) {
+	public LogicException(Throwable cause) {
 		super(cause);
 	}
 
@@ -33,7 +38,7 @@ public class ConnectionPoolExeption extends Exception {
 	 * @param message
 	 * @param cause
 	 */
-	public ConnectionPoolExeption(String message, Throwable cause) {
+	public LogicException(String message, Throwable cause) {
 		super(message, cause);
 	}
 
@@ -43,8 +48,7 @@ public class ConnectionPoolExeption extends Exception {
 	 * @param enableSuppression
 	 * @param writableStackTrace
 	 */
-	public ConnectionPoolExeption(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+	public LogicException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 	}
-
 }

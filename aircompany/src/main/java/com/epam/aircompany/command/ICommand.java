@@ -15,6 +15,7 @@ import com.epam.aircompany.pool.ConnectionPool;
  *
  */
 public interface ICommand {
+	String URL_ERROR = "error500";
 	ResourceBundle URL_BOUNDLE = ResourceBundle.getBundle("jsp_URL");
 	
 	/**
@@ -25,6 +26,6 @@ public interface ICommand {
 	 *            javax.servlet.http.HttpServletRequest
 	 * @return The URL of the JSP to which the request is forwarded.
 	 */
-	String execute(HttpServletRequest request, ConnectionPool connectionPool, IDao databaseDao);
+	String execute(HttpServletRequest request);
 
 }

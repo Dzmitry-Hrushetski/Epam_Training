@@ -24,7 +24,7 @@ public class PositionCommand implements ICommand {
 	 * @see com.epam.aircompany.command.ICommand#execute(javax.servlet.http.HttpServletRequest, com.epam.aircompany.pool.ConnectionPool, com.epam.aircompany.dao.IDao)
 	 */
 	@Override
-	public String execute(HttpServletRequest request, ConnectionPool connectionPool, IDao databaseDao) {
+	public String execute(HttpServletRequest request) {
 		
 		String url = URL_BOUNDLE.getString(URL_CHEEF);
 		/*IEmployeeDao iEmployee = (IEmployeeDao) request.getAttribute(PARAM_EMPLOYEE_LIST);

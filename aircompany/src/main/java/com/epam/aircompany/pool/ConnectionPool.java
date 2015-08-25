@@ -77,9 +77,9 @@ public class ConnectionPool {
 	 * Takes a database connection from pool
 	 * 
 	 * @return java.sql.Connection
-	 * @throws ConnectionPoolExeption 
+	 * @throws ConnectionPoolException 
 	 */
-	public Connection getConnection() throws ConnectionPoolExeption {
+	public Connection getConnection() throws ConnectionPoolException {
 		Connection connection = null;
 
 		LOCK.lock();
@@ -142,7 +142,7 @@ public class ConnectionPool {
 		return areClosed;
 	}
 
-	private Connection createConnection() throws ConnectionPoolExeption {
+	private Connection createConnection() throws ConnectionPoolException {
 		Connection connection = null;
 		
 		try {
@@ -150,8 +150,8 @@ public class ConnectionPool {
 			connection = DriverManager.getConnection(dbUrl, prop);
 			currentPoolSize++;
 		} catch (SQLException | ClassNotFoundException e) {
-			LOG.error("Error. Unable to create connection");
-			throw new ConnectionPoolExeption("Error. Unable to create connection",e);
+			//LOG.error("Error. Unable to create connection");
+			throw new ConnectionPoolException("Error. Unable to create connection",e);
 		}
 		return connection;
 	}

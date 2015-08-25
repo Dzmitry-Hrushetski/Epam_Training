@@ -27,7 +27,7 @@
 	<form action="ControllerServlet" method="post">
 		<input type="hidden" name="action" value="cheef_command"> 
 		<input type="hidden" name="operation" value="position"> 
-		<label for="position"><fmt:message key="cheef.position_message_list" bundle="${ rb }" /></label> <select autofocus id="position" name="position" onchange="submit()">
+		<label for="position"><fmt:message key="cheef.position_message_list" bundle="${ rb }" /></label> <select id="position" name="position" onchange="submit()">
 			<c:forEach items="${position_list}" var="p">
 				<option value="${p.id}" ${p.id eq position ? 'selected' : ''}>${p.positionName}</option>
 			</c:forEach>

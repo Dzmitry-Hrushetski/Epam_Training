@@ -18,7 +18,7 @@ public class NoCommand implements ICommand {
 	 * @see com.epam.aircompany.command.ICommand#execute(javax.servlet.http.HttpServletRequest)
 	 */
 	@Override
-	public String execute(HttpServletRequest request, ConnectionPool connectionPool, IDao databaseDao) {
+	public String execute(HttpServletRequest request) {
 		// TODO Auto-generated method stub
 		return "/index.jsp";
 	}

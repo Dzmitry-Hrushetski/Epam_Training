@@ -72,12 +72,12 @@ public class ControllerServlet extends HttpServlet {
 	 */
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ICommand command = null;
-		ConnectionPool connectionPool = null;
+		/*ConnectionPool connectionPool = null;
 		IDao dataBaseDao = null;
 		
 		ServletContext context = request.getSession().getServletContext();
 		connectionPool = (ConnectionPool)context.getAttribute(CONNECTION_POOL);
-		dataBaseDao = (IDao)context.getAttribute(I_DAO);
+		dataBaseDao = (IDao)context.getAttribute(I_DAO);*/
 				
 		String action = request.getParameter("action");
 		
@@ -92,7 +92,7 @@ public class ControllerServlet extends HttpServlet {
  			}
  		}
 		
-		String url = command.execute(request, connectionPool, dataBaseDao);
+		String url = command.execute(request);
 		
 		/* putting the reconstructed ControllerServlet URL into request */
 		//request.setAttribute("base", request.getRequestURL().toString());

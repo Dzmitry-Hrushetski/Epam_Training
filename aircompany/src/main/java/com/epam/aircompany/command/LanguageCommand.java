@@ -6,9 +6,6 @@ package com.epam.aircompany.command;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import com.epam.aircompany.dao.IDao;
-import com.epam.aircompany.pool.ConnectionPool;
-
 /**
  * @author Dzmitry Hrushetski
  *
@@ -22,7 +19,7 @@ public class LanguageCommand implements ICommand {
 	 * @see com.epam.aircompany.command.ICommand#execute(javax.servlet.http.HttpServletRequest, com.epam.aircompany.pool.ConnectionPool, com.epam.aircompany.dao.IDao)
 	 */
 	@Override
-	public String execute(HttpServletRequest request, ConnectionPool connectionPool, IDao databaseDao) {
+	public String execute(HttpServletRequest request) {
 		String language = request.getParameter(PARAM_LANGUAGE);
 		HttpSession session = request.getSession();
 		session.setAttribute(LOCALE, language);

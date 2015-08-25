@@ -4,6 +4,7 @@
 package com.epam.aircompany.command;
 
 import java.sql.Connection;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +18,8 @@ import com.epam.aircompany.dao.DaoException;
 import com.epam.aircompany.dao.IDao;
 import com.epam.aircompany.dao.IEmployeeDao;
 import com.epam.aircompany.dao.IPositionDao;
+import com.epam.aircompany.logic.EmployeeLogic;
+import com.epam.aircompany.logic.LogicException;
 import com.epam.aircompany.logic.Validator;
 import com.epam.aircompany.pool.ConnectionPool;
 
@@ -33,6 +36,7 @@ public class LoginCommand implements ICommand {
 	private static final String PARAM_EMPLOYEE_LIST = "employee_list";
 	private static final String PARAM_POSITION_LIST = "position_list";
 	private static final String PARAM_EMPLOYEE_ENTITY = "employee_entity";
+	private static final String PARAM_EXCEPTION = "exception";
 	private static final String URL_LOGIN = "login";
 	private static final String URL_CHEEF = "cheef";
 	private static final String URL_ADMIN = "admin";
@@ -42,30 +46,36 @@ public class LoginCommand implements ICommand {
 	private static final int MANAGER = 3;
 	private static final int FIRST_EMPLOYEE = 0;
 	
-	private IEmployeeDao iEmployee;
-	private IPositionDao iPosition;
 	private Employee employee;
 	
 	/* (non-Javadoc)
 	 * @see com.epam.aircompany.command.ICommand#execute(javax.servlet.http.HttpServletRequest)
 	 */
 	@Override
-	public String execute(HttpServletRequest request, ConnectionPool connectionPool, IDao databaseDao) {
+	public String execute(HttpServletRequest request) {
 		String url = URL_BOUNDLE.getString(URL_LOGIN);
-		Connection connection = connectionPool.getConnection();		
 		String userName = request.getParameter(PARAM_USER_NAME);
 		String password = request.getParameter(PARAM_PASSWORD);
 		
+		
+		
 		try {
 			if(Validator.validateUserName(userName) && Validator.validatePassword(password)) {
-				iEmployee = databaseDao.createIEmployeeDao(connection);
-				employee = iEmployee.findEmployeeByUserName(userName);
-				if(employee!= null && password.equals(employee.getPassword())) {									
-					iPosition = databaseDao.createIPositionDao(connection);
+				
+				EmployeeLogic employeeLogic = new EmployeeLogic();
+				employee = employeeLogic.findEmployeeByUserName(userName);
+				
+				if(employee!= null && password.equals(employee.getPassword())) {
 					
-					preparationJspData(request, databaseDao, employee);
+					HashMap<String, Object> rezultMap = employeeLogic.generateEmployeeJspData(employee);
 					
-					url = findURL(employee);			
+					request.setAttribute(PARAM_EMPLOYEE_ENTITY, rezultMap.get(PARAM_EMPLOYEE_ENTITY));
+					HttpSession session = request.getSession();
+					session.setAttribute(PARAM_EMPLOYEE_LIST, rezultMap.get(PARAM_EMPLOYEE_LIST));
+					session.setAttribute(PARAM_POSITION_LIST, rezultMap.get(PARAM_POSITION_LIST));
+					
+					url = findURL(employee);
+					
 				} else {
 					request.setAttribute(PARAM_USER_NAME, userName);
 					request.setAttribute(PARAM_INCORRECT, true);
@@ -76,44 +86,12 @@ public class LoginCommand implements ICommand {
 				request.setAttribute(PARAM_NOT_VALID, true);
 				LOG.info("Login or password not valid.");
 			}
-		} catch (DaoException e) {
-			
-		} finally {
-			connectionPool.releaseConnection(connection);
-		}
+		} catch (LogicException e) {
+			LOG.error(e);
+			request.setAttribute(PARAM_EXCEPTION, e);
+			url = URL_BOUNDLE.getString(URL_ERROR);
+		} 
 		return url;
-	}
-
-	/**
-	 * @param request
-	 * @param iDao 
-	 * @param employee
-	 * @throws DaoException 
-	 */
-	private void preparationJspData(HttpServletRequest request, IDao iDao, Employee employee) throws DaoException {
-				
-		switch(employee.getPosition().getId()) {
-		case CHEEF:
-			List<Employee> employeeList = iEmployee.findEmployeeByPositionId(CHEEF);
-			List<Position> positionList = iPosition.findAll();
-			
-			if(!employeeList.isEmpty()) {
-				employee = iEmployee.findEntityByID(employeeList.get(FIRST_EMPLOYEE).getId());
-				request.setAttribute(PARAM_EMPLOYEE_ENTITY, employee);
-			}
-			
-			HttpSession session = request.getSession();
-			session.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
-			session.setAttribute(PARAM_POSITION_LIST, positionList);
-			break;
-		case ADMIN:
-			
-			break;
-		case MANAGER:
-			
-			break;
-		}
-		
 	}
 
 	private String findURL(Employee employee) {
