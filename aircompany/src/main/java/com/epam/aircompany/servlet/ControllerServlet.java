@@ -24,6 +24,7 @@ import static com.epam.aircompany.constant.Constants.*;
 public class ControllerServlet extends HttpServlet {
 	private static final Logger LOG = Logger.getLogger(ControllerServlet.class);
 	private static final long serialVersionUID = 1L;
+	private static final String BASE = "base";
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -95,7 +96,7 @@ public class ControllerServlet extends HttpServlet {
 		String url = command.execute(request);
 		
 		/* putting the reconstructed ControllerServlet URL into request */
-		//request.setAttribute("base", request.getRequestURL().toString());
+		request.setAttribute(BASE, request.getRequestURL().toString());
 		
 		/* forwarding the request to a proper JSP */
 		request.getRequestDispatcher(url).forward(request, response);

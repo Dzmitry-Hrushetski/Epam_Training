@@ -31,7 +31,7 @@ public class Employee extends Person {
 		return startDate;
 	}
 	public String getStartDateString() {
-		return String.format(DATE_STRING, startDate.get(Calendar.YEAR), startDate.get(Calendar.MONTH), startDate.get(Calendar.DAY_OF_MONTH));
+		return String.format(DATE_STRING, startDate.get(Calendar.YEAR), startDate.get(Calendar.MONTH)+1, startDate.get(Calendar.DAY_OF_MONTH));
 	}
 	public void setStartDate(GregorianCalendar startDate) {
 		this.startDate = startDate;

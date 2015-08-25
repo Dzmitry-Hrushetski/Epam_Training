@@ -32,6 +32,8 @@ public class CheefCommand implements ICommand {
 	private static final String PARAM_POSITION = "position";
 	private static final String PARAM_EMPLOYEE_ENTITY = "employee_entity";
 	private static final String PARAM_EXCEPTION = "exception";
+	private static final String PARAM_DELETE = "delete";
+	private static final String PARAM_SAVE = "save";
 	private static final int FIRST_EMPLOYEE = 0;
 	
 	private Employee employee;
@@ -100,9 +102,18 @@ public class CheefCommand implements ICommand {
 			break;
 			
 		case PARAM_EMPLOYEE_ENTITY:
-			param = request.getParameter("save");
-			param = request.getParameter("delete");	
 			param = request.getParameter(PARAM_EMPLOYEE_ENTITY);
+			int employeeId = Integer.parseInt(param);
+			
+			param = request.getParameter(PARAM_DELETE);	
+			if(param != null) {
+				EmployeeLogic employeeLogic = new EmployeeLogic();
+				employee = employeeLogic.deleteEntityByID(employeeId);
+			}
+			
+			param = request.getParameter(PARAM_SAVE);
+			
+			
 			
 			break;
 		}

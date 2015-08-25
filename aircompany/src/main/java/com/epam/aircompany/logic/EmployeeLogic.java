@@ -137,4 +137,9 @@ public class EmployeeLogic extends BaseLogic {
 		}	
 		return employee;
 	}
+
+	public bool deleteEntityByID(int employeeId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
