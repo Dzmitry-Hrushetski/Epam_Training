@@ -56,7 +56,6 @@
 					<c:forEach items="${employee_list}" var="e">
 						<option value="${e.id}" ${e.id eq employee ? 'selected' : ''}>${e.firstName} ${e.lastName}</option>
 					</c:forEach>
-						<option value="0" >Add new Employee</option>
 				</select>
 			</form>
 		</c:when>
@@ -76,32 +75,36 @@
 				<input type="hidden" name="position" value="${position}">
 				<input type="hidden" name="employee" value="${employee}"> 
 
-				<fmt:message key="cheef.first_name" bundle="${ rb }" />
-				<input type="text" name="first_name" maxlength="50" value="${employee_entity.firstName}" required="required"/>
-				<br>
-				<br>
-				<fmt:message key="cheef.last_name" bundle="${ rb }" />
-				<input type="text" name="last_name" maxlength="50" value="${employee_entity.lastName}" required="required"/>
-				<br>
-				<br>
-				<fmt:message key="cheef.phone" bundle="${ rb }" />
-				<input type="text" name="phone" maxlength="13" value="${employee_entity.phone}" required="required" pattern="375[0-9]{9}"/>
-				<br>
-				<br>
-				<fmt:message key="cheef.addres" bundle="${ rb }" />
-				<input type="text" name="addres" size="60" maxlength="80" value="${employee_entity.addres}" required="required"/>
-				<br>
-				<br>
-				<fmt:message key="cheef.user_name" bundle="${ rb }" />
-				<input type="email" name="user_name" size="30" maxlength="50" value="${employee_entity.userName}" required="required"/>
-				<br>
-				<br>
-				<fmt:message key="cheef.password" bundle="${ rb }" />
-				<input type="text" name="password" maxlength="25" value="${employee_entity.password}" required="required" pattern="[A-Za-z0-9\\._\\-]{5,20}"/>
-				<br>
-				<br>
-				<fmt:message key="cheef.date" bundle="${ rb }" />
-				<input type="date" name="calendar" value="${employee_entity.startDateString}" required="required"/>
+		<table>
+			<tr>
+				<td><fmt:message key="cheef.first_name" bundle="${ rb }" /></td>
+				<td><input type="text" name="first_name" maxlength="50" value="${employee_entity.firstName}" required="required"/></td>
+			</tr>
+			<tr>
+				<td><fmt:message key="cheef.last_name" bundle="${ rb }" /></td>
+				<td><input type="text" name="last_name" maxlength="50" value="${employee_entity.lastName}" required="required"/></td>
+			</tr>
+			<tr>
+				<td><fmt:message key="cheef.phone" bundle="${ rb }" /></td>
+				<td><input type="text" name="phone" maxlength="13" value="${employee_entity.phone}" required="required" pattern="\+375[0-9]{9}"/></td>
+			</tr>
+			<tr>
+				<td><fmt:message key="cheef.addres" bundle="${ rb }" /></td>
+				<td><input type="text" name="addres" size="50" maxlength="80" value="${employee_entity.addres}" required="required"/></td>
+			</tr>
+			<tr>
+				<td><fmt:message key="cheef.user_name" bundle="${ rb }" /></td>
+				<td><input type="email" name="user_name" size="30" maxlength="50" value="${employee_entity.userName}" required="required"/></td>
+			</tr>
+			<tr>
+				<td><fmt:message key="cheef.password" bundle="${ rb }" /></td>
+				<td><input type="text" name="password" maxlength="25" value="${employee_entity.password}" required="required" pattern="[A-Za-z0-9\\._\\-]{5,20}"/></td>
+			</tr>
+			<tr>
+				<td><fmt:message key="cheef.date" bundle="${ rb }" /></td>
+				<td><input type="date" name="calendar" value="${employee_entity.startDateString}" required="required"/></td>
+			</tr>
+		</table>
 				<br>
 				<br>
 				<c:if test="${not empty delete_state}">
@@ -109,6 +112,9 @@
 				</c:if>
 				<c:if test="${not empty save_state}">
 					<fmt:message key="cheef.save_state" bundle="${ rb }" />
+				</c:if>
+				<c:if test="${not empty bad_data}">
+					<fmt:message key="cheef.bad_data" bundle="${ rb }" />
 				</c:if>
 				<br>
 				<br>

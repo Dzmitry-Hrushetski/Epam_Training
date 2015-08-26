@@ -13,12 +13,9 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import com.epam.aircompany.bean.Employee;
-import com.epam.aircompany.dao.DaoException;
-import com.epam.aircompany.dao.IDao;
-import com.epam.aircompany.dao.IEmployeeDao;
 import com.epam.aircompany.logic.EmployeeLogic;
 import com.epam.aircompany.logic.LogicException;
-import com.epam.aircompany.pool.ConnectionPool;
+import com.epam.aircompany.logic.Validator;
 
 /**
  * @author Dzmitry Hrushetski
@@ -39,6 +36,7 @@ public class CheefCommand implements ICommand {
 	private static final String PARAM_CREATE_NEW = "create_new";
 	private static final String PARAM_DELETE_STATE = "delete_state";
 	private static final String PARAM_SAVE_STATE = "save_state";
+	private static final String PARAM_BAD_DATA = "bad_data";
 	private static final String PARAM_SAVE = "save";
 	private static final String PARAM_FIRST_NAME = "first_name";
 	private static final String PARAM_LAST_NAME = "last_name";
@@ -125,29 +123,31 @@ public class CheefCommand implements ICommand {
 					EmployeeLogic employeeLogic = new EmployeeLogic();
 					isOk = employeeLogic.deleteEntityByID(employeeId);
 					request.setAttribute(PARAM_DELETE_STATE, isOk);
-					
-					employeeLogic = new EmployeeLogic();	
+
+					employeeLogic = new EmployeeLogic();
 					List<Employee> employeeList = employeeLogic.findEmployeeByPositionId(positionId);
-					
-					if(!employeeList.isEmpty()) {
+
+					if (!employeeList.isEmpty()) {
 						employee = employeeLogic.findEntityByID(employeeList.get(FIRST_EMPLOYEE).getId());
 						request.setAttribute(PARAM_EMPLOYEE_ENTITY, employee);
 					}
-					
+
 					HttpSession session = request.getSession();
 					session.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
-										
+
 					param = request.getParameter(PARAM_POSITION);
 					request.setAttribute(PARAM_POSITION, param);
 				}
 
 				param = request.getParameter(PARAM_SAVE);
-				
 				if (param != null) {
-					try {
-						
-						HashMap<String, String> employeeData = new HashMap<String, String>();
-						
+					HashMap<String, String> employeeData = new HashMap<String, String>();
+					String userName = request.getParameter(PARAM_USER_NAME);
+					String password = request.getParameter(PARAM_PASSWORD);
+					String phone = request.getParameter(PARAM_PHONE);
+					
+					isOk = Validator.validateEmployeeData(userName, password, phone);
+					if(isOk) {
 						param = request.getParameter(PARAM_FIRST_NAME);
 						employeeData.put(PARAM_FIRST_NAME, param);
 						param = request.getParameter(PARAM_LAST_NAME);
@@ -162,28 +162,40 @@ public class CheefCommand implements ICommand {
 						employeeData.put(PARAM_PASSWORD, param);
 						param = request.getParameter(PARAM_START_DATE);
 						employeeData.put(PARAM_START_DATE, param);
-						
+
 						EmployeeLogic employeeLogic = new EmployeeLogic();
 						isOk = employeeLogic.updateEntityByID(employeeId, employeeData);
 						request.setAttribute(PARAM_SAVE_STATE, isOk);
-						
+
 						employeeLogic = new EmployeeLogic();
 						employee = employeeLogic.findEntityByID(employeeId);
-						
-						if(employee != null) {
+
+						if (employee != null) {
 							request.setAttribute(PARAM_EMPLOYEE_ENTITY, employee);
-						}
-					
-						param = request.getParameter(PARAM_EMPLOYEE);
-						request.setAttribute(PARAM_EMPLOYEE, param);
-						param = request.getParameter(PARAM_POSITION);
-						request.setAttribute(PARAM_POSITION, param);
+						}	
+					} else {
+						request.setAttribute(PARAM_BAD_DATA, isOk);
 						
-					} catch (LogicException e) {
-						LOG.error(e);
-						request.setAttribute(PARAM_EXCEPTION, e);
-						url = URL_BOUNDLE.getString(URL_ERROR);
-					} 
+						param = request.getParameter(PARAM_FIRST_NAME);
+						request.setAttribute(PARAM_FIRST_NAME, param);
+						param = request.getParameter(PARAM_LAST_NAME);
+						request.setAttribute(PARAM_LAST_NAME, param);
+						param = request.getParameter(PARAM_PHONE);
+						request.setAttribute(PARAM_PHONE, param);
+						param = request.getParameter(PARAM_ADDRESS);
+						request.setAttribute(PARAM_ADDRESS, param);
+						param = request.getParameter(PARAM_USER_NAME);
+						request.setAttribute(PARAM_USER_NAME, param);
+						param = request.getParameter(PARAM_PASSWORD);
+						request.setAttribute(PARAM_PASSWORD, param);
+						param = request.getParameter(PARAM_START_DATE);
+						request.setAttribute(PARAM_START_DATE, param);
+					}
+					
+					param = request.getParameter(PARAM_EMPLOYEE);
+					request.setAttribute(PARAM_EMPLOYEE, param);
+					param = request.getParameter(PARAM_POSITION);
+					request.setAttribute(PARAM_POSITION, param);
 				}
 			} catch (LogicException e) {
 				LOG.error(e);

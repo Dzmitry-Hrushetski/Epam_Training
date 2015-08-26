@@ -15,6 +15,7 @@ public class Validator {
 	private static final ResourceBundle REGEX_BOUNDLE;
 	private static final String USER_NAME = "email";
 	private static final String PASSWORD = "password";
+	private static final String PHONE = "phone";
 	private static final int MAX_LENGTH_USER_NAME = 50;
 	private static final int MAX_LENGTH_PASSWORD = 25;
 	private static Pattern pattern;
@@ -23,6 +24,19 @@ public class Validator {
 	/* initializes the ResourceBundle instance */
 	static {
 		REGEX_BOUNDLE = ResourceBundle.getBundle("regExp");
+	}
+	
+	public static boolean validatePhone(String phone) {
+		boolean dataOk = false;
+		String regExp = REGEX_BOUNDLE.getString(PHONE);
+		pattern = Pattern.compile(regExp);
+
+		if (phone != null && !phone.isEmpty()) {
+			matcher = pattern.matcher(phone);
+			dataOk = matcher.matches();
+			matcher.reset();
+		}
+		return dataOk;
 	}
 	
 	/**
@@ -71,4 +85,19 @@ public class Validator {
 		return dataOk;*/
 	}
 
+	public static boolean validateEmployeeData(String userName,	String pass, String tel) {
+		
+		if(!validateUserName(userName)) {
+			return false;
+		}
+		
+		if(!validatePassword(pass)) {
+			return false;
+		}
+		
+		if(!validatePhone(tel)) {
+			return false;
+		}
+		return true;
+	}
 }

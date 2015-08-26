@@ -177,4 +177,21 @@ public class EmployeeLogic extends BaseLogic {
 		}	
 		return isOk;
 	}
+
+	public boolean addNewEntity(HashMap<String, String> employeeData) throws LogicException {
+		boolean isOk = false;
+		
+		try {	
+			
+			connection = connectionPool.getConnection();
+			IEmployeeDao iEmployee = databaseDao.createIEmployeeDao(connection);
+			isOk = iEmployee.addNewEntity(employeeData);
+			
+		} catch (ConnectionPoolException | DaoException e) {
+			throw new LogicException(e); 
+		} finally {
+			connectionPool.releaseConnection(connection);
+		}	
+		return isOk;
+	}
 }

@@ -42,12 +42,15 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 	private static final String PARAM_USER_NAME = "user_name";
 	private static final String PARAM_PASSWORD = "password";
 	private static final String PARAM_START_DATE = "calendar";
+	private static final String PARAM_POSITION = "position";
 	private static final String FIND_EMPLOYEE_BY_USER_NAME = "SELECT person.user_name, person.password, position.id, position.position_name FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id WHERE person.user_name = ? AND (position.position_name = 'Директор' OR position.position_name = 'Администратор' OR position.position_name = 'Диспетчер') AND employee.disable = 0";
 	private static final String FIND_EMPLOYEE_BY_POSITION_ID = "SELECT employee.id, position.id, position.position_name, employee.start_date, person.first_name, person.last_name, person.addres, person.phone, person.user_name, person.password FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id WHERE position.id = ? AND employee.disable = 0";
 	private static final String FIND_EMPLOYEE_BY_ID = "SELECT employee.id, position.id, position.position_name, employee.start_date, person.first_name, person.last_name, person.addres, person.phone, person.user_name, person.password FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id WHERE employee.id = ? AND employee.disable = 0";
 	private static final String FIND_ALL_EMPLOYEE = "SELECT employee.id, position.id, position.position_name, employee.start_date, person.first_name, person.last_name, person.addres, person.phone, person.user_name, person.password FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id";
 	private static final String DELETE_EMPLOYEE = "UPDATE employee INNER JOIN person ON employee.person_id = person.id SET employee.disable = 1, person.disable = 1 WHERE employee.id = ?";
-	private static final String UPDATE_EMPLOYEE_BY_ID = "UPDATE employee INNER JOIN person ON employee.person_id = person.id SET employee.start_date = ?, person.first_name = ?, person.last_name = ?, person.addres = ?, person.phone = ?, person.user_name = ?, person.password = ? WHERE employee.id = ?"; 
+	private static final String UPDATE_EMPLOYEE_BY_ID = "UPDATE employee INNER JOIN person ON employee.person_id = person.id SET employee.start_date = ?, person.first_name = ?, person.last_name = ?, person.addres = ?, person.phone = ?, person.user_name = ?, person.password = ? WHERE employee.id = ?";
+	private static final String ADD_PERSON = "INSERT INTO person (first_name, last_name, addres, phone, user_name, password, disable) VALUES (?, ?, ?, ?, ?, ?, 0)";
+	private static final String ADD_EMPLOYEE = "INSERT INTO employee (person_id, position_id, start_date, disable) VALUES (LAST_INSERT_ID(), ?, ?, 0)";
 		/**
 	 * @param connection
 	 */
@@ -286,5 +289,49 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 			close(prepStatement);
 		}
 		return isOk;
+	}
+
+	@Override
+	public boolean addNewEntity(HashMap<String, String> employeeData) throws DaoException {
+		boolean isAdded = false;
+		PreparedStatement prepStatement = null;
+
+		try {
+			connection.setAutoCommit(false);
+			
+			prepStatement = connection.prepareStatement(ADD_PERSON);
+			
+			prepStatement.setString(1,employeeData.get(PARAM_FIRST_NAME));
+			prepStatement.setString(2,employeeData.get(PARAM_LAST_NAME));
+			prepStatement.setString(3,employeeData.get(PARAM_ADDRESS));
+			prepStatement.setString(4,employeeData.get(PARAM_PHONE));
+			prepStatement.setString(5,employeeData.get(PARAM_USER_NAME));
+			prepStatement.setString(6,employeeData.get(PARAM_PASSWORD));
+			prepStatement.executeUpdate();
+			
+			close(prepStatement);
+			
+			prepStatement = connection.prepareStatement(ADD_EMPLOYEE);
+			prepStatement.setInt(1,Integer.parseInt(employeeData.get(PARAM_POSITION)));
+			prepStatement.setDate(2,Date.valueOf(employeeData.get(PARAM_START_DATE)));
+			
+			prepStatement.executeUpdate();
+			
+			connection.commit();
+			
+			connection.setAutoCommit(true);
+			
+			isAdded = true;
+		} catch (SQLException ex) {
+			try {
+				connection.rollback();
+			} catch (SQLException e) {
+				throw new DaoException("Database error", e);
+			}
+			throw new DaoException("Database error", ex);
+		} finally {
+			close(prepStatement);
+		}
+		return isAdded;
 	}
 }
