@@ -58,8 +58,8 @@ public class ConnectionPool {
 			prop.put(USE_UNICODE, rb.getString(USE_UNICODE));
 			
 		} catch (MissingResourceException ex) {
-			String errorMessage = String.format("Error. The resource %s file isn't found", DB_PROPERTIES_FILE_NAME);
-			LOG.fatal(errorMessage);
+			String errorMessage = String.format("Error. The resource %s file isn't found or file bad", DB_PROPERTIES_FILE_NAME);
+			LOG.fatal(errorMessage,ex);
 			throw new RuntimeException(errorMessage, ex);
 		} 
 	}

@@ -138,8 +138,43 @@ public class EmployeeLogic extends BaseLogic {
 		return employee;
 	}
 
-	public bool deleteEntityByID(int employeeId) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean deleteEntityByID(int employeeId) throws LogicException {
+		boolean isOk = false;
+		
+		try {	
+			
+			connection = connectionPool.getConnection();
+			IEmployeeDao iEmployee = databaseDao.createIEmployeeDao(connection);
+			isOk = iEmployee.deleteEntityByID(employeeId);
+			
+		} catch (ConnectionPoolException | DaoException e) {
+			throw new LogicException(e); 
+		} finally {
+			connectionPool.releaseConnection(connection);
+		}	
+		return isOk;
+	}
+
+	/**
+	 * @param employeeId
+	 * @param employeeData 
+	 * @return
+	 * @throws LogicException 
+	 */
+	public boolean updateEntityByID(int employeeId, HashMap<String,String> employeeData) throws LogicException {
+		boolean isOk = false;
+		
+		try {	
+			
+			connection = connectionPool.getConnection();
+			IEmployeeDao iEmployee = databaseDao.createIEmployeeDao(connection);
+			isOk = iEmployee.updateEntityByID(employeeId, employeeData);
+			
+		} catch (ConnectionPoolException | DaoException e) {
+			throw new LogicException(e); 
+		} finally {
+			connectionPool.releaseConnection(connection);
+		}	
+		return isOk;
 	}
 }

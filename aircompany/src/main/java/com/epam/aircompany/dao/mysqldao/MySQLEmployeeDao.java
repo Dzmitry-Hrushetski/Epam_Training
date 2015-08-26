@@ -4,12 +4,14 @@
 package com.epam.aircompany.dao.mysqldao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.List;
 
 import com.epam.aircompany.bean.Employee;
@@ -33,12 +35,20 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 	private static final String PASSWORD = "person.password";
 	private static final String POSITION_NAME = "position.position_name";
 	private static final String POSITION_ID = "position.id";
+	private static final String PARAM_FIRST_NAME = "first_name";
+	private static final String PARAM_LAST_NAME = "last_name";
+	private static final String PARAM_PHONE = "phone";
+	private static final String PARAM_ADDRESS = "addres";
+	private static final String PARAM_USER_NAME = "user_name";
+	private static final String PARAM_PASSWORD = "password";
+	private static final String PARAM_START_DATE = "calendar";
 	private static final String FIND_EMPLOYEE_BY_USER_NAME = "SELECT person.user_name, person.password, position.id, position.position_name FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id WHERE person.user_name = ? AND (position.position_name = 'Директор' OR position.position_name = 'Администратор' OR position.position_name = 'Диспетчер') AND employee.disable = 0";
 	private static final String FIND_EMPLOYEE_BY_POSITION_ID = "SELECT employee.id, position.id, position.position_name, employee.start_date, person.first_name, person.last_name, person.addres, person.phone, person.user_name, person.password FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id WHERE position.id = ? AND employee.disable = 0";
 	private static final String FIND_EMPLOYEE_BY_ID = "SELECT employee.id, position.id, position.position_name, employee.start_date, person.first_name, person.last_name, person.addres, person.phone, person.user_name, person.password FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id WHERE employee.id = ? AND employee.disable = 0";
 	private static final String FIND_ALL_EMPLOYEE = "SELECT employee.id, position.id, position.position_name, employee.start_date, person.first_name, person.last_name, person.addres, person.phone, person.user_name, person.password FROM employee INNER JOIN person ON employee.person_id = person.id INNER JOIN position ON employee.position_id = position.id";
-
-	/**
+	private static final String DELETE_EMPLOYEE = "UPDATE employee INNER JOIN person ON employee.person_id = person.id SET employee.disable = 1, person.disable = 1 WHERE employee.id = ?";
+	private static final String UPDATE_EMPLOYEE_BY_ID = "UPDATE employee INNER JOIN person ON employee.person_id = person.id SET employee.start_date = ?, person.first_name = ?, person.last_name = ?, person.addres = ?, person.phone = ?, person.user_name = ?, person.password = ? WHERE employee.id = ?"; 
+		/**
 	 * @param connection
 	 */
 	public MySQLEmployeeDao(Connection connection) {
@@ -223,5 +233,58 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 		}
 		
 		return employeeList;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.dao.IEmployeeDao#deleteEntityByID(int)
+	 */
+	@Override
+	public boolean deleteEntityByID(int employeeId) throws DaoException {
+		PreparedStatement prepStatement = null;
+		boolean isOk = false;
+		 		
+		try {
+			prepStatement = connection.prepareStatement(DELETE_EMPLOYEE);
+			
+			prepStatement.setInt(1,employeeId);
+			prepStatement.executeUpdate();
+			isOk = true;
+			
+		} catch (SQLException ex) {
+			throw new DaoException("Database error.", ex);
+		} finally {
+			close(prepStatement);
+		}
+		return isOk;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.dao.IEmployeeDao#updateEntityByID(int, java.util.HashMap)
+	 */
+	@Override
+	public boolean updateEntityByID(int employeeId, HashMap<String, String> employeeData) throws DaoException {
+		PreparedStatement prepStatement = null;
+		boolean isOk = false;
+		 		
+		try {
+			prepStatement = connection.prepareStatement(UPDATE_EMPLOYEE_BY_ID);
+			
+			prepStatement.setString(2,employeeData.get(PARAM_FIRST_NAME));
+			prepStatement.setString(3,employeeData.get(PARAM_LAST_NAME));
+			prepStatement.setString(4,employeeData.get(PARAM_ADDRESS));
+			prepStatement.setString(5,employeeData.get(PARAM_PHONE));
+			prepStatement.setString(6,employeeData.get(PARAM_USER_NAME));
+			prepStatement.setString(7,employeeData.get(PARAM_PASSWORD));
+			prepStatement.setDate(1,Date.valueOf(employeeData.get(PARAM_START_DATE)));		
+			prepStatement.setInt(8,employeeId);
+			prepStatement.executeUpdate();
+			isOk = true;
+			
+		} catch (SQLException ex) {
+			throw new DaoException("Database error.", ex);
+		} finally {
+			close(prepStatement);
+		}
+		return isOk;
 	}
 }

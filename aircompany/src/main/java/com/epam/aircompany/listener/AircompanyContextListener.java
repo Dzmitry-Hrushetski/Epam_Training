@@ -1,13 +1,10 @@
 package com.epam.aircompany.listener;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 import org.apache.log4j.Logger;
 
-import com.epam.aircompany.dao.factory.DaoFactoryType;
-import com.epam.aircompany.dao.factory.DatabaseFactory;
 import com.epam.aircompany.pool.ConnectionPool;
 
 import static com.epam.aircompany.constant.Constants.*;
@@ -42,8 +39,8 @@ public class AircompanyContextListener implements ServletContextListener {
     	//ServletContext context = arg0.getServletContext();
     	//context.setAttribute(CONNECTION_POOL, ConnectionPool.getInstance());
     	//context.setAttribute(I_DAO, DatabaseFactory.getInstance().getDatabaseDao(DaoFactoryType.MYSQL));
-    	ConnectionPool.getInstance();
-    	LOG.info("Create Pool");
+    	//ConnectionPool.getInstance();
+    	//LOG.info("Create Pool");
     }
 	
 }

@@ -3,7 +3,6 @@
  */
 package com.epam.aircompany.command;
 
-import java.sql.Connection;
 import java.util.HashMap;
 import java.util.List;
 
@@ -13,22 +12,17 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import com.epam.aircompany.bean.Employee;
-import com.epam.aircompany.dao.DaoException;
-import com.epam.aircompany.dao.IDao;
-import com.epam.aircompany.dao.IEmployeeDao;
 import com.epam.aircompany.logic.EmployeeLogic;
 import com.epam.aircompany.logic.LogicException;
-import com.epam.aircompany.pool.ConnectionPool;
 
 /**
  * @author Dzmitry Hrushetski
  *
  */
-public class CheefCommand implements ICommand {
-	private static final Logger LOG = Logger.getLogger(CheefCommand.class);
+public class CreateNewEmployeeCommand implements ICommand {
+	private static final Logger LOG = Logger.getLogger(CreateNewEmployeeCommand.class);
+	private static final String URL_CREATE_NEW = "create_new_employee";
 	private static final int FIRST_EMPLOYEE = 0;
-	private static final String URL_CHEEF = "cheef";
-	private static final String URL_NEW = "create_new_employee";
 	private static final String PARAM_EMPLOYEE_LIST = "employee_list";
 	private static final String PARAM_OPERATION = "operation";
 	private static final String PARAM_EMPLOYEE = "employee";
@@ -36,7 +30,6 @@ public class CheefCommand implements ICommand {
 	private static final String PARAM_EMPLOYEE_ENTITY = "employee_entity";
 	private static final String PARAM_EXCEPTION = "exception";
 	private static final String PARAM_DELETE = "delete";
-	private static final String PARAM_CREATE_NEW = "create_new";
 	private static final String PARAM_DELETE_STATE = "delete_state";
 	private static final String PARAM_SAVE_STATE = "save_state";
 	private static final String PARAM_SAVE = "save";
@@ -55,7 +48,7 @@ public class CheefCommand implements ICommand {
 	 */
 	@Override
 	public String execute(HttpServletRequest request) {
-		String url = URL_BOUNDLE.getString(URL_CHEEF);
+		String url = URL_BOUNDLE.getString(URL_CREATE_NEW);
 		String operation = request.getParameter(PARAM_OPERATION);
 		int employeeId = 0;
 		int positionId = 0;
@@ -191,13 +184,8 @@ public class CheefCommand implements ICommand {
 				url = URL_BOUNDLE.getString(URL_ERROR);
 			}
 			break;
-			
-		case PARAM_CREATE_NEW:
-			param = request.getParameter(PARAM_POSITION);
-			request.setAttribute(PARAM_POSITION, param);
-			url = URL_BOUNDLE.getString(URL_NEW);
-			break;
 		}
 		return url;
 	}
+
 }

@@ -14,7 +14,7 @@ public enum CommandEnum {
 	CHEEF_COMMAND (new CheefCommand()),
 	POSITION_COMMAND (new PositionCommand()),
 	LOGOUT_COMMAND (new LogoutCommand()),
-	CREATE_ENPLOYEE_COMMAND (new CreateNewEmployee());
+	CREATE_EMPLOYEE_COMMAND (new CreateNewEmployeeCommand());
 	
 	private ICommand command;
 	
