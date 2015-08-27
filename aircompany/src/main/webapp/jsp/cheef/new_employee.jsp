@@ -81,7 +81,7 @@
 				</c:if>
 				<br>
 				<br>
-				<input type="submit" name="save" value="<fmt:message key="cheef.save" bundle="${ rb }" />"  />
+				<input type="submit" name="save" value="<fmt:message key="save" bundle="${ rb }" />"  />
 				<input type="submit" name="back" value="<fmt:message key="cheef.back" bundle="${ rb }" />"  />
 			</form>
 	
@@ -89,7 +89,7 @@
 	
 	<form action="ControllerServlet" method="post">
 		<input type="hidden" name="action" value="logout_command">
-		<input type="submit" name="logout" value="<fmt:message key="cheef.logout" bundle="${ rb }" />"  />
+		<input type="submit" name="logout" value="<fmt:message key="logout" bundle="${ rb }" />"  />
 	</form>
 	
 </body>

@@ -4,6 +4,7 @@
 package com.epam.aircompany.logic;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import com.epam.aircompany.bean.Employee;
@@ -17,12 +18,12 @@ import com.epam.aircompany.pool.ConnectionPoolException;
  * @author Dzmitry Hrushetski
  *
  */
-public class AdminLogic extends BaseLogic {
+public class RouteLogic extends BaseLogic {
 
 	/**
 	 * 
 	 */
-	public AdminLogic() {
+	public RouteLogic() {
 	}
 	
 	public List<Route> findAllRoute() throws LogicException {
@@ -55,5 +56,39 @@ public class AdminLogic extends BaseLogic {
 			connectionPool.releaseConnection(connection);
 		}	
 		return route;
+	}
+
+	public boolean deleteRouteByID(int routeId) throws LogicException {
+		boolean isOk = false;
+		
+		try {	
+			
+			connection = connectionPool.getConnection();
+			IRouteDao iRoute = databaseDao.createIRouteDao(connection);
+			isOk = iRoute.deleteRouteByID(routeId);
+			
+		} catch (ConnectionPoolException | DaoException e) {
+			throw new LogicException(e); 
+		} finally {
+			connectionPool.releaseConnection(connection);
+		}	
+		return isOk;
+	}
+
+	public boolean updateRouteByID(int routeId, HashMap<String, String> routeData) throws LogicException {
+		boolean isOk = false;
+		
+		try {	
+			
+			connection = connectionPool.getConnection();
+			IRouteDao iRoute = databaseDao.createIRouteDao(connection);
+			isOk = iRoute.updateRouteByID(routeId, routeData);
+			
+		} catch (ConnectionPoolException | DaoException e) {
+			throw new LogicException(e); 
+		} finally {
+			connectionPool.releaseConnection(connection);
+		}	
+		return isOk;
 	}
 }

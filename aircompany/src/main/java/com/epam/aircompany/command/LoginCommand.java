@@ -11,9 +11,13 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
+import com.epam.aircompany.bean.Airplane;
+import com.epam.aircompany.bean.Airport;
 import com.epam.aircompany.bean.Employee;
 import com.epam.aircompany.bean.Route;
-import com.epam.aircompany.logic.AdminLogic;
+import com.epam.aircompany.logic.AirplaneLogic;
+import com.epam.aircompany.logic.AirportLogic;
+import com.epam.aircompany.logic.RouteLogic;
 import com.epam.aircompany.logic.EmployeeLogic;
 import com.epam.aircompany.logic.LogicException;
 import com.epam.aircompany.logic.Validator;
@@ -31,6 +35,9 @@ public class LoginCommand implements ICommand {
 	private static final String PARAM_EMPLOYEE_LIST = "employee_list";
 	private static final String PARAM_POSITION_LIST = "position_list";
 	private static final String PARAM_ROUTE_LIST = "route_list";
+	private static final String PARAM_DEPARTURE_AIRPORT_LIST = "departure_airport_list";
+	private static final String PARAM_ARRIVAL_AIRPORT_LIST = "arrival_airport_list";
+	private static final String PARAM_AIRPLANE_LIST = "airplane_list";
 	private static final String PARAM_EMPLOYEE_ENTITY = "employee_entity";
 	private static final String PARAM_ROUTE_ENTITY = "route_entity";
 	private static final String PARAM_EXCEPTION = "exception";
@@ -87,6 +94,7 @@ public class LoginCommand implements ICommand {
 
 	private String findURL(HttpServletRequest request, Employee employee) throws LogicException {
 		String url=null;
+		HttpSession session=null;
 		
 		switch(employee.getPosition().getId()) {
 		case CHEEF:
@@ -94,7 +102,7 @@ public class LoginCommand implements ICommand {
 			EmployeeLogic employeeLogic = new EmployeeLogic();
 			HashMap<String, Object> rezultMap = employeeLogic.generateEmployeeJspData(employee);
 			request.setAttribute(PARAM_EMPLOYEE_ENTITY, rezultMap.get(PARAM_EMPLOYEE_ENTITY));
-			HttpSession session = request.getSession();
+			session = request.getSession();
 			session.setAttribute(PARAM_EMPLOYEE_LIST, rezultMap.get(PARAM_EMPLOYEE_LIST));
 			session.setAttribute(PARAM_POSITION_LIST, rezultMap.get(PARAM_POSITION_LIST));
 			
@@ -103,12 +111,23 @@ public class LoginCommand implements ICommand {
 			
 		case ADMIN:
 			
-			AdminLogic adminLogic = new AdminLogic();
-			List<Route> routeList = adminLogic.findAllRoute();
-			request.setAttribute(PARAM_ROUTE_LIST, routeList);
+			RouteLogic routeLogic = new RouteLogic();
+			List<Route> routeList = routeLogic.findAllRoute();
+			
+			AirportLogic airportLogic = new AirportLogic();
+			List<Airport> airportList = airportLogic.findAllAirport();
+			
+			AirplaneLogic airplaneLogic = new AirplaneLogic();
+			List<Airplane> airplaneList = airplaneLogic.findAllAirport();
+			
+			session = request.getSession();
+			session.setAttribute(PARAM_ROUTE_LIST, routeList);
+			session.setAttribute(PARAM_DEPARTURE_AIRPORT_LIST, airportList);
+			session.setAttribute(PARAM_ARRIVAL_AIRPORT_LIST, airportList);
+			session.setAttribute(PARAM_AIRPLANE_LIST, airplaneList);
 			
 			if (!routeList.isEmpty()) {
-				Route route = adminLogic.findRouteByID(routeList.get(FIRST_ENTITY).getId());
+				Route route = routeLogic.findRouteByID(routeList.get(FIRST_ENTITY).getId());
 				request.setAttribute(PARAM_ROUTE_ENTITY, route);
 			}
 					

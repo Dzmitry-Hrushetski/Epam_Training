@@ -11,6 +11,7 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.List;
 
 import com.epam.aircompany.bean.Airplane;
@@ -39,6 +40,8 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 	private static final String AIRPLANE_ID = "route.airplane_id";
 	private static final String FIND_ALL_ROUTE = "SELECT route.* FROM route WHERE route.disable = 0";
 	private static final String FIND_ROUTE_BY_ID = "SELECT route.* FROM route WHERE route.id = ? AND route.disable = 0";
+	private static final String DELETE_ROUTE = "UPDATE route SET disable = 1 WHERE route.id = ?";
+	private static final String UPDATE_ROUTE_BY_ID = "UPDATE route SET departure_airport_id = ?, arrival_airport_id = ?, airplane_id = ?, departure_time = ?, arrival_time = ?, route_number = ? WHERE route.id = ?";
 	
 	private IDao databaseDao = DatabaseFactory.getInstance().getDatabaseDao(DaoFactoryType.MYSQL);
 	
@@ -165,6 +168,46 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 	public boolean updateEntity(Route entity, int id) throws DaoException {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public boolean deleteRouteByID(int routeId) throws DaoException {
+		PreparedStatement prepStatement = null;
+		boolean isOk = false;
+		 		
+		try {
+			prepStatement = connection.prepareStatement(DELETE_ROUTE);
+			
+			prepStatement.setInt(1,routeId);
+			prepStatement.executeUpdate();
+			isOk = true;
+			
+		} catch (SQLException ex) {
+			throw new DaoException("Database error.", ex);
+		} finally {
+			close(prepStatement);
+		}
+		return isOk;
+	}
+
+	@Override
+	public boolean updateRouteByID(int routeId,	HashMap<String, String> routeData) throws DaoException {
+		PreparedStatement prepStatement = null;
+		boolean isOk = false;
+		 		
+		try {
+			prepStatement = connection.prepareStatement(DELETE_ROUTE);
+			
+			prepStatement.setInt(1,routeId);
+			prepStatement.executeUpdate();
+			isOk = true;
+			
+		} catch (SQLException ex) {
+			throw new DaoException("Database error.", ex);
+		} finally {
+			close(prepStatement);
+		}
+		return isOk;
 	}
 
 }

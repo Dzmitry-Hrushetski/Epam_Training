@@ -24,14 +24,15 @@
 
 	<br>
 
-	<c:if test="${empty position}">
+	<c:if test="${empty route}">
 		<c:set var="route" value="1" scope="request" />
 	</c:if>
 
 	<form action="ControllerServlet" method="post">
 		<input type="hidden" name="action" value="admin_command"> 
 		<input type="hidden" name="operation" value="route"> 
-		<label for="route"><fmt:message key="admin.route_list_message" bundle="${ rb }" /></label> <select id="route" name="route" onchange="submit()">
+		<label for="route"><fmt:message key="admin.route_list_message" bundle="${ rb }" /></label>
+		 <select id="route" name="route" onchange="submit()">
 			<c:forEach items="${route_list}" var="p">
 				<option value="${p.id}" ${p.id eq route ? 'selected' : ''}>${p.routeNumber} ${p.departureAirport.city.cityName} - ${p.arrivalAirport.city.cityName}</option>
 			</c:forEach>
@@ -51,6 +52,39 @@
 
 		<table>
 			<tr>
+				<td><fmt:message key="admin.departure_airport" bundle="${ rb }" /></td>
+				<td> 
+					<select	id="departure_airport" name="departure_airport">
+						<c:forEach items="${departure_airport_list}" var="p">
+							<option value="${p.id}" ${p.id eq route_entity.departureAirport.id ? 'selected' : ''}>${p.city.cityName} ${p.airportName}</option>
+						</c:forEach>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><fmt:message key="admin.arrival_airport" bundle="${ rb }" /></td>
+				<td> 
+					<select	id="arrival_airport" name="arrival_airport">
+						<c:forEach items="${arrival_airport_list}" var="p">
+							<option value="${p.id}" ${p.id eq route_entity.arrivalAirport.id ? 'selected' : ''}>${p.city.cityName} ${p.airportName}</option>
+						</c:forEach>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><fmt:message key="admin.airplane" bundle="${ rb }" /></td>
+				<td> 
+					<select	id="airplane" name="airplane">
+						<c:forEach items="${airplane_list}" var="a">
+							<option value="${a.id}" ${a.id eq route_entity.airplane.id ? 'selected' : ''}>${a.airplaneType.modelName} ${a.boardNumber}</option>
+						</c:forEach>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
 				<td><fmt:message key="admin.route_number" bundle="${ rb }" /></td>
 				<td><input type="text" name="route_number" maxlength="25" value="${route_entity.routeNumber}" required="required"/></td>
 			</tr>
@@ -60,46 +94,21 @@
 			</tr>
 			<tr>
 				<td><fmt:message key="admin.arrival_time" bundle="${ rb }" /></td>
-				<td><input type="datetime" name="arrival_time" maxlength="13" value="${route_entity.arrivalString}" required="required"/></td>
+				<td><input type="datetime" name="arrival_time" value="${route_entity.arrivalString}" required="required"/></td>
 			</tr>
-			<tr>
-				<td><fmt:message key="admin.arrival_time" bundle="${ rb }" /></td>
-				<td><input type="datetime" name="arrival_time" value="2004-07-24 18:18:18" required="required"/></td>
-			</tr>
-			<!-- 
-			<tr>
-				<td><fmt:message key="cheef.addres" bundle="${ rb }" /></td>
-				<td><input type="text" name="addres" size="50" maxlength="80" value="${employee_entity.addres}" required="required"/></td>
-			</tr>
-			<tr>
-				<td><fmt:message key="cheef.user_name" bundle="${ rb }" /></td>
-				<td><input type="email" name="user_name" size="30" maxlength="50" value="${employee_entity.userName}" required="required"/></td>
-			</tr>
-			<tr>
-				<td><fmt:message key="cheef.password" bundle="${ rb }" /></td>
-				<td><input type="text" name="password" maxlength="25" value="${employee_entity.password}" required="required" pattern="[A-Za-z0-9\\._\\-]{5,20}"/></td>
-			</tr>
-			<tr>
-				<td><fmt:message key="cheef.date" bundle="${ rb }" /></td>
-				<td><input type="date" name="calendar" value="${employee_entity.startDateString}" required="required"/></td>
-			</tr>
-			 -->
 		</table>
 				<br>
 				<br>
 				<c:if test="${not empty delete_state}">
-					<fmt:message key="cheef.delet_state" bundle="${ rb }" />
+					<fmt:message key="admin.delet_state" bundle="${ rb }" />
 				</c:if>
 				<c:if test="${not empty save_state}">
-					<fmt:message key="cheef.save_state" bundle="${ rb }" />
-				</c:if>
-				<c:if test="${not empty bad_data}">
-					<fmt:message key="cheef.bad_data" bundle="${ rb }" />
+					<fmt:message key="admin.save_state" bundle="${ rb }" />
 				</c:if>
 				<br>
 				<br>
-				<input type="submit" name="save" value="<fmt:message key="cheef.save" bundle="${ rb }" />"  />
-				<input type="submit" name="delete" value="<fmt:message key="cheef.delete" bundle="${ rb }" />"  />
+				<input type="submit" name="save" value="<fmt:message key="save" bundle="${ rb }" />"  />
+				<input type="submit" name="delete" value="<fmt:message key="delete" bundle="${ rb }" />"  />
 			</form>
 		</c:when>
 
@@ -108,17 +117,16 @@
 	<br>
 	
 	<form action="ControllerServlet" method="post">
-		<input type="hidden" name="action" value="cheef_command">
-		<input type="hidden" name="operation" value="create_new">
-		<input type="hidden" name="position" value="${position}"> 
-		<input type="submit" name="create" value="<fmt:message key="cheef.create" bundle="${ rb }" />"  />
+		<input type="hidden" name="action" value="admin_command">
+		<input type="hidden" name="operation" value="create_new"> 
+		<input type="submit" name="create" value="<fmt:message key="create" bundle="${ rb }" />"  />
 	</form>
 	
 	<br>
 	
 	<form action="ControllerServlet" method="post">
 		<input type="hidden" name="action" value="logout_command">
-		<input type="submit" name="logout" value="<fmt:message key="cheef.logout" bundle="${ rb }" />"  />
+		<input type="submit" name="logout" value="<fmt:message key="logout" bundle="${ rb }" />"  />
 	</form>
 	
 </body>

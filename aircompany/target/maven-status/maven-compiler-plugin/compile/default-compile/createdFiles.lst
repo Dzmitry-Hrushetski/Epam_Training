@@ -21,6 +21,7 @@ com\epam\aircompany\logic\EmployeeLogic.class
 com\epam\aircompany\bean\Entity.class
 com\epam\aircompany\command\AdminCommand.class
 com\epam\aircompany\dao\factory\DatabaseFactory$1.class
+com\epam\aircompany\logic\RouteLogic.class
 com\epam\aircompany\constant\Constants.class
 com\epam\aircompany\filter\PageRedirectFilter.class
 com\epam\aircompany\dao\factory\DaoFactoryType.class
@@ -41,8 +42,9 @@ com\epam\aircompany\dao\mysqldao\MySQLEmployeeDao.class
 com\epam\aircompany\bean\AirplaneType.class
 com\epam\aircompany\dao\mysqldao\MySQLAirplaneDao.class
 com\epam\aircompany\command\PositionCommand.class
+com\epam\aircompany\logic\AirportLogic.class
 com\epam\aircompany\command\CreateNewEmployeeCommand.class
-com\epam\aircompany\logic\AdminLogic.class
+com\epam\aircompany\logic\AirplaneLogic.class
 com\epam\aircompany\dao\mysqldao\MySQLDao.class
 com\epam\aircompany\dao\IRouteDao.class
 com\epam\aircompany\command\LoginCommand.class
