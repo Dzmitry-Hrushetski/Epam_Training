@@ -4,6 +4,7 @@
 package com.epam.aircompany.dao.mysqldao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -28,6 +29,7 @@ public class MySQLAirportDao extends AbstractDao implements IAirportDao {
 	private static final String CITY_ID = "city.id";
 	private static final String CITY_NAME = "city.city_name";
 	private static final String FIND_ALL_AIRPORT = "SELECT airport.*, city.* FROM airport INNER JOIN city ON airport.city_id = city.id";
+	private static final String FIND_AIRPORT_BY_ID = "SELECT airport.*, city.* FROM airport INNER JOIN city ON airport.city_id = city.id WHERE airport.id = ?";
 
 	/**
 	 * @param connection
@@ -77,8 +79,34 @@ public class MySQLAirportDao extends AbstractDao implements IAirportDao {
 	 */
 	@Override
 	public Airport findEntityByID(int id) throws DaoException {
-		// TODO Auto-generated method stub
-		return null;
+		Airport airport = null;
+		City city = null;
+		PreparedStatement prepStatement = null;
+		 		
+		try {
+			prepStatement = connection.prepareStatement(FIND_AIRPORT_BY_ID);
+			
+			prepStatement.setInt(1,id);
+			ResultSet rs = prepStatement.executeQuery();
+			while (rs.next()) {
+				
+				city = new City();
+				city.setId(rs.getInt(CITY_ID));
+				city.setCityName(rs.getString(CITY_NAME));
+				
+				airport = new Airport();
+				airport.setCity(city);
+				airport.setId(rs.getInt(AIRPORT_ID));
+				airport.setAirportName(rs.getString(AIRPORT_NAME));
+				airport.setIataCode(rs.getString(AIRPORT_IATA));
+				airport.setIcaoCode(rs.getString(AIRPORT_ICAO));	
+			}
+		} catch (SQLException ex) {
+			throw new DaoException("Database error.", ex);
+		} finally {
+			close(prepStatement);
+		}
+		return airport;
 	}
 
 	/* (non-Javadoc)

@@ -22,8 +22,6 @@ public class EmployeeLogic extends BaseLogic {
 	private static final String PARAM_POSITION_LIST = "position_list";
 	private static final String PARAM_EMPLOYEE_ENTITY = "employee_entity";
 	private static final int CHEEF = 1;
-	private static final int ADMIN = 2;
-	private static final int MANAGER = 3;
 	private static final int FIRST_EMPLOYEE = 0;
 	
 	
@@ -56,40 +54,30 @@ public class EmployeeLogic extends BaseLogic {
 	 * @throws LogicException 
 	 */
 	public HashMap<String, Object> generateEmployeeJspData(Employee employee) throws LogicException {
-		
-		HashMap<String,Object> rezultMap = new HashMap<String,Object>();
-		
-		switch(employee.getPosition().getId()) {
-		case CHEEF:
-			try {	
-				connection = connectionPool.getConnection();
-				IEmployeeDao iEmployee = databaseDao.createIEmployeeDao(connection);
-				IPositionDao iPosition = databaseDao.createIPositionDao(connection);
-				List<Employee> employeeList = iEmployee.findEmployeeByPositionId(CHEEF);
-				List<Position> positionList = iPosition.findAll();
-				
-				Employee firstEmployee = null;
-				
-				if(!employeeList.isEmpty()) {
-					firstEmployee = iEmployee.findEntityByID(employeeList.get(FIRST_EMPLOYEE).getId());
-					rezultMap.put(PARAM_EMPLOYEE_ENTITY, firstEmployee);
-				}
-				
-				rezultMap.put(PARAM_EMPLOYEE_LIST, employeeList);
-				rezultMap.put(PARAM_POSITION_LIST, positionList);
-				
-			} catch (ConnectionPoolException | DaoException e) {
-				throw new LogicException(e); 
-			} finally {
-				connectionPool.releaseConnection(connection);
+
+		HashMap<String, Object> rezultMap = new HashMap<String, Object>();
+
+		try {
+			connection = connectionPool.getConnection();
+			IEmployeeDao iEmployee = databaseDao.createIEmployeeDao(connection);
+			IPositionDao iPosition = databaseDao.createIPositionDao(connection);
+			List<Employee> employeeList = iEmployee.findEmployeeByPositionId(CHEEF);
+			List<Position> positionList = iPosition.findAll();
+
+			Employee firstEmployee = null;
+
+			if (!employeeList.isEmpty()) {
+				firstEmployee = iEmployee.findEntityByID(employeeList.get(FIRST_EMPLOYEE).getId());
+				rezultMap.put(PARAM_EMPLOYEE_ENTITY, firstEmployee);
 			}
-			break;
-		case ADMIN:
-			
-			break;
-		case MANAGER:
-			
-			break;
+
+			rezultMap.put(PARAM_EMPLOYEE_LIST, employeeList);
+			rezultMap.put(PARAM_POSITION_LIST, positionList);
+
+		} catch (ConnectionPoolException | DaoException e) {
+			throw new LogicException(e);
+		} finally {
+			connectionPool.releaseConnection(connection);
 		}
 		return rezultMap;
 	}

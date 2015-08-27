@@ -10,6 +10,7 @@ import com.epam.aircompany.dao.IAirportDao;
 import com.epam.aircompany.dao.IDao;
 import com.epam.aircompany.dao.IEmployeeDao;
 import com.epam.aircompany.dao.IPositionDao;
+import com.epam.aircompany.dao.IRouteDao;
 
 /**
  * @author Dzmitry Hrushetski
@@ -38,6 +39,11 @@ public class MySQLDao implements IDao {
 	@Override
 	public IAirplaneDao createIAirplaneDao(Connection connection) {
 		return new MySQLAirplaneDao(connection);
+	}
+
+	@Override
+	public IRouteDao createIRouteDao(Connection connection) {
+		return new MySQLRouteDao(connection);
 	}
 
 }

@@ -15,5 +15,6 @@ public interface IDao {
 	public IPositionDao createIPositionDao(Connection connection);
 	public IAirportDao createIAirportDao(Connection connection);
 	public IAirplaneDao createIAirplaneDao(Connection connection);
+	public IRouteDao createIRouteDao(Connection connection);
 
 }

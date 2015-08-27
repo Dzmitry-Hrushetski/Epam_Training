@@ -10,7 +10,7 @@
 <html lang="${locale}">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title><fmt:message key="cheef.title" bundle="${ rb }" /></title>
+<title><fmt:message key="admin.title" bundle="${ rb }" /></title>
 </head>
 <body>
 	<h3>
@@ -18,76 +18,55 @@
 	</h3>
 	<p>
 	<h4>
-		<fmt:message key="cheef.message" bundle="${ rb }" />
+		<fmt:message key="admin.message" bundle="${ rb }" />
 	</h4>
 	<p/>
 
 	<br>
 
 	<c:if test="${empty position}">
-		<c:set var="position" value="1" scope="request" />
+		<c:set var="route" value="1" scope="request" />
 	</c:if>
 
 	<form action="ControllerServlet" method="post">
-		<input type="hidden" name="action" value="cheef_command"> 
-		<input type="hidden" name="operation" value="position"> 
-		<label for="position"><fmt:message key="cheef.position_message_list" bundle="${ rb }" /></label> <select id="position" name="position" onchange="submit()">
-			<c:forEach items="${position_list}" var="p">
-				<option value="${p.id}" ${p.id eq position ? 'selected' : ''}>${p.positionName}</option>
+		<input type="hidden" name="action" value="admin_command"> 
+		<input type="hidden" name="operation" value="route"> 
+		<label for="route"><fmt:message key="admin.route_list_message" bundle="${ rb }" /></label> <select id="route" name="route" onchange="submit()">
+			<c:forEach items="${route_list}" var="p">
+				<option value="${p.id}" ${p.id eq route ? 'selected' : ''}>${p.routeNumber} ${p.departureAirport.city.cityName} - ${p.arrivalAirport.city.cityName}</option>
 			</c:forEach>
 		</select>
 	</form>
 
 	<br>
 
+		
 	<c:choose>
-		<c:when test="${not empty employee_list}">
-
-			<c:if test="${empty employee}">
-				<c:set var="employee" value="1" scope="request" />
-			</c:if>
-
-			<form action="ControllerServlet" method="post">	
-				<input type="hidden" name="action" value="cheef_command"> 
-				<input type="hidden" name="operation" value="employee"> 
-				<input type="hidden" name="position" value="${position}"> 
-				<label for="employee"><fmt:message key="cheef.employee_message_list" bundle="${ rb }" /></label> 
-				<select	id="employee" name="employee" onchange="submit()" >
-					<c:forEach items="${employee_list}" var="e">
-						<option value="${e.id}" ${e.id eq employee ? 'selected' : ''}>${e.firstName} ${e.lastName}</option>
-					</c:forEach>
-				</select>
-			</form>
-		</c:when>
-		<c:otherwise>
-			<fmt:message key="cheef.employee_message_empty" bundle="${ rb }" />
-		</c:otherwise>
-	</c:choose>
-
-	<p><fmt:message key="cheef.data" bundle="${ rb }" /></p>
-	
-	<c:choose>
-		<c:when test="${not empty employee_entity}">
+		<c:when test="${not empty route_entity}">
 			<form action="ControllerServlet" method="post">
-				<input type="hidden" name="action" value="cheef_command"> 
-				<input type="hidden" name="operation" value="employee_entity">
-				<input type="hidden" name="employee_entity" value="${employee_entity.id}">
-				<input type="hidden" name="position" value="${position}">
-				<input type="hidden" name="employee" value="${employee}"> 
+				<input type="hidden" name="action" value="admin_command"> 
+				<input type="hidden" name="operation" value="route_entity">
+				<input type="hidden" name="route_entity" value="${route_entity.id}">
+				<input type="hidden" name="route" value="${route}">
 
 		<table>
 			<tr>
-				<td><fmt:message key="cheef.first_name" bundle="${ rb }" /></td>
-				<td><input type="text" name="first_name" maxlength="50" value="${employee_entity.firstName}" required="required"/></td>
+				<td><fmt:message key="admin.route_number" bundle="${ rb }" /></td>
+				<td><input type="text" name="route_number" maxlength="25" value="${route_entity.routeNumber}" required="required"/></td>
 			</tr>
 			<tr>
-				<td><fmt:message key="cheef.last_name" bundle="${ rb }" /></td>
-				<td><input type="text" name="last_name" maxlength="50" value="${employee_entity.lastName}" required="required"/></td>
+				<td><fmt:message key="admin.departure_time" bundle="${ rb }" /></td>
+				<td><input type="datetime" name="departure_time" value="${route_entity.departureString}" required="required"/></td>
 			</tr>
 			<tr>
-				<td><fmt:message key="cheef.phone" bundle="${ rb }" /></td>
-				<td><input type="text" name="phone" maxlength="13" value="${employee_entity.phone}" required="required" pattern="\+375[0-9]{9}"/></td>
+				<td><fmt:message key="admin.arrival_time" bundle="${ rb }" /></td>
+				<td><input type="datetime" name="arrival_time" maxlength="13" value="${route_entity.arrivalString}" required="required"/></td>
 			</tr>
+			<tr>
+				<td><fmt:message key="admin.arrival_time" bundle="${ rb }" /></td>
+				<td><input type="datetime" name="arrival_time" value="2004-07-24 18:18:18" required="required"/></td>
+			</tr>
+			<!-- 
 			<tr>
 				<td><fmt:message key="cheef.addres" bundle="${ rb }" /></td>
 				<td><input type="text" name="addres" size="50" maxlength="80" value="${employee_entity.addres}" required="required"/></td>
@@ -104,6 +83,7 @@
 				<td><fmt:message key="cheef.date" bundle="${ rb }" /></td>
 				<td><input type="date" name="calendar" value="${employee_entity.startDateString}" required="required"/></td>
 			</tr>
+			 -->
 		</table>
 				<br>
 				<br>

@@ -4,6 +4,7 @@
 package com.epam.aircompany.dao.mysqldao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -11,8 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.epam.aircompany.bean.Airplane;
-import com.epam.aircompany.bean.Airport;
-import com.epam.aircompany.bean.City;
+import com.epam.aircompany.bean.AirplaneType;
 import com.epam.aircompany.dao.AbstractDao;
 import com.epam.aircompany.dao.DaoException;
 import com.epam.aircompany.dao.IAirplaneDao;
@@ -22,13 +22,12 @@ import com.epam.aircompany.dao.IAirplaneDao;
  *
  */
 public class MySQLAirplaneDao extends AbstractDao implements IAirplaneDao {
-	private static final String AIRPORT_NAME = "airport.airport_name";
-	private static final String AIRPORT_ID = "airport.id";
-	private static final String AIRPORT_IATA = "airport.iata_code";
-	private static final String AIRPORT_ICAO = "airport.icao_code";
-	private static final String CITY_ID = "city.id";
-	private static final String CITY_NAME = "city.city_name";
+	private static final String AIRPLANE_ID = "airplane.id";
+	private static final String AIRPLANE_BOARD_NUMBER = "airplane.board_number";
+	private static final String AIRPLANE_TYPE_ID = "airplane_type.id";
+	private static final String MODEL_NAME = "airplane_type.model_name";
 	private static final String FIND_ALL_AIRPLANE = "SELECT airplane.*, airplane_type.* FROM airplane INNER JOIN airplane_type ON airplane.airplane_type_id = airplane_type.id";
+	private static final String FIND_AIRPLANE_BY_ID = "SELECT airplane.*, airplane_type.* FROM airplane INNER JOIN airplane_type ON airplane.airplane_type_id = airplane_type.id WHERE airplane.id = ?";
 
 	/**
 	 * @param connection
@@ -42,35 +41,33 @@ public class MySQLAirplaneDao extends AbstractDao implements IAirplaneDao {
 	 */
 	@Override
 	public List<Airplane> findAll() throws DaoException {
-		List<Airport> airportList = new ArrayList<Airport>();
+		List<Airplane> airplaneList = new ArrayList<Airplane>();
 		Statement statement = null;
-		Airport airport = null;
-		City city = null;
+		Airplane airplane = null;
+		AirplaneType airplaneType = null;
 		
 		try {
 			statement = connection.createStatement();
 			ResultSet rs = statement.executeQuery(FIND_ALL_AIRPLANE);
 			while (rs.next()) {
 				
-				city = new City();
-				city.setId(rs.getInt(CITY_ID));
-				city.setCityName(rs.getString(CITY_NAME));
+				airplaneType = new AirplaneType();
+				airplaneType.setId(rs.getInt(AIRPLANE_TYPE_ID));
+				airplaneType.setModelName(rs.getString(MODEL_NAME));
 				
-				airport = new Airport();
-				airport.setCity(city);
-				airport.setId(rs.getInt(AIRPORT_ID));
-				airport.setAirportName(rs.getString(AIRPORT_NAME));
-				airport.setIataCode(rs.getString(AIRPORT_IATA));
-				airport.setIcaoCode(rs.getString(AIRPORT_ICAO));
+				airplane = new Airplane();
+				airplane.setAirplaneType(airplaneType);
+				airplane.setId(rs.getInt(AIRPLANE_ID));
+				airplane.setBoardNumber(rs.getString(AIRPLANE_BOARD_NUMBER));
 				
-				airportList.add(airport);
+				airplaneList.add(airplane);
 			}
 		} catch (SQLException ex) {
 			throw new DaoException("Database error.", ex);
 		} finally {
 			close(statement);
 		}
-		return airportList;
+		return airplaneList;
 	}
 
 	/* (non-Javadoc)
@@ -78,8 +75,32 @@ public class MySQLAirplaneDao extends AbstractDao implements IAirplaneDao {
 	 */
 	@Override
 	public Airplane findEntityByID(int id) throws DaoException {
-		// TODO Auto-generated method stub
-		return null;
+		Airplane airplane = null;
+		AirplaneType airplaneType = null;
+		PreparedStatement prepStatement = null;
+		 		
+		try {
+			prepStatement = connection.prepareStatement(FIND_AIRPLANE_BY_ID);
+			
+			prepStatement.setInt(1,id);
+			ResultSet rs = prepStatement.executeQuery();
+			while (rs.next()) {
+				
+				airplaneType = new AirplaneType();
+				airplaneType.setId(rs.getInt(AIRPLANE_TYPE_ID));
+				airplaneType.setModelName(rs.getString(MODEL_NAME));
+				
+				airplane = new Airplane();
+				airplane.setAirplaneType(airplaneType);
+				airplane.setId(rs.getInt(AIRPLANE_ID));
+				airplane.setBoardNumber(rs.getString(AIRPLANE_BOARD_NUMBER));	
+			}
+		} catch (SQLException ex) {
+			throw new DaoException("Database error.", ex);
+		} finally {
+			close(prepStatement);
+		}
+		return airplane;
 	}
 
 	/* (non-Javadoc)

@@ -64,7 +64,7 @@
 		</c:otherwise>
 	</c:choose>
 
-	<br>
+	<p><fmt:message key="cheef.data" bundle="${ rb }" /></p>
 	
 	<c:choose>
 		<c:when test="${not empty employee_entity}">

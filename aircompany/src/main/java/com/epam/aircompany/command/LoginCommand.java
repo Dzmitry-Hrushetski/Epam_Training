@@ -4,6 +4,7 @@
 package com.epam.aircompany.command;
 
 import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import com.epam.aircompany.bean.Employee;
+import com.epam.aircompany.bean.Route;
+import com.epam.aircompany.logic.AdminLogic;
 import com.epam.aircompany.logic.EmployeeLogic;
 import com.epam.aircompany.logic.LogicException;
 import com.epam.aircompany.logic.Validator;
@@ -27,7 +30,9 @@ public class LoginCommand implements ICommand {
 	private static final String PARAM_INCORRECT = "incorrect";
 	private static final String PARAM_EMPLOYEE_LIST = "employee_list";
 	private static final String PARAM_POSITION_LIST = "position_list";
+	private static final String PARAM_ROUTE_LIST = "route_list";
 	private static final String PARAM_EMPLOYEE_ENTITY = "employee_entity";
+	private static final String PARAM_ROUTE_ENTITY = "route_entity";
 	private static final String PARAM_EXCEPTION = "exception";
 	private static final String URL_LOGIN = "login";
 	private static final String URL_CHEEF = "cheef";
@@ -36,7 +41,8 @@ public class LoginCommand implements ICommand {
 	private static final int CHEEF = 1;
 	private static final int ADMIN = 2;
 	private static final int MANAGER = 3;
-	private static final int FIRST_EMPLOYEE = 0;
+	private static final int FIRST_ENTITY = 0;
+	
 	
 	private Employee employee;
 	
@@ -59,14 +65,7 @@ public class LoginCommand implements ICommand {
 				
 				if(employee!= null && password.equals(employee.getPassword())) {
 					
-					HashMap<String, Object> rezultMap = employeeLogic.generateEmployeeJspData(employee);
-					
-					request.setAttribute(PARAM_EMPLOYEE_ENTITY, rezultMap.get(PARAM_EMPLOYEE_ENTITY));
-					HttpSession session = request.getSession();
-					session.setAttribute(PARAM_EMPLOYEE_LIST, rezultMap.get(PARAM_EMPLOYEE_LIST));
-					session.setAttribute(PARAM_POSITION_LIST, rezultMap.get(PARAM_POSITION_LIST));
-					
-					url = findURL(employee);
+					url = findURL(request, employee);
 					
 				} else {
 					request.setAttribute(PARAM_USER_NAME, userName);
@@ -86,16 +85,36 @@ public class LoginCommand implements ICommand {
 		return url;
 	}
 
-	private String findURL(Employee employee) {
+	private String findURL(HttpServletRequest request, Employee employee) throws LogicException {
 		String url=null;
 		
 		switch(employee.getPosition().getId()) {
 		case CHEEF:
+			
+			EmployeeLogic employeeLogic = new EmployeeLogic();
+			HashMap<String, Object> rezultMap = employeeLogic.generateEmployeeJspData(employee);
+			request.setAttribute(PARAM_EMPLOYEE_ENTITY, rezultMap.get(PARAM_EMPLOYEE_ENTITY));
+			HttpSession session = request.getSession();
+			session.setAttribute(PARAM_EMPLOYEE_LIST, rezultMap.get(PARAM_EMPLOYEE_LIST));
+			session.setAttribute(PARAM_POSITION_LIST, rezultMap.get(PARAM_POSITION_LIST));
+			
 			url = URL_BOUNDLE.getString(URL_CHEEF);
 			break;
+			
 		case ADMIN:
+			
+			AdminLogic adminLogic = new AdminLogic();
+			List<Route> routeList = adminLogic.findAllRoute();
+			request.setAttribute(PARAM_ROUTE_LIST, routeList);
+			
+			if (!routeList.isEmpty()) {
+				Route route = adminLogic.findRouteByID(routeList.get(FIRST_ENTITY).getId());
+				request.setAttribute(PARAM_ROUTE_ENTITY, route);
+			}
+					
 			url = URL_BOUNDLE.getString(URL_ADMIN);
 			break;
+			
 		case MANAGER:
 			url = URL_BOUNDLE.getString(URL_MANAGER);
 			break;

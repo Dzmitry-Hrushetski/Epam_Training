@@ -37,8 +37,7 @@
 		</select>
 	</form>
 
-	<br>
-	<br>
+	<p><fmt:message key="cheef.data" bundle="${ rb }" /></p>
 	
 	<form action="ControllerServlet" method="post">
 				<input type="hidden" name="action" value="create_employee_command"> 
