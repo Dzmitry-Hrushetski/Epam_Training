@@ -3,9 +3,7 @@
  */
 package com.epam.aircompany.command;
 
-import java.sql.Connection;
 import java.util.HashMap;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -13,15 +11,9 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import com.epam.aircompany.bean.Employee;
-import com.epam.aircompany.bean.Position;
-import com.epam.aircompany.dao.DaoException;
-import com.epam.aircompany.dao.IDao;
-import com.epam.aircompany.dao.IEmployeeDao;
-import com.epam.aircompany.dao.IPositionDao;
 import com.epam.aircompany.logic.EmployeeLogic;
 import com.epam.aircompany.logic.LogicException;
 import com.epam.aircompany.logic.Validator;
-import com.epam.aircompany.pool.ConnectionPool;
 
 /**
  * @author Dzmitry Hrushetski

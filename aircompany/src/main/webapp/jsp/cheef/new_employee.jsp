@@ -64,6 +64,7 @@
 			<tr>
 				<td><fmt:message key="cheef.user_name" bundle="${ rb }" /></td>
 				<td><input type="email" name="user_name" size="30" maxlength="50" value="${employee_entity.userName}" required="required"/></td>
+				<!-- ${position eq 1 ? 'required="required"' : ''} -->
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.password" bundle="${ rb }" /></td>
