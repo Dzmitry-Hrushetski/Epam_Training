@@ -3,6 +3,7 @@
  */
 package com.epam.aircompany.bean;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 /**
@@ -16,7 +17,7 @@ public class CompositionCrew extends Entity {
 	 */
 	private static final long serialVersionUID = 1905339389654368810L;
 	private AirplaneType airplaneType;
-	private HashSet<Position> crew;
+	private HashMap<Integer,Integer> crew;
 	
 	/**
 	 * @return the airplaneType
@@ -33,13 +34,13 @@ public class CompositionCrew extends Entity {
 	/**
 	 * @return the crew
 	 */
-	public HashSet<Position> getCrew() {
+	public HashMap<Integer,Integer> getCrew() {
 		return crew;
 	}
 	/**
 	 * @param crew the crew to set
 	 */
-	public void setCrew(HashSet<Position> crew) {
+	public void setCrew(HashMap<Integer,Integer> crew) {
 		this.crew = crew;
 	} 
 }

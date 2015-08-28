@@ -7,6 +7,7 @@ import java.sql.Connection;
 
 import com.epam.aircompany.dao.IAirplaneDao;
 import com.epam.aircompany.dao.IAirportDao;
+import com.epam.aircompany.dao.ICompositionCrewDao;
 import com.epam.aircompany.dao.IDao;
 import com.epam.aircompany.dao.IEmployeeDao;
 import com.epam.aircompany.dao.IPositionDao;
@@ -44,6 +45,11 @@ public class MySQLDao implements IDao {
 	@Override
 	public IRouteDao createIRouteDao(Connection connection) {
 		return new MySQLRouteDao(connection);
+	}
+
+	@Override
+	public ICompositionCrewDao createICompositionCrewDao(Connection connection) {
+		return new MySQLCompositionCrewDao(connection);
 	}
 
 }

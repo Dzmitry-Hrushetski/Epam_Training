@@ -5,6 +5,7 @@ com\epam\aircompany\logic\LogicException.class
 com\epam\aircompany\bean\Airport.class
 com\epam\aircompany\dao\DaoException.class
 com\epam\aircompany\bean\Person.class
+com\epam\aircompany\command\ManagerCommand.class
 com\epam\aircompany\command\ICommand.class
 com\epam\aircompany\dao\factory\DatabaseFactory.class
 com\epam\aircompany\bean\Position.class

@@ -13,10 +13,12 @@ import org.apache.log4j.Logger;
 
 import com.epam.aircompany.bean.Airplane;
 import com.epam.aircompany.bean.Airport;
+import com.epam.aircompany.bean.CompositionCrew;
 import com.epam.aircompany.bean.Employee;
 import com.epam.aircompany.bean.Route;
 import com.epam.aircompany.logic.AirplaneLogic;
 import com.epam.aircompany.logic.AirportLogic;
+import com.epam.aircompany.logic.CompositionCrewLogic;
 import com.epam.aircompany.logic.RouteLogic;
 import com.epam.aircompany.logic.EmployeeLogic;
 import com.epam.aircompany.logic.LogicException;
@@ -49,6 +51,17 @@ public class LoginCommand implements ICommand {
 	private static final int ADMIN = 2;
 	private static final int MANAGER = 3;
 	private static final int FIRST_ENTITY = 0;
+	private static final int FIRST_PILOT_ID = 4;
+	private static final int CO_PILOT_ID = 5;
+	private static final int ENGINEER_ID = 6;
+	private static final int NAVIGATOR_ID = 7;
+	private static final int STEWARD_ID = 8;
+	private static final String PARAM_FIRST_PILOT_LIST = "first_pilot_list";
+	private static final String PARAM_CO_PILOT_LIST = "co_pilot_list";
+	private static final String PARAM_ENGINEER_LIST = "engineer_list";
+	private static final String PARAM_NAVIGATOR_LIST = "navigator_list";
+	private static final String PARAM_STEWARD_LIST = "steward_list";
+	
 	
 	
 	private Employee employee;
@@ -95,11 +108,14 @@ public class LoginCommand implements ICommand {
 	private String findURL(HttpServletRequest request, Employee employee) throws LogicException {
 		String url=null;
 		HttpSession session=null;
+		RouteLogic routeLogic = null;
+		List<Route> routeList = null;
+		EmployeeLogic employeeLogic = null;
 		
 		switch(employee.getPosition().getId()) {
 		case CHEEF:
 			
-			EmployeeLogic employeeLogic = new EmployeeLogic();
+			employeeLogic = new EmployeeLogic();
 			HashMap<String, Object> rezultMap = employeeLogic.generateEmployeeJspData(employee);
 			request.setAttribute(PARAM_EMPLOYEE_ENTITY, rezultMap.get(PARAM_EMPLOYEE_ENTITY));
 			session = request.getSession();
@@ -111,8 +127,8 @@ public class LoginCommand implements ICommand {
 			
 		case ADMIN:
 			
-			RouteLogic routeLogic = new RouteLogic();
-			List<Route> routeList = routeLogic.findAllRoute();
+			routeLogic = new RouteLogic();
+			routeList = routeLogic.findAllRoute();
 			
 			AirportLogic airportLogic = new AirportLogic();
 			List<Airport> airportList = airportLogic.findAllAirport();
@@ -135,6 +151,50 @@ public class LoginCommand implements ICommand {
 			break;
 			
 		case MANAGER:
+			
+			routeLogic = new RouteLogic();
+			routeList = routeLogic.findAllRoute();
+			
+			if (!routeList.isEmpty()) {
+				Route route = routeList.get(FIRST_ENTITY);
+				request.setAttribute(PARAM_ROUTE_ENTITY, route);
+				
+				CompositionCrewLogic compCrewLogic = new CompositionCrewLogic();
+				CompositionCrew compCrew = compCrewLogic.findEntityByAirplaneTypeId(route.getId());
+				
+				employeeLogic = new EmployeeLogic();
+				List<Employee> firstPilotList = employeeLogic.findEmployeeByPositionId(FIRST_PILOT_ID);
+				List<Employee> coPilotList = employeeLogic.findEmployeeByPositionId(CO_PILOT_ID);
+				List<Employee> engineerList = employeeLogic.findEmployeeByPositionId(ENGINEER_ID);
+				List<Employee> navigatorList = employeeLogic.findEmployeeByPositionId(NAVIGATOR_ID);
+				List<Employee> stewardList = employeeLogic.findEmployeeByPositionId(STEWARD_ID);
+				
+				if(compCrew.getCrew().containsKey(CO_PILOT_ID)) {
+					request.setAttribute("co_pilot_present", compCrew.getCrew().get(CO_PILOT_ID));
+				}
+				
+				
+			} else {
+				// надписть список пустой и все, только выбор создать
+			}
+			
+			
+				
+			
+			session = request.getSession();
+			session.setAttribute(PARAM_ROUTE_LIST, routeList);
+			session.setAttribute(PARAM_FIRST_PILOT_LIST, firstPilotList);
+			session.setAttribute(PARAM_CO_PILOT_LIST, coPilotList);
+			session.setAttribute(PARAM_ENGINEER_LIST, engineerList);
+			session.setAttribute(PARAM_NAVIGATOR_LIST, navigatorList);
+			session.setAttribute(PARAM_STEWARD_LIST, stewardList);
+						
+			
+			request.setAttribute("co_pilot_present", true);
+			request.setAttribute("engineer_present", true);
+			request.setAttribute("navigator_present", true);
+			request.setAttribute("steward_present", true);
+			
 			url = URL_BOUNDLE.getString(URL_MANAGER);
 			break;
 		}

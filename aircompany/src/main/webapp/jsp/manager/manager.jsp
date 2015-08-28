@@ -1,0 +1,144 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
+<fmt:setLocale value="${locale}" />
+<fmt:setBundle basename="text" var="rb" />
+
+<!DOCTYPE html>
+
+<html lang="${locale}">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title><fmt:message key="manager.title" bundle="${ rb }" /></title>
+</head>
+<body>
+	<h3>
+		<fmt:message key="aircompany.name" bundle="${ rb }" />
+	</h3>
+	<p>
+	<h4>
+		<fmt:message key="manager.message" bundle="${ rb }" />
+	</h4>
+	<p/>
+
+	<br>
+
+	<c:if test="${empty route}">
+		<c:set var="route" value="1" scope="request" />
+	</c:if>
+
+	<form action="ControllerServlet" method="post">
+		<input type="hidden" name="action" value="manager_command"> 
+		<input type="hidden" name="operation" value="route"> 
+		<label for="route"><fmt:message key="admin.route_list_message" bundle="${ rb }" /></label>
+		 <select id="route" name="route" onchange="submit()">
+			<c:forEach items="${route_list}" var="p">
+				<option value="${p.id}" ${p.id eq route ? 'selected' : ''}>${p.routeNumber} ${p.departureAirport.city.cityName} - ${p.arrivalAirport.city.cityName} ${p.airplane.airplaneType.modelName}</option>
+			</c:forEach>
+		</select>
+	</form>
+
+	<br>
+
+	<form action="ControllerServlet" method="post">
+				<input type="hidden" name="action" value="manager_command"> 
+				<input type="hidden" name="operation" value="crew_entity">
+				<input type="hidden" name="route" value="${route}">
+
+		<table>
+			<tr>
+				<td><fmt:message key="manager.first_pilot" bundle="${ rb }" /></td>
+				<td> 
+					<select	id="first_pilot" name="first_pilot">
+						<c:forEach items="${first_pilot_list}" var="e">
+							<option value="${e.id}" ${e.id eq first_pilot ? 'selected' : ''}>${e.firstName} ${e.lastName}</option>
+						</c:forEach>
+					</select>
+				</td>
+			</tr>
+		
+			<c:if test="${not empty co_pilot_present}">
+					
+			<tr>
+				<td><fmt:message key="manager.co_pilot" bundle="${ rb }" /></td>
+				<td> 
+					<select	id="co_pilot" name="co_pilot">
+						<c:forEach items="${co_pilot_list}" var="e">
+							<option value="${e.id}" ${e.id eq co_pilot ? 'selected' : ''}>${e.firstName} ${e.lastName}</option>
+						</c:forEach>
+					</select>
+				</td>
+			</tr>
+			</c:if>
+			
+			<c:if test="${not empty engineer_present}">
+			<tr>
+				<td><fmt:message key="manager.engineer" bundle="${ rb }" /></td>
+				<td> 
+					<select	id="engineer" name="engineer">
+						<c:forEach items="${engineer_list}" var="e">
+							<option value="${e.id}" ${e.id eq engineer ? 'selected' : ''}>${e.firstName} ${e.lastName}</option>
+						</c:forEach>
+					</select>
+				</td>
+			</tr>
+			</c:if>
+			
+			<c:if test="${not empty navigator_present}">
+			<tr>
+				<td><fmt:message key="manager.navigator" bundle="${ rb }" /></td>
+				<td> 
+					<select	id="navigator" name="navigator">
+						<c:forEach items="${navigator_list}" var="e">
+							<option value="${e.id}" ${e.id eq engineer ? 'selected' : ''}>${e.firstName} ${e.lastName}</option>
+						</c:forEach>
+					</select>
+				</td>
+			</tr>
+			</c:if>
+			
+			<c:if test="${not empty steward_present}">
+			<tr>
+				<td><fmt:message key="manager.steward" bundle="${ rb }" /></td>
+				<td> 
+					<select	id="steward" name="steward" size="8" multiple>
+						<c:forEach items="${steward_list}" var="e">
+							<option value="${e.id}" ${e.id eq engineer ? 'selected' : ''}>${e.firstName} ${e.lastName}</option>
+						</c:forEach>
+					</select>
+				</td>
+			</tr>
+			</c:if>
+		
+		</table>
+				<br>
+				<br>
+				<c:if test="${not empty delete_state}">
+					<fmt:message key="admin.delet_state" bundle="${ rb }" />
+				</c:if>
+				<c:if test="${not empty save_state}">
+					<fmt:message key="admin.save_state" bundle="${ rb }" />
+				</c:if>
+				<br>
+				<br>
+				<input type="submit" name="save" value="<fmt:message key="save" bundle="${ rb }" />"  />
+				<input type="submit" name="delete" value="<fmt:message key="delete" bundle="${ rb }" />"  />
+	</form>
+
+	<br>
+	
+	<form action="ControllerServlet" method="post">
+		<input type="hidden" name="action" value="manager_command">
+		<input type="hidden" name="operation" value="create_new"> 
+		<input type="submit" name="create" value="<fmt:message key="admin.create" bundle="${ rb }" />"  />
+	</form>
+	
+	<br>
+	
+	<form action="ControllerServlet" method="post">
+		<input type="hidden" name="action" value="logout_command">
+		<input type="submit" name="logout" value="<fmt:message key="logout" bundle="${ rb }" />"  />
+	</form>
+</body>
+</html>

@@ -3,7 +3,6 @@
  */
 package com.epam.aircompany.command;
 
-import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -20,41 +19,51 @@ import com.epam.aircompany.logic.RouteLogic;
  * @author Dzmitry Hrushetski
  *
  */
-public class AdminCommand implements ICommand {
-	private static final Logger LOG = Logger.getLogger(AdminCommand.class);
-	private static final String URL_ADMIN = "admin";
-	private static final String URL_NEW = "create_new_route";
-	private static final int FIRST_ROUTE = 0;
+public class ManagerCommand implements ICommand {
+	private static final Logger LOG = Logger.getLogger(ManagerCommand.class);
 	private static final String PARAM_OPERATION = "operation";
+	private static final String PARAM_ROUTE_LIST = "route_list";
+	private static final String PARAM_DEPARTURE_AIRPORT_LIST = "departure_airport_list";
+	private static final String PARAM_ARRIVAL_AIRPORT_LIST = "arrival_airport_list";
+	private static final String PARAM_AIRPLANE_LIST = "airplane_list";
+	private static final String PARAM_EMPLOYEE_ENTITY = "employee_entity";
+	private static final String PARAM_CREW_ENTITY = "crew_entity";
 	private static final String PARAM_EXCEPTION = "exception";
 	private static final String PARAM_ROUTE = "route";
-	private static final String PARAM_ROUTE_ENTITY = "route_entity";
-	private static final String PARAM_NEW_ROUTE_ENTITY = "new_route_entity";
-	private static final String PARAM_DELETE = "delete";
 	private static final String PARAM_CREATE_NEW = "create_new";
-	private static final String PARAM_DELETE_STATE = "delete_state";
-	private static final String PARAM_SAVE_STATE = "save_state";
-	private static final String PARAM_BAD_DATA = "bad_data";
-	private static final String PARAM_SAVE = "save";
-	private static final String PARAM_ROUTE_LIST = "route_list";
-	private static final String PARAM_DEPARTURE_AIRPORT = "departure_airport";
-	private static final String PARAM_ARRIVAL_AIRPORT = "arrival_airport";
-	private static final String PARAM_AIRPLANE = "airplane";
-	private static final String PARAM_ROUTE_NUMBER = "route_number";
-	private static final String PARAM_DEPARTURE_TIME = "departure_time";
-	private static final String PARAM_ARRIVAL_TIME = "arrival_time";
-	private static final String PARAM_SAVE_STATE_NEW = "save_state_new";
-	
-	private Route route;
-	
+	private static final String URL_LOGIN = "login";
+	private static final String URL_CHEEF = "cheef";
+	private static final String URL_ADMIN = "admin";
+	private static final String URL_MANAGER = "manager";
+	private static final String URL_NEW = "create_new_crew";
+	private static final int CHEEF = 1;
+	private static final int ADMIN = 2;
+	private static final int MANAGER = 3;
+	private static final int FIRST_ENTITY = 0;
+	private static final int FIRST_PILOT_ID = 4;
+	private static final int CO_PILOT_ID = 5;
+	private static final int ENGINEER_ID = 6;
+	private static final int NAVIGATOR_ID = 7;
+	private static final int STEWARD_ID = 8;
+	private static final String PARAM_FIRST_PILOT_LIST = "first_pilot_list";
+	private static final String PARAM_CO_PILOT_LIST = "co_pilot_list";
+	private static final String PARAM_ENGINEER_LIST = "engineer_list";
+	private static final String PARAM_NAVIGATOR_LIST = "navigator_list";
+	private static final String PARAM_STEWARD_LIST = "steward_list";
+
+	/**
+	 * 
+	 */
+	public ManagerCommand() {
+	}
+
 	/* (non-Javadoc)
 	 * @see com.epam.aircompany.command.ICommand#execute(javax.servlet.http.HttpServletRequest)
 	 */
 	@Override
 	public String execute(HttpServletRequest request) {
-		String url = URL_BOUNDLE.getString(URL_ADMIN);
+		String url = URL_BOUNDLE.getString(URL_MANAGER);
 		String operation = request.getParameter(PARAM_OPERATION);
-		RouteLogic routeLogic = new RouteLogic();
 		String param = null;
 		boolean isOk = false;
 		int routeId = 0;
@@ -66,20 +75,20 @@ public class AdminCommand implements ICommand {
 			routeId = Integer.parseInt(param);
 			
 			try {
-				//RouteLogic routeLogic = new RouteLogic();
-				route = routeLogic.findRouteByID(routeId);
-				request.setAttribute(PARAM_ROUTE_ENTITY, route);
+				RouteLogic routeLogic = new RouteLogic();
+				Route route = routeLogic.findRouteByID(routeId);
+				request.setAttribute(PARAM_CREW_ENTITY, route);
 			} catch (LogicException e) {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);
 				url = URL_BOUNDLE.getString(URL_ERROR);
 			}	
 			break;
-		case PARAM_ROUTE_ENTITY:
+		case PARAM_CREW_ENTITY:
 			param = request.getParameter(PARAM_ROUTE);
 			request.setAttribute(PARAM_ROUTE, param);
 			
-			param = request.getParameter(PARAM_ROUTE_ENTITY);
+			/*param = request.getParameter(PARAM_ROUTE_ENTITY);
 			routeId = Integer.parseInt(param);
 			
 			try {
@@ -126,7 +135,7 @@ public class AdminCommand implements ICommand {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);
 				url = URL_BOUNDLE.getString(URL_ERROR);
-			}	
+			}	*/
 			break;	
 		case PARAM_CREATE_NEW:
 			url = URL_BOUNDLE.getString(URL_NEW);
@@ -134,4 +143,5 @@ public class AdminCommand implements ICommand {
 		}
 		return url;
 	}
+
 }
