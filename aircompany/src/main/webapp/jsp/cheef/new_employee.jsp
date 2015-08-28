@@ -82,8 +82,12 @@
 				<br>
 				<br>
 				<input type="submit" name="save" value="<fmt:message key="save" bundle="${ rb }" />"  />
-				<input type="submit" name="back" value="<fmt:message key="cheef.back" bundle="${ rb }" />"  />
 			</form>
+			<form action="ControllerServlet" method="post">
+				<input type="hidden" name="action" value="create_employee_command"> 
+				<input type="hidden" name="operation" value="back">
+				<input type="submit" name="back" value="<fmt:message key="cheef.back" bundle="${ rb }" />"  />
+		</form>
 	
 	<br>
 	

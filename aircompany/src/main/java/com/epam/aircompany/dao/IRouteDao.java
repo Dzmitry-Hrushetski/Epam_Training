@@ -17,4 +17,6 @@ public interface IRouteDao extends IBaseDao<Route> {
 
 	boolean updateRouteByID(int routeId, HashMap<String, String> routeData) throws DaoException;
 
+	boolean addNewRoute(HashMap<String, String> routeData) throws DaoException;
+
 }

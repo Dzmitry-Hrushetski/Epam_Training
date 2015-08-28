@@ -15,7 +15,8 @@ public enum CommandEnum {
 	POSITION_COMMAND (new PositionCommand()),
 	LOGOUT_COMMAND (new LogoutCommand()),
 	CREATE_EMPLOYEE_COMMAND (new CreateNewEmployeeCommand()),
-	ADMIN_COMMAND (new AdminCommand());
+	ADMIN_COMMAND (new AdminCommand()),
+	NEW_ROUTE_COMMAND(new NewRouteCommand());
 	
 	private ICommand command;
 	

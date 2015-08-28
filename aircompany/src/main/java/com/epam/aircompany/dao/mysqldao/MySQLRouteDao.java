@@ -9,7 +9,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
@@ -38,10 +42,17 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 	private static final String DEPARTURE_AIRPORT_ID = "route.departure_airport_id";
 	private static final String ARRIVAL_AIRPORT_ID = "route.arrival_airport_id";
 	private static final String AIRPLANE_ID = "route.airplane_id";
+	private static final String PARAM_DEPARTURE_AIRPORT = "departure_airport";
+	private static final String PARAM_ARRIVAL_AIRPORT = "arrival_airport";
+	private static final String PARAM_AIRPLANE = "airplane";
+	private static final String PARAM_ROUTE_NUMBER = "route_number";
+	private static final String PARAM_DEPARTURE_TIME = "departure_time";
+	private static final String PARAM_ARRIVAL_TIME = "arrival_time";
 	private static final String FIND_ALL_ROUTE = "SELECT route.* FROM route WHERE route.disable = 0";
 	private static final String FIND_ROUTE_BY_ID = "SELECT route.* FROM route WHERE route.id = ? AND route.disable = 0";
 	private static final String DELETE_ROUTE = "UPDATE route SET disable = 1 WHERE route.id = ?";
 	private static final String UPDATE_ROUTE_BY_ID = "UPDATE route SET departure_airport_id = ?, arrival_airport_id = ?, airplane_id = ?, departure_time = ?, arrival_time = ?, route_number = ? WHERE route.id = ?";
+	private static final String ADD_ROUTE = "INSERT INTO route (departure_airport_id, arrival_airport_id, airplane_id, departure_time, arrival_time, route_number, disable) VALUES (?, ?, ?, ?, ?, ?, 0)";
 	
 	private IDao databaseDao = DatabaseFactory.getInstance().getDatabaseDao(DaoFactoryType.MYSQL);
 	
@@ -196,18 +207,62 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 		boolean isOk = false;
 		 		
 		try {
-			prepStatement = connection.prepareStatement(DELETE_ROUTE);
+			prepStatement = connection.prepareStatement(UPDATE_ROUTE_BY_ID);
 			
-			prepStatement.setInt(1,routeId);
+			prepStatement.setInt(1,Integer.parseInt(routeData.get(PARAM_DEPARTURE_AIRPORT)));
+			prepStatement.setInt(2,Integer.parseInt(routeData.get(PARAM_ARRIVAL_AIRPORT)));
+			prepStatement.setInt(3,Integer.parseInt(routeData.get(PARAM_AIRPLANE)));
+			prepStatement.setTimestamp(4,convertStringToTimestamp(routeData.get(PARAM_DEPARTURE_TIME)));
+			prepStatement.setTimestamp(5,convertStringToTimestamp(routeData.get(PARAM_ARRIVAL_TIME)));
+			//prepStatement.setTimestamp(4,Timestamp.valueOf(routeData.get(PARAM_DEPARTURE_TIME)));
+			//prepStatement.setTimestamp(5,Timestamp.valueOf(routeData.get(PARAM_ARRIVAL_TIME)));
+			prepStatement.setString(6,routeData.get(PARAM_ROUTE_NUMBER));
+			prepStatement.setInt(7,routeId);
 			prepStatement.executeUpdate();
 			isOk = true;
 			
-		} catch (SQLException ex) {
+		} catch (SQLException | ParseException ex) {
 			throw new DaoException("Database error.", ex);
 		} finally {
 			close(prepStatement);
 		}
 		return isOk;
 	}
+	
+	@Override
+	public boolean addNewRoute(HashMap<String, String> routeData) throws DaoException {
+		PreparedStatement prepStatement = null;
+		boolean isOk = false;
+		 		
+		try {
+			prepStatement = connection.prepareStatement(ADD_ROUTE);
+			
+			prepStatement.setInt(1,Integer.parseInt(routeData.get(PARAM_DEPARTURE_AIRPORT)));
+			prepStatement.setInt(2,Integer.parseInt(routeData.get(PARAM_ARRIVAL_AIRPORT)));
+			prepStatement.setInt(3,Integer.parseInt(routeData.get(PARAM_AIRPLANE)));
+			prepStatement.setTimestamp(4,convertStringToTimestamp(routeData.get(PARAM_DEPARTURE_TIME)));
+			prepStatement.setTimestamp(5,convertStringToTimestamp(routeData.get(PARAM_ARRIVAL_TIME)));
+			//prepStatement.setTimestamp(4,Timestamp.valueOf(routeData.get(PARAM_DEPARTURE_TIME)));
+			//prepStatement.setTimestamp(5,Timestamp.valueOf(routeData.get(PARAM_ARRIVAL_TIME)));
+			prepStatement.setString(6,routeData.get(PARAM_ROUTE_NUMBER));
+			prepStatement.executeUpdate();
+			isOk = true;
+			
+		} catch (SQLException | ParseException ex) {
+			throw new DaoException("Database error.", ex);
+		} finally {
+			close(prepStatement);
+		}
+		return isOk;
+	}
+	
+	private Timestamp convertStringToTimestamp(String str_date) throws ParseException {
+		DateFormat formatter;
+		
+		formatter = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+		Date date = (Date) formatter.parse(str_date);
+		java.sql.Timestamp timeStampDate = new Timestamp(date.getTime());
 
+		return timeStampDate;
+	}
 }

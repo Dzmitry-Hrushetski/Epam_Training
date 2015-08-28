@@ -91,4 +91,21 @@ public class RouteLogic extends BaseLogic {
 		}	
 		return isOk;
 	}
+
+	public boolean addNewRoute(HashMap<String, String> routeData) throws LogicException {
+		boolean isOk = false;
+		
+		try {	
+			
+			connection = connectionPool.getConnection();
+			IRouteDao iRoute = databaseDao.createIRouteDao(connection);
+			isOk = iRoute.addNewRoute(routeData);
+			
+		} catch (ConnectionPoolException | DaoException e) {
+			throw new LogicException(e); 
+		} finally {
+			connectionPool.releaseConnection(connection);
+		}	
+		return isOk;
+	}
 }

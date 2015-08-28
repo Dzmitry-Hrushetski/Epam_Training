@@ -25,6 +25,7 @@ com\epam\aircompany\logic\RouteLogic.class
 com\epam\aircompany\constant\Constants.class
 com\epam\aircompany\filter\PageRedirectFilter.class
 com\epam\aircompany\dao\factory\DaoFactoryType.class
+com\epam\aircompany\command\NewRouteCommand.class
 com\epam\aircompany\dao\IEmployeeDao.class
 com\epam\aircompany\dao\mysqldao\MySQLPositionDao.class
 com\epam\aircompany\filter\EncodingFilter.class

@@ -16,7 +16,7 @@ public class Route extends Entity {
 	 * 
 	 */
 	private static final long serialVersionUID = -8426647497365969985L;
-	private static final String DATE_STRING="%d-%02d-%02d %02d:%02d";
+	private static final String DATE_STRING="%d-%02d-%02d %02d:%02d:%02d";
 	private Airport departureAirport;
 	private Airport arrivalAirport;
 	private Airplane airplane;
@@ -81,7 +81,7 @@ public class Route extends Entity {
 	}
 	
 	public String getDepartureString() {
-		return String.format(DATE_STRING, departure.get(Calendar.YEAR), departure.get(Calendar.MONTH)+1, departure.get(Calendar.DAY_OF_MONTH), departure.get(Calendar.HOUR), departure.get(Calendar.MINUTE));
+		return String.format(DATE_STRING, departure.get(Calendar.YEAR), departure.get(Calendar.MONTH)+1, departure.get(Calendar.DAY_OF_MONTH), departure.get(Calendar.HOUR_OF_DAY), departure.get(Calendar.MINUTE), departure.get(Calendar.SECOND));
 	}
 	/**
 	 * @param departure the departure to set
@@ -97,7 +97,7 @@ public class Route extends Entity {
 	}
 	
 	public String getArrivalString() {
-		return String.format(DATE_STRING, arrival.get(Calendar.YEAR), arrival.get(Calendar.MONTH)+1, arrival.get(Calendar.DAY_OF_MONTH), arrival.get(Calendar.HOUR), arrival.get(Calendar.MINUTE));
+		return String.format(DATE_STRING, arrival.get(Calendar.YEAR), arrival.get(Calendar.MONTH)+1, arrival.get(Calendar.DAY_OF_MONTH), arrival.get(Calendar.HOUR_OF_DAY), arrival.get(Calendar.MINUTE), departure.get(Calendar.SECOND));
 	}
 	/**
 	 * @param arrival the arrival to set

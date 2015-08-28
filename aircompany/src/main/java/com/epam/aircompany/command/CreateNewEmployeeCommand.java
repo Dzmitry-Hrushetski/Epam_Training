@@ -36,6 +36,7 @@ public class CreateNewEmployeeCommand implements ICommand {
 	private static final String PARAM_SAVE_STATE = "save_state";
 	private static final String PARAM_BAD_DATA = "bad_data";
 	private static final String PARAM_SAVE = "save";
+	private static final String PARAM_BACK = "back";
 	private static final String PARAM_FIRST_NAME = "first_name";
 	private static final String PARAM_LAST_NAME = "last_name";
 	private static final String PARAM_PHONE = "phone";
@@ -43,7 +44,7 @@ public class CreateNewEmployeeCommand implements ICommand {
 	private static final String PARAM_USER_NAME = "user_name";
 	private static final String PARAM_PASSWORD = "password";
 	private static final String PARAM_START_DATE = "calendar";
-	private static final String PARAM_BACK = "back";
+	private static final String PARAM_POSITION_LIST = "position_list";
 	
 	private Employee employee;
 
@@ -54,6 +55,7 @@ public class CreateNewEmployeeCommand implements ICommand {
 	public String execute(HttpServletRequest request) {
 		String url = URL_BOUNDLE.getString(URL_CREATE_NEW);
 		String operation = request.getParameter(PARAM_OPERATION);
+		HttpSession session = null;
 		int employeeId = 0;
 		int positionId = 0;
 		boolean isOk = false;
@@ -87,29 +89,23 @@ public class CreateNewEmployeeCommand implements ICommand {
 			
 			break;
 			
-		/*case PARAM_EMPLOYEE:
-			param = request.getParameter(PARAM_EMPLOYEE);
-			employeeId = Integer.parseInt(param);
-			
+		case PARAM_BACK:		
 			try {
 				
 				EmployeeLogic employeeLogic = new EmployeeLogic();
-				employee = employeeLogic.findEntityByID(employeeId);
-				
-				if(employee != null) {
-					request.setAttribute(PARAM_EMPLOYEE_ENTITY, employee);
-				}
-			
-				request.setAttribute(PARAM_EMPLOYEE, param);
-				param = request.getParameter(PARAM_POSITION);
-				request.setAttribute(PARAM_POSITION, param);
+				HashMap<String, Object> rezultMap = employeeLogic.generateEmployeeJspData(employee);
+				request.setAttribute(PARAM_EMPLOYEE_ENTITY, rezultMap.get(PARAM_EMPLOYEE_ENTITY));
+				session = request.getSession();
+				session.setAttribute(PARAM_EMPLOYEE_LIST, rezultMap.get(PARAM_EMPLOYEE_LIST));
+				session.setAttribute(PARAM_POSITION_LIST, rezultMap.get(PARAM_POSITION_LIST));
 				
 			} catch (LogicException e) {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);
 				url = URL_BOUNDLE.getString(URL_ERROR);
 			} 
-			break;*/
+			url = URL_BOUNDLE.getString(URL_CHEEF);
+			break;
 			
 		case PARAM_EMPLOYEE_ENTITY:
 			/*param = request.getParameter(PARAM_EMPLOYEE_ENTITY);
@@ -128,7 +124,7 @@ public class CreateNewEmployeeCommand implements ICommand {
 						request.setAttribute(PARAM_EMPLOYEE_ENTITY, employee);
 					}
 
-					HttpSession session = request.getSession();
+					session = request.getSession();
 					session.setAttribute(PARAM_EMPLOYEE_LIST, employeeList);
 
 					param = request.getParameter(PARAM_POSITION);

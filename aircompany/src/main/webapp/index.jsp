@@ -9,7 +9,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <body>
 
-Hello
 <jsp:forward page="/jsp/login/login.jsp"></jsp:forward>
 
 </body>
