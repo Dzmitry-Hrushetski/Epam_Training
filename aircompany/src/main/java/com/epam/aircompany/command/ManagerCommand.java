@@ -3,6 +3,8 @@
  */
 package com.epam.aircompany.command;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -62,7 +64,17 @@ public class ManagerCommand implements ICommand {
 	private static final String PARAM_STEWARD_PRES = "steward_present";
 	private static final String PARAM_COMP_CREW = "comp_crew";
 	private static final String PARAM_CREW = "crew";
-
+	private static final String PARAM_SAVE = "save";
+	private static final String PARAM_DELETE = "delete";
+	private static final String PARAM_DELETE_STATE = "delete_state";
+	private static final String PARAM_SAVE_STATE = "save_state";
+	private static final String PARAM_FIRST_PILOT = "first_pilot";
+	private static final String PARAM_CO_PILOT = "co_pilot";
+	private static final String PARAM_ENGINEER = "engineer";
+	private static final String PARAM_NAVIGATOR = "navigator";
+	private static final String PARAM_STEWARD = "steward";
+	
+	
 	/**
 	 * 
 	 */
@@ -76,6 +88,8 @@ public class ManagerCommand implements ICommand {
 	public String execute(HttpServletRequest request) {
 		String url = URL_BOUNDLE.getString(URL_MANAGER);
 		String operation = request.getParameter(PARAM_OPERATION);
+		CrewLogic crewLogic = new CrewLogic();
+		CompositionCrew compCrew = null;
 		HttpSession session=null;
 		String param = null;
 		boolean isOk = false;
@@ -93,9 +107,9 @@ public class ManagerCommand implements ICommand {
 				request.setAttribute(PARAM_CREW_ENTITY, route);
 				
 				CompositionCrewLogic compCrewLogic = new CompositionCrewLogic();
-				CompositionCrew compCrew = compCrewLogic.findEntityByAirplaneTypeId(route.getAirplane().getAirplaneType().getId());
+				compCrew = compCrewLogic.findEntityByAirplaneTypeId(route.getAirplane().getAirplaneType().getId());
 				
-				CrewLogic crewLogic = new CrewLogic();
+				//CrewLogic crewLogic = new CrewLogic();
 				Crew crew = crewLogic.findEntityByRouteId(route.getId());
 				
 				session = request.getSession();
@@ -129,40 +143,59 @@ public class ManagerCommand implements ICommand {
 		case PARAM_CREW_ENTITY:
 			param = request.getParameter(PARAM_ROUTE);
 			request.setAttribute(PARAM_ROUTE, param);
-			
-			/*param = request.getParameter(PARAM_ROUTE_ENTITY);
 			routeId = Integer.parseInt(param);
 			
 			try {
 				param = request.getParameter(PARAM_DELETE);
 				if (param != null) {
-					//RouteLogic routeLogic = new RouteLogic();
-					isOk = routeLogic.deleteRouteByID(routeId);
+					isOk = crewLogic.deleteCrewByRouteId(routeId);
 					request.setAttribute(PARAM_DELETE_STATE, isOk);
+					
+					session = request.getSession();
+					compCrew = (CompositionCrew) session.getAttribute(PARAM_COMP_CREW);
+					
+					if(compCrew.getCrew().containsKey(CO_PILOT_ID)) {
+						request.setAttribute(PARAM_CO_PILOT_PRES, compCrew.getCrew().get(CO_PILOT_ID));
+					}
+					if(compCrew.getCrew().containsKey(ENGINEER_ID)) {
+						request.setAttribute(PARAM_ENGINEER_PRES, compCrew.getCrew().get(ENGINEER_ID));
+					}
+					if(compCrew.getCrew().containsKey(NAVIGATOR_ID)) {
+						request.setAttribute(PARAM_NAVIGATOR_PRES, compCrew.getCrew().get(NAVIGATOR_ID));
+					}
+					if(compCrew.getCrew().containsKey(STEWARD_ID)) {
+						request.setAttribute(PARAM_STEWARD_PRES, compCrew.getCrew().get(STEWARD_ID));
+					}
 				}
 				
 				param = request.getParameter(PARAM_SAVE);
 				if (param != null) {
-					HashMap<String, String> routeData = new HashMap<String, String>();
+					ArrayList<String> crewData = new ArrayList<String>();
 					
-					param = request.getParameter(PARAM_DEPARTURE_AIRPORT);
-					routeData.put(PARAM_DEPARTURE_AIRPORT, param);
-					param = request.getParameter(PARAM_ARRIVAL_AIRPORT);
-					routeData.put(PARAM_ARRIVAL_AIRPORT, param);
-					param = request.getParameter(PARAM_AIRPLANE);
-					routeData.put(PARAM_AIRPLANE, param);
-					param = request.getParameter(PARAM_ROUTE_NUMBER);
-					routeData.put(PARAM_ROUTE_NUMBER, param);
-					param = request.getParameter(PARAM_DEPARTURE_TIME);
-					routeData.put(PARAM_DEPARTURE_TIME, param);
-					param = request.getParameter(PARAM_ARRIVAL_TIME);
-					routeData.put(PARAM_ARRIVAL_TIME, param);
+					//param = request.getParameter(PARAM_FIRST_PILOT);
+					crewData.add(request.getParameter(PARAM_FIRST_PILOT));
 					
-					isOk = routeLogic.updateRouteByID(routeId,routeData);
+					session = request.getSession();
+					compCrew = (CompositionCrew) session.getAttribute(PARAM_COMP_CREW);
+					
+					if(compCrew.getCrew().containsKey(CO_PILOT_ID)) {
+						crewData.add(request.getParameter(PARAM_CO_PILOT));
+					}
+					if(compCrew.getCrew().containsKey(ENGINEER_ID)) {
+						crewData.add(request.getParameter(PARAM_ENGINEER));
+					}
+					if(compCrew.getCrew().containsKey(NAVIGATOR_ID)) {
+						crewData.add(request.getParameter(PARAM_NAVIGATOR));
+					}
+					if(compCrew.getCrew().containsKey(STEWARD_ID)) {
+						crewData.addAll(Arrays.asList(request.getParameterValues(PARAM_STEWARD)));
+					}
+					
+					isOk = crewLogic.saveCrewByRouteId(routeId, crewData);
 					request.setAttribute(PARAM_SAVE_STATE, isOk);
 				}
 				
-				//RouteLogic routeLogic = new RouteLogic();
+				/*//RouteLogic routeLogic = new RouteLogic();
 				List<Route> routeList = routeLogic.findAllRoute();
 							
 				HttpSession session = request.getSession();
@@ -172,12 +205,13 @@ public class ManagerCommand implements ICommand {
 					route = routeLogic.findRouteByID(routeList.get(routeId-1).getId());
 					request.setAttribute(PARAM_ROUTE_ENTITY, route);
 				}
+				*/
 				
 			} catch (LogicException e) {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);
 				url = URL_BOUNDLE.getString(URL_ERROR);
-			}	*/
+			}	
 			break;	
 		case PARAM_CREATE_NEW:
 			url = URL_BOUNDLE.getString(URL_NEW);

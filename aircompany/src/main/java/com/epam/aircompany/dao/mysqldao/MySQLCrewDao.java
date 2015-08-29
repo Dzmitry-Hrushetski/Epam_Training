@@ -28,10 +28,14 @@ import com.epam.aircompany.logic.ICrewDao;
  *
  */
 public class MySQLCrewDao extends AbstractDao implements ICrewDao {
-	private static final String FIND_BY_ROUTE_ID = "SELECT crew.employee_id FROM crew WHERE crew.route_id = ? AND crew.disable = 0";
 	private static final String EMPLOYEE_ID = "employee_id";
 	private static final String QUANTITY = "quantity";
+	private static final String FIND_BY_ROUTE_ID = "SELECT crew.employee_id FROM crew WHERE crew.route_id = ? AND crew.disable = 0";
+	//private static final String DELETE_CREW = "UPDATE crew SET disable = 1 WHERE route_id = ?";
+	private static final String DELETE_CREW = "DELETE FROM crew	WHERE route_id = ?";
 	
+	private static final String ADD_CREW_ENTITY = "INSERT INTO crew (route_id, employee_id, disable) VALUES (?, ?, 0)";
+		
 	private IDao databaseDao = DatabaseFactory.getInstance().getDatabaseDao(DaoFactoryType.MYSQL);
 
 	/**
@@ -108,6 +112,69 @@ public class MySQLCrewDao extends AbstractDao implements ICrewDao {
 			close(prepStatement);
 		}
 		return crew;
+	}
+
+	@Override
+	public boolean deleteCrewByRouteId(int id) throws DaoException {
+		boolean isOk = false;
+		PreparedStatement prepStatement = null;
+ 		
+		try {
+			prepStatement = connection.prepareStatement(DELETE_CREW);
+			
+			prepStatement.setInt(1,id);
+			prepStatement.executeUpdate();
+			isOk = true;
+			
+		} catch (SQLException ex) {
+			throw new DaoException("Database error.", ex);
+		} finally {
+			close(prepStatement);
+		}
+		return isOk;
+	}
+
+	@Override
+	public boolean saveCrewByRouteId(int id, ArrayList<String> crewData) throws DaoException {
+		boolean isOk = false;
+		PreparedStatement prepStatement = null;
+		
+		try {
+			
+			connection.setAutoCommit(false);
+			
+			prepStatement = connection.prepareStatement(DELETE_CREW);
+			
+			prepStatement.setInt(1,id);
+			prepStatement.executeUpdate();
+			
+			close(prepStatement);
+			
+			for(String e: crewData) {
+			prepStatement = connection.prepareStatement(ADD_CREW_ENTITY);
+			
+			prepStatement.setInt(1,id);
+			prepStatement.setInt(2,Integer.parseInt(e));
+			prepStatement.executeUpdate();
+			
+			close(prepStatement);
+			}
+			
+			connection.commit();
+			connection.setAutoCommit(true);
+			isOk = true;
+			
+		} catch (SQLException ex) {
+			try {
+				connection.rollback();
+			} catch (SQLException e) {
+				throw new DaoException("Database error", e);
+			}
+			throw new DaoException("Database error.", ex);
+		} finally {
+			close(prepStatement);
+		}
+		return isOk;
 	}
 
 }

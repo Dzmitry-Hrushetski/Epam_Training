@@ -128,16 +128,21 @@
 				<br>
 				<br>
 				<input type="submit" name="save" value="<fmt:message key="save" bundle="${ rb }" />"  />
+				
+	</form>
+	<form action="ControllerServlet" method="post">
+				<input type="hidden" name="action" value="manager_command"> 
+				<input type="hidden" name="operation" value="crew_entity">
+				<input type="hidden" name="route" value="${route}">
 				<input type="submit" name="delete" value="<fmt:message key="delete" bundle="${ rb }" />"  />
 	</form>
-
 	<br>
 	<fmt:message key="manager.crew_list" bundle="${ rb }" />
 	<br>
 	<c:choose>
 		<c:when test="${not empty crew}"> 
 			<c:forEach items="${crew.crew}" var="e">
-				<p>${e.position.positionName} ${e.firstName} ${e.lastName}</p>
+				<p>${e.position.positionName}: ${e.firstName} ${e.lastName}</p>
 			</c:forEach>
 		</c:when>
 		

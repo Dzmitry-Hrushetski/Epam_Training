@@ -3,6 +3,8 @@
  */
 package com.epam.aircompany.logic;
 
+import java.util.ArrayList;
+
 import com.epam.aircompany.bean.CompositionCrew;
 import com.epam.aircompany.bean.Crew;
 import com.epam.aircompany.dao.DaoException;
@@ -34,5 +36,33 @@ public class CrewLogic extends BaseLogic {
 			connectionPool.releaseConnection(connection);
 		}	
 		return crew;
+	}
+
+	public boolean deleteCrewByRouteId(int id) throws LogicException {
+		boolean isOk = false;
+		try {	
+			connection = connectionPool.getConnection();
+			ICrewDao iCrewDao = databaseDao.createICrewDao(connection);
+			isOk = iCrewDao.deleteCrewByRouteId(id);		
+		} catch (ConnectionPoolException | DaoException e) {
+			throw new LogicException(e); 
+		} finally {
+			connectionPool.releaseConnection(connection);
+		}	
+		return isOk;
+	}
+
+	public boolean saveCrewByRouteId(int id, ArrayList<String> crewData) throws LogicException {
+		boolean isOk = false;
+		try {	
+			connection = connectionPool.getConnection();
+			ICrewDao iCrewDao = databaseDao.createICrewDao(connection);
+			isOk = iCrewDao.saveCrewByRouteId(id, crewData);		
+		} catch (ConnectionPoolException | DaoException e) {
+			throw new LogicException(e); 
+		} finally {
+			connectionPool.releaseConnection(connection);
+		}	
+		return isOk;
 	}
 }
