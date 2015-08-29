@@ -69,4 +69,12 @@
 		<exception-type>java.lang.Exception</exception-type>
 		<location>/jsp/error/error500.jsp</location>
   </error-page>
+  
+  <jsp-config>
+		<taglib>
+			<taglib-uri>develop_info</taglib-uri>
+			<taglib-location>/WEB-INF/tld/develop.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+	
 </web-app>

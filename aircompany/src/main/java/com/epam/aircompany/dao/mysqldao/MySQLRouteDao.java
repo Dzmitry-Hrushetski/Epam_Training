@@ -35,6 +35,7 @@ import com.epam.aircompany.dao.factory.DatabaseFactory;
  *
  */
 public class MySQLRouteDao extends AbstractDao implements IRouteDao {
+	private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
 	private static final String ROUTE_ID = "route.id";
 	private static final String ROUTE_NUMBER = "route.route_number";
 	private static final String ROUTE_DEPARTURE_TIME = "route.departure_time";
@@ -93,7 +94,7 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 				calendar = new GregorianCalendar();
 				time = rs.getTimestamp(ROUTE_ARRIVAL_TIME);
 				calendar.setTimeInMillis(time.getTime());
-				route.setDeparture(calendar);
+				route.setArrival(calendar);
 				
 				IAirportDao iAirport = databaseDao.createIAirportDao(connection);
 				airport = iAirport.findEntityByID(rs.getInt(DEPARTURE_AIRPORT_ID));
@@ -214,8 +215,6 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 			prepStatement.setInt(3,Integer.parseInt(routeData.get(PARAM_AIRPLANE)));
 			prepStatement.setTimestamp(4,convertStringToTimestamp(routeData.get(PARAM_DEPARTURE_TIME)));
 			prepStatement.setTimestamp(5,convertStringToTimestamp(routeData.get(PARAM_ARRIVAL_TIME)));
-			//prepStatement.setTimestamp(4,Timestamp.valueOf(routeData.get(PARAM_DEPARTURE_TIME)));
-			//prepStatement.setTimestamp(5,Timestamp.valueOf(routeData.get(PARAM_ARRIVAL_TIME)));
 			prepStatement.setString(6,routeData.get(PARAM_ROUTE_NUMBER));
 			prepStatement.setInt(7,routeId);
 			prepStatement.executeUpdate();
@@ -242,8 +241,6 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 			prepStatement.setInt(3,Integer.parseInt(routeData.get(PARAM_AIRPLANE)));
 			prepStatement.setTimestamp(4,convertStringToTimestamp(routeData.get(PARAM_DEPARTURE_TIME)));
 			prepStatement.setTimestamp(5,convertStringToTimestamp(routeData.get(PARAM_ARRIVAL_TIME)));
-			//prepStatement.setTimestamp(4,Timestamp.valueOf(routeData.get(PARAM_DEPARTURE_TIME)));
-			//prepStatement.setTimestamp(5,Timestamp.valueOf(routeData.get(PARAM_ARRIVAL_TIME)));
 			prepStatement.setString(6,routeData.get(PARAM_ROUTE_NUMBER));
 			prepStatement.executeUpdate();
 			isOk = true;
@@ -259,7 +256,7 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 	private Timestamp convertStringToTimestamp(String str_date) throws ParseException {
 		DateFormat formatter;
 		
-		formatter = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+		formatter = new SimpleDateFormat(DATE_FORMAT);
 		Date date = (Date) formatter.parse(str_date);
 		java.sql.Timestamp timeStampDate = new Timestamp(date.getTime());
 

@@ -1,6 +1,7 @@
 <%@ page language="java" isErrorPage="true" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="devtg" uri="develop_info" %>
 
 <fmt:setLocale value="${locale}" />
 <fmt:setBundle basename="text" var="rb" />
@@ -76,5 +77,6 @@
     	<fmt:message key="error.back_to_previous" bundle="${ rb }" />
     </button>
 
+	<devtg:develop-info/>
 </body>
 </html>

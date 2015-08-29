@@ -44,6 +44,7 @@ public class AdminCommand implements ICommand {
 	private static final String PARAM_DEPARTURE_TIME = "departure_time";
 	private static final String PARAM_ARRIVAL_TIME = "arrival_time";
 	private static final String PARAM_SAVE_STATE_NEW = "save_state_new";
+	private static final int DB_ID_CORRECTION = 1;
 	
 	private Route route;
 	
@@ -119,7 +120,7 @@ public class AdminCommand implements ICommand {
 								
 				if (!routeList.isEmpty()) {
 					//route = routeLogic.findRouteByID(routeList.get(routeId-1).getId());
-					route = routeList.get(routeId-1);
+					route = routeList.get(routeId-DB_ID_CORRECTION);
 					request.setAttribute(PARAM_ROUTE_ENTITY, route);
 				}
 				

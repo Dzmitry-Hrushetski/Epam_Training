@@ -2,6 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="devtg" uri="develop_info" %>
+
 <c:if test="${empty locale}">
 <c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
 <c:set var="locale" value="${language eq 'ru_RU' ? 'ru' : language eq 'en_US' ? 'en' : language}" scope="request"/>
@@ -60,5 +62,6 @@
 	<c:if test="${not_valid eq true}"> <fmt:message key="login.not_valid" bundle="${ rb }" />	</c:if>
 	<c:if test="${incorrect eq true}"> <fmt:message key="login.incorrect" bundle="${ rb }" /> </c:if>
 		
+	<devtg:develop-info/>	
     </body>
 </html>

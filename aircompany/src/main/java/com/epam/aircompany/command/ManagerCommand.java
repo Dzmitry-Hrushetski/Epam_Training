@@ -89,6 +89,7 @@ public class ManagerCommand implements ICommand {
 		String url = URL_BOUNDLE.getString(URL_MANAGER);
 		String operation = request.getParameter(PARAM_OPERATION);
 		CrewLogic crewLogic = new CrewLogic();
+		Crew crew = null;
 		CompositionCrew compCrew = null;
 		HttpSession session=null;
 		String param = null;
@@ -110,7 +111,7 @@ public class ManagerCommand implements ICommand {
 				compCrew = compCrewLogic.findEntityByAirplaneTypeId(route.getAirplane().getAirplaneType().getId());
 				
 				//CrewLogic crewLogic = new CrewLogic();
-				Crew crew = crewLogic.findEntityByRouteId(route.getId());
+				crew = crewLogic.findEntityByRouteId(route.getId());
 				
 				session = request.getSession();
 				session.setAttribute(PARAM_COMP_CREW, compCrew);
@@ -177,6 +178,7 @@ public class ManagerCommand implements ICommand {
 					
 					session = request.getSession();
 					compCrew = (CompositionCrew) session.getAttribute(PARAM_COMP_CREW);
+					session.setAttribute(PARAM_COMP_CREW, compCrew);
 					
 					if(compCrew.getCrew().containsKey(CO_PILOT_ID)) {
 						crewData.add(request.getParameter(PARAM_CO_PILOT));
@@ -193,6 +195,11 @@ public class ManagerCommand implements ICommand {
 					
 					isOk = crewLogic.saveCrewByRouteId(routeId, crewData);
 					request.setAttribute(PARAM_SAVE_STATE, isOk);
+					
+					crew = crewLogic.findEntityByRouteId(routeId);
+					if(crew!=null) {
+						request.setAttribute(PARAM_CREW, crew);
+					}
 				}
 				
 				/*//RouteLogic routeLogic = new RouteLogic();

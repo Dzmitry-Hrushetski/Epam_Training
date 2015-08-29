@@ -3,6 +3,7 @@
  */
 package com.epam.aircompany.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -16,7 +17,7 @@ public class Employee extends Person {
 	 * 
 	 */
 	private static final long serialVersionUID = 6399419629743726133L;
-	private static final String DATE_STRING="%d-%02d-%02d";
+	private static final String DATE_FORMAT="yyyy-MM-dd";
 	private Position position;
 	private GregorianCalendar startDate;
 	private boolean disable;
@@ -31,7 +32,8 @@ public class Employee extends Person {
 		return startDate;
 	}
 	public String getStartDateString() {
-		return String.format(DATE_STRING, startDate.get(Calendar.YEAR), startDate.get(Calendar.MONTH)+1, startDate.get(Calendar.DAY_OF_MONTH));
+		SimpleDateFormat formattedDate = new SimpleDateFormat(DATE_FORMAT);
+		return formattedDate.format(startDate.getTime()); 
 	}
 	public void setStartDate(GregorianCalendar startDate) {
 		this.startDate = startDate;

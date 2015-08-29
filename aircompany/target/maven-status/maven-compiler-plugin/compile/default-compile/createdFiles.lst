@@ -41,6 +41,7 @@ com\epam\aircompany\dao\mysqldao\MySQLRouteDao.class
 com\epam\aircompany\bean\Crew.class
 com\epam\aircompany\dao\IAirportDao.class
 com\epam\aircompany\bean\City.class
+com\epam\aircompany\tag\DevelopInfo.class
 com\epam\aircompany\bean\CompositionCrew.class
 com\epam\aircompany\bean\Employee.class
 com\epam\aircompany\bean\Airplane.class

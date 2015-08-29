@@ -220,3 +220,4 @@
 26.08.2015 09:32:18,825 FATAL pool.ConnectionPool - Error. The resource mysql_db file isn't found or file bad
 28.08.2015 08:59:56,651 INFO  command.LoginCommand - The user with such email doesn't exist or the password wrong.
 29.08.2015 20:26:54,167 INFO  command.LoginCommand - The user with such email doesn't exist or the password wrong.
+29.08.2015 23:52:53,311 INFO  command.LoginCommand - The user with such email doesn't exist or the password wrong.

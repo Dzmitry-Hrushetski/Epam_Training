@@ -33,7 +33,6 @@ public class MySQLCrewDao extends AbstractDao implements ICrewDao {
 	private static final String FIND_BY_ROUTE_ID = "SELECT crew.employee_id FROM crew WHERE crew.route_id = ? AND crew.disable = 0";
 	//private static final String DELETE_CREW = "UPDATE crew SET disable = 1 WHERE route_id = ?";
 	private static final String DELETE_CREW = "DELETE FROM crew	WHERE route_id = ?";
-	
 	private static final String ADD_CREW_ENTITY = "INSERT INTO crew (route_id, employee_id, disable) VALUES (?, ?, 0)";
 		
 	private IDao databaseDao = DatabaseFactory.getInstance().getDatabaseDao(DaoFactoryType.MYSQL);
