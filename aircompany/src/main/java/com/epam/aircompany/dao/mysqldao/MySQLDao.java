@@ -12,6 +12,7 @@ import com.epam.aircompany.dao.IDao;
 import com.epam.aircompany.dao.IEmployeeDao;
 import com.epam.aircompany.dao.IPositionDao;
 import com.epam.aircompany.dao.IRouteDao;
+import com.epam.aircompany.logic.ICrewDao;
 
 /**
  * @author Dzmitry Hrushetski
@@ -50,6 +51,11 @@ public class MySQLDao implements IDao {
 	@Override
 	public ICompositionCrewDao createICompositionCrewDao(Connection connection) {
 		return new MySQLCompositionCrewDao(connection);
+	}
+
+	@Override
+	public ICrewDao createICrewDao(Connection connection) {
+		return new MySQLCrewDao(connection);
 	}
 
 }

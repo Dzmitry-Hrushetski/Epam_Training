@@ -20,8 +20,6 @@ import com.epam.aircompany.dao.ICompositionCrewDao;
  *
  */
 public class MySQLCompositionCrewDao extends AbstractDao implements ICompositionCrewDao {
-	
-	
 	private static final String FIND_BY_AIRPLANE_TYPR_ID = "SELECT composition_crew.* FROM composition_crew WHERE composition_crew.airplane_type_id = ?";
 	private static final String POSITION_ID = "position_id";
 	private static final String QUANTITY = "quantity";

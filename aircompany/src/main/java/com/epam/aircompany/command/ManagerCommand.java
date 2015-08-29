@@ -11,7 +11,13 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
+import com.epam.aircompany.bean.CompositionCrew;
+import com.epam.aircompany.bean.Crew;
+import com.epam.aircompany.bean.Employee;
 import com.epam.aircompany.bean.Route;
+import com.epam.aircompany.logic.CompositionCrewLogic;
+import com.epam.aircompany.logic.CrewLogic;
+import com.epam.aircompany.logic.EmployeeLogic;
 import com.epam.aircompany.logic.LogicException;
 import com.epam.aircompany.logic.RouteLogic;
 
@@ -50,6 +56,12 @@ public class ManagerCommand implements ICommand {
 	private static final String PARAM_ENGINEER_LIST = "engineer_list";
 	private static final String PARAM_NAVIGATOR_LIST = "navigator_list";
 	private static final String PARAM_STEWARD_LIST = "steward_list";
+	private static final String PARAM_CO_PILOT_PRES = "co_pilot_present";
+	private static final String PARAM_ENGINEER_PRES = "engineer_present";
+	private static final String PARAM_NAVIGATOR_PRES = "navigator_present";
+	private static final String PARAM_STEWARD_PRES = "steward_present";
+	private static final String PARAM_COMP_CREW = "comp_crew";
+	private static final String PARAM_CREW = "crew";
 
 	/**
 	 * 
@@ -64,6 +76,7 @@ public class ManagerCommand implements ICommand {
 	public String execute(HttpServletRequest request) {
 		String url = URL_BOUNDLE.getString(URL_MANAGER);
 		String operation = request.getParameter(PARAM_OPERATION);
+		HttpSession session=null;
 		String param = null;
 		boolean isOk = false;
 		int routeId = 0;
@@ -78,6 +91,35 @@ public class ManagerCommand implements ICommand {
 				RouteLogic routeLogic = new RouteLogic();
 				Route route = routeLogic.findRouteByID(routeId);
 				request.setAttribute(PARAM_CREW_ENTITY, route);
+				
+				CompositionCrewLogic compCrewLogic = new CompositionCrewLogic();
+				CompositionCrew compCrew = compCrewLogic.findEntityByAirplaneTypeId(route.getAirplane().getAirplaneType().getId());
+				
+				CrewLogic crewLogic = new CrewLogic();
+				Crew crew = crewLogic.findEntityByRouteId(route.getId());
+				
+				session = request.getSession();
+				session.setAttribute(PARAM_COMP_CREW, compCrew);
+				
+				if(crew!=null) {
+					request.setAttribute(PARAM_CREW, crew);
+				}
+				
+				
+				if(compCrew.getCrew().containsKey(CO_PILOT_ID)) {
+					request.setAttribute(PARAM_CO_PILOT_PRES, compCrew.getCrew().get(CO_PILOT_ID));
+				}
+				if(compCrew.getCrew().containsKey(ENGINEER_ID)) {
+					request.setAttribute(PARAM_ENGINEER_PRES, compCrew.getCrew().get(ENGINEER_ID));
+				}
+				if(compCrew.getCrew().containsKey(NAVIGATOR_ID)) {
+					request.setAttribute(PARAM_NAVIGATOR_PRES, compCrew.getCrew().get(NAVIGATOR_ID));
+				}
+				if(compCrew.getCrew().containsKey(STEWARD_ID)) {
+					request.setAttribute(PARAM_STEWARD_PRES, compCrew.getCrew().get(STEWARD_ID));
+				}
+				
+				
 			} catch (LogicException e) {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);

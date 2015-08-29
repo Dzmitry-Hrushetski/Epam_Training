@@ -118,7 +118,8 @@ public class AdminCommand implements ICommand {
 				session.setAttribute(PARAM_ROUTE_LIST, routeList);
 								
 				if (!routeList.isEmpty()) {
-					route = routeLogic.findRouteByID(routeList.get(routeId-1).getId());
+					//route = routeLogic.findRouteByID(routeList.get(routeId-1).getId());
+					route = routeList.get(routeId-1);
 					request.setAttribute(PARAM_ROUTE_ENTITY, route);
 				}
 				

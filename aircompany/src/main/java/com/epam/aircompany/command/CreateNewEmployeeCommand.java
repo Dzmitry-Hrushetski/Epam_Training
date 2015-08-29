@@ -120,7 +120,7 @@ public class CreateNewEmployeeCommand implements ICommand {
 					List<Employee> employeeList = employeeLogic.findEmployeeByPositionId(positionId);
 
 					if (!employeeList.isEmpty()) {
-						employee = employeeLogic.findEntityByID(employeeList.get(FIRST_EMPLOYEE).getId());
+						employee = employeeList.get(FIRST_EMPLOYEE);
 						request.setAttribute(PARAM_EMPLOYEE_ENTITY, employee);
 					}
 

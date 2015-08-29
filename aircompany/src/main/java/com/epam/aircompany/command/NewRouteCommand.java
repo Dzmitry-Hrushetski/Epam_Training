@@ -113,8 +113,7 @@ public class NewRouteCommand implements ICommand {
 				session.setAttribute(PARAM_AIRPLANE_LIST, airplaneList);
 
 				if (!routeList.isEmpty()) {
-					Route route = routeLogic.findRouteByID(routeList.get(
-							FIRST_ROUTE).getId());
+					Route route = routeList.get(FIRST_ROUTE);
 					request.setAttribute(PARAM_ROUTE_ENTITY, route);
 				}
 			} catch (LogicException e) {

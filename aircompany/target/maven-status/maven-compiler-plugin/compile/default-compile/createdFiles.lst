@@ -1,9 +1,11 @@
 com\epam\aircompany\servlet\ControllerServlet.class
 com\epam\aircompany\dao\AbstractDao.class
 com\epam\aircompany\bean\Route.class
+com\epam\aircompany\logic\CompositionCrewLogic.class
 com\epam\aircompany\logic\LogicException.class
 com\epam\aircompany\bean\Airport.class
 com\epam\aircompany\dao\DaoException.class
+com\epam\aircompany\dao\ICompositionCrewDao.class
 com\epam\aircompany\bean\Person.class
 com\epam\aircompany\command\ManagerCommand.class
 com\epam\aircompany\command\ICommand.class
@@ -14,8 +16,10 @@ com\epam\aircompany\listener\AircompanyContextListener.class
 com\epam\aircompany\dao\IBaseDao.class
 com\epam\aircompany\pool\ConnectionPool$ConnectionPoolHolder.class
 com\epam\aircompany\command\NoCommand.class
+com\epam\aircompany\dao\mysqldao\MySQLCrewDao.class
 com\epam\aircompany\filter\ServletFilter.class
 com\epam\aircompany\dao\mysqldao\MySQLAirportDao.class
+com\epam\aircompany\dao\mysqldao\MySQLCompositionCrewDao.class
 com\epam\aircompany\constant\ClientType.class
 com\epam\aircompany\pool\ConnectionPool$1.class
 com\epam\aircompany\logic\EmployeeLogic.class
@@ -25,10 +29,12 @@ com\epam\aircompany\dao\factory\DatabaseFactory$1.class
 com\epam\aircompany\logic\RouteLogic.class
 com\epam\aircompany\constant\Constants.class
 com\epam\aircompany\filter\PageRedirectFilter.class
+com\epam\aircompany\logic\ICrewDao.class
 com\epam\aircompany\dao\factory\DaoFactoryType.class
 com\epam\aircompany\command\NewRouteCommand.class
 com\epam\aircompany\dao\IEmployeeDao.class
 com\epam\aircompany\dao\mysqldao\MySQLPositionDao.class
+com\epam\aircompany\logic\CrewLogic.class
 com\epam\aircompany\filter\EncodingFilter.class
 com\epam\aircompany\pool\ConnectionPool.class
 com\epam\aircompany\dao\mysqldao\MySQLRouteDao.class

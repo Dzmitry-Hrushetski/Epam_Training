@@ -40,19 +40,20 @@
 	</form>
 
 	<br>
-
+	
 	<form action="ControllerServlet" method="post">
 				<input type="hidden" name="action" value="manager_command"> 
 				<input type="hidden" name="operation" value="crew_entity">
 				<input type="hidden" name="route" value="${route}">
-
+				
 		<table>
 			<tr>
 				<td><fmt:message key="manager.first_pilot" bundle="${ rb }" /></td>
 				<td> 
-					<select	id="first_pilot" name="first_pilot">
+					<select	id="first_pilot" name="first_pilot" required>
+						<option value="" ><fmt:message key="manager.first_pilot_select" bundle="${ rb }" /></option>
 						<c:forEach items="${first_pilot_list}" var="e">
-							<option value="${e.id}" ${e.id eq first_pilot ? 'selected' : ''}>${e.firstName} ${e.lastName}</option>
+							<option value="${e.id}" >${e.firstName} ${e.lastName}</option>
 						</c:forEach>
 					</select>
 				</td>
@@ -63,9 +64,10 @@
 			<tr>
 				<td><fmt:message key="manager.co_pilot" bundle="${ rb }" /></td>
 				<td> 
-					<select	id="co_pilot" name="co_pilot">
+					<select	id="co_pilot" name="co_pilot" required>
+						<option value="" ><fmt:message key="manager.co_pilot_select" bundle="${ rb }" /></option>
 						<c:forEach items="${co_pilot_list}" var="e">
-							<option value="${e.id}" ${e.id eq co_pilot ? 'selected' : ''}>${e.firstName} ${e.lastName}</option>
+							<option value="${e.id}" >${e.firstName} ${e.lastName}</option>
 						</c:forEach>
 					</select>
 				</td>
@@ -76,9 +78,10 @@
 			<tr>
 				<td><fmt:message key="manager.engineer" bundle="${ rb }" /></td>
 				<td> 
-					<select	id="engineer" name="engineer">
+					<select	id="engineer" name="engineer" required>
+						<option value="" ><fmt:message key="manager.engineer_select" bundle="${ rb }" /></option>
 						<c:forEach items="${engineer_list}" var="e">
-							<option value="${e.id}" ${e.id eq engineer ? 'selected' : ''}>${e.firstName} ${e.lastName}</option>
+							<option value="${e.id}" >${e.firstName} ${e.lastName}</option>
 						</c:forEach>
 					</select>
 				</td>
@@ -89,9 +92,10 @@
 			<tr>
 				<td><fmt:message key="manager.navigator" bundle="${ rb }" /></td>
 				<td> 
-					<select	id="navigator" name="navigator">
+					<select	id="navigator" name="navigator" required>
+						<option value="" ><fmt:message key="manager.navigator_select" bundle="${ rb }" /></option>
 						<c:forEach items="${navigator_list}" var="e">
-							<option value="${e.id}" ${e.id eq engineer ? 'selected' : ''}>${e.firstName} ${e.lastName}</option>
+							<option value="${e.id}" >${e.firstName} ${e.lastName}</option>
 						</c:forEach>
 					</select>
 				</td>
@@ -102,9 +106,10 @@
 			<tr>
 				<td><fmt:message key="manager.steward" bundle="${ rb }" /></td>
 				<td> 
-					<select	id="steward" name="steward" size="8" multiple>
+					<select	id="steward" name="steward" size="8" multiple required>
+						<option value="" ><fmt:message key="manager.steward_select" bundle="${ rb }" /></option>
 						<c:forEach items="${steward_list}" var="e">
-							<option value="${e.id}" ${e.id eq engineer ? 'selected' : ''}>${e.firstName} ${e.lastName}</option>
+							<option value="${e.id}" >${e.firstName} ${e.lastName}</option>
 						</c:forEach>
 					</select>
 				</td>
@@ -115,10 +120,10 @@
 				<br>
 				<br>
 				<c:if test="${not empty delete_state}">
-					<fmt:message key="admin.delet_state" bundle="${ rb }" />
+					<fmt:message key="manager.delet_state" bundle="${ rb }" />
 				</c:if>
 				<c:if test="${not empty save_state}">
-					<fmt:message key="admin.save_state" bundle="${ rb }" />
+					<fmt:message key="manager.save_state" bundle="${ rb }" />
 				</c:if>
 				<br>
 				<br>
@@ -127,13 +132,27 @@
 	</form>
 
 	<br>
-	
+	<fmt:message key="manager.crew_list" bundle="${ rb }" />
+	<br>
+	<c:choose>
+		<c:when test="${not empty crew}"> 
+			<c:forEach items="${crew.crew}" var="e">
+				<p>${e.position.positionName} ${e.firstName} ${e.lastName}</p>
+			</c:forEach>
+		</c:when>
+		
+		<c:otherwise> 
+			<fmt:message key="manager.crew_list_empty" bundle="${ rb }" />
+		</c:otherwise>
+	</c:choose>
+	<br>
+	<!-- 
 	<form action="ControllerServlet" method="post">
 		<input type="hidden" name="action" value="manager_command">
 		<input type="hidden" name="operation" value="create_new"> 
 		<input type="submit" name="create" value="<fmt:message key="admin.create" bundle="${ rb }" />"  />
 	</form>
-	
+	 -->
 	<br>
 	
 	<form action="ControllerServlet" method="post">

@@ -8,17 +8,21 @@ C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\constant\ClientType.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\command\LoginCommand.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\mysqldao\MySQLRouteDao.java
+C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\logic\CompositionCrewLogic.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\bean\Airplane.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\mysqldao\MySQLDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\filter\ServletFilter.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\command\CreateNewEmployeeCommand.java
+C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\mysqldao\MySQLCrewDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\command\LanguageCommand.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\IAirplaneDao.java
+C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\logic\CrewLogic.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\bean\Airport.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\command\AdminCommand.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\command\NewRouteCommand.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\command\PositionCommand.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\factory\DatabaseFactory.java
+C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\ICompositionCrewDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\bean\AirplaneType.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\command\CommandEnum.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\mysqldao\MySQLAirportDao.java
@@ -44,6 +48,7 @@ C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\mysqldao\MySQLAirplaneDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\IEmployeeDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\mysqldao\MySQLPositionDao.java
+C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\logic\ICrewDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\mysqldao\MySQLEmployeeDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\bean\Route.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\IPositionDao.java
@@ -55,3 +60,4 @@ C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\bean\Person.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\IDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\logic\EmployeeLogic.java
+C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\mysqldao\MySQLCompositionCrewDao.java
