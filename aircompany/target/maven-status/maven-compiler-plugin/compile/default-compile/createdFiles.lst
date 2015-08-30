@@ -34,6 +34,7 @@ com\epam\aircompany\dao\factory\DaoFactoryType.class
 com\epam\aircompany\command\NewRouteCommand.class
 com\epam\aircompany\dao\IEmployeeDao.class
 com\epam\aircompany\dao\mysqldao\MySQLPositionDao.class
+com\epam\aircompany\tag\DateTimeFormatter.class
 com\epam\aircompany\logic\CrewLogic.class
 com\epam\aircompany\filter\EncodingFilter.class
 com\epam\aircompany\pool\ConnectionPool.class
@@ -52,6 +53,7 @@ com\epam\aircompany\bean\AirplaneType.class
 com\epam\aircompany\dao\mysqldao\MySQLAirplaneDao.class
 com\epam\aircompany\command\PositionCommand.class
 com\epam\aircompany\logic\AirportLogic.class
+com\epam\aircompany\tag\DateFormatter.class
 com\epam\aircompany\command\CreateNewEmployeeCommand.class
 com\epam\aircompany\logic\AirplaneLogic.class
 com\epam\aircompany\dao\mysqldao\MySQLDao.class

@@ -178,7 +178,7 @@ public class ManagerCommand implements ICommand {
 					
 					session = request.getSession();
 					compCrew = (CompositionCrew) session.getAttribute(PARAM_COMP_CREW);
-					session.setAttribute(PARAM_COMP_CREW, compCrew);
+					
 					
 					if(compCrew.getCrew().containsKey(CO_PILOT_ID)) {
 						crewData.add(request.getParameter(PARAM_CO_PILOT));
@@ -195,6 +195,19 @@ public class ManagerCommand implements ICommand {
 					
 					isOk = crewLogic.saveCrewByRouteId(routeId, crewData);
 					request.setAttribute(PARAM_SAVE_STATE, isOk);
+					
+					if(compCrew.getCrew().containsKey(CO_PILOT_ID)) {
+						request.setAttribute(PARAM_CO_PILOT_PRES, compCrew.getCrew().get(CO_PILOT_ID));
+					}
+					if(compCrew.getCrew().containsKey(ENGINEER_ID)) {
+						request.setAttribute(PARAM_ENGINEER_PRES, compCrew.getCrew().get(ENGINEER_ID));
+					}
+					if(compCrew.getCrew().containsKey(NAVIGATOR_ID)) {
+						request.setAttribute(PARAM_NAVIGATOR_PRES, compCrew.getCrew().get(NAVIGATOR_ID));
+					}
+					if(compCrew.getCrew().containsKey(STEWARD_ID)) {
+						request.setAttribute(PARAM_STEWARD_PRES, compCrew.getCrew().get(STEWARD_ID));
+					}
 					
 					crew = crewLogic.findEntityByRouteId(routeId);
 					if(crew!=null) {

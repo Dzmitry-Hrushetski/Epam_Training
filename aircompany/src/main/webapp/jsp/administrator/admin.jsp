@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="devtg" uri="develop_info" %>
+<%@ taglib prefix="devtg" uri="customtags" %>
 
 <fmt:setLocale value="${locale}" />
 <fmt:setBundle basename="text" var="rb" />
@@ -91,11 +91,11 @@
 			</tr>
 			<tr>
 				<td><fmt:message key="admin.departure_time" bundle="${ rb }" /></td>
-				<td><input type="datetime" name="departure_time" value="${route_entity.departureString}" required="required"/></td>
+				<td><input type="datetime" name="departure_time" value="<devtg:date-time calendar="${route_entity.departure}"/>" required="required"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="admin.arrival_time" bundle="${ rb }" /></td>
-				<td><input type="datetime" name="arrival_time" value="${route_entity.arrivalString}" required="required"/></td>
+				<td><input type="datetime" name="arrival_time" value="<devtg:date-time calendar="${route_entity.arrival}"/>" required="required"/></td>
 			</tr>
 		</table>
 				<br>
@@ -130,5 +130,6 @@
 		<input type="submit" name="logout" value="<fmt:message key="logout" bundle="${ rb }" />"  />
 	</form>
 	<devtg:develop-info/>
+	
 </body>
 </html>

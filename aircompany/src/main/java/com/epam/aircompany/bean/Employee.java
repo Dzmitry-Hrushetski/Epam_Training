@@ -17,7 +17,7 @@ public class Employee extends Person {
 	 * 
 	 */
 	private static final long serialVersionUID = 6399419629743726133L;
-	private static final String DATE_FORMAT="yyyy-MM-dd";
+	//private static final String DATE_FORMAT="yyyy-MM-dd";
 	private Position position;
 	private GregorianCalendar startDate;
 	private boolean disable;
@@ -31,10 +31,10 @@ public class Employee extends Person {
 	public GregorianCalendar getStartDate() {
 		return startDate;
 	}
-	public String getStartDateString() {
+	/*public String getStartDateString() {
 		SimpleDateFormat formattedDate = new SimpleDateFormat(DATE_FORMAT);
 		return formattedDate.format(startDate.getTime()); 
-	}
+	}*/
 	public void setStartDate(GregorianCalendar startDate) {
 		this.startDate = startDate;
 	}

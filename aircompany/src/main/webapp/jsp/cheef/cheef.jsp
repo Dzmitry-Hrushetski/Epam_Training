@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="devtg" uri="develop_info" %>
+<%@ taglib prefix="devtg" uri="customtags" %>
 
 <fmt:setLocale value="${locale}" />
 <fmt:setBundle basename="text" var="rb" />
@@ -103,7 +103,7 @@
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.date" bundle="${ rb }" /></td>
-				<td><input type="date" name="calendar" value="${employee_entity.startDateString}" required="required"/></td>
+				<td><input type="date" name="calendar" value="<devtg:date calendar="${employee_entity.startDate}"/>" required="required"/></td>
 			</tr>
 		</table>
 				<br>
