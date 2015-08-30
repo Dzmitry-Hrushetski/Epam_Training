@@ -19,18 +19,17 @@
 	</h3>
 	<p>
 	<h4>
-		<fmt:message key="cheef.message" bundle="${ rb }" />
+		<fmt:message key="cheef.new.message" bundle="${ rb }" />
 	</h4>
 	<p/>
 
-	<br>
 
 	<c:if test="${empty position}">
 		<c:set var="position" value="1" scope="request" />
 	</c:if>
 
 	<form action="ControllerServlet" method="post">
-		<input type="hidden" name="action" value="cheef_command"> 
+		<input type="hidden" name="action" value="create_employee_command"> 
 		<input type="hidden" name="operation" value="position"> 
 		<label for="position"><fmt:message key="cheef.position_message_list" bundle="${ rb }" /></label> <select id="position" name="position" onchange="submit()">
 			<c:forEach items="${position_list}" var="p">
@@ -39,43 +38,12 @@
 		</select>
 	</form>
 
-	<br>
-
-	<c:choose>
-		<c:when test="${not empty employee_list}">
-
-			<c:if test="${empty employee}">
-				<c:set var="employee" value="1" scope="request" />
-			</c:if>
-
-			<form action="ControllerServlet" method="post">	
-				<input type="hidden" name="action" value="cheef_command"> 
-				<input type="hidden" name="operation" value="employee"> 
-				<input type="hidden" name="position" value="${position}"> 
-				<label for="employee"><fmt:message key="cheef.employee_message_list" bundle="${ rb }" /></label> 
-				<select	id="employee" name="employee" onchange="submit()" >
-					<c:forEach items="${employee_list}" var="e">
-						<option value="${e.id}" ${e.id eq employee ? 'selected' : ''}>${e.firstName} ${e.lastName}</option>
-					</c:forEach>
-				</select>
-			</form>
-		</c:when>
-		<c:otherwise>
-			<fmt:message key="cheef.employee_message_empty" bundle="${ rb }" />
-		</c:otherwise>
-	</c:choose>
-
 	<p><fmt:message key="cheef.data" bundle="${ rb }" /></p>
 	
-	<c:choose>
-		<c:when test="${not empty employee_entity}">
-			<form action="ControllerServlet" method="post">
-				<input type="hidden" name="action" value="cheef_command"> 
+	<form action="ControllerServlet" method="post">
+				<input type="hidden" name="action" value="create_employee_command"> 
 				<input type="hidden" name="operation" value="employee_entity">
-				<input type="hidden" name="employee_entity" value="${employee_entity.id}">
-				<input type="hidden" name="position" value="${position}">
-				<input type="hidden" name="employee" value="${employee}"> 
-
+				<input type="hidden" name="position" value="${position}"> 
 		<table>
 			<tr>
 				<td><fmt:message key="cheef.first_name" bundle="${ rb }" /></td>
@@ -96,6 +64,7 @@
 			<tr>
 				<td><fmt:message key="cheef.user_name" bundle="${ rb }" /></td>
 				<td><input type="email" name="user_name" size="30" maxlength="50" value="${employee_entity.userName}" required="required"/></td>
+				<!-- ${position eq 1 ? 'required="required"' : ''} -->
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.password" bundle="${ rb }" /></td>
@@ -103,37 +72,23 @@
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.date" bundle="${ rb }" /></td>
-				<td><input type="date" name="calendar" value="<devtg:date calendar="${employee_entity.startDate}"/>" required="required" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"/></td>
+				<td><input type="date" name="calendar" value="<devtg:date calendar="${employee_entity.startDate}"/>" required="required"/></td>
 			</tr>
 		</table>
 				<br>
 				<br>
-				<c:if test="${not empty delete_state}">
-					<fmt:message key="cheef.delet_state" bundle="${ rb }" />
-				</c:if>
 				<c:if test="${not empty save_state}">
 					<fmt:message key="cheef.save_state" bundle="${ rb }" />
-				</c:if>
-				<c:if test="${not empty bad_data}">
-					<fmt:message key="cheef.bad_data" bundle="${ rb }" />
 				</c:if>
 				<br>
 				<br>
 				<input type="submit" name="save" value="<fmt:message key="save" bundle="${ rb }" />"  />
-				<input type="submit" name="delete" value="<fmt:message key="delete" bundle="${ rb }" />"  />
 			</form>
-		</c:when>
-
-	</c:choose>
-	
-	<br>
-	
-	<form action="ControllerServlet" method="post">
-		<input type="hidden" name="action" value="cheef_command">
-		<input type="hidden" name="operation" value="create_new">
-		<input type="hidden" name="position" value="${position}"> 
-		<input type="submit" name="create" value="<fmt:message key="cheef.create" bundle="${ rb }" />"  />
-	</form>
+			<form action="ControllerServlet" method="post">
+				<input type="hidden" name="action" value="create_employee_command"> 
+				<input type="hidden" name="operation" value="back">
+				<input type="submit" name="back" value="<fmt:message key="cheef.back" bundle="${ rb }" />"  />
+		</form>
 	
 	<br>
 	

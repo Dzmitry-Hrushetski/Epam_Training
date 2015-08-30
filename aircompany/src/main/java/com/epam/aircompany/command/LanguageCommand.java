@@ -25,5 +25,4 @@ public class LanguageCommand implements ICommand {
 		session.setAttribute(LOCALE, language);
 		return URL_BOUNDLE.getString(URL_LOGIN);
 	}
-
 }

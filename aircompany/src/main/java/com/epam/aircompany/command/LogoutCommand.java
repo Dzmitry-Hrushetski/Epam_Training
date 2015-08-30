@@ -6,8 +6,6 @@ package com.epam.aircompany.command;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import com.epam.aircompany.dao.IDao;
-import com.epam.aircompany.pool.ConnectionPool;
 
 /**
  * @author Dzmitry Hrushetski
@@ -28,5 +26,4 @@ public class LogoutCommand implements ICommand {
 		
 		return url;
 	}
-
 }

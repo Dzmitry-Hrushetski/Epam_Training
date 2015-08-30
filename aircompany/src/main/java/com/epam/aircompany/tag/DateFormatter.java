@@ -32,10 +32,12 @@ public class DateFormatter extends TagSupport {
 	@Override
 	public int doStartTag() throws JspException {
 		try {
-			JspWriter out = pageContext.getOut();
-			
-			SimpleDateFormat formattedDate = new SimpleDateFormat(DATE_FORMAT);
-			out.write(formattedDate.format(calendar.getTime()));
+			if (calendar != null) {
+				JspWriter out = pageContext.getOut();
+
+				SimpleDateFormat formattedDate = new SimpleDateFormat(DATE_FORMAT);
+				out.write(formattedDate.format(calendar.getTime()));
+			}
 		} catch (IOException e) {
 			throw new JspException(e.getMessage());
 		}
@@ -46,5 +48,4 @@ public class DateFormatter extends TagSupport {
 	public int doEndTag() throws JspException {
 		return EVAL_PAGE;
 	}
-
 }

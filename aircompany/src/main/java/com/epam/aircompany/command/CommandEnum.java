@@ -12,7 +12,6 @@ public enum CommandEnum {
 	LANGUAGE_COMMAND (new LanguageCommand()),
 	LOGIN_COMMAND (new LoginCommand()),
 	CHEEF_COMMAND (new CheefCommand()),
-	POSITION_COMMAND (new PositionCommand()),
 	LOGOUT_COMMAND (new LogoutCommand()),
 	CREATE_EMPLOYEE_COMMAND (new CreateNewEmployeeCommand()),
 	ADMIN_COMMAND (new AdminCommand()),

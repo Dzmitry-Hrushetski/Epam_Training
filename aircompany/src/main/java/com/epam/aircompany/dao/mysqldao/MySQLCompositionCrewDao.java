@@ -36,8 +36,7 @@ public class MySQLCompositionCrewDao extends AbstractDao implements IComposition
 	 */
 	@Override
 	public List<CompositionCrew> findAll() throws DaoException {
-		// TODO Auto-generated method stub
-		return null;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	/* (non-Javadoc)
@@ -45,8 +44,7 @@ public class MySQLCompositionCrewDao extends AbstractDao implements IComposition
 	 */
 	@Override
 	public CompositionCrew findEntityByID(int id) throws DaoException {
-		// TODO Auto-generated method stub
-		return null;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	/* (non-Javadoc)
@@ -54,8 +52,7 @@ public class MySQLCompositionCrewDao extends AbstractDao implements IComposition
 	 */
 	@Override
 	public boolean addNewEntity(CompositionCrew entity) throws DaoException {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	/* (non-Javadoc)
@@ -63,8 +60,7 @@ public class MySQLCompositionCrewDao extends AbstractDao implements IComposition
 	 */
 	@Override
 	public boolean updateEntity(CompositionCrew entity, int id)	throws DaoException {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	@Override
@@ -92,5 +88,4 @@ public class MySQLCompositionCrewDao extends AbstractDao implements IComposition
 		}
 		return compCrew;
 	}
-
 }

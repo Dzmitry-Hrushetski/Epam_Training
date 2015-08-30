@@ -2,7 +2,6 @@ C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\IBaseDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\command\NoCommand.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\pool\ConnectionPool.java
-C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\logic\PositionLogic.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\factory\DaoFactoryType.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\command\ManagerCommand.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\constant\ClientType.java
@@ -23,13 +22,11 @@ C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\command\AdminCommand.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\command\NewRouteCommand.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\tag\DateFormatter.java
-C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\command\PositionCommand.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\factory\DatabaseFactory.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\ICompositionCrewDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\bean\AirplaneType.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\command\CommandEnum.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\mysqldao\MySQLAirportDao.java
-C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\constant\Constants.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\logic\RouteLogic.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\bean\Position.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\logic\LogicException.java
@@ -49,9 +46,9 @@ C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\listener\AircompanyContextListener.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\logic\AirplaneLogic.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\mysqldao\MySQLAirplaneDao.java
+C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\ICrewDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\IEmployeeDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\mysqldao\MySQLPositionDao.java
-C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\logic\ICrewDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\mysqldao\MySQLEmployeeDao.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\bean\Route.java
 C:\Java_workspace\Git_Local_Repo\Epam_Training\aircompany\src\main\java\com\epam\aircompany\dao\IPositionDao.java

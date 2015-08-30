@@ -4,7 +4,6 @@
 package com.epam.aircompany.bean;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 /**
  * @author Dzmitry Hrushetski

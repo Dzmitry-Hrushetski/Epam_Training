@@ -8,20 +8,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 
-import com.epam.aircompany.bean.CompositionCrew;
 import com.epam.aircompany.bean.Crew;
 import com.epam.aircompany.bean.Employee;
 import com.epam.aircompany.dao.AbstractDao;
 import com.epam.aircompany.dao.DaoException;
+import com.epam.aircompany.dao.ICrewDao;
 import com.epam.aircompany.dao.IDao;
 import com.epam.aircompany.dao.IEmployeeDao;
 import com.epam.aircompany.dao.factory.DaoFactoryType;
 import com.epam.aircompany.dao.factory.DatabaseFactory;
-import com.epam.aircompany.logic.ICrewDao;
 
 /**
  * @author Dzmitry Hrushetski
@@ -29,7 +26,7 @@ import com.epam.aircompany.logic.ICrewDao;
  */
 public class MySQLCrewDao extends AbstractDao implements ICrewDao {
 	private static final String EMPLOYEE_ID = "employee_id";
-	private static final String QUANTITY = "quantity";
+	//private static final String QUANTITY = "quantity";
 	private static final String FIND_BY_ROUTE_ID = "SELECT crew.employee_id FROM crew WHERE crew.route_id = ? AND crew.disable = 0";
 	//private static final String DELETE_CREW = "UPDATE crew SET disable = 1 WHERE route_id = ?";
 	private static final String DELETE_CREW = "DELETE FROM crew	WHERE route_id = ?";
@@ -49,8 +46,7 @@ public class MySQLCrewDao extends AbstractDao implements ICrewDao {
 	 */
 	@Override
 	public List<Crew> findAll() throws DaoException {
-		// TODO Auto-generated method stub
-		return null;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	/* (non-Javadoc)
@@ -58,8 +54,7 @@ public class MySQLCrewDao extends AbstractDao implements ICrewDao {
 	 */
 	@Override
 	public Crew findEntityByID(int id) throws DaoException {
-		// TODO Auto-generated method stub
-		return null;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	/* (non-Javadoc)
@@ -67,8 +62,7 @@ public class MySQLCrewDao extends AbstractDao implements ICrewDao {
 	 */
 	@Override
 	public boolean addNewEntity(Crew entity) throws DaoException {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	/* (non-Javadoc)
@@ -76,8 +70,7 @@ public class MySQLCrewDao extends AbstractDao implements ICrewDao {
 	 */
 	@Override
 	public boolean updateEntity(Crew entity, int id) throws DaoException {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	/* (non-Javadoc)
@@ -175,5 +168,4 @@ public class MySQLCrewDao extends AbstractDao implements ICrewDao {
 		}
 		return isOk;
 	}
-
 }

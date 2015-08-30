@@ -132,15 +132,13 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 				employee.setAddres(rs.getString(ADDRES));
 				employee.setPhone(rs.getString(PHONE));
 				employee.setUserName(rs.getString(USER_NAME));
-				employee.setPassword(rs.getString(PASSWORD));
-				
+				employee.setPassword(rs.getString(PASSWORD));		
 			}
 		} catch (SQLException ex) {
 			throw new DaoException("Database error.", ex);
 		} finally {
 			close(prepStatement);
-		}
-		
+		}		
 		return employee;
 	}
 
@@ -149,8 +147,7 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 	 */
 	@Override
 	public boolean addNewEntity(Employee entity) throws DaoException {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	/* (non-Javadoc)
@@ -158,8 +155,7 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 	 */
 	@Override
 	public boolean updateEntity(Employee entity, int id) throws DaoException {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	@Override
@@ -181,8 +177,7 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 				employee = new Employee();
 				employee.setPosition(position);
 				employee.setUserName(rs.getString(USER_NAME));
-				employee.setPassword(rs.getString(PASSWORD));
-				
+				employee.setPassword(rs.getString(PASSWORD));			
 			}
 		} catch (SQLException ex) {
 			throw new DaoException("Database error.", ex);
@@ -227,14 +222,12 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 				employee.setPassword(rs.getString(PASSWORD));
 				
 				employeeList.add(employee);
-				
 			}
 		} catch (SQLException ex) {
 			throw new DaoException("Database error.", ex);
 		} finally {
 			close(prepStatement);
-		}
-		
+		}		
 		return employeeList;
 	}
 

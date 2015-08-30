@@ -12,6 +12,11 @@ public class ConnectionPoolException extends Exception {
 	/**
 	 * 
 	 */
+	private static final long serialVersionUID = -1336821047092818599L;
+
+	/**
+	 * 
+	 */
 	public ConnectionPoolException() {
 	}
 
@@ -46,5 +51,4 @@ public class ConnectionPoolException extends Exception {
 	public ConnectionPoolException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 	}
-
 }

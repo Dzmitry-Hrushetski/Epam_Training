@@ -9,7 +9,6 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.TagSupport;
 
-
 /**
  * @author Dzmitry Hrushetski
  *
@@ -27,7 +26,6 @@ public class DevelopInfo extends TagSupport {
 		try {
 			JspWriter out = pageContext.getOut();
 			out.write(DEVELOPER_INFO);
-			//out.write(DEVELOPER_INFO_TRAINING);
 		} catch (IOException e) {
 			throw new JspException(e.getMessage());
 		}
@@ -38,6 +36,4 @@ public class DevelopInfo extends TagSupport {
 	public int doEndTag() throws JspException {
 		return EVAL_PAGE;
 	}
-
-
 }

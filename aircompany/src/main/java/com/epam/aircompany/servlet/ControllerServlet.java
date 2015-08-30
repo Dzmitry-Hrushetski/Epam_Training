@@ -3,7 +3,6 @@ package com.epam.aircompany.servlet;
 import java.io.IOException;
 
 import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,10 +12,6 @@ import org.apache.log4j.Logger;
 
 import com.epam.aircompany.command.CommandEnum;
 import com.epam.aircompany.command.ICommand;
-import com.epam.aircompany.dao.IDao;
-import com.epam.aircompany.pool.ConnectionPool;
-
-import static com.epam.aircompany.constant.Constants.*;
 
 /**
  * Servlet implementation class ControllerServlet
@@ -73,13 +68,6 @@ public class ControllerServlet extends HttpServlet {
 	 */
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ICommand command = null;
-		/*ConnectionPool connectionPool = null;
-		IDao dataBaseDao = null;
-		
-		ServletContext context = request.getSession().getServletContext();
-		connectionPool = (ConnectionPool)context.getAttribute(CONNECTION_POOL);
-		dataBaseDao = (IDao)context.getAttribute(I_DAO);*/
-				
 		String action = request.getParameter("action");
 		
 		if(action == null || action.isEmpty()) {

@@ -10,9 +10,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
 import com.epam.aircompany.bean.Position;
 import com.epam.aircompany.dao.AbstractDao;
 import com.epam.aircompany.dao.DaoException;
@@ -66,8 +63,7 @@ public class MySQLPositionDao extends AbstractDao implements IPositionDao {
 	 */
 	@Override
 	public Position findEntityByID(int id) throws DaoException {
-		// TODO Auto-generated method stub
-		return null;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	/* (non-Javadoc)
@@ -75,8 +71,7 @@ public class MySQLPositionDao extends AbstractDao implements IPositionDao {
 	 */
 	@Override
 	public boolean addNewEntity(Position entity) throws DaoException {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	/* (non-Javadoc)
@@ -84,8 +79,6 @@ public class MySQLPositionDao extends AbstractDao implements IPositionDao {
 	 */
 	@Override
 	public boolean updateEntity(Position entity, int id) throws DaoException {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
-
 }

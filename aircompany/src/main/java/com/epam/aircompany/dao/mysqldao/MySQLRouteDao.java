@@ -106,7 +106,6 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 				airplane = iAirplane.findEntityByID(rs.getInt(AIRPLANE_ID));
 				route.setAirplane(airplane);
 				
-				
 				routeList.add(route);
 			}
 		} catch (SQLException ex) {
@@ -154,7 +153,6 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 				IAirplaneDao iAirplane = databaseDao.createIAirplaneDao(connection);
 				airplane = iAirplane.findEntityByID(rs.getInt(AIRPLANE_ID));
 				route.setAirplane(airplane);
-				
 			}
 		} catch (SQLException ex) {
 			throw new DaoException("Database error.", ex);
@@ -169,8 +167,7 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 	 */
 	@Override
 	public boolean addNewEntity(Route entity) throws DaoException {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	/* (non-Javadoc)
@@ -178,8 +175,7 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 	 */
 	@Override
 	public boolean updateEntity(Route entity, int id) throws DaoException {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	@Override
@@ -219,7 +215,6 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 			prepStatement.setInt(7,routeId);
 			prepStatement.executeUpdate();
 			isOk = true;
-			
 		} catch (SQLException | ParseException ex) {
 			throw new DaoException("Database error.", ex);
 		} finally {
@@ -244,7 +239,6 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 			prepStatement.setString(6,routeData.get(PARAM_ROUTE_NUMBER));
 			prepStatement.executeUpdate();
 			isOk = true;
-			
 		} catch (SQLException | ParseException ex) {
 			throw new DaoException("Database error.", ex);
 		} finally {

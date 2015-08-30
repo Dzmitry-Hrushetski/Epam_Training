@@ -5,8 +5,6 @@ package com.epam.aircompany.dao;
 
 import java.sql.Connection;
 
-import com.epam.aircompany.logic.ICrewDao;
-
 /**
  * @author Dzmitry Hrushetski
  *

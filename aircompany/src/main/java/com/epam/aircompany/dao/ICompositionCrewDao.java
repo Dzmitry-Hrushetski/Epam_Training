@@ -11,5 +11,4 @@ import com.epam.aircompany.bean.CompositionCrew;
  */
 public interface ICompositionCrewDao extends IBaseDao<CompositionCrew> {
 	CompositionCrew findEntityByAirplaneTypeId(int id) throws DaoException;
-
 }

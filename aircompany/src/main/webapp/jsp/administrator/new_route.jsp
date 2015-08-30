@@ -24,26 +24,6 @@
 	<p/>
 
 	<br>
-<!-- 
-	<c:if test="${empty route}">
-		<c:set var="route" value="1" scope="request" />
-	</c:if>
-
-	<form action="ControllerServlet" method="post">
-		<input type="hidden" name="action" value="admin_command"> 
-		<input type="hidden" name="operation" value="route"> 
-		<label for="route"><fmt:message key="admin.route_list_message" bundle="${ rb }" /></label>
-		 <select id="route" name="route" onchange="submit()">
-			<c:forEach items="${route_list}" var="p">
-				<option value="${p.id}" ${p.id eq route ? 'selected' : ''}>${p.routeNumber} ${p.departureAirport.city.cityName} - ${p.arrivalAirport.city.cityName}</option>
-			</c:forEach>
-		</select>
-	</form>
-
-	<br>
- -->
-		
-	
 		<form action="ControllerServlet" method="post">
 				<input type="hidden" name="action" value="new_route_command"> 
 				<input type="hidden" name="operation" value="new_route_entity">
@@ -84,15 +64,15 @@
 
 			<tr>
 				<td><fmt:message key="admin.route_number" bundle="${ rb }" /></td>
-				<td><input type="text" name="route_number" maxlength="25" value="${route_entity.routeNumber}" required="required"/></td>
+				<td><input type="text" name="route_number" maxlength="25" required="required"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="admin.departure_time" bundle="${ rb }" /></td>
-				<td><input type="datetime" name="departure_time" value="<devtg:date-time calendar="${route_entity.departure}"/>" required="required"/></td>
+				<td><input type="datetime" name="departure_time" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01]) ([0-1]\d|2[0-3])(:[0-5]\d){2}" required="required"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="admin.arrival_time" bundle="${ rb }" /></td>
-				<td><input type="datetime" name="arrival_time" value="<devtg:date-time calendar="${route_entity.arrival}"/>" required="required"/></td>
+				<td><input type="datetime" name="arrival_time" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01]) ([0-1]\d|2[0-3])(:[0-5]\d){2}" required="required"/></td>
 			</tr>
 		</table>
 				<br>

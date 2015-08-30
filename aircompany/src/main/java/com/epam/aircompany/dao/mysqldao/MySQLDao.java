@@ -8,11 +8,11 @@ import java.sql.Connection;
 import com.epam.aircompany.dao.IAirplaneDao;
 import com.epam.aircompany.dao.IAirportDao;
 import com.epam.aircompany.dao.ICompositionCrewDao;
+import com.epam.aircompany.dao.ICrewDao;
 import com.epam.aircompany.dao.IDao;
 import com.epam.aircompany.dao.IEmployeeDao;
 import com.epam.aircompany.dao.IPositionDao;
 import com.epam.aircompany.dao.IRouteDao;
-import com.epam.aircompany.logic.ICrewDao;
 
 /**
  * @author Dzmitry Hrushetski
@@ -57,5 +57,4 @@ public class MySQLDao implements IDao {
 	public ICrewDao createICrewDao(Connection connection) {
 		return new MySQLCrewDao(connection);
 	}
-
 }

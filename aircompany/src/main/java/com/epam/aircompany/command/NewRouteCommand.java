@@ -18,6 +18,7 @@ import com.epam.aircompany.logic.AirplaneLogic;
 import com.epam.aircompany.logic.AirportLogic;
 import com.epam.aircompany.logic.LogicException;
 import com.epam.aircompany.logic.RouteLogic;
+import com.epam.aircompany.logic.Validator;
 
 /**
  * @author Dzmitry Hrushetski
@@ -30,16 +31,11 @@ public class NewRouteCommand implements ICommand {
 	private static final int FIRST_ROUTE = 0;
 	private static final String PARAM_OPERATION = "operation";
 	private static final String PARAM_EXCEPTION = "exception";
-	private static final String PARAM_ROUTE = "route";
 	private static final String PARAM_ROUTE_ENTITY = "route_entity";
 	private static final String PARAM_NEW_ROUTE_ENTITY = "new_route_entity";
-	private static final String PARAM_DELETE = "delete";
-	private static final String PARAM_CREATE_NEW = "create_new";
-	private static final String PARAM_DELETE_STATE = "delete_state";
 	private static final String PARAM_SAVE_STATE = "save_state";
 	private static final String PARAM_BACK = "back";
 	private static final String PARAM_BAD_DATA = "bad_data";
-	private static final String PARAM_SAVE = "save";
 	private static final String PARAM_ROUTE_LIST = "route_list";
 	private static final String PARAM_DEPARTURE_AIRPORT = "departure_airport";
 	private static final String PARAM_ARRIVAL_AIRPORT = "arrival_airport";
@@ -47,7 +43,6 @@ public class NewRouteCommand implements ICommand {
 	private static final String PARAM_ROUTE_NUMBER = "route_number";
 	private static final String PARAM_DEPARTURE_TIME = "departure_time";
 	private static final String PARAM_ARRIVAL_TIME = "arrival_time";
-	private static final String PARAM_SAVE_STATE_NEW = "save_state_new";
 	private static final String PARAM_DEPARTURE_AIRPORT_LIST = "departure_airport_list";
 	private static final String PARAM_ARRIVAL_AIRPORT_LIST = "arrival_airport_list";
 	private static final String PARAM_AIRPLANE_LIST = "airplane_list";
@@ -68,32 +63,37 @@ public class NewRouteCommand implements ICommand {
 		RouteLogic routeLogic = new RouteLogic();
 		String param = null;
 		boolean isOk = false;
-		int routeId = 0;
 		
 		switch (operation) {
-
 		case PARAM_NEW_ROUTE_ENTITY:
-			HashMap<String, String> routeData = new HashMap<String, String>();
+			String departureTime = request.getParameter(PARAM_DEPARTURE_TIME);
+			String arrivalTime = request.getParameter(PARAM_ARRIVAL_TIME);
+			
+			if (Validator.validateDateTimeFormat(departureTime) == true && Validator.validateDateTimeFormat(arrivalTime) == true) {
+				HashMap<String, String> routeData = new HashMap<String, String>();
 
-			param = request.getParameter(PARAM_DEPARTURE_AIRPORT);
-			routeData.put(PARAM_DEPARTURE_AIRPORT, param);
-			param = request.getParameter(PARAM_ARRIVAL_AIRPORT);
-			routeData.put(PARAM_ARRIVAL_AIRPORT, param);
-			param = request.getParameter(PARAM_AIRPLANE);
-			routeData.put(PARAM_AIRPLANE, param);
-			param = request.getParameter(PARAM_ROUTE_NUMBER);
-			routeData.put(PARAM_ROUTE_NUMBER, param);
-			param = request.getParameter(PARAM_DEPARTURE_TIME);
-			routeData.put(PARAM_DEPARTURE_TIME, param);
-			param = request.getParameter(PARAM_ARRIVAL_TIME);
-			routeData.put(PARAM_ARRIVAL_TIME, param);
-			try {
-				isOk = routeLogic.addNewRoute(routeData);
-				request.setAttribute(PARAM_SAVE_STATE, isOk);
-			} catch (LogicException e) {
-				LOG.error(e);
-				request.setAttribute(PARAM_EXCEPTION, e);
-				url = URL_BOUNDLE.getString(URL_ERROR);
+				param = request.getParameter(PARAM_DEPARTURE_AIRPORT);
+				routeData.put(PARAM_DEPARTURE_AIRPORT, param);
+				param = request.getParameter(PARAM_ARRIVAL_AIRPORT);
+				routeData.put(PARAM_ARRIVAL_AIRPORT, param);
+				param = request.getParameter(PARAM_AIRPLANE);
+				routeData.put(PARAM_AIRPLANE, param);
+				param = request.getParameter(PARAM_ROUTE_NUMBER);
+				routeData.put(PARAM_ROUTE_NUMBER, param);
+				param = request.getParameter(PARAM_DEPARTURE_TIME);
+				routeData.put(PARAM_DEPARTURE_TIME, param);
+				param = request.getParameter(PARAM_ARRIVAL_TIME);
+				routeData.put(PARAM_ARRIVAL_TIME, param);
+				try {
+					isOk = routeLogic.addNewRoute(routeData);
+					request.setAttribute(PARAM_SAVE_STATE, isOk);
+				} catch (LogicException e) {
+					LOG.error(e);
+					request.setAttribute(PARAM_EXCEPTION, e);
+					url = URL_BOUNDLE.getString(URL_ERROR);
+				}
+			} else {
+				request.setAttribute(PARAM_BAD_DATA, true);
 			}
 			break;
 		case PARAM_BACK:

@@ -28,5 +28,4 @@ public interface IEmployeeDao extends IBaseDao<Employee>{
 	 */
 	public boolean updateEntityByID(int employeeId, HashMap<String, String> employeeData) throws DaoException;
 	public boolean addNewEntity(HashMap<String, String> employeeData)throws DaoException;
-
 }

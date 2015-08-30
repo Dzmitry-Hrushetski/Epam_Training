@@ -5,8 +5,6 @@ package com.epam.aircompany.command;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -15,11 +13,9 @@ import org.apache.log4j.Logger;
 
 import com.epam.aircompany.bean.CompositionCrew;
 import com.epam.aircompany.bean.Crew;
-import com.epam.aircompany.bean.Employee;
 import com.epam.aircompany.bean.Route;
 import com.epam.aircompany.logic.CompositionCrewLogic;
 import com.epam.aircompany.logic.CrewLogic;
-import com.epam.aircompany.logic.EmployeeLogic;
 import com.epam.aircompany.logic.LogicException;
 import com.epam.aircompany.logic.RouteLogic;
 
@@ -30,34 +26,16 @@ import com.epam.aircompany.logic.RouteLogic;
 public class ManagerCommand implements ICommand {
 	private static final Logger LOG = Logger.getLogger(ManagerCommand.class);
 	private static final String PARAM_OPERATION = "operation";
-	private static final String PARAM_ROUTE_LIST = "route_list";
-	private static final String PARAM_DEPARTURE_AIRPORT_LIST = "departure_airport_list";
-	private static final String PARAM_ARRIVAL_AIRPORT_LIST = "arrival_airport_list";
-	private static final String PARAM_AIRPLANE_LIST = "airplane_list";
-	private static final String PARAM_EMPLOYEE_ENTITY = "employee_entity";
 	private static final String PARAM_CREW_ENTITY = "crew_entity";
 	private static final String PARAM_EXCEPTION = "exception";
 	private static final String PARAM_ROUTE = "route";
 	private static final String PARAM_CREATE_NEW = "create_new";
-	private static final String URL_LOGIN = "login";
-	private static final String URL_CHEEF = "cheef";
-	private static final String URL_ADMIN = "admin";
 	private static final String URL_MANAGER = "manager";
 	private static final String URL_NEW = "create_new_crew";
-	private static final int CHEEF = 1;
-	private static final int ADMIN = 2;
-	private static final int MANAGER = 3;
-	private static final int FIRST_ENTITY = 0;
-	private static final int FIRST_PILOT_ID = 4;
 	private static final int CO_PILOT_ID = 5;
 	private static final int ENGINEER_ID = 6;
 	private static final int NAVIGATOR_ID = 7;
 	private static final int STEWARD_ID = 8;
-	private static final String PARAM_FIRST_PILOT_LIST = "first_pilot_list";
-	private static final String PARAM_CO_PILOT_LIST = "co_pilot_list";
-	private static final String PARAM_ENGINEER_LIST = "engineer_list";
-	private static final String PARAM_NAVIGATOR_LIST = "navigator_list";
-	private static final String PARAM_STEWARD_LIST = "steward_list";
 	private static final String PARAM_CO_PILOT_PRES = "co_pilot_present";
 	private static final String PARAM_ENGINEER_PRES = "engineer_present";
 	private static final String PARAM_NAVIGATOR_PRES = "navigator_present";
@@ -73,7 +51,6 @@ public class ManagerCommand implements ICommand {
 	private static final String PARAM_ENGINEER = "engineer";
 	private static final String PARAM_NAVIGATOR = "navigator";
 	private static final String PARAM_STEWARD = "steward";
-	
 	
 	/**
 	 * 
@@ -110,7 +87,6 @@ public class ManagerCommand implements ICommand {
 				CompositionCrewLogic compCrewLogic = new CompositionCrewLogic();
 				compCrew = compCrewLogic.findEntityByAirplaneTypeId(route.getAirplane().getAirplaneType().getId());
 				
-				//CrewLogic crewLogic = new CrewLogic();
 				crew = crewLogic.findEntityByRouteId(route.getId());
 				
 				session = request.getSession();
@@ -132,9 +108,7 @@ public class ManagerCommand implements ICommand {
 				}
 				if(compCrew.getCrew().containsKey(STEWARD_ID)) {
 					request.setAttribute(PARAM_STEWARD_PRES, compCrew.getCrew().get(STEWARD_ID));
-				}
-				
-				
+				}	
 			} catch (LogicException e) {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);
@@ -168,17 +142,14 @@ public class ManagerCommand implements ICommand {
 						request.setAttribute(PARAM_STEWARD_PRES, compCrew.getCrew().get(STEWARD_ID));
 					}
 				}
-				
 				param = request.getParameter(PARAM_SAVE);
 				if (param != null) {
 					ArrayList<String> crewData = new ArrayList<String>();
 					
-					//param = request.getParameter(PARAM_FIRST_PILOT);
 					crewData.add(request.getParameter(PARAM_FIRST_PILOT));
 					
 					session = request.getSession();
 					compCrew = (CompositionCrew) session.getAttribute(PARAM_COMP_CREW);
-					
 					
 					if(compCrew.getCrew().containsKey(CO_PILOT_ID)) {
 						crewData.add(request.getParameter(PARAM_CO_PILOT));
@@ -214,19 +185,6 @@ public class ManagerCommand implements ICommand {
 						request.setAttribute(PARAM_CREW, crew);
 					}
 				}
-				
-				/*//RouteLogic routeLogic = new RouteLogic();
-				List<Route> routeList = routeLogic.findAllRoute();
-							
-				HttpSession session = request.getSession();
-				session.setAttribute(PARAM_ROUTE_LIST, routeList);
-								
-				if (!routeList.isEmpty()) {
-					route = routeLogic.findRouteByID(routeList.get(routeId-1).getId());
-					request.setAttribute(PARAM_ROUTE_ENTITY, route);
-				}
-				*/
-				
 			} catch (LogicException e) {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);
@@ -239,5 +197,4 @@ public class ManagerCommand implements ICommand {
 		}
 		return url;
 	}
-
 }

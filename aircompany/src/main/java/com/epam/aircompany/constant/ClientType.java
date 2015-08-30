@@ -15,6 +15,20 @@ public enum ClientType {
 	private int clientType;
 	
 	private ClientType(int clientType) {
+		this.setClientType(clientType);
+	}
+
+	/**
+	 * @return the clientType
+	 */
+	public int getClientType() {
+		return clientType;
+	}
+
+	/**
+	 * @param clientType the clientType to set
+	 */
+	public void setClientType(int clientType) {
 		this.clientType = clientType;
 	}
 }

@@ -114,8 +114,7 @@ public class MySQLAirportDao extends AbstractDao implements IAirportDao {
 	 */
 	@Override
 	public boolean addNewEntity(Airport entity) throws DaoException {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 	/* (non-Javadoc)
@@ -123,8 +122,7 @@ public class MySQLAirportDao extends AbstractDao implements IAirportDao {
 	 */
 	@Override
 	public boolean updateEntity(Airport entity, int id) throws DaoException {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
 }

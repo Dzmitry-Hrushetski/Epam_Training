@@ -36,5 +36,4 @@ public class AirportLogic extends BaseLogic {
 		}
 		return airportList;
 	}
-
 }

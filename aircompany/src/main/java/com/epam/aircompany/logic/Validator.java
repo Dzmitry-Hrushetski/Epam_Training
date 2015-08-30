@@ -3,6 +3,8 @@
  */
 package com.epam.aircompany.logic;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,8 +18,12 @@ public class Validator {
 	private static final String USER_NAME = "email";
 	private static final String PASSWORD = "password";
 	private static final String PHONE = "phone";
+	private static final String DATE = "date";
+	private static final String DATE_TIME = "date_time";
 	private static final int MAX_LENGTH_USER_NAME = 50;
 	private static final int MAX_LENGTH_PASSWORD = 25;
+	private static final String DATE_FORMAT="yyyy-MM-dd";
+	private static final String DATE_TIME_FORMAT="yyyy-MM-dd HH:mm:ss";
 	private static Pattern pattern;
 	private static Matcher matcher;
 
@@ -72,20 +78,9 @@ public class Validator {
 			matcher.reset();
 		}
 		return dataOk;
-		
-		/*if (login != null) {
-			if ((login.length() > 0) && (login.length() <= MAX_LENGTH)) {
-				matcher = pattern.matcher(login);
-				dataOk = matcher.matches();
-				if (matcher != null) {
-					matcher.reset();
-				}
-			}
-		}
-		return dataOk;*/
 	}
 
-	public static boolean validateEmployeeData(String userName,	String pass, String tel) {
+	public static boolean validateEmployeeData(String userName,	String pass, String tel, String startDate) {
 		
 		if(!validateUserName(userName)) {
 			return false;
@@ -98,6 +93,55 @@ public class Validator {
 		if(!validatePhone(tel)) {
 			return false;
 		}
+		
+		if(!validateDateFormat(startDate)) {
+			return false;
+		}
 		return true;
+	}
+	
+	public static boolean validateDateFormat(String date) {
+		boolean isOk = false;
+		
+		String regExp = REGEX_BOUNDLE.getString(DATE);
+		pattern = Pattern.compile(regExp);
+
+		if (date != null && !date.isEmpty()) {
+			matcher = pattern.matcher(date);
+			isOk = matcher.matches();
+			matcher.reset();
+		}
+		if (isOk) {
+			isOk = false;
+			SimpleDateFormat formattedDate = new SimpleDateFormat(DATE_FORMAT);
+			try {
+				formattedDate.parse(date);
+				isOk = true;
+			} catch (ParseException e) {
+			}
+		}
+		return isOk;
+	}
+	
+	public static boolean validateDateTimeFormat(String date) {
+		boolean isOk = false;
+		String regExp = REGEX_BOUNDLE.getString(DATE_TIME);
+		pattern = Pattern.compile(regExp);
+
+		if (date != null && !date.isEmpty()) {
+			matcher = pattern.matcher(date);
+			isOk = matcher.matches();
+			matcher.reset();
+		}
+		if (isOk) {
+			isOk = false;
+			SimpleDateFormat formattedDate = new SimpleDateFormat(DATE_TIME_FORMAT);
+			try {
+				formattedDate.parse(date);
+				isOk = true;
+			} catch (ParseException e) {
+			}
+		}
+		return isOk;
 	}
 }

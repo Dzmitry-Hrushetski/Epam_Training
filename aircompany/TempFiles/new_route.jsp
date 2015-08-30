@@ -19,12 +19,12 @@
 	</h3>
 	<p>
 	<h4>
-		<fmt:message key="admin.message" bundle="${ rb }" />
+		<fmt:message key="admin.new.message" bundle="${ rb }" />
 	</h4>
 	<p/>
 
 	<br>
-
+<!-- 
 	<c:if test="${empty route}">
 		<c:set var="route" value="1" scope="request" />
 	</c:if>
@@ -41,16 +41,13 @@
 	</form>
 
 	<br>
-
+ -->
 		
-	<c:choose>
-		<c:when test="${not empty route_entity}">
-			<form action="ControllerServlet" method="post">
-				<input type="hidden" name="action" value="admin_command"> 
-				<input type="hidden" name="operation" value="route_entity">
-				<input type="hidden" name="route_entity" value="${route_entity.id}">
-				<input type="hidden" name="route" value="${route}">
-
+	
+		<form action="ControllerServlet" method="post">
+				<input type="hidden" name="action" value="new_route_command"> 
+				<input type="hidden" name="operation" value="new_route_entity">
+				
 		<table>
 			<tr>
 				<td><fmt:message key="admin.departure_airport" bundle="${ rb }" /></td>
@@ -100,39 +97,28 @@
 		</table>
 				<br>
 				<br>
-				<c:if test="${not empty delete_state}">
-					<fmt:message key="admin.delet_state" bundle="${ rb }" />
-				</c:if>
 				<c:if test="${not empty save_state}">
 					<fmt:message key="admin.save_state" bundle="${ rb }" />
-				</c:if>
-				<c:if test="${not empty bad_data}">
-					<fmt:message key="admin.bad_data" bundle="${ rb }" />
 				</c:if>
 				<br>
 				<br>
 				<input type="submit" name="save" value="<fmt:message key="save" bundle="${ rb }" />"  />
-				<input type="submit" name="delete" value="<fmt:message key="delete" bundle="${ rb }" />"  />
-			</form>
-		</c:when>
-
-	</c:choose>
+				
+		</form>
+		<form action="ControllerServlet" method="post">
+				<input type="hidden" name="action" value="new_route_command"> 
+				<input type="hidden" name="operation" value="back">
+				<input type="submit" name="back" value="<fmt:message key="cheef.back" bundle="${ rb }" />"  />
+		</form>
 	
 	<br>
-	
-	<form action="ControllerServlet" method="post">
-		<input type="hidden" name="action" value="admin_command">
-		<input type="hidden" name="operation" value="create_new"> 
-		<input type="submit" name="create" value="<fmt:message key="admin.create" bundle="${ rb }" />"  />
-	</form>
-	
 	<br>
 	
 	<form action="ControllerServlet" method="post">
 		<input type="hidden" name="action" value="logout_command">
 		<input type="submit" name="logout" value="<fmt:message key="logout" bundle="${ rb }" />"  />
 	</form>
-	<devtg:develop-info/>
 	
+	<devtg:develop-info/>
 </body>
 </html>

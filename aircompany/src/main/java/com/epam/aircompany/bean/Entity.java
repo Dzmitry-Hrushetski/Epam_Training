@@ -23,8 +23,4 @@ public class Entity implements Cloneable, Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-	/*public String getIdString() {
-		Integer i=new Integer(id);
-		return i.toString();
-	}*/
 }

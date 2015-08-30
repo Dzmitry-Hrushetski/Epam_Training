@@ -152,13 +152,6 @@
 		</c:otherwise>
 	</c:choose>
 	<br>
-	<!-- 
-	<form action="ControllerServlet" method="post">
-		<input type="hidden" name="action" value="manager_command">
-		<input type="hidden" name="operation" value="create_new"> 
-		<input type="submit" name="create" value="<fmt:message key="admin.create" bundle="${ rb }" />"  />
-	</form>
-	 -->
 	<br>
 	
 	<form action="ControllerServlet" method="post">

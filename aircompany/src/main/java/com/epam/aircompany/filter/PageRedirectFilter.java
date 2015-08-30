@@ -47,5 +47,4 @@ public class PageRedirectFilter implements Filter {
 	public void init(FilterConfig fConfig) throws ServletException {
 		indexPath = fConfig.getInitParameter("indexPath");
 	}
-
 }

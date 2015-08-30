@@ -36,5 +36,4 @@ public class AirplaneLogic extends BaseLogic {
 		}
 		return airplaneList;
 	}
-
 }

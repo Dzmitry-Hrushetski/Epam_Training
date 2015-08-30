@@ -4,7 +4,6 @@
 package com.epam.aircompany.logic;
 
 import com.epam.aircompany.bean.CompositionCrew;
-import com.epam.aircompany.bean.Employee;
 import com.epam.aircompany.dao.DaoException;
 import com.epam.aircompany.dao.ICompositionCrewDao;
 import com.epam.aircompany.pool.ConnectionPoolException;
@@ -35,5 +34,4 @@ public class CompositionCrewLogic extends BaseLogic {
 		}	
 		return compCrew;
 	}
-
 }

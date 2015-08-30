@@ -3,8 +3,6 @@
  */
 package com.epam.aircompany.bean;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
@@ -17,7 +15,6 @@ public class Route extends Entity {
 	 * 
 	 */
 	private static final long serialVersionUID = -8426647497365969985L;
-	//private static final String DATE_FORMAT="yyyy-MM-dd HH:mm:ss";
 	private Airport departureAirport;
 	private Airport arrivalAirport;
 	private Airplane airplane;
@@ -80,11 +77,6 @@ public class Route extends Entity {
 	public GregorianCalendar getDeparture() {
 		return departure;
 	}
-	
-	/*public String getDepartureString() {
-		SimpleDateFormat formattedDate = new SimpleDateFormat(DATE_FORMAT);
-		return formattedDate.format(departure.getTime());
-	}*/
 	/**
 	 * @param departure the departure to set
 	 */
@@ -97,11 +89,6 @@ public class Route extends Entity {
 	public GregorianCalendar getArrival() {
 		return arrival;
 	}
-	
-	/*public String getArrivalString() {
-		SimpleDateFormat formattedDate = new SimpleDateFormat(DATE_FORMAT);
-		return formattedDate.format(arrival.getTime());
-	}*/
 	/**
 	 * @param arrival the arrival to set
 	 */
@@ -120,5 +107,4 @@ public class Route extends Entity {
 	public void setRouteNumber(String routeNumber) {
 		this.routeNumber = routeNumber;
 	}
-	
 }

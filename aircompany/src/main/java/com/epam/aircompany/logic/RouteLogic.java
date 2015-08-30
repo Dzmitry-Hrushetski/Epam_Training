@@ -3,14 +3,11 @@
  */
 package com.epam.aircompany.logic;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import com.epam.aircompany.bean.Employee;
 import com.epam.aircompany.bean.Route;
 import com.epam.aircompany.dao.DaoException;
-import com.epam.aircompany.dao.IEmployeeDao;
 import com.epam.aircompany.dao.IRouteDao;
 import com.epam.aircompany.pool.ConnectionPoolException;
 

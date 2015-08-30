@@ -3,7 +3,6 @@
  */
 package com.epam.aircompany.command;
 
-import java.sql.Connection;
 import java.util.HashMap;
 import java.util.List;
 
@@ -145,8 +144,9 @@ public class CheefCommand implements ICommand {
 					String userName = request.getParameter(PARAM_USER_NAME);
 					String password = request.getParameter(PARAM_PASSWORD);
 					String phone = request.getParameter(PARAM_PHONE);
+					String startDate = request.getParameter(PARAM_START_DATE);
 					
-					isOk = Validator.validateEmployeeData(userName, password, phone);
+					isOk = Validator.validateEmployeeData(userName, password, phone, startDate);
 					if(isOk) {
 						param = request.getParameter(PARAM_FIRST_NAME);
 						employeeData.put(PARAM_FIRST_NAME, param);

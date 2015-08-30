@@ -221,3 +221,4 @@
 28.08.2015 08:59:56,651 INFO  command.LoginCommand - The user with such email doesn't exist or the password wrong.
 29.08.2015 20:26:54,167 INFO  command.LoginCommand - The user with such email doesn't exist or the password wrong.
 29.08.2015 23:52:53,311 INFO  command.LoginCommand - The user with such email doesn't exist or the password wrong.
+30.08.2015 22:06:50,706 INFO  command.LoginCommand - The user with such email doesn't exist or the password wrong.

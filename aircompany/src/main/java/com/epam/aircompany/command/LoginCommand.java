@@ -71,8 +71,6 @@ public class LoginCommand implements ICommand {
 	private static final String PARAM_ROUTE_EMPTY = "route_list_empty";
 	private static final String PARAM_CREW = "crew";
 	
-	
-	
 	private Employee employee;
 	
 	/* (non-Javadoc)
@@ -83,8 +81,6 @@ public class LoginCommand implements ICommand {
 		String url = URL_BOUNDLE.getString(URL_LOGIN);
 		String userName = request.getParameter(PARAM_USER_NAME);
 		String password = request.getParameter(PARAM_PASSWORD);
-		
-		
 		
 		try {
 			if(Validator.validateUserName(userName) && Validator.validatePassword(password)) {

@@ -5,10 +5,9 @@ package com.epam.aircompany.logic;
 
 import java.util.ArrayList;
 
-import com.epam.aircompany.bean.CompositionCrew;
 import com.epam.aircompany.bean.Crew;
 import com.epam.aircompany.dao.DaoException;
-import com.epam.aircompany.dao.ICompositionCrewDao;
+import com.epam.aircompany.dao.ICrewDao;
 import com.epam.aircompany.pool.ConnectionPoolException;
 
 /**

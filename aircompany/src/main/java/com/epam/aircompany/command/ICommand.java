@@ -7,8 +7,6 @@ import java.util.ResourceBundle;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.epam.aircompany.dao.IDao;
-import com.epam.aircompany.pool.ConnectionPool;
 
 /**
  * @author Dzmitry Hrushetski
@@ -27,5 +25,4 @@ public interface ICommand {
 	 * @return The URL of the JSP to which the request is forwarded.
 	 */
 	String execute(HttpServletRequest request);
-
 }
