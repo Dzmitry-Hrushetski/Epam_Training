@@ -154,6 +154,8 @@ public class ManagerCommand implements ICommand {
 					if (compCrew.getCrew().containsKey(STEWARD_ID)) {
 						String[] stewards = request.getParameterValues(PARAM_STEWARD);
 						if(stewards.length <= compCrew.getCrew().get(STEWARD_ID)) {
+							crewData.add(request.getParameter(PARAM_FIRST_PILOT));
+							
 							if(compCrew.getCrew().containsKey(CO_PILOT_ID)) {
 								crewData.add(request.getParameter(PARAM_CO_PILOT));
 							}
@@ -174,8 +176,6 @@ public class ManagerCommand implements ICommand {
 							request.setAttribute(PARAM_STEWARDS_COUNT, String.valueOf(compCrew.getCrew().get(STEWARD_ID)));
 						}
 					}
-					
-					crewData.add(request.getParameter(PARAM_FIRST_PILOT));
 					
 					if(compCrew.getCrew().containsKey(CO_PILOT_ID)) {
 						request.setAttribute(PARAM_CO_PILOT_PRES, compCrew.getCrew().get(CO_PILOT_ID));

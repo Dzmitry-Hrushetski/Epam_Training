@@ -19,7 +19,7 @@ import com.epam.aircompany.command.ICommand;
 public class ControllerServlet extends HttpServlet {
 	private static final Logger LOG = Logger.getLogger(ControllerServlet.class);
 	private static final long serialVersionUID = 1L;
-	private static final String BASE = "base";
+	private static final String PARAM_ACTION = "action";
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -68,7 +68,7 @@ public class ControllerServlet extends HttpServlet {
 	 */
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ICommand command = null;
-		String action = request.getParameter("action");
+		String action = request.getParameter(PARAM_ACTION);
 		
 		if(action == null || action.isEmpty()) {
 			command = CommandEnum.NO_COMMAND.getCommand();
@@ -82,9 +82,6 @@ public class ControllerServlet extends HttpServlet {
  		}
 		
 		String url = command.execute(request);
-		
-		/* putting the reconstructed ControllerServlet URL into request */
-		request.setAttribute(BASE, request.getRequestURL().toString());
 		
 		/* forwarding the request to a proper JSP */
 		request.getRequestDispatcher(url).forward(request, response);

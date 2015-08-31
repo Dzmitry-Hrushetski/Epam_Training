@@ -133,16 +133,16 @@
 				<br>
 				<br>
 				<input type="submit" name="save" value="<fmt:message key="save" bundle="${ rb }" />"  />
-				<br>
-				<br>
-				
+				<br>	
 	</form>
+	<c:if test="${not empty crew}">
 	<form action="ControllerServlet" method="post">
 				<input type="hidden" name="action" value="manager_command"> 
 				<input type="hidden" name="operation" value="crew_entity">
 				<input type="hidden" name="route" value="${route}">
 				<input type="submit" name="delete" value="<fmt:message key="delete" bundle="${ rb }" />"  />
 	</form>
+	</c:if>
 	<br>
 	<fmt:message key="manager.crew_list" bundle="${ rb }" />
 	<br>
