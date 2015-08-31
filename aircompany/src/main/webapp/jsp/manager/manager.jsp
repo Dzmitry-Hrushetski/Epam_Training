@@ -126,9 +126,15 @@
 				<c:if test="${not empty save_state}">
 					<fmt:message key="manager.save_state" bundle="${ rb }" />
 				</c:if>
+				<c:if test="${not empty bad_data}">
+					<fmt:message key="manager.bad_data" bundle="${ rb }" />
+					<c:out value="${stewards_count}" />
+				</c:if>
 				<br>
 				<br>
 				<input type="submit" name="save" value="<fmt:message key="save" bundle="${ rb }" />"  />
+				<br>
+				<br>
 				
 	</form>
 	<form action="ControllerServlet" method="post">

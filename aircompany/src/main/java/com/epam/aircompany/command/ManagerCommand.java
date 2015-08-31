@@ -43,6 +43,7 @@ public class ManagerCommand implements ICommand {
 	private static final String PARAM_COMP_CREW = "comp_crew";
 	private static final String PARAM_CREW = "crew";
 	private static final String PARAM_SAVE = "save";
+	private static final String PARAM_BAD_DATA = "bad_data";
 	private static final String PARAM_DELETE = "delete";
 	private static final String PARAM_DELETE_STATE = "delete_state";
 	private static final String PARAM_SAVE_STATE = "save_state";
@@ -51,6 +52,7 @@ public class ManagerCommand implements ICommand {
 	private static final String PARAM_ENGINEER = "engineer";
 	private static final String PARAM_NAVIGATOR = "navigator";
 	private static final String PARAM_STEWARD = "steward";
+	private static final String PARAM_STEWARDS_COUNT = "stewards_count";
 	
 	/**
 	 * 
@@ -146,26 +148,34 @@ public class ManagerCommand implements ICommand {
 				if (param != null) {
 					ArrayList<String> crewData = new ArrayList<String>();
 					
-					crewData.add(request.getParameter(PARAM_FIRST_PILOT));
-					
 					session = request.getSession();
 					compCrew = (CompositionCrew) session.getAttribute(PARAM_COMP_CREW);
 					
-					if(compCrew.getCrew().containsKey(CO_PILOT_ID)) {
-						crewData.add(request.getParameter(PARAM_CO_PILOT));
-					}
-					if(compCrew.getCrew().containsKey(ENGINEER_ID)) {
-						crewData.add(request.getParameter(PARAM_ENGINEER));
-					}
-					if(compCrew.getCrew().containsKey(NAVIGATOR_ID)) {
-						crewData.add(request.getParameter(PARAM_NAVIGATOR));
-					}
-					if(compCrew.getCrew().containsKey(STEWARD_ID)) {
-						crewData.addAll(Arrays.asList(request.getParameterValues(PARAM_STEWARD)));
+					if (compCrew.getCrew().containsKey(STEWARD_ID)) {
+						String[] stewards = request.getParameterValues(PARAM_STEWARD);
+						if(stewards.length <= compCrew.getCrew().get(STEWARD_ID)) {
+							if(compCrew.getCrew().containsKey(CO_PILOT_ID)) {
+								crewData.add(request.getParameter(PARAM_CO_PILOT));
+							}
+							if(compCrew.getCrew().containsKey(ENGINEER_ID)) {
+								crewData.add(request.getParameter(PARAM_ENGINEER));
+							}
+							if(compCrew.getCrew().containsKey(NAVIGATOR_ID)) {
+								crewData.add(request.getParameter(PARAM_NAVIGATOR));
+							}
+							if(compCrew.getCrew().containsKey(STEWARD_ID)) {
+								crewData.addAll(Arrays.asList(request.getParameterValues(PARAM_STEWARD)));
+							}
+							
+							isOk = crewLogic.saveCrewByRouteId(routeId, crewData);
+							request.setAttribute(PARAM_SAVE_STATE, isOk);
+						} else {
+							request.setAttribute(PARAM_BAD_DATA, true);
+							request.setAttribute(PARAM_STEWARDS_COUNT, String.valueOf(compCrew.getCrew().get(STEWARD_ID)));
+						}
 					}
 					
-					isOk = crewLogic.saveCrewByRouteId(routeId, crewData);
-					request.setAttribute(PARAM_SAVE_STATE, isOk);
+					crewData.add(request.getParameter(PARAM_FIRST_PILOT));
 					
 					if(compCrew.getCrew().containsKey(CO_PILOT_ID)) {
 						request.setAttribute(PARAM_CO_PILOT_PRES, compCrew.getCrew().get(CO_PILOT_ID));
