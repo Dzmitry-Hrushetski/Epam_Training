@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.command;
 
 import java.util.ArrayList;
@@ -20,8 +17,9 @@ import com.epam.aircompany.logic.LogicException;
 import com.epam.aircompany.logic.RouteLogic;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class ManagerCommand processes commands from the JSP page of the manager and executes control of crews of airplanes.
  *
+ * @author Dzmitry Hrushetski
  */
 public class ManagerCommand implements ICommand {
 	private static final Logger LOG = Logger.getLogger(ManagerCommand.class);
@@ -55,7 +53,7 @@ public class ManagerCommand implements ICommand {
 	private static final String PARAM_STEWARDS_COUNT = "stewards_count";
 	
 	/**
-	 * 
+	 * Instantiates a new manager command.
 	 */
 	public ManagerCommand() {
 	}

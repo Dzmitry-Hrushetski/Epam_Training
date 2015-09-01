@@ -1,19 +1,13 @@
-/**
- * 
- */
 package com.epam.aircompany.bean;
 
 import java.util.GregorianCalendar;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class Route is a Java Bean that contains information on number of flight, date/time of embarkation and an arrival, airport of departure and an arrival, the airplane, crew.
  *
+ * @author Dzmitry Hrushetski
  */
 public class Route extends Entity {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -8426647497365969985L;
 	private Airport departureAirport;
 	private Airport arrivalAirport;
@@ -24,85 +18,134 @@ public class Route extends Entity {
 	private String routeNumber;
 	
 	/**
-	 * @return the departureAirport
+	 * Gets the departure airport.
+	 *
+	 * @return Airport
+	 * @see com.epam.aircompany.bean.Airport
 	 */
 	public Airport getDepartureAirport() {
 		return departureAirport;
 	}
+	
 	/**
-	 * @param departureAirport the departureAirport to set
+	 * Sets the departure airport.
+	 *
+	 * @param Airport
+	 * @see com.epam.aircompany.bean.Airport
 	 */
 	public void setDepartureAirport(Airport departureAirport) {
 		this.departureAirport = departureAirport;
 	}
+	
 	/**
-	 * @return the arrivalAirport
+	 * Gets the arrival airport.
+	 *
+	 * @return Airport
+	 * @see com.epam.aircompany.bean.Airport
 	 */
 	public Airport getArrivalAirport() {
 		return arrivalAirport;
 	}
+	
 	/**
-	 * @param arrivalAirport the arrivalAirport to set
+	 * Sets the arrival airport.
+	 *
+	 * @param Airport
+	 * @see com.epam.aircompany.bean.Airport
 	 */
 	public void setArrivalAirport(Airport arrivalAirport) {
 		this.arrivalAirport = arrivalAirport;
 	}
+	
 	/**
-	 * @return the airplane
+	 * Gets the airplane.
+	 *
+	 * @return Airplane
+	 * @see com.epam.aircompany.bean.Airplane
 	 */
 	public Airplane getAirplane() {
 		return airplane;
 	}
+	
 	/**
-	 * @param airplane the airplane to set
+	 * Sets the airplane.
+	 *
+	 * @param Airplane
+	 * @see com.epam.aircompany.bean.Airplane
 	 */
 	public void setAirplane(Airplane airplane) {
 		this.airplane = airplane;
 	}
+	
 	/**
-	 * @return the crew
+	 * Gets the crew.
+	 *
+	 * @return Crew
+	 * @see com.epam.aircompany.bean.Crew
 	 */
 	public Crew getCrew() {
 		return crew;
 	}
+	
 	/**
-	 * @param crew the crew to set
+	 * Sets the crew.
+	 *
+	 * @param Crew
+	 * @see com.epam.aircompany.bean.Crew
 	 */
 	public void setCrew(Crew crew) {
 		this.crew = crew;
 	}
+	
 	/**
-	 * @return the departure
+	 * Gets the departure date and time.
+	 *
+	 * @return GregorianCalendar
 	 */
 	public GregorianCalendar getDeparture() {
 		return departure;
 	}
+	
 	/**
-	 * @param departure the departure to set
+	 * Sets the departure date and time.
+	 *
+	 * @param GregorianCalendar
 	 */
 	public void setDeparture(GregorianCalendar departure) {
 		this.departure = departure;
 	}
+	
 	/**
-	 * @return the arrival
+	 * Gets the arrival date and time.
+	 *
+	 * @return GregorianCalendar
 	 */
 	public GregorianCalendar getArrival() {
 		return arrival;
 	}
+	
 	/**
-	 * @param arrival the arrival to set
+	 * Sets the arrival date and time.
+	 *
+	 * @param GregorianCalendar
 	 */
 	public void setArrival(GregorianCalendar arrival) {
 		this.arrival = arrival;
 	}
+	
 	/**
-	 * @return the routeNumber
+	 * Gets the route number.
+	 *
+	 * @return the route number
 	 */
 	public String getRouteNumber() {
 		return routeNumber;
 	}
+	
 	/**
-	 * @param routeNumber the routeNumber to set
+	 * Sets the route number.
+	 *
+	 * @param routeNumber the new route number
 	 */
 	public void setRouteNumber(String routeNumber) {
 		this.routeNumber = routeNumber;

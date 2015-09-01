@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.command;
 
 import java.util.HashMap;
@@ -21,8 +18,9 @@ import com.epam.aircompany.logic.RouteLogic;
 import com.epam.aircompany.logic.Validator;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class NewRouteCommand processes commands from the JSP page of the administrator and controls creation of a new route.
  *
+ * @author Dzmitry Hrushetski
  */
 public class NewRouteCommand implements ICommand {
 	private static final Logger LOG = Logger.getLogger(NewRouteCommand.class);
@@ -48,7 +46,7 @@ public class NewRouteCommand implements ICommand {
 	private static final String PARAM_AIRPLANE_LIST = "airplane_list";
 
 	/**
-	 * 
+	 * Instantiates a new new route command.
 	 */
 	public NewRouteCommand() {
 	}

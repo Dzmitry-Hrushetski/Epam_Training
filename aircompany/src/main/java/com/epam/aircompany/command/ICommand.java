@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.command;
 
 import java.util.ResourceBundle;
@@ -9,6 +6,11 @@ import javax.servlet.http.HttpServletRequest;
 
 
 /**
+ * Interface ICommand is an interface that will be implemented by all
+ * Command classes that process data received from JSPs. It contains just one
+ * method that will be invoked by a Servlet (Controller) in order to process the
+ * request and redirect it to a chosen JSP.
+ * 
  * @author Dzmitry Hrushetski
  *
  */

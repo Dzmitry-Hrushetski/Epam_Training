@@ -1,11 +1,9 @@
-/**
- * 
- */
 package com.epam.aircompany.bean;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class Airport is a Java Bean that contains a name of the airport and its international codes.
  *
+ * @author Dzmitry Hrushetski
  */
 public class Airport extends Entity {
 
@@ -17,50 +15,76 @@ public class Airport extends Entity {
 	private String airportName;
 	private String iataCode;
 	private String icaoCode;
+	
 	/**
-	 * @return the city
+	 * Gets the city.
+	 *
+	 * @return City
+	 * @see com.epam.aircompany.bean.City
 	 */
 	public City getCity() {
 		return city;
 	}
+	
 	/**
-	 * @param city the city to set
+	 * Sets the city.
+	 *
+	 * @param city the new City
+	 * @see com.epam.aircompany.bean.City
 	 */
 	public void setCity(City city) {
 		this.city = city;
 	}
+	
 	/**
-	 * @return the airportName
+	 * Gets the airport name.
+	 *
+	 * @return the airport name
 	 */
 	public String getAirportName() {
 		return airportName;
 	}
+	
 	/**
-	 * @param airportName the airportName to set
+	 * Sets the airport name.
+	 *
+	 * @param airportName the new airport name
 	 */
 	public void setAirportName(String airportName) {
 		this.airportName = airportName;
 	}
+	
 	/**
-	 * @return the iataCode
+	 * Gets the international iata code.
+	 *
+	 * @return the iata code
 	 */
 	public String getIataCode() {
 		return iataCode;
 	}
+	
 	/**
-	 * @param iataCode the iataCode to set
+	 * Sets the international iata code.
+	 *
+	 * @param iataCode the new iata code
 	 */
 	public void setIataCode(String iataCode) {
 		this.iataCode = iataCode;
 	}
+	
 	/**
-	 * @return the icaoCode
+	 * Gets the international icao code.
+	 *
+	 * @return the icao code
 	 */
 	public String getIcaoCode() {
 		return icaoCode;
 	}
+	
 	/**
-	 * @param icaoCode the icaoCode to set
+	 * Sets the international icao code.
+	 *
+	 * @param icaoCode the new icao code
 	 */
 	public void setIcaoCode(String icaoCode) {
 		this.icaoCode = icaoCode;

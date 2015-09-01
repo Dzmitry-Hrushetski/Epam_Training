@@ -1,29 +1,31 @@
-/**
- * 
- */
 package com.epam.aircompany.bean;
 
 import java.util.ArrayList;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class Crew is a Java Bean that contains information on crew of the airplane.
  *
+ * @author Dzmitry Hrushetski
  */
 public class Crew extends Entity {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -4979490072285900467L;
 	private ArrayList<Employee> crew;
+	
 	/**
-	 * @return the crew
+	 * Gets the list of the Employee.
+	 *
+	 * @return ArrayList<Employee>
+	 * @see com.epam.aircompany.bean.Employee
 	 */
 	public ArrayList<Employee> getCrew() {
 		return crew;
 	}
+	
 	/**
-	 * @param crew the crew to set
+	 * Sets the list of the Employee.
+	 *
+	 * @param ArrayList<Employee>
+	 * @see com.epam.aircompany.bean.Employee
 	 */
 	public void setCrew(ArrayList<Employee> crew) {
 		this.crew = crew;

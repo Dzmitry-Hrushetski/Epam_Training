@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.command;
 
 import java.util.HashMap;
@@ -17,8 +14,9 @@ import com.epam.aircompany.logic.RouteLogic;
 import com.epam.aircompany.logic.Validator;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class AdminCommand processes commands from the JSP page of an administartor on which control of routes of airline is made.
  *
+ * @author Dzmitry Hrushetski
  */
 public class AdminCommand implements ICommand {
 	private static final Logger LOG = Logger.getLogger(AdminCommand.class);

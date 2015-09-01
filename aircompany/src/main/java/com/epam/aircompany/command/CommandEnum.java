@@ -1,11 +1,9 @@
-/**
- * 
- */
 package com.epam.aircompany.command;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Enum CommandEnum commands of application.
  *
+ * @author Dzmitry Hrushetski
  */
 public enum CommandEnum {
 	NO_COMMAND (new NoCommand()),
@@ -20,10 +18,20 @@ public enum CommandEnum {
 	
 	private ICommand command;
 	
+	/**
+	 * Instantiates a new command enum.
+	 *
+	 * @param command the command
+	 */
 	private CommandEnum(ICommand command) {
 		this.command = command;
 	}
 	
+	/**
+	 * Gets the command.
+	 *
+	 * @return the command
+	 */
 	public ICommand getCommand() {
 		return command;
 	}

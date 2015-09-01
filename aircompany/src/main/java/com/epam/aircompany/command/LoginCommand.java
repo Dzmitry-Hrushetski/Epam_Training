@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.command;
 
 import java.util.HashMap;
@@ -27,8 +24,9 @@ import com.epam.aircompany.logic.LogicException;
 import com.epam.aircompany.logic.Validator;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class LoginCommand processes commands from the start JSP page on which authentication of the user is made.
  *
+ * @author Dzmitry Hrushetski
  */
 public class LoginCommand implements ICommand {
 	private static final Logger LOG = Logger.getLogger(LoginCommand.class);
@@ -110,6 +108,14 @@ public class LoginCommand implements ICommand {
 		return url;
 	}
 
+	/**
+	 * Find url.
+	 *
+	 * @param request the request
+	 * @param employee the employee
+	 * @return the string
+	 * @throws LogicException the logic exception
+	 */
 	private String findURL(HttpServletRequest request, Employee employee) throws LogicException {
 		String url=null;
 		HttpSession session=null;

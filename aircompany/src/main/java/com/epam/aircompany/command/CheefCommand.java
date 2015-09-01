@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.command;
 
 import java.util.HashMap;
@@ -17,8 +14,9 @@ import com.epam.aircompany.logic.LogicException;
 import com.epam.aircompany.logic.Validator;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Сlass CheefCommand processes commands from the JSP page of the director on which control of lists of employees is made.
  *
+ * @author Dzmitry Hrushetski
  */
 public class CheefCommand implements ICommand {
 	private static final Logger LOG = Logger.getLogger(CheefCommand.class);
@@ -48,7 +46,7 @@ public class CheefCommand implements ICommand {
 	private Employee employee;
 
 	/* (non-Javadoc)
-	 * @see com.epam.aircompany.command.ICommand#execute(javax.servlet.http.HttpServletRequest, com.epam.aircompany.pool.ConnectionPool, com.epam.aircompany.dao.IDao)
+	 * @see com.epam.aircompany.command.ICommand#execute(javax.servlet.http.HttpServletRequest)
 	 */
 	@Override
 	public String execute(HttpServletRequest request) {

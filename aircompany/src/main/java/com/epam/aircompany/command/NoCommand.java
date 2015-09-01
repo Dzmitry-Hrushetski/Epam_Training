@@ -1,14 +1,12 @@
-/**
- * 
- */
 package com.epam.aircompany.command;
 
 import javax.servlet.http.HttpServletRequest;
 
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class NoCommand processes origin of an unknown command from the JSP page and executes transition to an application homepage.
  *
+ * @author Dzmitry Hrushetski
  */
 public class NoCommand implements ICommand {
 	private static final String URL_INDEX = "/index.jsp";
