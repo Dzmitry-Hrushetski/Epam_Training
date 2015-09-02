@@ -6,10 +6,6 @@ package com.epam.aircompany.bean;
  * @author Dzmitry Hrushetski
  */
 public class Airport extends Entity {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -8213532884205059798L;
 	private City city;
 	private String airportName;

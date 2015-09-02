@@ -12,7 +12,7 @@ public interface IDao {
 	/**
 	 * Creates the IEmployeeDao.
 	 *
-	 * @param Connection the connection
+	 * @param connection the Connection
 	 * @return IEmployeeDao
 	 */
 	public IEmployeeDao createIEmployeeDao(Connection connection);
@@ -20,7 +20,7 @@ public interface IDao {
 	/**
 	 * Creates the IPositionDao.
 	 *
-	 * @param Connection the connection
+	 * @param connection the Connection
 	 * @return IPositionDao
 	 */
 	public IPositionDao createIPositionDao(Connection connection);
@@ -28,7 +28,7 @@ public interface IDao {
 	/**
 	 * Creates the IAirportDao.
 	 *
-	 * @param Connection the connection
+	 * @param connection the Connection
 	 * @return IAirportDao
 	 */
 	public IAirportDao createIAirportDao(Connection connection);
@@ -36,7 +36,7 @@ public interface IDao {
 	/**
 	 * Creates the IAirplaneDao.
 	 *
-	 * @param Connection the connection
+	 * @param connection the Connection
 	 * @return IAirplaneDao
 	 */
 	public IAirplaneDao createIAirplaneDao(Connection connection);
@@ -44,7 +44,7 @@ public interface IDao {
 	/**
 	 * Creates the IRouteDao.
 	 *
-	 * @param Connection the connection
+	 * @param connection the Connection
 	 * @return IRouteDao
 	 */
 	public IRouteDao createIRouteDao(Connection connection);
@@ -52,7 +52,7 @@ public interface IDao {
 	/**
 	 * Creates the ICompositionCrewDao.
 	 *
-	 * @param Connection the connection
+	 * @param connection the Connection
 	 * @return ICompositionCrewDao
 	 */
 	public ICompositionCrewDao createICompositionCrewDao(Connection connection);
@@ -60,7 +60,7 @@ public interface IDao {
 	/**
 	 * Creates the ICrewDao.
 	 *
-	 * @param Connection the connection
+	 * @param connection the Connection
 	 * @return ICrewDao
 	 */
 	public ICrewDao createICrewDao(Connection connection);

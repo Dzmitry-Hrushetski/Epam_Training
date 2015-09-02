@@ -25,7 +25,7 @@ public interface IEmployeeDao extends IBaseDao<Employee>{
 	 * Find employee by position id.
 	 *
 	 * @param positionId the position id
-	 * @return List<Employee>
+	 * @return List of Employee
 	 * @throws DaoException the dao exception
 	 */
 	public List<Employee> findEmployeeByPositionId(int positionId) throws DaoException;
@@ -43,7 +43,7 @@ public interface IEmployeeDao extends IBaseDao<Employee>{
 	 * Update entity by id.
 	 *
 	 * @param employeeId the employee id
-	 * @param HashMap<String, String> the employee data
+	 * @param employeeData HashMap key - String, value - String the employee data
 	 * @return true, if successful
 	 * @throws DaoException the dao exception
 	 */
@@ -52,7 +52,7 @@ public interface IEmployeeDao extends IBaseDao<Employee>{
 	/**
 	 * Adds the new entity.
 	 *
-	 * @param HashMap<String, String> the employee data
+	 * @param employeeData HashMap key - String, value - String the employee data
 	 * @return true, if successful
 	 * @throws DaoException the dao exception
 	 */

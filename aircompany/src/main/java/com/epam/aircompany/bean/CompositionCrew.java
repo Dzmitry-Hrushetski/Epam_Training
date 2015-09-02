@@ -25,7 +25,7 @@ public class CompositionCrew extends Entity {
 	/**
 	 * Sets the airplane type.
 	 *
-	 * @param AirplaneType the new airplane type
+	 * @param airplaneType the new airplane type
 	 * @see com.epam.aircompany.bean.AirplaneType
 	 */
 	public void setAirplaneType(AirplaneType airplaneType) {
@@ -35,7 +35,7 @@ public class CompositionCrew extends Entity {
 	/**
 	 * Gets HashMap in which key is position ID, value - number of employees.
 	 *
-	 * @return the HashMap<Integer,Integer> 
+	 * @return the HashMap key - Integer, value - Integer 
 	 */
 	public HashMap<Integer,Integer> getCrew() {
 		return crew;
@@ -44,7 +44,7 @@ public class CompositionCrew extends Entity {
 	/**
 	 * Sets HashMap in which key is position ID, value - number of employees.
 	 *
-	 * @param HashMap<Integer,Integer>
+	 * @param crew HashMap key - Integer, value - Integer
 	 */
 	public void setCrew(HashMap<Integer,Integer> crew) {
 		this.crew = crew;

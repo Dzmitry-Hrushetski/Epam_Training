@@ -69,7 +69,7 @@ public class CrewLogic extends BaseLogic {
 	 * Save Crew by Route id.
 	 *
 	 * @param id the id of Route
-	 * @param ArrayList<String> crewData 
+	 * @param  crewData  ArrayList crewData
 	 * @return true, if successful
 	 * @throws LogicException the logic exception
 	 */

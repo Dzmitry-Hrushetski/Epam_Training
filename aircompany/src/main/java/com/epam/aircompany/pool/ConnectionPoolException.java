@@ -35,7 +35,8 @@ public class ConnectionPoolException extends Exception {
 	 * @param message
 	 *            The details message of ConnectionPoolException.
 	 * @param cause
-	 */           
+	 *           The root cause of ConnectionPoolException.
+	 */
 	public ConnectionPoolException(String message, Throwable cause) {
 		super(message, cause);
 	}

@@ -58,8 +58,8 @@ public class EmployeeLogic extends BaseLogic {
 	/**
 	 * Prepares data for operation on the page of the director.
 	 *
-	 * @param Employee 
-	 * @return HashMap<String, Object>
+	 * @param employee Employee 
+	 * @return HashMap key - String, value- Object parameters for request
 	 * @throws LogicException the logic exception
 	 */
 	public HashMap<String, Object> generateEmployeeJspData(Employee employee) throws LogicException {
@@ -95,7 +95,7 @@ public class EmployeeLogic extends BaseLogic {
 	 * Find Employee by position id.
 	 *
 	 * @param positionId the position id
-	 * @return List<Employee>
+	 * @return List of Employee
 	 * @throws LogicException the logic exception
 	 */
 	public List<Employee> findEmployeeByPositionId(int positionId) throws LogicException {
@@ -167,7 +167,7 @@ public class EmployeeLogic extends BaseLogic {
 	 * Update Employee by id.
 	 *
 	 * @param employeeId the employee id
-	 * @param HashMap<String,String> the employee data
+	 * @param employeeData HashMap key - String, value - String the employee data
 	 * @return true, if successful
 	 * @throws LogicException the logic exception
 	 */
@@ -191,7 +191,7 @@ public class EmployeeLogic extends BaseLogic {
 	/**
 	 * Adds the new Employee.
 	 *
-	 * @param HashMap<String, String> the employee data
+	 * @param employeeData HashMap key - String, value - String the employee data
 	 * @return true, if successful
 	 * @throws LogicException the logic exception
 	 */

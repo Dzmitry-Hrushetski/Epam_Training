@@ -36,10 +36,10 @@ public class DatabaseFactory {
 	}
 	
 	/**
-	 * Gets the database dao.
+	 * Gets the database DAO.
 	 *
-	 * @param IDao the type database dao
-	 * @return the database dao
+	 * @param typeDatabaseDao the type of database DAO
+	 * @return the database DAO
 	 */
 	public IDao getDatabaseDao(DaoFactoryType typeDatabaseDao) {
 		

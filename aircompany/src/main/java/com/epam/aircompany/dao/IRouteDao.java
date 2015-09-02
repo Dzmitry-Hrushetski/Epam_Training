@@ -24,7 +24,7 @@ public interface IRouteDao extends IBaseDao<Route> {
 	 * Update route by id.
 	 *
 	 * @param routeId the route id
-	 * @param HashMap<String, String> the route data
+	 * @param routeData HashMap key - String, value - String the route data
 	 * @return true, if successful
 	 * @throws DaoException the dao exception
 	 */
@@ -33,7 +33,7 @@ public interface IRouteDao extends IBaseDao<Route> {
 	/**
 	 * Adds the new route.
 	 *
-	 * @param HashMap<String, String> the route data
+	 * @param routeData HashMap key - String, value - String the route data
 	 * @return true, if successful
 	 * @throws DaoException the dao exception
 	 */

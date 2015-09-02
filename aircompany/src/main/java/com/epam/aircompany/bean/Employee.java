@@ -26,7 +26,7 @@ public class Employee extends Person {
 	/**
 	 * Sets the employee's position.
 	 *
-	 * @param Position 
+	 * @param position Position 
 	 * @see com.epam.aircompany.bean.Position
 	 */
 	public void setPosition(Position position) {
@@ -45,7 +45,7 @@ public class Employee extends Person {
 	/**
 	 * Sets the start of operation.
 	 *
-	 * @param GregorianCalendar
+	 * @param startDate GregorianCalendar
 	 */
 	public void setStartDate(GregorianCalendar startDate) {
 		this.startDate = startDate;

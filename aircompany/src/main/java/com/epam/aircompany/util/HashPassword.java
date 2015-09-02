@@ -12,11 +12,11 @@ public class HashPassword {
 	/**
 	 * Calculate hash password.
 	 *
-	 * @param String
+	 * @param password String
 	 * @return String the hash string
 	 */
-	public static String calculateHashPassword(String st) {
-	    String md5Hex = DigestUtils.md5Hex(st);
+	public static String calculateHashPassword(String password) {
+	    String md5Hex = DigestUtils.md5Hex(password);
 	    return md5Hex;
 	}
 }

@@ -42,8 +42,8 @@ public interface IBaseDao<T extends Entity> {
 	 * 
 	 * @param entity
 	 *            new type T Entity object
-	 * @return {@code true} if the object is successfully added and
-	 *         {@code false} otherwise
+	 * @return true if the object is successfully added and
+	 *         false otherwise
 	 * @throws DaoException
 	 *             If a database access/handling error occurs.
 	 */
@@ -56,8 +56,8 @@ public interface IBaseDao<T extends Entity> {
 	 *            new type T Entity object
 	 * @param id
 	 *            the ID of type T Entity object to be updated
-	 * @return {@code true} if the object's data is successfully updated and
-	 *         {@code false} otherwise
+	 * @return true if the object's data is successfully updated and
+	 *         false otherwise
 	 * @throws DaoException
 	 *             If a database access/handling error occurs.
 	 */

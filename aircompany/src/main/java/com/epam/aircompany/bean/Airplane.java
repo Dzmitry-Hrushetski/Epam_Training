@@ -24,7 +24,7 @@ public class Airplane extends Entity{
 	/**
 	 * Sets the airplane type.
 	 *
-	 * @param AirplaneType the new airplane type
+	 * @param airplaneType the new airplane type
 	 * @see com.epam.aircompany.bean.AirplaneType
 	 */
 	public void setAirplaneType(AirplaneType airplaneType) {

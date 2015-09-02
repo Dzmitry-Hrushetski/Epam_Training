@@ -30,7 +30,7 @@ public class Route extends Entity {
 	/**
 	 * Sets the departure airport.
 	 *
-	 * @param Airport
+	 * @param departureAirport Airport
 	 * @see com.epam.aircompany.bean.Airport
 	 */
 	public void setDepartureAirport(Airport departureAirport) {
@@ -50,7 +50,7 @@ public class Route extends Entity {
 	/**
 	 * Sets the arrival airport.
 	 *
-	 * @param Airport
+	 * @param arrivalAirport Airport
 	 * @see com.epam.aircompany.bean.Airport
 	 */
 	public void setArrivalAirport(Airport arrivalAirport) {
@@ -70,7 +70,7 @@ public class Route extends Entity {
 	/**
 	 * Sets the airplane.
 	 *
-	 * @param Airplane
+	 * @param airplane Airplane
 	 * @see com.epam.aircompany.bean.Airplane
 	 */
 	public void setAirplane(Airplane airplane) {
@@ -90,7 +90,7 @@ public class Route extends Entity {
 	/**
 	 * Sets the crew.
 	 *
-	 * @param Crew
+	 * @param crew Crew
 	 * @see com.epam.aircompany.bean.Crew
 	 */
 	public void setCrew(Crew crew) {
@@ -109,7 +109,7 @@ public class Route extends Entity {
 	/**
 	 * Sets the departure date and time.
 	 *
-	 * @param GregorianCalendar
+	 * @param departure GregorianCalendar
 	 */
 	public void setDeparture(GregorianCalendar departure) {
 		this.departure = departure;
@@ -127,7 +127,7 @@ public class Route extends Entity {
 	/**
 	 * Sets the arrival date and time.
 	 *
-	 * @param GregorianCalendar
+	 * @param arrival GregorianCalendar
 	 */
 	public void setArrival(GregorianCalendar arrival) {
 		this.arrival = arrival;

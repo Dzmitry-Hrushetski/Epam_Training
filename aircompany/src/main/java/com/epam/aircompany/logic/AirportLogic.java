@@ -24,7 +24,7 @@ public class AirportLogic extends BaseLogic {
 	/**
 	 * Find all Airport.
 	 *
-	 * @return List<Airport>
+	 * @return List of Airport
 	 * @throws LogicException the logic exception
 	 */
 	public List<Airport> findAllAirport() throws LogicException {

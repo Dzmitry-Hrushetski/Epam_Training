@@ -14,7 +14,7 @@ public class Crew extends Entity {
 	/**
 	 * Gets the list of the Employee.
 	 *
-	 * @return ArrayList<Employee>
+	 * @return ArrayList of Employee
 	 * @see com.epam.aircompany.bean.Employee
 	 */
 	public ArrayList<Employee> getCrew() {
@@ -24,7 +24,7 @@ public class Crew extends Entity {
 	/**
 	 * Sets the list of the Employee.
 	 *
-	 * @param ArrayList<Employee>
+	 * @param crew ArrayList of Employee
 	 * @see com.epam.aircompany.bean.Employee
 	 */
 	public void setCrew(ArrayList<Employee> crew) {

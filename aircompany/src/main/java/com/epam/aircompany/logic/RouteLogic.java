@@ -25,7 +25,7 @@ public class RouteLogic extends BaseLogic {
 	/**
 	 * Find all Route.
 	 *
-	 * @return List<Route>
+	 * @return List of Route
 	 * @throws LogicException the logic exception
 	 */
 	public List<Route> findAllRoute() throws LogicException {
@@ -95,7 +95,7 @@ public class RouteLogic extends BaseLogic {
 	 * Update Route by id.
 	 *
 	 * @param routeId the route id
-	 * @param HashMap<String, String> the route data
+	 * @param routeData HashMap key - String, value - String the route data
 	 * @return true, if successful
 	 * @throws LogicException the logic exception
 	 */
@@ -119,7 +119,7 @@ public class RouteLogic extends BaseLogic {
 	/**
 	 * Adds the new Route.
 	 *
-	 * @param HashMap<String, String> the route data
+	 * @param routeData HashMap key - String, value - String the route data
 	 * @return true, if successful
 	 * @throws LogicException the logic exception
 	 */

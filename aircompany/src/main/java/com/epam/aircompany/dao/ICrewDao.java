@@ -14,7 +14,7 @@ public interface ICrewDao extends IBaseDao<Crew> {
 	/**
 	 * Find entity by route id.
 	 *
-	 * @param id the id
+	 * @param id the Route id
 	 * @return Crew
 	 * @throws DaoException the dao exception
 	 */
@@ -23,7 +23,7 @@ public interface ICrewDao extends IBaseDao<Crew> {
 	/**
 	 * Delete crew by route id.
 	 *
-	 * @param id the id
+	 * @param id the Route id
 	 * @return true, if successful
 	 * @throws DaoException the dao exception
 	 */
@@ -32,7 +32,7 @@ public interface ICrewDao extends IBaseDao<Crew> {
 	/**
 	 * Save crew by route id.
 	 *
-	 * @param id the id
+	 * @param id the Route id
 	 * @param crewData the crew data
 	 * @return true, if successful
 	 * @throws DaoException the dao exception

@@ -35,7 +35,7 @@ public class Validator {
 	/**
 	 * Validate phone number.
 	 *
-	 * @param String the phone
+	 * @param phone the phone number
 	 * @return true, if successful
 	 */
 	public static boolean validatePhone(String phone) {
@@ -54,7 +54,7 @@ public class Validator {
 	/**
 	 * Validate password.
 	 *
-	 * @param String the password
+	 * @param password the password
 	 * @return true, if successful
 	 */
 	public static boolean validatePassword(String password) {
@@ -73,7 +73,7 @@ public class Validator {
 	/**
 	 * Validate user name.
 	 *
-	 * @param String the user name
+	 * @param userName the user e-mail
 	 * @return true, if successful
 	 */
 	/* Validates the entered user_name (e-mail) */
@@ -93,10 +93,10 @@ public class Validator {
 	/**
 	 * Validate employee data.
 	 *
-	 * @param String the user name
-	 * @param String the password
-	 * @param String the phone number
-	 * @param String the start date
+	 * @param userName the user e-mail
+	 * @param pass the password
+	 * @param tel the phone number
+	 * @param startDate the start date
 	 * @return true, if successful
 	 */
 	public static boolean validateEmployeeData(String userName,	String pass, String tel, String startDate) {
@@ -122,7 +122,7 @@ public class Validator {
 	/**
 	 * Validate date format.
 	 *
-	 * @param String the date
+	 * @param date the date
 	 * @return true, if successful
 	 */
 	public static boolean validateDateFormat(String date) {
@@ -149,9 +149,9 @@ public class Validator {
 	}
 	
 	/**
-	 * Validate date time format.
+	 * Validate date/time format.
 	 *
-	 * @param String the date
+	 * @param date the date/time
 	 * @return true, if successful
 	 */
 	public static boolean validateDateTimeFormat(String date) {

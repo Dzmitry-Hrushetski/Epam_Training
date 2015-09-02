@@ -111,7 +111,7 @@ public class ConnectionPool {
 	/**
 	 * Release connection.
 	 *
-	 * @param Connection the connection
+	 * @param connection the Connection
 	 * @return true, if successful
 	 */
 	public boolean releaseConnection(Connection connection) {

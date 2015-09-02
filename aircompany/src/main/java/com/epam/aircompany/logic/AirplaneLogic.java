@@ -24,7 +24,7 @@ public class AirplaneLogic extends BaseLogic {
 	/**
 	 * Find all Airplane.
 	 *
-	 * @return List<Airplane>
+	 * @return List of Airplane
 	 * @throws LogicException the logic exception
 	 */
 	public List<Airplane> findAllAirplane() throws LogicException {
