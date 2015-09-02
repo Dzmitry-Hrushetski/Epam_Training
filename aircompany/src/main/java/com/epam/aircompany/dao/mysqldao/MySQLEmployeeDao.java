@@ -14,17 +14,21 @@ import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.epam.aircompany.bean.Employee;
 import com.epam.aircompany.bean.Position;
 import com.epam.aircompany.dao.AbstractDao;
 import com.epam.aircompany.dao.DaoException;
 import com.epam.aircompany.dao.IEmployeeDao;
+import com.epam.aircompany.util.HashPassword;
 
 /**
  * @author Dzmitry Hrushetski
  *
  */
 public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
+	private static final Logger LOG = Logger.getLogger(MySQLEmployeeDao.class);
 	private static final String ID = "employee.id";
 	private static final String START_DATE = "employee.start_date";
 	private static final String FIRST_NAME = "person.first_name";
@@ -270,7 +274,7 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 			prepStatement.setString(4,employeeData.get(PARAM_ADDRESS));
 			prepStatement.setString(5,employeeData.get(PARAM_PHONE));
 			prepStatement.setString(6,employeeData.get(PARAM_USER_NAME));
-			prepStatement.setString(7,employeeData.get(PARAM_PASSWORD));
+			prepStatement.setString(7,HashPassword.calculateHashPassword(employeeData.get(PARAM_PASSWORD)));
 			prepStatement.setDate(1,Date.valueOf(employeeData.get(PARAM_START_DATE)));		
 			prepStatement.setInt(8,employeeId);
 			prepStatement.executeUpdate();
@@ -299,7 +303,7 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 			prepStatement.setString(3,employeeData.get(PARAM_ADDRESS));
 			prepStatement.setString(4,employeeData.get(PARAM_PHONE));
 			prepStatement.setString(5,employeeData.get(PARAM_USER_NAME));
-			prepStatement.setString(6,employeeData.get(PARAM_PASSWORD));
+			prepStatement.setString(6,HashPassword.calculateHashPassword(employeeData.get(PARAM_PASSWORD)));
 			prepStatement.executeUpdate();
 			
 			close(prepStatement);
@@ -312,18 +316,21 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 			
 			connection.commit();
 			
-			connection.setAutoCommit(true);
-			
 			isAdded = true;
 		} catch (SQLException ex) {
 			try {
 				connection.rollback();
 			} catch (SQLException e) {
-				throw new DaoException("Database error", e);
+				LOG.error("Error in metod addNewEntity, roollback exception", e);
 			}
 			throw new DaoException("Database error", ex);
 		} finally {
 			close(prepStatement);
+			try {
+				connection.setAutoCommit(true);
+			} catch (SQLException e) {
+				LOG.error("Error in metod addNewEntity, setAutoCommit exception", e);
+			}
 		}
 		return isAdded;
 	}

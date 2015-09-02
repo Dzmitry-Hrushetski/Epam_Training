@@ -11,6 +11,7 @@
 <html lang="${locale}">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel='stylesheet' href='css/style.css' type='text/css' />
 <title><fmt:message key="manager.title" bundle="${ rb }" /></title>
 </head>
 <body>
@@ -51,7 +52,7 @@
 			<tr>
 				<td><fmt:message key="manager.first_pilot" bundle="${ rb }" /></td>
 				<td> 
-					<select	id="first_pilot" name="first_pilot" required>
+					* <select	id="first_pilot" name="first_pilot" required>
 						<option value="" ><fmt:message key="manager.first_pilot_select" bundle="${ rb }" /></option>
 						<c:forEach items="${first_pilot_list}" var="e">
 							<option value="${e.id}" >${e.firstName} ${e.lastName}</option>
@@ -65,7 +66,7 @@
 			<tr>
 				<td><fmt:message key="manager.co_pilot" bundle="${ rb }" /></td>
 				<td> 
-					<select	id="co_pilot" name="co_pilot" required>
+					* <select	id="co_pilot" name="co_pilot" required>
 						<option value="" ><fmt:message key="manager.co_pilot_select" bundle="${ rb }" /></option>
 						<c:forEach items="${co_pilot_list}" var="e">
 							<option value="${e.id}" >${e.firstName} ${e.lastName}</option>
@@ -79,7 +80,7 @@
 			<tr>
 				<td><fmt:message key="manager.engineer" bundle="${ rb }" /></td>
 				<td> 
-					<select	id="engineer" name="engineer" required>
+					* <select	id="engineer" name="engineer" required>
 						<option value="" ><fmt:message key="manager.engineer_select" bundle="${ rb }" /></option>
 						<c:forEach items="${engineer_list}" var="e">
 							<option value="${e.id}" >${e.firstName} ${e.lastName}</option>
@@ -93,7 +94,7 @@
 			<tr>
 				<td><fmt:message key="manager.navigator" bundle="${ rb }" /></td>
 				<td> 
-					<select	id="navigator" name="navigator" required>
+					* <select	id="navigator" name="navigator" required>
 						<option value="" ><fmt:message key="manager.navigator_select" bundle="${ rb }" /></option>
 						<c:forEach items="${navigator_list}" var="e">
 							<option value="${e.id}" >${e.firstName} ${e.lastName}</option>
@@ -107,7 +108,7 @@
 			<tr>
 				<td><fmt:message key="manager.steward" bundle="${ rb }" /></td>
 				<td> 
-					<select	id="steward" name="steward" size="8" multiple required>
+					* <select	id="steward" name="steward" size="8" multiple required>
 						<option value="" ><fmt:message key="manager.steward_select" bundle="${ rb }" /></option>
 						<c:forEach items="${steward_list}" var="e">
 							<option value="${e.id}" >${e.firstName} ${e.lastName}</option>

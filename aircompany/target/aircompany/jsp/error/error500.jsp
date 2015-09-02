@@ -11,6 +11,7 @@
 <html lang="${locale}">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel='stylesheet' href='css/style.css' type='text/css' />
 <title><fmt:message key="error.error_page.title" bundle="${ rb }" /></title>
 </head>
 <body>

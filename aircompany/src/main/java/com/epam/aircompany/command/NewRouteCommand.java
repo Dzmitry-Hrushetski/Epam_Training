@@ -15,7 +15,7 @@ import com.epam.aircompany.logic.AirplaneLogic;
 import com.epam.aircompany.logic.AirportLogic;
 import com.epam.aircompany.logic.LogicException;
 import com.epam.aircompany.logic.RouteLogic;
-import com.epam.aircompany.logic.Validator;
+import com.epam.aircompany.util.Validator;
 
 /**
  * The Class NewRouteCommand processes commands from the JSP page of the administrator and controls creation of a new route.
@@ -88,7 +88,7 @@ public class NewRouteCommand implements ICommand {
 				} catch (LogicException e) {
 					LOG.error(e);
 					request.setAttribute(PARAM_EXCEPTION, e);
-					url = URL_BOUNDLE.getString(URL_ERROR);
+					url = URL_BOUNDLE.getString(URL_ERROR_PAGE);
 				}
 			} else {
 				request.setAttribute(PARAM_BAD_DATA, true);
@@ -117,7 +117,7 @@ public class NewRouteCommand implements ICommand {
 			} catch (LogicException e) {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);
-				url = URL_BOUNDLE.getString(URL_ERROR);
+				url = URL_BOUNDLE.getString(URL_ERROR_PAGE);
 			}
 			url = URL_BOUNDLE.getString(URL_ADMIN);
 			break;

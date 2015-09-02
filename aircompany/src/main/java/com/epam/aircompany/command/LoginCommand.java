@@ -21,7 +21,8 @@ import com.epam.aircompany.logic.CrewLogic;
 import com.epam.aircompany.logic.RouteLogic;
 import com.epam.aircompany.logic.EmployeeLogic;
 import com.epam.aircompany.logic.LogicException;
-import com.epam.aircompany.logic.Validator;
+import com.epam.aircompany.util.HashPassword;
+import com.epam.aircompany.util.Validator;
 
 /**
  * The Class LoginCommand processes commands from the start JSP page on which authentication of the user is made.
@@ -86,7 +87,8 @@ public class LoginCommand implements ICommand {
 				EmployeeLogic employeeLogic = new EmployeeLogic();
 				employee = employeeLogic.findEmployeeByUserName(userName);
 				
-				if(employee!= null && password.equals(employee.getPassword())) {
+				String hashPassword = HashPassword.calculateHashPassword(password);
+				if(employee!= null && hashPassword.equals(employee.getPassword())) {
 					
 					url = findURL(request, employee);
 					
@@ -103,7 +105,7 @@ public class LoginCommand implements ICommand {
 		} catch (LogicException e) {
 			LOG.error(e);
 			request.setAttribute(PARAM_EXCEPTION, e);
-			url = URL_BOUNDLE.getString(URL_ERROR);
+			url = URL_BOUNDLE.getString(URL_ERROR_PAGE);
 		} 
 		return url;
 	}

@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.epam.aircompany.util.Validator;
+
 /**
  * @author Dzmitry Hrushetski
  *
@@ -47,7 +49,7 @@ public class ValidatorTest {
 	}
 
 	/**
-	 * Test method for {@link com.epam.aircompany.logic.Validator#validatePhone(java.lang.String)}.
+	 * Test method for {@link com.epam.aircompany.util.Validator#validatePhone(java.lang.String)}.
 	 */
 	@Test
 	public void testValidatePhone() {
@@ -63,7 +65,7 @@ public class ValidatorTest {
 	}
 
 	/**
-	 * Test method for {@link com.epam.aircompany.logic.Validator#validateDateFormat(java.lang.String)}.
+	 * Test method for {@link com.epam.aircompany.util.Validator#validateDateFormat(java.lang.String)}.
 	 */
 	@Test
 	public void testValidateDateFormat() {

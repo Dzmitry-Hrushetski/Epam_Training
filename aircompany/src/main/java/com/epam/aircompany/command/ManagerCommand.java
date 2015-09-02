@@ -112,7 +112,7 @@ public class ManagerCommand implements ICommand {
 			} catch (LogicException e) {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);
-				url = URL_BOUNDLE.getString(URL_ERROR);
+				url = URL_BOUNDLE.getString(URL_ERROR_PAGE);
 			}	
 			break;
 		case PARAM_CREW_ENTITY:
@@ -196,7 +196,7 @@ public class ManagerCommand implements ICommand {
 			} catch (LogicException e) {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);
-				url = URL_BOUNDLE.getString(URL_ERROR);
+				url = URL_BOUNDLE.getString(URL_ERROR_PAGE);
 			}	
 			break;	
 		case PARAM_CREATE_NEW:

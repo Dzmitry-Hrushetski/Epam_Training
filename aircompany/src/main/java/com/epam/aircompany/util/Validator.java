@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.epam.aircompany.logic;
+package com.epam.aircompany.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

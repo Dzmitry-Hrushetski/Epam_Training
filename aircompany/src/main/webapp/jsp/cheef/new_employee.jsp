@@ -11,6 +11,7 @@
 <html lang="${locale}">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel='stylesheet' href='css/style.css' type='text/css' />
 <title><fmt:message key="cheef.title" bundle="${ rb }" /></title>
 </head>
 <body>
@@ -47,32 +48,32 @@
 		<table>
 			<tr>
 				<td><fmt:message key="cheef.first_name" bundle="${ rb }" /></td>
-				<td><input type="text" name="first_name" maxlength="50" required="required"/></td>
+				<td>* <input type="text" name="first_name" maxlength="50" required="required"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.last_name" bundle="${ rb }" /></td>
-				<td><input type="text" name="last_name" maxlength="50" required="required"/></td>
+				<td>* <input type="text" name="last_name" maxlength="50" required="required"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.phone" bundle="${ rb }" /></td>
-				<td><input type="text" name="phone" maxlength="13" required="required" pattern="\+375[0-9]{9}"/></td>
+				<td>* <input type="text" name="phone" maxlength="13" required="required" pattern="\+375[0-9]{9}" title="<fmt:message key="chif.phone.title" bundle="${ rb }" />"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.addres" bundle="${ rb }" /></td>
-				<td><input type="text" name="addres" size="50" maxlength="80" required="required"/></td>
+				<td>* <input type="text" name="addres" size="50" maxlength="80" required="required"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.user_name" bundle="${ rb }" /></td>
-				<td><input type="email" name="user_name" size="30" maxlength="50" required="required"/></td>
+				<td>* <input type="email" name="user_name" size="30" maxlength="50" required="required"/></td>
 				<!-- ${position eq 1 ? 'required="required"' : ''} -->
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.password" bundle="${ rb }" /></td>
-				<td><input type="text" name="password" maxlength="25" required="required" pattern="[A-Za-z0-9\\._\\-]{5,20}"/></td>
+				<td>* <input type="text" name="password" maxlength="25" required="required" pattern="[A-Za-z0-9\\._\\-]{5,20}" title="<fmt:message key="login.title" bundle="${ rb }" />"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.date" bundle="${ rb }" /></td>
-				<td><input type="date" name="calendar" required="required" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"/></td>
+				<td>* <input type="date" name="calendar" required="required" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"/></td>
 			</tr>
 		</table>
 				<br>

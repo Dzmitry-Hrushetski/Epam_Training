@@ -12,7 +12,7 @@ com\epam\aircompany\command\ICommand.class
 com\epam\aircompany\dao\factory\DatabaseFactory.class
 com\epam\aircompany\bean\Position.class
 com\epam\aircompany\dao\IAirplaneDao.class
-com\epam\aircompany\listener\AircompanyContextListener.class
+com\epam\aircompany\util\Validator.class
 com\epam\aircompany\dao\IBaseDao.class
 com\epam\aircompany\pool\ConnectionPool$ConnectionPoolHolder.class
 com\epam\aircompany\command\NoCommand.class
@@ -36,9 +36,11 @@ com\epam\aircompany\logic\CrewLogic.class
 com\epam\aircompany\filter\EncodingFilter.class
 com\epam\aircompany\pool\ConnectionPool.class
 com\epam\aircompany\dao\mysqldao\MySQLRouteDao.class
+com\epam\aircompany\util\HashPassword.class
 com\epam\aircompany\bean\Crew.class
 com\epam\aircompany\dao\IAirportDao.class
 com\epam\aircompany\bean\City.class
+com\epam\aircompany\listener\PoolManagerListener.class
 com\epam\aircompany\tag\DevelopInfo.class
 com\epam\aircompany\bean\CompositionCrew.class
 com\epam\aircompany\bean\Employee.class
@@ -62,5 +64,4 @@ com\epam\aircompany\command\CommandEnum.class
 com\epam\aircompany\command\LanguageCommand.class
 com\epam\aircompany\dao\IDao.class
 com\epam\aircompany\dao\factory\DatabaseFactory$DatabaseFactoryHolder.class
-com\epam\aircompany\logic\Validator.class
 com\epam\aircompany\command\LogoutCommand.class

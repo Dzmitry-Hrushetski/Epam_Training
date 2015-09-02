@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
  *
  */
 public interface ICommand {
-	String URL_ERROR = "error500";
+	String URL_ERROR_PAGE = "error500";
 	ResourceBundle URL_BOUNDLE = ResourceBundle.getBundle("jsp_URL");
 	
 	/**

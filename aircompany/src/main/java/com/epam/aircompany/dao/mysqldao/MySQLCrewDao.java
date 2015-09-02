@@ -10,6 +10,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.epam.aircompany.bean.Crew;
 import com.epam.aircompany.bean.Employee;
 import com.epam.aircompany.dao.AbstractDao;
@@ -25,6 +27,7 @@ import com.epam.aircompany.dao.factory.DatabaseFactory;
  *
  */
 public class MySQLCrewDao extends AbstractDao implements ICrewDao {
+	private static final Logger LOG = Logger.getLogger(MySQLCrewDao.class);
 	private static final String EMPLOYEE_ID = "employee_id";
 	//private static final String QUANTITY = "quantity";
 	private static final String FIND_BY_ROUTE_ID = "SELECT crew.employee_id FROM crew WHERE crew.route_id = ? AND crew.disable = 0";
@@ -142,29 +145,33 @@ public class MySQLCrewDao extends AbstractDao implements ICrewDao {
 			
 			close(prepStatement);
 			
-			for(String e: crewData) {
-			prepStatement = connection.prepareStatement(ADD_CREW_ENTITY);
-			
-			prepStatement.setInt(1,id);
-			prepStatement.setInt(2,Integer.parseInt(e));
-			prepStatement.executeUpdate();
-			
-			close(prepStatement);
+			for (String e : crewData) {
+				prepStatement = connection.prepareStatement(ADD_CREW_ENTITY);
+
+				prepStatement.setInt(1, id);
+				prepStatement.setInt(2, Integer.parseInt(e));
+				prepStatement.executeUpdate();
+
+				close(prepStatement);
 			}
 			
 			connection.commit();
-			connection.setAutoCommit(true);
 			isOk = true;
-			
 		} catch (SQLException ex) {
 			try {
 				connection.rollback();
 			} catch (SQLException e) {
-				throw new DaoException("Database error", e);
+				LOG.error("Error in metod saveCrewByRouteId, roollback exception", e);
 			}
 			throw new DaoException("Database error.", ex);
 		} finally {
 			close(prepStatement);
+			
+			try {
+				connection.setAutoCommit(true);
+			} catch (SQLException e) {
+				LOG.error("Error in metod saveCrewByRouteIdy, setAutoCommit exception", e);
+			}
 		}
 		return isOk;
 	}

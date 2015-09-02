@@ -16,6 +16,7 @@
 <html lang="${locale}">
     <head>
        	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       	<link rel='stylesheet' href='css/style.css' type='text/css' />
         <title><fmt:message key="login.title" bundle="${ rb }" /></title>
     </head>
     <body>
@@ -51,7 +52,7 @@
 			</tr>
 			<tr>
 				<td><input type="email" name="user_name" value="${user_name}" size="30" maxlength="50" required="required"/></td>
-				<td><input type="password" name="password" size="25" maxlength="25" pattern="[A-Za-z0-9\\._\\-]{5,20}" required="required" /></td>
+				<td><input type="password" name="password" size="25" maxlength="25" pattern="[A-Za-z0-9\\._\\-]{5,20}" required="required" title="<fmt:message key="login.title" bundle="${ rb }" />"/></td>
 				<td><input type="submit" value="<fmt:message key="login.enter" bundle="${ rb }" />" /></td>
 			</tr>
 		</table>

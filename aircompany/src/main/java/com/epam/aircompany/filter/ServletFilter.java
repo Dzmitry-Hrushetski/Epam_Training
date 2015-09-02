@@ -37,7 +37,6 @@ public class ServletFilter implements Filter {
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
 		HttpServletResponse httpResponse = (HttpServletResponse) response;
 		
-		httpRequest.getSession().invalidate();
 		httpResponse.sendRedirect(httpRequest.getContextPath() + indexPath);
 		
 		// pass the request along the filter chain

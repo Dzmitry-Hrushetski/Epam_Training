@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 import com.epam.aircompany.bean.Route;
 import com.epam.aircompany.logic.LogicException;
 import com.epam.aircompany.logic.RouteLogic;
-import com.epam.aircompany.logic.Validator;
+import com.epam.aircompany.util.Validator;
 
 /**
  * The Class AdminCommand processes commands from the JSP page of an administartor on which control of routes of airline is made.
@@ -67,7 +67,7 @@ public class AdminCommand implements ICommand {
 			} catch (LogicException e) {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);
-				url = URL_BOUNDLE.getString(URL_ERROR);
+				url = URL_BOUNDLE.getString(URL_ERROR_PAGE);
 			}	
 			break;
 		case PARAM_ROUTE_ENTITY:
@@ -125,7 +125,7 @@ public class AdminCommand implements ICommand {
 			} catch (LogicException e) {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);
-				url = URL_BOUNDLE.getString(URL_ERROR);
+				url = URL_BOUNDLE.getString(URL_ERROR_PAGE);
 			}	
 			break;	
 		case PARAM_CREATE_NEW:

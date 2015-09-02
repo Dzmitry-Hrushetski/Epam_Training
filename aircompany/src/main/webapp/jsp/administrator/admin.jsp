@@ -11,6 +11,7 @@
 <html lang="${locale}">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel='stylesheet' href='css/style.css' type='text/css' />
 <title><fmt:message key="admin.title" bundle="${ rb }" /></title>
 </head>
 <body>
@@ -55,7 +56,7 @@
 			<tr>
 				<td><fmt:message key="admin.departure_airport" bundle="${ rb }" /></td>
 				<td> 
-					<select	id="departure_airport" name="departure_airport">
+					* <select	id="departure_airport" name="departure_airport">
 						<c:forEach items="${departure_airport_list}" var="p">
 							<option value="${p.id}" ${p.id eq route_entity.departureAirport.id ? 'selected' : ''}>${p.city.cityName} ${p.airportName}</option>
 						</c:forEach>
@@ -66,7 +67,7 @@
 			<tr>
 				<td><fmt:message key="admin.arrival_airport" bundle="${ rb }" /></td>
 				<td> 
-					<select	id="arrival_airport" name="arrival_airport">
+					* <select	id="arrival_airport" name="arrival_airport">
 						<c:forEach items="${arrival_airport_list}" var="p">
 							<option value="${p.id}" ${p.id eq route_entity.arrivalAirport.id ? 'selected' : ''}>${p.city.cityName} ${p.airportName}</option>
 						</c:forEach>
@@ -77,7 +78,7 @@
 			<tr>
 				<td><fmt:message key="admin.airplane" bundle="${ rb }" /></td>
 				<td> 
-					<select	id="airplane" name="airplane">
+					* <select	id="airplane" name="airplane">
 						<c:forEach items="${airplane_list}" var="a">
 							<option value="${a.id}" ${a.id eq route_entity.airplane.id ? 'selected' : ''}>${a.airplaneType.modelName} ${a.boardNumber}</option>
 						</c:forEach>
@@ -87,15 +88,15 @@
 
 			<tr>
 				<td><fmt:message key="admin.route_number" bundle="${ rb }" /></td>
-				<td><input type="text" name="route_number" maxlength="25" value="${route_entity.routeNumber}" required="required"/></td>
+				<td>* <input type="text" name="route_number" maxlength="25" value="${route_entity.routeNumber}" required="required" pattern="[A-Za-z0-9\\._\\-]{4,8}" title="<fmt:message key="admin.route.title" bundle="${ rb }" />"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="admin.departure_time" bundle="${ rb }" /></td>
-				<td><input type="datetime" name="departure_time" value="<devtg:date-time calendar="${route_entity.departure}"/>" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01]) ([0-1]\d|2[0-3])(:[0-5]\d){2}" required="required"/></td>
+				<td>* <input type="datetime" name="departure_time" value="<devtg:date-time calendar="${route_entity.departure}"/>" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01]) ([0-1]\d|2[0-3])(:[0-5]\d){2}" required="required" title="<fmt:message key="admin.date.title" bundle="${ rb }" />"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="admin.arrival_time" bundle="${ rb }" /></td>
-				<td><input type="datetime" name="arrival_time" value="<devtg:date-time calendar="${route_entity.arrival}"/>" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01]) ([0-1]\d|2[0-3])(:[0-5]\d){2}" required="required"/></td>
+				<td>* <input type="datetime" name="arrival_time" value="<devtg:date-time calendar="${route_entity.arrival}"/>" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01]) ([0-1]\d|2[0-3])(:[0-5]\d){2}" required="required" title="<fmt:message key="admin.date.title" bundle="${ rb }" />"/></td>
 			</tr>
 		</table>
 				<br>

@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 import com.epam.aircompany.bean.Employee;
 import com.epam.aircompany.logic.EmployeeLogic;
 import com.epam.aircompany.logic.LogicException;
-import com.epam.aircompany.logic.Validator;
+import com.epam.aircompany.util.Validator;
 
 /**
  * The Сlass CreateNewEmployeeCommand processes commands from the JSP page of the director on which adding of new employees is made.
@@ -75,7 +75,7 @@ public class CreateNewEmployeeCommand implements ICommand {
 			} catch (LogicException e) {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);
-				url = URL_BOUNDLE.getString(URL_ERROR);
+				url = URL_BOUNDLE.getString(URL_ERROR_PAGE);
 			} 
 			url = URL_BOUNDLE.getString(URL_CHEEF);
 			break;
@@ -161,7 +161,7 @@ public class CreateNewEmployeeCommand implements ICommand {
 			} catch (LogicException e) {
 				LOG.error(e);
 				request.setAttribute(PARAM_EXCEPTION, e);
-				url = URL_BOUNDLE.getString(URL_ERROR);
+				url = URL_BOUNDLE.getString(URL_ERROR_PAGE);
 			}
 			break;
 		}
