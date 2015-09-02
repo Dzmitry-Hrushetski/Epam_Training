@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.logic;
 
 import java.sql.Connection;
@@ -11,8 +8,12 @@ import com.epam.aircompany.dao.factory.DatabaseFactory;
 import com.epam.aircompany.pool.ConnectionPool;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class BaseLogic super class for all classes of logic, realizes receiving Instance ConnectionPool and IDao Database Dao.
  *
+ * @author Dzmitry Hrushetski
+ * 
+ * @see com.epam.aircompany.pool.ConnectionPool
+ * @see com.epam.aircompany.dao.factory.DatabaseFactory
  */
 public abstract class BaseLogic {
 	
@@ -20,9 +21,6 @@ public abstract class BaseLogic {
 	public Connection connection;
 	public IDao databaseDao;
 
-	/**
-	 * 
-	 */
 	public BaseLogic() {
 		connectionPool = ConnectionPool.getInstance();
 		databaseDao = DatabaseFactory.getInstance().getDatabaseDao(DaoFactoryType.MYSQL);

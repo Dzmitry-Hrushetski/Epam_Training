@@ -1,54 +1,44 @@
-/**
- * 
- */
 package com.epam.aircompany.dao;
 
 /**
+ * Class DAOException represents a general DAO exception. It should wrap
+ * any exception of the underlying code, such as SQLExceptions.
+ *
  * @author Dzmitry Hrushetski
  *
  */
 public class DaoException extends Exception {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 6709403228183876262L;
 
 	/**
+	 * Constructs a DAOException with the given details message.
 	 * 
-	 */
-	public DaoException() {
-	}
-
-	/**
 	 * @param message
+	 *            The details message of DAOException.
 	 */
 	public DaoException(String message) {
 		super(message);
 	}
 
 	/**
+	 * Constructs a DAOException with the given root cause.
+	 * 
 	 * @param cause
+	 *            The root cause of DAOException.
 	 */
 	public DaoException(Throwable cause) {
 		super(cause);
 	}
 
 	/**
+	 * Constructs a DAOException with the given details message and root cause.
+	 * 
 	 * @param message
+	 *            The details message of DAOException.
 	 * @param cause
+	 *            The root cause of DAOException.
 	 */
 	public DaoException(String message, Throwable cause) {
 		super(message, cause);
-	}
-
-	/**
-	 * @param message
-	 * @param cause
-	 * @param enableSuppression
-	 * @param writableStackTrace
-	 */
-	public DaoException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-		super(message, cause, enableSuppression, writableStackTrace);
 	}
 }

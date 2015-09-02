@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.dao.mysqldao;
 
 import java.sql.Connection;
@@ -18,8 +15,9 @@ import com.epam.aircompany.dao.DaoException;
 import com.epam.aircompany.dao.IAirportDao;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class MySQLAirportDao realizes MySQL DAO for entity Airport.
  *
+ * @author Dzmitry Hrushetski
  */
 public class MySQLAirportDao extends AbstractDao implements IAirportDao {
 	private static final String AIRPORT_NAME = "airport.airport_name";
@@ -32,7 +30,9 @@ public class MySQLAirportDao extends AbstractDao implements IAirportDao {
 	private static final String FIND_AIRPORT_BY_ID = "SELECT airport.*, city.* FROM airport INNER JOIN city ON airport.city_id = city.id WHERE airport.id = ?";
 
 	/**
-	 * @param connection
+	 * Instantiates a new MySQLAirportDao.
+	 *
+	 * @param connection the connection
 	 */
 	public MySQLAirportDao(Connection connection) {
 		super(connection);

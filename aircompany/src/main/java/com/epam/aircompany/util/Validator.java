@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.util;
 
 import java.text.ParseException;
@@ -10,8 +7,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class Validator contains various methods that allow to validate data
+ * received from JSPs before inserting them into the database/updating the
+ * database.
  *
+ * @author Dzmitry Hrushetski
  */
 public class Validator {
 	private static final ResourceBundle REGEX_BOUNDLE;
@@ -32,6 +32,12 @@ public class Validator {
 		REGEX_BOUNDLE = ResourceBundle.getBundle("regExp");
 	}
 	
+	/**
+	 * Validate phone number.
+	 *
+	 * @param String the phone
+	 * @return true, if successful
+	 */
 	public static boolean validatePhone(String phone) {
 		boolean dataOk = false;
 		String regExp = REGEX_BOUNDLE.getString(PHONE);
@@ -46,12 +52,10 @@ public class Validator {
 	}
 	
 	/**
-	 * Validates the entered password.
-	 * 
-	 * @param password
-	 *            the password to validate
-	 * @return {@code true} when entered password passes validation and
-	 *         {@code false} otherwise
+	 * Validate password.
+	 *
+	 * @param String the password
+	 * @return true, if successful
 	 */
 	public static boolean validatePassword(String password) {
 		boolean dataOk = false;
@@ -66,6 +70,12 @@ public class Validator {
 		return dataOk;
 	}
 	
+	/**
+	 * Validate user name.
+	 *
+	 * @param String the user name
+	 * @return true, if successful
+	 */
 	/* Validates the entered user_name (e-mail) */
 	public static boolean validateUserName(String userName) {
 		boolean dataOk = false;
@@ -80,6 +90,15 @@ public class Validator {
 		return dataOk;
 	}
 
+	/**
+	 * Validate employee data.
+	 *
+	 * @param String the user name
+	 * @param String the password
+	 * @param String the phone number
+	 * @param String the start date
+	 * @return true, if successful
+	 */
 	public static boolean validateEmployeeData(String userName,	String pass, String tel, String startDate) {
 		
 		if(!validateUserName(userName)) {
@@ -100,6 +119,12 @@ public class Validator {
 		return true;
 	}
 	
+	/**
+	 * Validate date format.
+	 *
+	 * @param String the date
+	 * @return true, if successful
+	 */
 	public static boolean validateDateFormat(String date) {
 		boolean isOk = false;
 		
@@ -123,6 +148,12 @@ public class Validator {
 		return isOk;
 	}
 	
+	/**
+	 * Validate date time format.
+	 *
+	 * @param String the date
+	 * @return true, if successful
+	 */
 	public static boolean validateDateTimeFormat(String date) {
 		boolean isOk = false;
 		String regExp = REGEX_BOUNDLE.getString(DATE_TIME);

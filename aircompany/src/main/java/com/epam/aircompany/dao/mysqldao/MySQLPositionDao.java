@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.dao.mysqldao;
 
 import java.sql.Connection;
@@ -16,8 +13,9 @@ import com.epam.aircompany.dao.DaoException;
 import com.epam.aircompany.dao.IPositionDao;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class MySQLPositionDao realizes MySQL DAO for entity Position.
  *
+ * @author Dzmitry Hrushetski
  */
 public class MySQLPositionDao extends AbstractDao implements IPositionDao {
 	private static final String POSITION_NAME = "position.position_name";
@@ -25,7 +23,9 @@ public class MySQLPositionDao extends AbstractDao implements IPositionDao {
 	private static final String FIND_ALL_POSITION = "SELECT * FROM position";
 	
 	/**
-	 * @param connection
+	 * Instantiates a new MySQLPositionDao.
+	 *
+	 * @param connection the connection
 	 */
 	public MySQLPositionDao(Connection connection) {
 		super(connection);

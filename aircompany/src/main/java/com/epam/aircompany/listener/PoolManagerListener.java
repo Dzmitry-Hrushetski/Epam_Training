@@ -6,41 +6,39 @@ import javax.servlet.ServletContextListener;
 import org.apache.log4j.Logger;
 
 import com.epam.aircompany.pool.ConnectionPool;
-import com.epam.aircompany.util.HashPassword;
 
 /**
- * Application Lifecycle Listener implementation class PoolManagerListener
+ * The listener interface for receiving poolManager events.
+ * The class that is interested in processing a poolManager
+ * event implements this interface, and the object created
+ * with that class is registered with a component using the
+ * component's <code>addPoolManagerListener<code> method. When
+ * the poolManager event occurs, that object's appropriate
+ * method is invoked.
  *
+ * @see PoolManagerEvent
  */
 public class PoolManagerListener implements ServletContextListener {
 	private static final Logger LOG = Logger.getLogger(PoolManagerListener.class);
 	
     /**
-     * Default constructor. 
+     * Instantiates a new pool manager listener.
      */
     public PoolManagerListener() {
     }
 
-	/**
-     * @see ServletContextListener#contextDestroyed(ServletContextEvent)
-     */
+	/* (non-Javadoc)
+	 * @see javax.servlet.ServletContextListener#contextDestroyed(javax.servlet.ServletContextEvent)
+	 */
     public void contextDestroyed(ServletContextEvent arg0)  { 
     	LOG.info("Close Pool");
     	ConnectionPool.getInstance().closeAllConnections();
     }
 
-	/**
-     * @see ServletContextListener#contextInitialized(ServletContextEvent)
-     */
+	/* (non-Javadoc)
+	 * @see javax.servlet.ServletContextListener#contextInitialized(javax.servlet.ServletContextEvent)
+	 */
     public void contextInitialized(ServletContextEvent arg0)  { 
-    	
-    /*	
-    	String str1 = HashPassword.calculateHashPassword("director");
-    	String str2 = HashPassword.calculateHashPassword("globus");
-    	String str3 = HashPassword.calculateHashPassword("123456");
-    	String str4 = HashPassword.calculateHashPassword("administrator");
-    	String str5 = HashPassword.calculateHashPassword("manager");
-    	*/
     	//ConnectionPool.getInstance();
     	//LOG.info("Create Pool");
     }

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.dao.mysqldao;
 
 import java.sql.Connection;
@@ -31,8 +28,9 @@ import com.epam.aircompany.dao.factory.DaoFactoryType;
 import com.epam.aircompany.dao.factory.DatabaseFactory;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class MySQLRouteDao realizes MySQL DAO for entity Route.
  *
+ * @author Dzmitry Hrushetski
  */
 public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 	private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
@@ -63,7 +61,9 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 	private GregorianCalendar calendar;
 	
 	/**
-	 * @param connection
+	 * Instantiates a new MySQLRouteDao.
+	 *
+	 * @param connection the connection
 	 */
 	public MySQLRouteDao(Connection connection) {
 		super(connection);
@@ -178,6 +178,9 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.dao.IRouteDao#deleteRouteByID(int)
+	 */
 	@Override
 	public boolean deleteRouteByID(int routeId) throws DaoException {
 		PreparedStatement prepStatement = null;
@@ -198,6 +201,9 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 		return isOk;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.dao.IRouteDao#updateRouteByID(int, java.util.HashMap)
+	 */
 	@Override
 	public boolean updateRouteByID(int routeId,	HashMap<String, String> routeData) throws DaoException {
 		PreparedStatement prepStatement = null;
@@ -223,6 +229,9 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 		return isOk;
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.dao.IRouteDao#addNewRoute(java.util.HashMap)
+	 */
 	@Override
 	public boolean addNewRoute(HashMap<String, String> routeData) throws DaoException {
 		PreparedStatement prepStatement = null;
@@ -247,6 +256,13 @@ public class MySQLRouteDao extends AbstractDao implements IRouteDao {
 		return isOk;
 	}
 	
+	/**
+	 * Convert string to timestamp.
+	 *
+	 * @param str_date the str_date
+	 * @return the timestamp
+	 * @throws ParseException the parse exception
+	 */
 	private Timestamp convertStringToTimestamp(String str_date) throws ParseException {
 		DateFormat formatter;
 		

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.dao.mysqldao;
 
 import java.sql.Connection;
@@ -24,8 +21,9 @@ import com.epam.aircompany.dao.IEmployeeDao;
 import com.epam.aircompany.util.HashPassword;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class MySQLEmployeeDao realizes MySQL DAO for entity Employee.
  *
+ * @author Dzmitry Hrushetski
  */
 public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 	private static final Logger LOG = Logger.getLogger(MySQLEmployeeDao.class);
@@ -55,9 +53,12 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 	private static final String UPDATE_EMPLOYEE_BY_ID = "UPDATE employee INNER JOIN person ON employee.person_id = person.id SET employee.start_date = ?, person.first_name = ?, person.last_name = ?, person.addres = ?, person.phone = ?, person.user_name = ?, person.password = ? WHERE employee.id = ?";
 	private static final String ADD_PERSON = "INSERT INTO person (first_name, last_name, addres, phone, user_name, password, disable) VALUES (?, ?, ?, ?, ?, ?, 0)";
 	private static final String ADD_EMPLOYEE = "INSERT INTO employee (person_id, position_id, start_date, disable) VALUES (LAST_INSERT_ID(), ?, ?, 0)";
+		
 		/**
-	 * @param connection
-	 */
+		 * Instantiates a new MySQLEmployeeDao.
+		 *
+		 * @param connection the connection
+		 */
 	public MySQLEmployeeDao(Connection connection) {
 		super(connection);
 	}
@@ -162,6 +163,9 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.dao.IEmployeeDao#findEmployeeByUserName(java.lang.String)
+	 */
 	@Override
 	public Employee findEmployeeByUserName(String userName) throws DaoException {
 		PreparedStatement prepStatement = null;
@@ -288,6 +292,9 @@ public class MySQLEmployeeDao extends AbstractDao implements IEmployeeDao {
 		return isOk;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.dao.IEmployeeDao#addNewEntity(java.util.HashMap)
+	 */
 	@Override
 	public boolean addNewEntity(HashMap<String, String> employeeData) throws DaoException {
 		boolean isAdded = false;

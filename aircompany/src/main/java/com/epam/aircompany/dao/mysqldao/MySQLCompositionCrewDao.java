@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.dao.mysqldao;
 
 import java.sql.Connection;
@@ -16,8 +13,9 @@ import com.epam.aircompany.dao.DaoException;
 import com.epam.aircompany.dao.ICompositionCrewDao;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class MySQLCompositionCrewDao realizes MySQL DAO for entity CompositionCrew.
  *
+ * @author Dzmitry Hrushetski
  */
 public class MySQLCompositionCrewDao extends AbstractDao implements ICompositionCrewDao {
 	private static final String FIND_BY_AIRPLANE_TYPR_ID = "SELECT composition_crew.* FROM composition_crew WHERE composition_crew.airplane_type_id = ?";
@@ -25,7 +23,9 @@ public class MySQLCompositionCrewDao extends AbstractDao implements IComposition
 	private static final String QUANTITY = "quantity";
 
 	/**
-	 * @param connection
+	 * Instantiates a new MySQLCompositionCrewDao.
+	 *
+	 * @param connection the connection
 	 */
 	public MySQLCompositionCrewDao(Connection connection) {
 		super(connection);
@@ -63,6 +63,9 @@ public class MySQLCompositionCrewDao extends AbstractDao implements IComposition
 		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
 
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.dao.ICompositionCrewDao#findEntityByAirplaneTypeId(int)
+	 */
 	@Override
 	public CompositionCrew findEntityByAirplaneTypeId(int id) throws DaoException {
 		CompositionCrew compCrew = null;

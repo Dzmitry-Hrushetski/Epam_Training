@@ -10,27 +10,30 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 /**
- * Servlet Filter implementation class EncodingFilter
+ * The Class EncodingFilter is a Filter that sets the 'UTF-8' character
+ * encoding for Request and Response objects.
+ *
+ * @author Dzmitry Hrushetski
  */
 public class EncodingFilter implements Filter {
 	private String code;
        
     /**
-     * @see Filter#Filter()
+     * Instantiates a new encoding filter.
      */
     public EncodingFilter() {
         super();
     }
 
-	/**
-	 * @see Filter#destroy()
+	/* (non-Javadoc)
+	 * @see javax.servlet.Filter#destroy()
 	 */
 	public void destroy() {
 		code=null;
 	}
 
-	/**
-	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+	/* (non-Javadoc)
+	 * @see javax.servlet.Filter#doFilter(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		String codeRequest = request.getCharacterEncoding();
@@ -43,8 +46,8 @@ public class EncodingFilter implements Filter {
 		chain.doFilter(request, response);
 	}
 
-	/**
-	 * @see Filter#init(FilterConfig)
+	/* (non-Javadoc)
+	 * @see javax.servlet.Filter#init(javax.servlet.FilterConfig)
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 		code = fConfig.getInitParameter("encoding");

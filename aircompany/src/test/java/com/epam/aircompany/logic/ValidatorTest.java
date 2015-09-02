@@ -10,8 +10,12 @@ import org.junit.Test;
 import com.epam.aircompany.util.Validator;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class ValidatorTest is used for testing methods of
+ * com.epam.aircompany.util.Validator class.
  *
+ * @author Dzmitry Hrushetski
+ * 
+ * @see com.epam.aircompany.util.Validator
  */
 public class ValidatorTest {
 	private ArrayList<String> validPhone = new ArrayList<String>();
@@ -21,7 +25,9 @@ public class ValidatorTest {
 
 	
 	/**
-	 * @throws java.lang.Exception
+	 * Sets the up validate phone.
+	 *
+	 * @throws Exception the exception
 	 */
 	@Before
 	public void setUpValidatePhone() throws Exception {
@@ -35,7 +41,9 @@ public class ValidatorTest {
 	}
 	
 	/**
-	 * @throws java.lang.Exception
+	 * Sets the up validate date format.
+	 *
+	 * @throws Exception the exception
 	 */
 	@Before
 	public void setUpValidateDateFormat() throws Exception {
@@ -49,7 +57,7 @@ public class ValidatorTest {
 	}
 
 	/**
-	 * Test method for {@link com.epam.aircompany.util.Validator#validatePhone(java.lang.String)}.
+	 * Test validate phone.
 	 */
 	@Test
 	public void testValidatePhone() {
@@ -65,7 +73,7 @@ public class ValidatorTest {
 	}
 
 	/**
-	 * Test method for {@link com.epam.aircompany.util.Validator#validateDateFormat(java.lang.String)}.
+	 * Test validate date format.
 	 */
 	@Test
 	public void testValidateDateFormat() {

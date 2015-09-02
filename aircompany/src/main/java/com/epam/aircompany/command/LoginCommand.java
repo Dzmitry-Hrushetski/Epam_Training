@@ -147,7 +147,7 @@ public class LoginCommand implements ICommand {
 			List<Airport> airportList = airportLogic.findAllAirport();
 			
 			AirplaneLogic airplaneLogic = new AirplaneLogic();
-			List<Airplane> airplaneList = airplaneLogic.findAllAirport();
+			List<Airplane> airplaneList = airplaneLogic.findAllAirplane();
 			
 			session = request.getSession();
 			session.setAttribute(PARAM_ROUTE_LIST, routeList);

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.dao.mysqldao;
 
 import java.sql.Connection;
@@ -23,8 +20,9 @@ import com.epam.aircompany.dao.factory.DaoFactoryType;
 import com.epam.aircompany.dao.factory.DatabaseFactory;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class MySQLCrewDao realizes MySQL DAO for entity Crew.
  *
+ * @author Dzmitry Hrushetski
  */
 public class MySQLCrewDao extends AbstractDao implements ICrewDao {
 	private static final Logger LOG = Logger.getLogger(MySQLCrewDao.class);
@@ -38,7 +36,9 @@ public class MySQLCrewDao extends AbstractDao implements ICrewDao {
 	private IDao databaseDao = DatabaseFactory.getInstance().getDatabaseDao(DaoFactoryType.MYSQL);
 
 	/**
-	 * @param connection
+	 * Instantiates a new MySQLCrewDao.
+	 *
+	 * @param connection the connection
 	 */
 	public MySQLCrewDao(Connection connection) {
 		super(connection);
@@ -109,6 +109,9 @@ public class MySQLCrewDao extends AbstractDao implements ICrewDao {
 		return crew;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.dao.ICrewDao#deleteCrewByRouteId(int)
+	 */
 	@Override
 	public boolean deleteCrewByRouteId(int id) throws DaoException {
 		boolean isOk = false;
@@ -129,6 +132,9 @@ public class MySQLCrewDao extends AbstractDao implements ICrewDao {
 		return isOk;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.epam.aircompany.dao.ICrewDao#saveCrewByRouteId(int, java.util.ArrayList)
+	 */
 	@Override
 	public boolean saveCrewByRouteId(int id, ArrayList<String> crewData) throws DaoException {
 		boolean isOk = false;

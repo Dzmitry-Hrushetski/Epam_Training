@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.dao.mysqldao;
 
 import java.sql.Connection;
@@ -18,8 +15,9 @@ import com.epam.aircompany.dao.DaoException;
 import com.epam.aircompany.dao.IAirplaneDao;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class MySQLAirplaneDao realizes MySQL DAO for entity Airplane.
  *
+ * @author Dzmitry Hrushetski
  */
 public class MySQLAirplaneDao extends AbstractDao implements IAirplaneDao {
 	private static final String AIRPLANE_ID = "airplane.id";
@@ -30,7 +28,9 @@ public class MySQLAirplaneDao extends AbstractDao implements IAirplaneDao {
 	private static final String FIND_AIRPLANE_BY_ID = "SELECT airplane.*, airplane_type.* FROM airplane INNER JOIN airplane_type ON airplane.airplane_type_id = airplane_type.id WHERE airplane.id = ?";
 
 	/**
-	 * @param connection
+	 * Instantiates a new MySQLAirplaneDao.
+	 *
+	 * @param connection the connection
 	 */
 	public MySQLAirplaneDao(Connection connection) {
 		super(connection);
@@ -118,5 +118,4 @@ public class MySQLAirplaneDao extends AbstractDao implements IAirplaneDao {
 	public boolean updateEntity(Airplane entity, int id) throws DaoException {
 		throw new UnsupportedOperationException("Error. This operation is not supported!");
 	}
-
 }

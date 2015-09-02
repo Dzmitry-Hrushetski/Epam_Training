@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.pool;
 
 import static org.junit.Assert.*;
@@ -11,15 +8,20 @@ import org.junit.After;
 import org.junit.Test;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class ConnectionPoolTest is used for testing the correct
+ * initialization of ConnectionPool and correct operation of getConnection()
+ * method.
  *
+ * @author Dzmitry Hrushetski
  */
 public class ConnectionPoolTest {
 	private ConnectionPool pool;
 	private Connection connection;
 
 	/**
-	 * @throws java.lang.Exception
+	 * Tear down.
+	 *
+	 * @throws Exception the exception
 	 */
 	@After
 	public void tearDown() throws Exception {
@@ -30,7 +32,7 @@ public class ConnectionPoolTest {
 	}
 
 	/**
-	 * Test method for {@link com.epam.aircompany.pool.ConnectionPool#getInstance()}.
+	 * Test get instance.
 	 */
 	@Test
 	public void testGetInstance() {
@@ -39,8 +41,9 @@ public class ConnectionPoolTest {
 	}
 
 	/**
-	 * Test method for {@link com.epam.aircompany.pool.ConnectionPool#getConnection()}.
-	 * @throws ConnectionPoolException 
+	 * Test get connection.
+	 *
+	 * @throws ConnectionPoolException the connection pool exception
 	 */
 	@Test
 	public void testGetConnection() throws ConnectionPoolException {

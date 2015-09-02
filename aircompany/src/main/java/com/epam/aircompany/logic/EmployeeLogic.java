@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.logic;
 
 import java.util.HashMap;
@@ -14,8 +11,10 @@ import com.epam.aircompany.dao.IPositionDao;
 import com.epam.aircompany.pool.ConnectionPoolException;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class EmployeeLogic contains various methods that use DAO layer to
+ * retrieve information about the Employee(s) from a database.
  *
+ * @author Dzmitry Hrushetski
  */
 public class EmployeeLogic extends BaseLogic {
 	private static final String PARAM_EMPLOYEE_LIST = "employee_list";
@@ -26,12 +25,19 @@ public class EmployeeLogic extends BaseLogic {
 	
 	
 	/**
-	 * 
+	 * Instantiates a new employee logic.
 	 */
 	public EmployeeLogic() {
 		super();
 	}
 
+	/**
+	 * Find Employee by user name.
+	 *
+	 * @param userName the user name
+	 * @return Employee
+	 * @throws LogicException the logic exception
+	 */
 	public Employee findEmployeeByUserName(String userName) throws LogicException {
 		Employee employee = null;
 		
@@ -50,8 +56,11 @@ public class EmployeeLogic extends BaseLogic {
 	}
 
 	/**
-	 * @param employee
-	 * @throws LogicException 
+	 * Prepares data for operation on the page of the director.
+	 *
+	 * @param Employee 
+	 * @return HashMap<String, Object>
+	 * @throws LogicException the logic exception
 	 */
 	public HashMap<String, Object> generateEmployeeJspData(Employee employee) throws LogicException {
 
@@ -83,9 +92,11 @@ public class EmployeeLogic extends BaseLogic {
 	}
 
 	/**
-	 * @param positionId
-	 * @return
-	 * @throws LogicException 
+	 * Find Employee by position id.
+	 *
+	 * @param positionId the position id
+	 * @return List<Employee>
+	 * @throws LogicException the logic exception
 	 */
 	public List<Employee> findEmployeeByPositionId(int positionId) throws LogicException {
 		List<Employee> employeeList = null;
@@ -105,9 +116,11 @@ public class EmployeeLogic extends BaseLogic {
 	}
 
 	/**
-	 * @param id
-	 * @return
-	 * @throws LogicException 
+	 * Find Employee by id.
+	 *
+	 * @param id the employee id
+	 * @return Employee
+	 * @throws LogicException the logic exception
 	 */
 	public Employee findEntityByID(int id) throws LogicException {
 		Employee employee = null;
@@ -126,6 +139,13 @@ public class EmployeeLogic extends BaseLogic {
 		return employee;
 	}
 
+	/**
+	 * Delete Employee by id.
+	 *
+	 * @param employeeId the employee id
+	 * @return true, if successful
+	 * @throws LogicException the logic exception
+	 */
 	public boolean deleteEntityByID(int employeeId) throws LogicException {
 		boolean isOk = false;
 		
@@ -144,10 +164,12 @@ public class EmployeeLogic extends BaseLogic {
 	}
 
 	/**
-	 * @param employeeId
-	 * @param employeeData 
-	 * @return
-	 * @throws LogicException 
+	 * Update Employee by id.
+	 *
+	 * @param employeeId the employee id
+	 * @param HashMap<String,String> the employee data
+	 * @return true, if successful
+	 * @throws LogicException the logic exception
 	 */
 	public boolean updateEntityByID(int employeeId, HashMap<String,String> employeeData) throws LogicException {
 		boolean isOk = false;
@@ -166,6 +188,13 @@ public class EmployeeLogic extends BaseLogic {
 		return isOk;
 	}
 
+	/**
+	 * Adds the new Employee.
+	 *
+	 * @param HashMap<String, String> the employee data
+	 * @return true, if successful
+	 * @throws LogicException the logic exception
+	 */
 	public boolean addNewEntity(HashMap<String, String> employeeData) throws LogicException {
 		boolean isOk = false;
 		

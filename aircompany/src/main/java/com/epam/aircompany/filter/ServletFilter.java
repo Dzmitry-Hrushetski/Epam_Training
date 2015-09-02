@@ -13,25 +13,28 @@ import javax.servlet.http.HttpServletResponse;
 
 
 /**
- * Servlet Filter implementation class ServletFilter
+ * The Class ServletFilter is a Filter that prohibits direct
+ * access to the Servlet and redirects such requests to the index page.
+ *
+ * @author Dzmitry Hrushetski
  */
 public class ServletFilter implements Filter {
 	private String indexPath;
 
     /**
-     * Default constructor. 
+     * Instantiates a new servlet filter.
      */
     public ServletFilter() {
     }
 
-	/**
-	 * @see Filter#destroy()
+	/* (non-Javadoc)
+	 * @see javax.servlet.Filter#destroy()
 	 */
 	public void destroy() {
 	}
 
-	/**
-	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+	/* (non-Javadoc)
+	 * @see javax.servlet.Filter#doFilter(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
@@ -43,8 +46,8 @@ public class ServletFilter implements Filter {
 		chain.doFilter(request, response);
 	}
 
-	/**
-	 * @see Filter#init(FilterConfig)
+	/* (non-Javadoc)
+	 * @see javax.servlet.Filter#init(javax.servlet.FilterConfig)
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 		indexPath = fConfig.getInitParameter("indexPath");

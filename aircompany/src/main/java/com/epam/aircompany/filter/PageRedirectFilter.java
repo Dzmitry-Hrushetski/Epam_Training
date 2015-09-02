@@ -12,25 +12,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet Filter implementation class PageRedirectFilter
+ * The Class PageRedirectFilter is a Filter that prohibits direct
+ * access to the JSP pages and redirects such requests to the index page.
+ *
+ * @author Dzmitry Hrushetski
  */
 public class PageRedirectFilter implements Filter {
 	private String indexPath;
 
     /**
-     * Default constructor. 
+     * Instantiates a new page redirect filter.
      */
     public PageRedirectFilter() {
     }
 
-	/**
-	 * @see Filter#destroy()
+	/* (non-Javadoc)
+	 * @see javax.servlet.Filter#destroy()
 	 */
 	public void destroy() {
 	}
 
-	/**
-	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+	/* (non-Javadoc)
+	 * @see javax.servlet.Filter#doFilter(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
@@ -41,8 +44,8 @@ public class PageRedirectFilter implements Filter {
 		chain.doFilter(request, response);
 	}
 
-	/**
-	 * @see Filter#init(FilterConfig)
+	/* (non-Javadoc)
+	 * @see javax.servlet.Filter#init(javax.servlet.FilterConfig)
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 		indexPath = fConfig.getInitParameter("indexPath");

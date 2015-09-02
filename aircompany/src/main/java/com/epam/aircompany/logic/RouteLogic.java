@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.logic;
 
 import java.util.HashMap;
@@ -12,17 +9,25 @@ import com.epam.aircompany.dao.IRouteDao;
 import com.epam.aircompany.pool.ConnectionPoolException;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class RouteLogic contains various methods that use DAO layer to
+ * retrieve information about the Route(s) from a database.
  *
+ * @author Dzmitry Hrushetski
  */
 public class RouteLogic extends BaseLogic {
 
 	/**
-	 * 
+	 * Instantiates a new route logic.
 	 */
 	public RouteLogic() {
 	}
 	
+	/**
+	 * Find all Route.
+	 *
+	 * @return List<Route>
+	 * @throws LogicException the logic exception
+	 */
 	public List<Route> findAllRoute() throws LogicException {
 		List<Route> routeList = null;
 		
@@ -38,6 +43,13 @@ public class RouteLogic extends BaseLogic {
 		return routeList;
 	}
 
+	/**
+	 * Find Route by id.
+	 *
+	 * @param id the Route id
+	 * @return Route
+	 * @throws LogicException the logic exception
+	 */
 	public Route findRouteByID(int id) throws LogicException {
 		Route route = null;
 		
@@ -55,6 +67,13 @@ public class RouteLogic extends BaseLogic {
 		return route;
 	}
 
+	/**
+	 * Delete Route by id.
+	 *
+	 * @param routeId the Route id
+	 * @return true, if successful
+	 * @throws LogicException the logic exception
+	 */
 	public boolean deleteRouteByID(int routeId) throws LogicException {
 		boolean isOk = false;
 		
@@ -72,6 +91,14 @@ public class RouteLogic extends BaseLogic {
 		return isOk;
 	}
 
+	/**
+	 * Update Route by id.
+	 *
+	 * @param routeId the route id
+	 * @param HashMap<String, String> the route data
+	 * @return true, if successful
+	 * @throws LogicException the logic exception
+	 */
 	public boolean updateRouteByID(int routeId, HashMap<String, String> routeData) throws LogicException {
 		boolean isOk = false;
 		
@@ -89,6 +116,13 @@ public class RouteLogic extends BaseLogic {
 		return isOk;
 	}
 
+	/**
+	 * Adds the new Route.
+	 *
+	 * @param HashMap<String, String> the route data
+	 * @return true, if successful
+	 * @throws LogicException the logic exception
+	 */
 	public boolean addNewRoute(HashMap<String, String> routeData) throws LogicException {
 		boolean isOk = false;
 		

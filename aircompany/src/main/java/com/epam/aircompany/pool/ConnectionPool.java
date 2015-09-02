@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.pool;
 
 import java.sql.Connection;
@@ -15,8 +12,13 @@ import java.util.concurrent.locks.ReentrantLock;
 import org.apache.log4j.Logger;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class ConnectionPool provides a thread-safe pool of connections to
+ * MySQL database. The pool is constructed using Singleton design pattern. 
+ * Database properties are stored in
+ * a separate file. The size of the pool is limited. It contains methods for
+ * extracting and releasing DB connections.
  *
+ * @author Dzmitry Hrushetski
  */
 public class ConnectionPool {
 	private static final Logger LOG = Logger.getLogger(ConnectionPool.class);
@@ -37,10 +39,18 @@ public class ConnectionPool {
 	private int currentPoolSize;
 	private LinkedBlockingQueue<Connection> dbConnections;
 	
+	/**
+	 * The Class ConnectionPoolHolder.
+	 *
+	 * @author Dzmitry Hrushetski
+	 */
 	private static class ConnectionPoolHolder {
 		private static final ConnectionPool POOL = new ConnectionPool();
 	}
 	
+	/**
+	 * Instantiates a new connection pool.
+	 */
 	private ConnectionPool() {
 		try {
 			rb = ResourceBundle.getBundle(DB_PROPERTIES_FILE_NAME);
@@ -65,19 +75,19 @@ public class ConnectionPool {
 	}
 
 	/**
-	 * Returns the only instance of ConnectionPool
-	 * 
-	 * @return com.epam.aircompany.pool.ConnectionPool
+	 * Gets the single instance of ConnectionPool.
+	 *
+	 * @return single instance of ConnectionPool
 	 */
 	public static ConnectionPool getInstance() {
 		return ConnectionPoolHolder.POOL;
 	}
 	
 	/**
-	 * Takes a database connection from pool
-	 * 
-	 * @return java.sql.Connection
-	 * @throws ConnectionPoolException 
+	 * Gets the connection.
+	 *
+	 * @return Connection
+	 * @throws ConnectionPoolException the connection pool exception
 	 */
 	public Connection getConnection() throws ConnectionPoolException {
 		Connection connection = null;
@@ -99,12 +109,10 @@ public class ConnectionPool {
 	}
 
 	/**
-	 * Releases a database connection by returning it to the pool
-	 * 
-	 * @param connection
-	 *            Connection that was previously taken
-	 * @return {@code true} if Connection was successfully returned to the pool,
-	 *         and {@code false} otherwise.
+	 * Release connection.
+	 *
+	 * @param Connection the connection
+	 * @return true, if successful
 	 */
 	public boolean releaseConnection(Connection connection) {
 		boolean isReleased = false;
@@ -122,10 +130,9 @@ public class ConnectionPool {
 	}
 
 	/**
-	 * Closes all initialized database connections
-	 * 
-	 * @return {@code true} if all DB Connections were closed and {@code false}
-	 *         otherwise.
+	 * Close all connections.
+	 *
+	 * @return true, if successful
 	 */
 	public boolean closeAllConnections() {
 		boolean areClosed = false;
@@ -142,6 +149,12 @@ public class ConnectionPool {
 		return areClosed;
 	}
 
+	/**
+	 * Creates the connection.
+	 *
+	 * @return Connection
+	 * @throws ConnectionPoolException the connection pool exception
+	 */
 	private Connection createConnection() throws ConnectionPoolException {
 		Connection connection = null;
 		

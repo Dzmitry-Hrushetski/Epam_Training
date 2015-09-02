@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.logic;
 
 import java.util.List;
@@ -11,18 +8,26 @@ import com.epam.aircompany.dao.IAirplaneDao;
 import com.epam.aircompany.pool.ConnectionPoolException;
 
 /**
- * @author Dzmitry Hrushetski
+ * The Class AirplaneLogic contains various methods that use DAO layer to
+ * retrieve information about the Airplane(s) from a database.
  *
+ * @author Dzmitry Hrushetski
  */
 public class AirplaneLogic extends BaseLogic {
 
 	/**
-	 * 
+	 * Instantiates a new airplane logic.
 	 */
 	public AirplaneLogic() {
 	}
 
-	public List<Airplane> findAllAirport() throws LogicException {
+	/**
+	 * Find all Airplane.
+	 *
+	 * @return List<Airplane>
+	 * @throws LogicException the logic exception
+	 */
+	public List<Airplane> findAllAirplane() throws LogicException {
 		List<Airplane> airplaneList = null;
 		
 		try {

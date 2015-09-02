@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.epam.aircompany.dao;
 
 import java.sql.Connection;
@@ -11,6 +8,7 @@ import org.apache.log4j.Logger;
 
 
 /**
+ * The abstract Сlass AbstractDao for all classes DAO, stores Connection and realizes a closing method a statement
  * @author Dzmitry Hrushetski
  *
  */
@@ -19,7 +17,10 @@ public abstract class AbstractDao {
 	protected Connection connection;
 
 	/**
+	 * The constructor is used by sub-classes only
 	 * 
+	 * @param connection
+	 *            java.sql.Connection
 	 */
 	public AbstractDao(Connection connection) {
 		this.connection = connection;

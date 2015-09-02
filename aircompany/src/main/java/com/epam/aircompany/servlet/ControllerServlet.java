@@ -14,7 +14,11 @@ import com.epam.aircompany.command.CommandEnum;
 import com.epam.aircompany.command.ICommand;
 
 /**
- * Servlet implementation class ControllerServlet
+ * The Class ControllerServlet is a Servlet implementation class that
+ * controls communication between Command interface and JSPs. It calls the
+ * proper Command class and then redirects the request to the proper JSP.
+ *
+ * @author Dzmitry Hrushetski
  */
 public class ControllerServlet extends HttpServlet {
 	private static final Logger LOG = Logger.getLogger(ControllerServlet.class);
@@ -22,49 +26,45 @@ public class ControllerServlet extends HttpServlet {
 	private static final String PARAM_ACTION = "action";
        
     /**
-     * @see HttpServlet#HttpServlet()
+     * Instantiates a new controller servlet.
      */
     public ControllerServlet() {
         super();
     }
 
-	/**
-	 * @see Servlet#init(ServletConfig)
+	/* (non-Javadoc)
+	 * @see javax.servlet.GenericServlet#init(javax.servlet.ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
 	}
 
-	/**
-	 * @see Servlet#destroy()
+	/* (non-Javadoc)
+	 * @see javax.servlet.GenericServlet#destroy()
 	 */
 	public void destroy() {
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	/* (non-Javadoc)
+	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		processRequest(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/* (non-Javadoc)
+	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		processRequest(request, response);
 	}
 	
 	/**
-	 * Processes the request
-	 * 
-	 * @param request
-	 *            javax.servlet.http.HttpServletRequest
-	 * @param response
-	 *            javax.servlet.http.HttpServletResponse
-	 * @throws ServletException
-	 *             When a Servlet exception of some sort has occurred
-	 * @throws IOException
-	 *             When an I/O exception of some sort has occurred
+	 * Process request.
+	 *
+	 * @param HttpServletRequest the request
+	 * @param HttpServletResponse the response
+	 * @throws ServletException the servlet exception
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ICommand command = null;
