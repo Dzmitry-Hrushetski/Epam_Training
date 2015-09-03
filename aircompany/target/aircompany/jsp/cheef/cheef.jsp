@@ -80,11 +80,11 @@
 		<table>
 			<tr>
 				<td><fmt:message key="cheef.first_name" bundle="${ rb }" /></td>
-				<td>* <input type="text" name="first_name" maxlength="50" value="${employee_entity.firstName}" required="required"/></td>
+				<td>* <input type="text" name="first_name" maxlength="50" value="${employee_entity.firstName}" required="required" title="50 <fmt:message key="chif.lenght.title" bundle="${ rb }" />"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.last_name" bundle="${ rb }" /></td>
-				<td>* <input type="text" name="last_name" maxlength="50" value="${employee_entity.lastName}" required="required"/></td>
+				<td>* <input type="text" name="last_name" maxlength="50" value="${employee_entity.lastName}" required="required" title="50 <fmt:message key="chif.lenght.title" bundle="${ rb }" />"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.phone" bundle="${ rb }" /></td>
@@ -92,7 +92,7 @@
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.addres" bundle="${ rb }" /></td>
-				<td>* <input type="text" name="addres" size="50" maxlength="80" value="${employee_entity.addres}" required="required"/></td>
+				<td>* <input type="text" name="addres" size="50" maxlength="80" value="${employee_entity.addres}" required="required" title="80 <fmt:message key="chif.lenght.title" bundle="${ rb }" />"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.user_name" bundle="${ rb }" /></td>

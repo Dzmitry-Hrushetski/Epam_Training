@@ -2,6 +2,7 @@ package com.epam.aircompany.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -24,6 +25,15 @@ public class Validator {
 	private static final int MAX_LENGTH_PASSWORD = 25;
 	private static final String DATE_FORMAT="yyyy-MM-dd";
 	private static final String DATE_TIME_FORMAT="yyyy-MM-dd HH:mm:ss";
+	private static final String PARAM_FIRST_NAME = "first_name";
+	private static final String PARAM_LAST_NAME = "last_name";
+	private static final String PARAM_PHONE = "phone";
+	private static final String PARAM_ADDRESS = "addres";
+	private static final String PARAM_USER_NAME = "user_name";
+	private static final String PARAM_PASSWORD = "password";
+	private static final String PARAM_START_DATE = "calendar";
+	private static final int MAX_LENGTH_NAME = 50;
+	private static final int MAX_LENGTH_ADDRESS = 80;
 	private static Pattern pattern;
 	private static Matcher matcher;
 
@@ -174,5 +184,47 @@ public class Validator {
 			}
 		}
 		return isOk;
+	}
+	
+	/**
+	 * Validate employee data.
+	 *
+	 * @param employeeData the full employee data
+	 * 
+	 * @return true, if successful
+	 */
+
+	public static boolean validateEmployeeData(HashMap<String, String> employeeData) {
+		String paramData = employeeData.get(PARAM_FIRST_NAME);
+		if(paramData.isEmpty() || paramData.length()>MAX_LENGTH_NAME) {
+			return false;
+		}
+		
+		paramData = employeeData.get(PARAM_LAST_NAME);
+		if(paramData.isEmpty() || paramData.length()>MAX_LENGTH_NAME) {
+			return false;
+		}
+		
+		paramData = employeeData.get(PARAM_ADDRESS);
+		if(paramData.isEmpty() || paramData.length()>MAX_LENGTH_ADDRESS) {
+			return false;
+		}
+		
+		if(!validateUserName(employeeData.get(PARAM_USER_NAME))) {
+			return false;
+		}
+		
+		if(!validatePassword(employeeData.get(PARAM_PASSWORD))) {
+			return false;
+		}
+		
+		if(!validatePhone(employeeData.get(PARAM_PHONE))) {
+			return false;
+		}
+		
+		if(!validateDateFormat(employeeData.get(PARAM_START_DATE))) {
+			return false;
+		}
+		return true;
 	}
 }
