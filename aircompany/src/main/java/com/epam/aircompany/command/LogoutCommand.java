@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
  */
 public class LogoutCommand implements ICommand {
 	private static final String URL_LOGIN = "login";
+	//private static final String USER_TYPE = "user_type";
 
 	/* (non-Javadoc)
 	 * @see com.epam.aircompany.command.ICommand#execute(javax.servlet.http.HttpServletRequest)
@@ -20,6 +21,7 @@ public class LogoutCommand implements ICommand {
 		String url = URL_BOUNDLE.getString(URL_LOGIN);
 		
 		HttpSession session = request.getSession(false);
+		//session.removeAttribute(USER_TYPE);
 		session.invalidate();
 		
 		return url;

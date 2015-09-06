@@ -57,7 +57,7 @@
   </filter>
   <filter-mapping>
     <filter-name>ServletFilter</filter-name>
-    <url-pattern>/ServletFilter</url-pattern>
+    <url-pattern>/ControllerServlet</url-pattern>
    		<dispatcher>FORWARD</dispatcher>
 		<dispatcher>REQUEST</dispatcher>
   </filter-mapping>

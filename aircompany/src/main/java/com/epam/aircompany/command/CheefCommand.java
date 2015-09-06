@@ -155,31 +155,8 @@ public class CheefCommand implements ICommand {
 					param = request.getParameter(PARAM_START_DATE);
 					employeeData.put(PARAM_START_DATE, param);
 					
-					
-					/*String userName = request.getParameter(PARAM_USER_NAME);
-					String password = request.getParameter(PARAM_PASSWORD);
-					String phone = request.getParameter(PARAM_PHONE);
-					String startDate = request.getParameter(PARAM_START_DATE);
-					
-					isOk = Validator.validateEmployeeData(userName, password, phone, startDate);
-					*/
 					isOk = Validator.validateEmployeeData(employeeData);
 					if(isOk) {
-						/*param = request.getParameter(PARAM_FIRST_NAME);
-						employeeData.put(PARAM_FIRST_NAME, param);
-						param = request.getParameter(PARAM_LAST_NAME);
-						employeeData.put(PARAM_LAST_NAME, param);
-						param = request.getParameter(PARAM_PHONE);
-						employeeData.put(PARAM_PHONE, param);
-						param = request.getParameter(PARAM_ADDRESS);
-						employeeData.put(PARAM_ADDRESS, param);
-						param = request.getParameter(PARAM_USER_NAME);
-						employeeData.put(PARAM_USER_NAME, param);
-						param = request.getParameter(PARAM_PASSWORD);
-						employeeData.put(PARAM_PASSWORD, param);
-						param = request.getParameter(PARAM_START_DATE);
-						employeeData.put(PARAM_START_DATE, param);*/
-
 						EmployeeLogic employeeLogic = new EmployeeLogic();
 						isOk = employeeLogic.updateEntityByID(employeeId, employeeData);
 						request.setAttribute(PARAM_SAVE_STATE, isOk);

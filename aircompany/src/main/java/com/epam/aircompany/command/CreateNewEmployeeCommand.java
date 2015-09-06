@@ -25,7 +25,6 @@ public class CreateNewEmployeeCommand implements ICommand {
 	private static final int FIRST_EMPLOYEE = 0;
 	private static final String PARAM_EMPLOYEE_LIST = "employee_list";
 	private static final String PARAM_OPERATION = "operation";
-	private static final String PARAM_EMPLOYEE = "employee";
 	private static final String PARAM_POSITION = "position";
 	private static final String PARAM_EMPLOYEE_ENTITY = "employee_entity";
 	private static final String PARAM_EXCEPTION = "exception";
@@ -124,33 +123,8 @@ public class CreateNewEmployeeCommand implements ICommand {
 					param = request.getParameter(PARAM_POSITION);
 					employeeData.put(PARAM_POSITION, param);
 					
-					
-					/*String userName = request.getParameter(PARAM_USER_NAME);
-					String password = request.getParameter(PARAM_PASSWORD);
-					String phone = request.getParameter(PARAM_PHONE);
-					String startDate = request.getParameter(PARAM_START_DATE);
-					
-					isOk = Validator.validateEmployeeData(userName, password, phone, startDate);
-					*/
 					isOk = Validator.validateEmployeeData(employeeData);
 					if(isOk) {
-						/*param = request.getParameter(PARAM_FIRST_NAME);
-						employeeData.put(PARAM_FIRST_NAME, param);
-						param = request.getParameter(PARAM_LAST_NAME);
-						employeeData.put(PARAM_LAST_NAME, param);
-						param = request.getParameter(PARAM_PHONE);
-						employeeData.put(PARAM_PHONE, param);
-						param = request.getParameter(PARAM_ADDRESS);
-						employeeData.put(PARAM_ADDRESS, param);
-						param = request.getParameter(PARAM_USER_NAME);
-						employeeData.put(PARAM_USER_NAME, param);
-						param = request.getParameter(PARAM_PASSWORD);
-						employeeData.put(PARAM_PASSWORD, param);
-						param = request.getParameter(PARAM_START_DATE);
-						employeeData.put(PARAM_START_DATE, param);
-						param = request.getParameter(PARAM_POSITION);
-						employeeData.put(PARAM_POSITION, param);*/
-
 						EmployeeLogic employeeLogic = new EmployeeLogic();
 						isOk = employeeLogic.addNewEntity(employeeData);
 						request.setAttribute(PARAM_SAVE_STATE, isOk);
@@ -173,8 +147,6 @@ public class CreateNewEmployeeCommand implements ICommand {
 						request.setAttribute(PARAM_START_DATE, param);
 					}
 					
-					//param = request.getParameter(PARAM_EMPLOYEE);
-					//request.setAttribute(PARAM_EMPLOYEE, param);
 					param = request.getParameter(PARAM_POSITION);
 					request.setAttribute(PARAM_POSITION, param);
 				}

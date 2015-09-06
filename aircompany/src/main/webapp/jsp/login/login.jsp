@@ -4,6 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="devtg" uri="customtags" %>
 
+<!--<c:set var="user_type" value="login" scope="session"/>-->
 <c:if test="${empty locale}">
 <c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
 <c:set var="locale" value="${language eq 'ru_RU' ? 'ru' : language eq 'en_US' ? 'en' : language}" scope="request"/>

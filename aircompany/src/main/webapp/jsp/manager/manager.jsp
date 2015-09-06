@@ -3,6 +3,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="devtg" uri="customtags" %>
 
+<c:set var="user_type" value="manager" scope="session"/>
+
 <fmt:setLocale value="${locale}" />
 <fmt:setBundle basename="text" var="rb" />
 

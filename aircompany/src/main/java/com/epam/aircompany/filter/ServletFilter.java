@@ -10,6 +10,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -19,6 +20,8 @@ import javax.servlet.http.HttpServletResponse;
  * @author Dzmitry Hrushetski
  */
 public class ServletFilter implements Filter {
+	private static final String USER_TYPE = "user_type";
+	private static final String INIT_PARAM = "indexPath";
 	private String indexPath;
 
     /**
@@ -40,8 +43,14 @@ public class ServletFilter implements Filter {
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
 		HttpServletResponse httpResponse = (HttpServletResponse) response;
 		
-		httpResponse.sendRedirect(httpRequest.getContextPath() + indexPath);
+		HttpSession session = httpRequest.getSession();
 		
+		String userType = (String) session.getAttribute(USER_TYPE);
+		if(userType == null || userType.isEmpty()) {
+			httpResponse.sendRedirect(httpRequest.getContextPath() + indexPath);
+			return;
+		}
+			
 		// pass the request along the filter chain
 		chain.doFilter(request, response);
 	}
@@ -50,6 +59,6 @@ public class ServletFilter implements Filter {
 	 * @see javax.servlet.Filter#init(javax.servlet.FilterConfig)
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
-		indexPath = fConfig.getInitParameter("indexPath");
+		indexPath = fConfig.getInitParameter(INIT_PARAM);
 	}
 }

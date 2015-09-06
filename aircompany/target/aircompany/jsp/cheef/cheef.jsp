@@ -3,6 +3,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="devtg" uri="customtags" %>
 
+<c:set var="user_type" value="cheef" scope="session"/>
+
 <fmt:setLocale value="${locale}" />
 <fmt:setBundle basename="text" var="rb" />
 
@@ -100,7 +102,7 @@
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.password" bundle="${ rb }" /></td>
-				<td>* <input type="text" name="password" maxlength="25" required="required" pattern="[A-Za-z0-9\\._\\-]{5,20}" title="<fmt:message key="login.title" bundle="${ rb }" />"/></td>
+				<td>* <input type="text" name="password" maxlength="25" value="password" required="required" pattern="[A-Za-z0-9\\._\\-]{5,20}" title="<fmt:message key="login.title" bundle="${ rb }" />"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="cheef.date" bundle="${ rb }" /></td>
