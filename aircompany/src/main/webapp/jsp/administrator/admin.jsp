@@ -92,11 +92,11 @@
 			</tr>
 			<tr>
 				<td><fmt:message key="admin.departure_time" bundle="${ rb }" /></td>
-				<td>* <input type="datetime" name="departure_time" value="<devtg:date-time calendar="${route_entity.departure}"/>" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01]) ([0-1]\d|2[0-3])(:[0-5]\d){2}" required="required" title="<fmt:message key="admin.date.title" bundle="${ rb }" />"/></td>
+				<td>* <input type="datetime" name="departure_time" value="<devtg:date-time calendar="${route_entity.departure}"/>" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01]) (([0-1][0-9])|2[0-3]):([0-5][0-9]):([0-5][0-9])" required="required" title="<fmt:message key="admin.date.title" bundle="${ rb }" />"/></td>
 			</tr>
 			<tr>
 				<td><fmt:message key="admin.arrival_time" bundle="${ rb }" /></td>
-				<td>* <input type="datetime" name="arrival_time" value="<devtg:date-time calendar="${route_entity.arrival}"/>" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01]) ([0-1]\d|2[0-3])(:[0-5]\d){2}" required="required" title="<fmt:message key="admin.date.title" bundle="${ rb }" />"/></td>
+				<td>* <input type="datetime" name="arrival_time" value="<devtg:date-time calendar="${route_entity.arrival}"/>" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01]) (([0-1][0-9])|2[0-3]):([0-5][0-9]):([0-5][0-9])" required="required" title="<fmt:message key="admin.date.title" bundle="${ rb }" />"/></td>
 			</tr>
 		</table>
 				<br>

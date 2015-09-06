@@ -66,8 +66,11 @@ public class NewRouteCommand implements ICommand {
 		case PARAM_NEW_ROUTE_ENTITY:
 			String departureTime = request.getParameter(PARAM_DEPARTURE_TIME);
 			String arrivalTime = request.getParameter(PARAM_ARRIVAL_TIME);
+			String routeNumber = request.getParameter(PARAM_ROUTE_NUMBER);
 			
-			if (Validator.validateDateTimeFormat(departureTime) == true && Validator.validateDateTimeFormat(arrivalTime) == true) {
+			if (Validator.validateDateTimeFormat(departureTime) == true 
+					&& Validator.validateDateTimeFormat(arrivalTime) == true 
+					&& Validator.validateRouteNumber(routeNumber) == true) {
 				HashMap<String, String> routeData = new HashMap<String, String>();
 
 				param = request.getParameter(PARAM_DEPARTURE_AIRPORT);

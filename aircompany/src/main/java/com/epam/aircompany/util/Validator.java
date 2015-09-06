@@ -34,6 +34,7 @@ public class Validator {
 	private static final String PARAM_START_DATE = "calendar";
 	private static final int MAX_LENGTH_NAME = 50;
 	private static final int MAX_LENGTH_ADDRESS = 80;
+	private static final String ROUTE_NUMBER = "route";
 	private static Pattern pattern;
 	private static Matcher matcher;
 
@@ -94,6 +95,26 @@ public class Validator {
 
 		if (userName != null && !userName.isEmpty() && userName.length() <= MAX_LENGTH_USER_NAME) {
 			matcher = pattern.matcher(userName);
+			dataOk = matcher.matches();
+			matcher.reset();
+		}
+		return dataOk;
+	}
+	
+	/**
+	 * Validate route number.
+	 *
+	 * @param routeNumber the route number
+	 * @return true, if successful
+	 */
+	/* Validates the entered route number */
+	public static boolean validateRouteNumber(String routeNumber) {
+		boolean dataOk = false;
+		String regExp = REGEX_BOUNDLE.getString(ROUTE_NUMBER);
+		pattern = Pattern.compile(regExp);
+
+		if (routeNumber != null && !routeNumber.isEmpty()) {
+			matcher = pattern.matcher(routeNumber);
 			dataOk = matcher.matches();
 			matcher.reset();
 		}
