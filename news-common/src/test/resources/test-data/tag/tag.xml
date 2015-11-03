@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <TAG TAG_ID="1" TAG_NAME="test tag1"/>
+    <TAG TAG_ID="2" TAG_NAME="test tag2"/>
+    <TAG TAG_ID="3" TAG_NAME="test tag3"/>
+    <TAG TAG_ID="4" TAG_NAME="test tag4"/>
+    
+    <NEWS_TAG NEWS_ID="1" TAG_ID="1"/>
+    <NEWS_TAG NEWS_ID="1" TAG_ID="2"/>
+    <NEWS_TAG NEWS_ID="1" TAG_ID="3"/>
+    <NEWS_TAG NEWS_ID="2" TAG_ID="4"/>
+    <NEWS_TAG NEWS_ID="3" TAG_ID="2"/>
+    <NEWS_TAG NEWS_ID="3" TAG_ID="3"/>
+    <NEWS_TAG NEWS_ID="3" TAG_ID="4"/>
+</dataset>
