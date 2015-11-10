@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.epam.newsmanagement.dao.ITagDao;
 import com.epam.newsmanagement.entity.Tag;
 import com.epam.newsmanagement.exception.DaoException;
 import com.github.springtestdbunit.DbUnitTestExecutionListener;
@@ -41,7 +43,7 @@ public class TagDaoImplTest {
 	private static final String SQL_FIND_TAG_BY_ID = "SELECT TAG_NAME, TAG_ID FROM TAG WHERE TAG_ID = ?";
 	private static final String SQL_FIND_TAG_BY_NEWS_ID = "SELECT TAG.TAG_NAME, TAG.TAG_ID FROM TAG INNER JOIN NEWS_TAG ON NEWS_TAG.TAG_ID = TAG.TAG_ID WHERE NEWS_TAG.NEWS_ID = ?";
 	private static final String SQL_DISABLE_FK_CONSTRAINT = "alter table \"ROOT\".\"NEWS_TAG\" disable  constraint \"FK_NEWS_TAG_NEWS_NEWS_ID\"";
-	private static final String TEST_TAG_NAME = "test tag3";
+	private static final String TEST_TAG_NAME = "test tag 3";
 	private static final String TEST_NEW_TAG_NAME = "test new";
 	private static final long TEST_ID = 3;
 	private static final int ONE_LINE = 1;
@@ -49,7 +51,7 @@ public class TagDaoImplTest {
 	private Tag testTag;
 	
 	@Autowired
-	private TagDaoImpl tagDao;
+	private ITagDao tagDao;
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
@@ -73,13 +75,13 @@ public class TagDaoImplTest {
 		testTag.setTagName(TEST_TAG_NAME);
 	}
 
-	@Before
+	/*@BeforeTransaction
 	public void disableConstraint() {
 			LOG.info("disableConstraint");
 		jdbcTemplate.execute(SQL_DISABLE_FK_CONSTRAINT);
-	}
+	}*/
 	
-	//@Ignore
+	@Ignore
 	@Test
 	@DatabaseSetup(value = "/test-data/tag/tag.xml", type = DatabaseOperation.INSERT)
 	public void findTagByIdTest() throws DaoException {
@@ -88,7 +90,7 @@ public class TagDaoImplTest {
 		assertEquals(tag, testTag);
 	}
 
-	//@Ignore
+	@Ignore
 	@Test
 	@DatabaseSetup(value = "/test-data/tag/tag.xml", type = DatabaseOperation.INSERT)
 	public void findAllTagsTest() throws DaoException {
@@ -98,12 +100,12 @@ public class TagDaoImplTest {
 		assertEquals(rowCount, taglist.size());
 	}
 
-	//@Ignore
+	@Ignore
 	@Test
 	@DatabaseSetup(value = "/test-data/tag/tag.xml", type = DatabaseOperation.INSERT)
 	public void findAllTagsByNewsIDTest() throws DaoException {
 		
-		LOG.info("Test metod");
+		//LOG.info("Test metod");
 
 		List<Tag> tagListExpected = jdbcTemplate.query(SQL_FIND_TAG_BY_NEWS_ID, new Object[]{TEST_ID}, rowMapper);
 		
@@ -112,7 +114,7 @@ public class TagDaoImplTest {
 		assertEquals(tagListExpected, tagListReal);
 	}
 
-	//@Ignore
+	@Ignore
 	@Test
 	public void addNewTagTest() throws DaoException {
 
@@ -125,7 +127,7 @@ public class TagDaoImplTest {
 		assertEquals(rowCountBefore + ONE_LINE, rowCountAfter);
 	}
 	
-	//@Ignore
+	@Ignore
 	@Test
 	@DatabaseSetup(value = "/test-data/tag/tag.xml", type = DatabaseOperation.INSERT)
 	public void updateTagTest() throws DaoException {
@@ -141,6 +143,7 @@ public class TagDaoImplTest {
 	//@Ignore
 	@Test
 	@DatabaseSetup(value = "/test-data/tag/tag.xml", type = DatabaseOperation.INSERT)
+	//@DatabaseSetup(value = "/test-data/full-database/full.xml", type = DatabaseOperation.INSERT)
 	public void deleteTagTest() throws DaoException {
 
 		int rowCountBefore = jdbcTemplate.queryForObject(SQL_TAG_COUNT_QUERY, Integer.class);

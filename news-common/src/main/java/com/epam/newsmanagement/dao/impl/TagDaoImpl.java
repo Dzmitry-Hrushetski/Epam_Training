@@ -40,10 +40,20 @@ public class TagDaoImpl implements ITagDao {
 	
 	private DataSource dataSource;
 	
+	/**
+	 * Gets the data source.
+	 *
+	 * @return the data source
+	 */
 	public DataSource getDataSource() {
 		return dataSource;
 	}
 
+	/**
+	 * Sets the data source.
+	 *
+	 * @param dataSource the new data source
+	 */
 	public void setDataSource(DataSource dataSource) {
 		this.dataSource = dataSource;
 	}
@@ -72,9 +82,9 @@ public class TagDaoImpl implements ITagDao {
 		} catch (SQLException ex) {
 			throw new DaoException("Database error, TagDaoImpl.", ex);
 		} finally {
-			releaseConnection(connection, dataSource);
-			closeQuietly(ps);
 			closeQuietly(rs);
+			closeQuietly(ps);
+			releaseConnection(connection, dataSource);
 		}
 		return tag;
 	}
@@ -104,9 +114,9 @@ public class TagDaoImpl implements ITagDao {
 		} catch (SQLException ex) {
 			throw new DaoException("Database error, TagDaoImpl.", ex);
 		} finally {
-			releaseConnection(connection, dataSource);
-			closeQuietly(st);
 			closeQuietly(rs);
+			closeQuietly(st);
+			releaseConnection(connection, dataSource);
 		}
 		return tagsList;
 	}
@@ -137,9 +147,9 @@ public class TagDaoImpl implements ITagDao {
 		} catch (SQLException ex) {
 			throw new DaoException("Database error, TagDaoImpl.", ex);
 		} finally {
-			releaseConnection(connection, dataSource);
-			closeQuietly(ps);
 			closeQuietly(rs);
+			closeQuietly(ps);
+			releaseConnection(connection, dataSource);
 		}
 		return tagsList;
 	}
@@ -167,10 +177,10 @@ public class TagDaoImpl implements ITagDao {
 		} catch (SQLException ex) {
 			throw new DaoException("Database error, TagDaoImpl.", ex);
 		} finally {
-			releaseConnection(connection, dataSource);
 			//DbUtils.closeQuietly(connection, ps, rs);
-			closeQuietly(ps);
 			closeQuietly(rs);
+			closeQuietly(ps);
+			releaseConnection(connection, dataSource);
 		}
 	}
 
@@ -192,9 +202,9 @@ public class TagDaoImpl implements ITagDao {
 		} catch (SQLException ex) {
 			throw new DaoException("Database error, TagDao.", ex);
 		} finally {
-			releaseConnection(connection, dataSource);
-			closeQuietly(ps);
 			closeQuietly(rs);
+			closeQuietly(ps);
+			releaseConnection(connection, dataSource);
 		}
 	}
 
@@ -215,9 +225,9 @@ public class TagDaoImpl implements ITagDao {
 		} catch (SQLException ex) {
 			throw new DaoException("Database error, TagDaoImpl.", ex);
 		} finally {
-			releaseConnection(connection, dataSource);
-			closeQuietly(ps);
 			closeQuietly(rs);
+			closeQuietly(ps);
+			releaseConnection(connection, dataSource);
 		}
 	}
 
@@ -239,9 +249,9 @@ public class TagDaoImpl implements ITagDao {
 		} catch (SQLException ex) {
 			throw new DaoException("Database error, TagDaoImpl.", ex);
 		} finally {
-			releaseConnection(connection, dataSource);
-			closeQuietly(ps);
 			closeQuietly(rs);
+			closeQuietly(ps);
+			releaseConnection(connection, dataSource);
 		}
 	}
 
@@ -263,9 +273,9 @@ public class TagDaoImpl implements ITagDao {
 		} catch (SQLException ex) {
 			throw new DaoException("Database error, TagDaoImpl.", ex);
 		} finally {
-			releaseConnection(connection, dataSource);
-			closeQuietly(ps);
 			closeQuietly(rs);
+			closeQuietly(ps);
+			releaseConnection(connection, dataSource);
 		}
 	}
 
@@ -286,9 +296,9 @@ public class TagDaoImpl implements ITagDao {
 		} catch (SQLException ex) {
 			throw new DaoException("Database error, TagDaoImpl.", ex);
 		} finally {
-			releaseConnection(connection, dataSource);
-			closeQuietly(ps);
 			closeQuietly(rs);
+			closeQuietly(ps);
+			releaseConnection(connection, dataSource);
 		}
 	}
 }

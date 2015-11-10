@@ -1,6 +1,7 @@
 package com.epam.newsmanagement.entity;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.sql.Timestamp;
 
 /**
@@ -15,7 +16,7 @@ public class News implements Serializable {
 	private String shortText;
 	private String fullText;
 	private Timestamp creationTimestamp;
-	private Timestamp modificationTimestamp;
+	private Date modificationDate;
 	
 		
 	/**
@@ -108,22 +109,24 @@ public class News implements Serializable {
 		this.creationTimestamp = creationTimestamp;
 	}
 	
-	/**
-	 * Gets the modification timestamp.
-	 *
-	 * @return the modification timestamp
-	 */
-	public Timestamp getModificationTimestamp() {
-		return modificationTimestamp;
-	}
 	
 	/**
-	 * Sets the modification timestamp.
+	 * Gets the modification date.
 	 *
-	 * @param modificationTimestamp the new modification timestamp
+	 * @return the modification date
 	 */
-	public void setModificationTimestamp(Timestamp modificationTimestamp) {
-		this.modificationTimestamp = modificationTimestamp;
+	public Date getModificationDate() {
+		return modificationDate;
+	}
+	
+	
+	/**
+	 * Sets the modification date.
+	 *
+	 * @param modificationDate the new modification date
+	 */
+	public void setModificationDate(Date modificationDate) {
+		this.modificationDate = modificationDate;
 	}
 
 	/* (non-Javadoc)
@@ -135,7 +138,7 @@ public class News implements Serializable {
 		int result = 1;
 		result = prime * result + ((creationTimestamp == null) ? 0 : creationTimestamp.hashCode());
 		result = prime * result + ((fullText == null) ? 0 : fullText.hashCode());
-		result = prime * result + ((modificationTimestamp == null) ? 0 : modificationTimestamp.hashCode());
+		result = prime * result + ((modificationDate == null) ? 0 : modificationDate.hashCode());
 		result = prime * result + (int) (newsId ^ (newsId >>> 32));
 		result = prime * result + ((shortText == null) ? 0 : shortText.hashCode());
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
@@ -164,10 +167,10 @@ public class News implements Serializable {
 				return false;
 		} else if (!fullText.equals(other.fullText))
 			return false;
-		if (modificationTimestamp == null) {
-			if (other.modificationTimestamp != null)
+		if (modificationDate == null) {
+			if (other.modificationDate != null)
 				return false;
-		} else if (!modificationTimestamp.equals(other.modificationTimestamp))
+		} else if (!modificationDate.equals(other.modificationDate))
 			return false;
 		if (newsId != other.newsId)
 			return false;
@@ -190,6 +193,6 @@ public class News implements Serializable {
 	@Override
 	public String toString() {
 		return "News [newsId=" + newsId + ", title=" + title + ", shortText=" + shortText + ", fullText=" + fullText
-				+ ", creationTimestamp=" + creationTimestamp + ", modificationTimestamp=" + modificationTimestamp + "]";
+				+ ", creationTimestamp=" + creationTimestamp + ", modificationDate=" + modificationDate + "]";
 	}
 }

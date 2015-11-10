@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataset>
-    <TAG TAG_ID="1" TAG_NAME="test tag1"/>
-    <TAG TAG_ID="2" TAG_NAME="test tag2"/>
-    <TAG TAG_ID="3" TAG_NAME="test tag3"/>
-    <TAG TAG_ID="4" TAG_NAME="test tag4"/>
+    <TAG TAG_ID="1" TAG_NAME="test tag 1"/>
+    <TAG TAG_ID="2" TAG_NAME="test tag 2"/>
+    <TAG TAG_ID="3" TAG_NAME="test tag 3"/>
+    <TAG TAG_ID="4" TAG_NAME="test tag 4"/>
+    
+    <NEWS 
+		NEWS_ID="1"
+		TITLE="Title News 1"
+		SHORT_TEXT="short news text 1"
+		FULL_TEXT="full news text 1"
+		CREATION_DATE="2015-01-01 00:01:00"
+		MODIFICATION_DATE="3015-01-01 00:00:00"/>
+	<NEWS 
+		NEWS_ID="2"
+		TITLE="Title News 2"
+		SHORT_TEXT="short news text 2"
+		FULL_TEXT="full news text 2"
+		CREATION_DATE="2015-01-01 00:02:00"
+		MODIFICATION_DATE="3015-01-01 00:00:00"/>	  
+	<NEWS 
+		NEWS_ID="3"
+		TITLE="Title News 3"
+		SHORT_TEXT="short news text 3"
+		FULL_TEXT="full news text 3"
+		CREATION_DATE="2015-01-01 00:03:00"
+		MODIFICATION_DATE="3015-01-01 00:00:00"/>
     
     <NEWS_TAG NEWS_ID="1" TAG_ID="1"/>
     <NEWS_TAG NEWS_ID="1" TAG_ID="2"/>

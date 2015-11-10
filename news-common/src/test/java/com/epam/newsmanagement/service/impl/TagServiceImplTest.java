@@ -10,17 +10,18 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.epam.newsmanagement.dao.impl.TagDaoImpl;
+import com.epam.newsmanagement.dao.ITagDao;
 import com.epam.newsmanagement.entity.Tag;
 import com.epam.newsmanagement.exception.DaoException;
 import com.epam.newsmanagement.exception.ServiceException;
+import com.epam.newsmanagement.service.ITagService;
 
 
 @RunWith(MockitoJUnitRunner.class)
 public class TagServiceImplTest {
 	
-	@Mock private TagDaoImpl tagDao;
-    @InjectMocks private TagServiceImpl tagService;
+	@Mock private ITagDao tagDao;
+    @InjectMocks private ITagService tagService;
 
 	@Test
 	public void addNewTagTest() throws ServiceException, DaoException {

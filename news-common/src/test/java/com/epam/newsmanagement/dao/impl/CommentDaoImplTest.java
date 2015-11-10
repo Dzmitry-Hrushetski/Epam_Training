@@ -22,6 +22,7 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.epam.newsmanagement.dao.ICommentDao;
 import com.epam.newsmanagement.entity.Comment;
 import com.epam.newsmanagement.exception.DaoException;
 import com.github.springtestdbunit.DbUnitTestExecutionListener;
@@ -38,13 +39,13 @@ public class CommentDaoImplTest {
 	private static final String SQL_COMMENTS_COUNT_IN_NEWS_QUERY = "SELECT COUNT(COMMENTS.NEWS_ID) FROM COMMENTS WHERE COMMENTS.NEWS_ID = ?";
 	private static final String SQL_FIND_COMMENTS_BY_NEWS_ID = "SELECT COMMENTS.COMMENT_ID, COMMENTS.NEWS_ID, COMMENTS.COMMENT_TEXT, COMMENTS.CREATION_DATE FROM COMMENTS WHERE NEWS_ID = ?";
 	private static final String TEST_COMMENT_TEXT = "test comment text";
-	private static final String CREATION_DATE = "2015-11-25 15:45:00";
+	private static final String CREATION_DATE = "2015-10-25 15:45:00";
 	private static final long TEST_ID = 2;
 	private static final long TEST_DELETE_ID = 3;
 	private static final int ONE_LINE = 1;
 	
 	@Autowired
-	private CommentDaoImpl commentDao;
+	private ICommentDao commentDao;
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
@@ -55,6 +56,7 @@ public class CommentDaoImplTest {
 		private static final String NEWS_ID = "NEWS_ID";
 		private static final String COMMENT_TEXT = "COMMENT_TEXT";
 		private static final String CREATION_DATE = "CREATION_DATE";
+		
 		@Override
 		public Comment mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Comment comment = new Comment();

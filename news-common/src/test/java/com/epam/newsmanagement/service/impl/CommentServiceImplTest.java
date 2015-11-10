@@ -10,15 +10,16 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.epam.newsmanagement.dao.impl.CommentDaoImpl;
+import com.epam.newsmanagement.dao.ICommentDao;
 import com.epam.newsmanagement.exception.DaoException;
 import com.epam.newsmanagement.exception.ServiceException;
+import com.epam.newsmanagement.service.ICommentService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CommentServiceImplTest {
 	//private static final long TEST_COMMENT_ID = 3;
-	@Mock private CommentDaoImpl commentDao;
-    @InjectMocks private CommentServiceImpl commentService;
+	@Mock private ICommentDao commentDao;
+    @InjectMocks private ICommentService commentService;
     
     @Test
 	public void countCommentsInNewsTest() throws ServiceException, DaoException {

@@ -17,6 +17,11 @@ import com.epam.newsmanagement.dao.ICommentDao;
 import com.epam.newsmanagement.entity.Comment;
 import com.epam.newsmanagement.exception.DaoException;
 
+/**
+ * The Class CommentDaoImpl.
+ *
+ * @author Dzmitry Hrushetski
+ */
 public class CommentDaoImpl implements ICommentDao {
 	private static final String SQL_COMMENTS_COUNT_IN_NEWS_QUERY = "SELECT COUNT(COMMENTS.NEWS_ID) FROM COMMENTS WHERE COMMENTS.NEWS_ID = ?";
 	private static final String SQL_FIND_COMMENTS_BY_NEWS_ID = "SELECT COMMENTS.COMMENT_ID, COMMENTS.NEWS_ID, COMMENTS.COMMENT_TEXT, COMMENTS.CREATION_DATE FROM COMMENTS WHERE NEWS_ID = ?";
@@ -30,14 +35,27 @@ public class CommentDaoImpl implements ICommentDao {
 	
 	private DataSource dataSource;
 	
+	/**
+	 * Gets the data source.
+	 *
+	 * @return the data source
+	 */
 	public DataSource getDataSource() {
 		return dataSource;
 	}
 
+	/**
+	 * Sets the data source.
+	 *
+	 * @param dataSource the new data source
+	 */
 	public void setDataSource(DataSource dataSource) {
 		this.dataSource = dataSource;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.epam.newsmanagement.dao.ICommentDao#countCommentsInNews(java.lang.Long)
+	 */
 	@Override
 	public int countCommentsInNews(Long newsId) throws DaoException {
 		Connection connection = null;
@@ -56,13 +74,16 @@ public class CommentDaoImpl implements ICommentDao {
 		} catch (SQLException ex) {
 			throw new DaoException("Database error, CommentDaoImpl.", ex);
 		} finally {
-			releaseConnection(connection, dataSource);
-			closeQuietly(ps);
 			closeQuietly(rs);
+			closeQuietly(ps);
+			releaseConnection(connection, dataSource);
 		}
 		return commentsCount;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.epam.newsmanagement.dao.ICommentDao#findCommentsByNewsId(java.lang.Long)
+	 */
 	@Override
 	public List<Comment> findCommentsByNewsId(Long newsId) throws DaoException {
 		ArrayList<Comment> commentList = new ArrayList<Comment>();
@@ -88,13 +109,16 @@ public class CommentDaoImpl implements ICommentDao {
 		} catch (SQLException ex) {
 			throw new DaoException("Database error, CommentDaoImpl.", ex);
 		} finally {
-			releaseConnection(connection, dataSource);
-			closeQuietly(ps);
 			closeQuietly(rs);
+			closeQuietly(ps);
+			releaseConnection(connection, dataSource);
 		}
 		return commentList;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.epam.newsmanagement.dao.ICommentDao#addComment(com.epam.newsmanagement.entity.Comment)
+	 */
 	@Override
 	public void addComment(Comment comment) throws DaoException {
 		Connection connection = null;
@@ -116,12 +140,15 @@ public class CommentDaoImpl implements ICommentDao {
 		} catch (SQLException ex) {
 			throw new DaoException("Database error, CommentDaoImpl.", ex);
 		} finally {
-			releaseConnection(connection, dataSource);
-			closeQuietly(ps);
 			closeQuietly(rs);
+			closeQuietly(ps);
+			releaseConnection(connection, dataSource);
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see com.epam.newsmanagement.dao.ICommentDao#deleteComment(java.lang.Long)
+	 */
 	@Override
 	public void deleteComment(Long commentId) throws DaoException {
 		Connection connection = null;
@@ -136,9 +163,9 @@ public class CommentDaoImpl implements ICommentDao {
 		} catch (SQLException ex) {
 			throw new DaoException("Database error, CommentDaoImpl.", ex);
 		} finally {
-			releaseConnection(connection, dataSource);
-			closeQuietly(ps);
 			closeQuietly(rs);
+			closeQuietly(ps);
+			releaseConnection(connection, dataSource);
 		}
 	}
 }

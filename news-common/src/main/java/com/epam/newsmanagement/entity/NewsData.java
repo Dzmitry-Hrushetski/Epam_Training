@@ -11,7 +11,7 @@ import java.util.List;
 public class NewsData implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private News news;
-	private Autor autor;
+	private Author autor;
 	private List<Tag> tags;
 	private List<Comment> comments;
 	
@@ -38,7 +38,7 @@ public class NewsData implements Serializable {
 	 *
 	 * @return the autor
 	 */
-	public Autor getAutor() {
+	public Author getAutor() {
 		return autor;
 	}
 	
@@ -47,7 +47,7 @@ public class NewsData implements Serializable {
 	 *
 	 * @param autor the new autor
 	 */
-	public void setAutor(Autor autor) {
+	public void setAutor(Author autor) {
 		this.autor = autor;
 	}
 	

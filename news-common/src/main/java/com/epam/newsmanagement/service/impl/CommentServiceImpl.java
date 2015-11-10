@@ -2,7 +2,7 @@ package com.epam.newsmanagement.service.impl;
 
 import java.util.List;
 
-import com.epam.newsmanagement.dao.impl.CommentDaoImpl;
+import com.epam.newsmanagement.dao.ICommentDao;
 import com.epam.newsmanagement.entity.Comment;
 import com.epam.newsmanagement.exception.DaoException;
 import com.epam.newsmanagement.exception.ServiceException;
@@ -15,14 +15,14 @@ import com.epam.newsmanagement.service.ICommentService;
  */
 public class CommentServiceImpl implements ICommentService{
 	
-	private CommentDaoImpl commentDao;
+	private ICommentDao commentDao;
 
 	/**
 	 * Gets the comment dao.
 	 *
 	 * @return the comment dao
 	 */
-	public CommentDaoImpl getCommentDao() {
+	public ICommentDao getCommentDao() {
 		return commentDao;
 	}
 
@@ -31,7 +31,7 @@ public class CommentServiceImpl implements ICommentService{
 	 *
 	 * @param commentDao the new comment dao
 	 */
-	public void setCommentDao(CommentDaoImpl commentDao) {
+	public void setCommentDao(ICommentDao commentDao) {
 		this.commentDao = commentDao;
 	}
 

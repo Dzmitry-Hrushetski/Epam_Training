@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.epam.newsmanagement.dao.impl.TagDaoImpl;
+import com.epam.newsmanagement.dao.ITagDao;
 import com.epam.newsmanagement.entity.Tag;
 import com.epam.newsmanagement.exception.DaoException;
 import com.epam.newsmanagement.exception.ServiceException;
@@ -15,13 +15,13 @@ import com.epam.newsmanagement.service.ITagService;
 public class TagServiceImpl implements ITagService {
 	//private static final Logger LOG = Logger.getLogger(TagServiceImpl.class);
 	
-	private TagDaoImpl tagDao;
+	private ITagDao tagDao;
 
-	public TagDaoImpl getTagDao() {
+	public ITagDao getTagDao() {
 		return tagDao;
 	}
 
-	public void setTagDao(TagDaoImpl tagDao) {
+	public void setTagDao(ITagDao tagDao) {
 		this.tagDao = tagDao;
 	}
 
