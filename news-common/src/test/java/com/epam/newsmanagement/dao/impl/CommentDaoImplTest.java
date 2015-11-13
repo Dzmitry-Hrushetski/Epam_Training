@@ -41,7 +41,7 @@ public class CommentDaoImplTest {
 	private static final String TEST_COMMENT_TEXT = "test comment text";
 	private static final String CREATION_DATE = "2015-10-25 15:45:00";
 	private static final long TEST_ID = 2;
-	private static final long TEST_DELETE_ID = 3;
+	private static final long TEST_DELETE_ID = 8;
 	private static final int ONE_LINE = 1;
 	
 	@Autowired
@@ -77,6 +77,7 @@ public class CommentDaoImplTest {
 		testComment.setCreationTimestamp(Timestamp.valueOf(CREATION_DATE));
 	}
 	
+	//@Ignore
 	@Test
 	@DatabaseSetup(value = "/test-data/comment/comment.xml", type = DatabaseOperation.INSERT)
 	public void countCommentsInNewsTest() throws DaoException {
@@ -87,6 +88,7 @@ public class CommentDaoImplTest {
 		assertEquals(rowCountExpected, rowCountReal);
 	}
 
+	//@Ignore
 	@Test
 	@DatabaseSetup(value = "/test-data/comment/comment.xml", type = DatabaseOperation.INSERT)
 	public void findCommentsByNewsIdTest() throws DaoException {
@@ -98,7 +100,9 @@ public class CommentDaoImplTest {
 		assertEquals(commentListExpected, commentListReal);
 	}
 	
+	//@Ignore
 	@Test
+	@DatabaseSetup(value = "/test-data/comment/comment.xml", type = DatabaseOperation.INSERT)
 	public void addCommentTest() throws DaoException {
 
 		int rowCountBefore = jdbcTemplate.queryForObject(SQL_COMMENTS_COUNT_IN_NEWS_QUERY, Integer.class, TEST_ID);
@@ -108,6 +112,7 @@ public class CommentDaoImplTest {
 		assertEquals(rowCountBefore + ONE_LINE, rowCountAfter);
 	}
 	
+	//@Ignore
 	@Test
 	@DatabaseSetup(value = "/test-data/comment/comment.xml", type = DatabaseOperation.INSERT)
 	public void deleteCommentTest() throws DaoException {

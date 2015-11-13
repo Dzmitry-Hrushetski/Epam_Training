@@ -17,6 +17,17 @@
 		<property name="authorDao" ref="authorDao" />
 	</bean>
 	
+	<bean id="newsService" class="com.epam.newsmanagement.service.impl.NewsServiceImpl">
+		<property name="newsDao" ref="newsDao" />
+	</bean>
+	
+	<bean id="newsDataService" class="com.epam.newsmanagement.service.impl.NewsDataServiceImpl">
+		<property name="newsService" ref="newsService" />
+		<property name="authorService" ref="authorService" />
+		<property name="tagService" ref="tagService" />
+		<property name="commentService" ref="commentService" />
+	</bean>
+	
 	<!-- dao -->
 	<bean id="tagDao" class="com.epam.newsmanagement.dao.impl.TagDaoImpl">
 	 	<property name="dataSource" ref="dataSource" /> 
@@ -27,6 +38,10 @@
 	</bean>
 	
 	<bean id="authorDao" class="com.epam.newsmanagement.dao.impl.AuthorDaoImpl">
+	 	<property name="dataSource" ref="dataSource" /> 
+	</bean>
+	
+	<bean id="newsDao" class="com.epam.newsmanagement.dao.impl.NewsDaoImpl">
 	 	<property name="dataSource" ref="dataSource" /> 
 	</bean>
 	
